@@ -1,0 +1,501 @@
+{
+  "checkedAt": "2026-10-08",
+  "pickCount": 443,
+  "results": [
+    {
+      "case": "ordinary_second",
+      "picks": [
+        {
+          "id": 12348,
+          "originalTeamId": 30,
+          "originalTeamName": "Wizards",
+          "currentTeamId": 20,
+          "currentTeamName": "Knicks",
+          "year": 2027,
+          "round": 2,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": false,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 20,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12348
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12348
+            ]
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "isValid": true,
+        "teams": [
+          {
+            "teamId": 20,
+            "teamName": "New York Knicks",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [],
+            "newTotalSalary": 220003756,
+            "newCapStatus": "Over First Apron"
+          },
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax"
+          }
+        ],
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) \u2014 Art. VII \u00a76(j) Traded Player Exception",
+          "\u00a78(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (\u00a76(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ]
+      }
+    },
+    {
+      "case": "wrong_owner",
+      "picks": [
+        {
+          "id": 12348,
+          "originalTeamId": 30,
+          "originalTeamName": "Wizards",
+          "currentTeamId": 20,
+          "currentTeamName": "Knicks",
+          "year": 2027,
+          "round": 2,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": false,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 16,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12348
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12348
+            ]
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "isValid": true,
+        "teams": [
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Miami Heat are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206935956,
+            "newCapStatus": "Over Luxury Tax"
+          },
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax"
+          }
+        ],
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) \u2014 Art. VII \u00a76(j) Traded Player Exception",
+          "Luxury Tax (\u00a76(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "\u00a78(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+        ]
+      }
+    },
+    {
+      "case": "ordinary_first",
+      "picks": [
+        {
+          "id": 12522,
+          "originalTeamId": 30,
+          "originalTeamName": "Wizards",
+          "currentTeamId": 30,
+          "currentTeamName": "Wizards",
+          "year": 2027,
+          "round": 1,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": false,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 30,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12522
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12522
+            ]
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "isValid": true,
+        "teams": [
+          {
+            "teamId": 30,
+            "teamName": "Washington Wizards",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [],
+            "newTotalSalary": 192083104,
+            "newCapStatus": "Over Cap"
+          },
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax"
+          }
+        ],
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) \u2014 Art. VII \u00a76(j) Traded Player Exception",
+          "\u00a78(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (\u00a76(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ]
+      }
+    },
+    {
+      "case": "protected",
+      "picks": [
+        {
+          "id": 12111,
+          "originalTeamId": 16,
+          "originalTeamName": "Heat",
+          "currentTeamId": 4,
+          "currentTeamName": "Hornets",
+          "year": 2027,
+          "round": 1,
+          "isProtected": true,
+          "protectionDetails": "Protected",
+          "isSwap": false,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 4,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12111
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12111
+            ]
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "isValid": true,
+        "teams": [
+          {
+            "teamId": 4,
+            "teamName": "Charlotte Hornets",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [],
+            "newTotalSalary": 177055763,
+            "newCapStatus": "Over Cap"
+          },
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax"
+          }
+        ],
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) \u2014 Art. VII \u00a76(j) Traded Player Exception",
+          "\u00a78(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (\u00a76(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ]
+      }
+    },
+    {
+      "case": "blocked",
+      "picks": [
+        {
+          "id": 12259,
+          "originalTeamId": 13,
+          "originalTeamName": "Clippers",
+          "currentTeamId": 13,
+          "currentTeamName": "Clippers",
+          "year": 2027,
+          "round": 1,
+          "isProtected": false,
+          "protectionDetails": "Swap-encumbered",
+          "isSwap": true,
+          "isTradable": false
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 13,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12259
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12259
+            ]
+          }
+        ]
+      },
+      "httpStatus": 400,
+      "response": {
+        "error": "2027 Rd1 pick cannot be traded \u2014 Swap-encumbered"
+      }
+    },
+    {
+      "case": "swap",
+      "picks": [
+        {
+          "id": 12488,
+          "originalTeamId": 28,
+          "originalTeamName": "Raptors",
+          "currentTeamId": 13,
+          "currentTeamName": "Clippers",
+          "year": 2027,
+          "round": 1,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": true,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 13,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12488
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12488
+            ]
+          }
+        ]
+      },
+      "httpStatus": 200,
+      "response": {
+        "isValid": true,
+        "teams": [
+          {
+            "teamId": 13,
+            "teamName": "Los Angeles Clippers",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [],
+            "newTotalSalary": 184907445,
+            "newCapStatus": "Over Cap"
+          },
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings"
+            ],
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax"
+          }
+        ],
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) \u2014 Art. VII \u00a76(j) Traded Player Exception",
+          "\u00a78(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (\u00a76(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ]
+      }
+    },
+    {
+      "case": "consecutive_firsts",
+      "picks": [
+        {
+          "id": 12045,
+          "originalTeamId": 1,
+          "originalTeamName": "Hawks",
+          "currentTeamId": 1,
+          "currentTeamName": "Hawks",
+          "year": 2029,
+          "round": 1,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": false,
+          "isTradable": true
+        },
+        {
+          "id": 12048,
+          "originalTeamId": 1,
+          "originalTeamName": "Hawks",
+          "currentTeamId": 1,
+          "currentTeamName": "Hawks",
+          "year": 2030,
+          "round": 1,
+          "isProtected": false,
+          "protectionDetails": null,
+          "isSwap": false,
+          "isTradable": true
+        }
+      ],
+      "payload": {
+        "teams": [
+          {
+            "teamId": 1,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [
+              12045,
+              12048
+            ],
+            "receivingPickIds": []
+          },
+          {
+            "teamId": 2,
+            "sendingPlayerIds": [],
+            "receivingPlayerIds": [],
+            "sendingPickIds": [],
+            "receivingPickIds": [
+              12045,
+              12048
+            ]
+          }
+        ]
+      },
+      "httpStatus": 400,
+      "response": {
+        "error": "Stepien Rule violation: Atlanta Hawks would have no 1st-round pick in both 2028 and 2029 \u2014 cannot trade both picks in the same transaction"
+      }
+    }
+  ]
+}

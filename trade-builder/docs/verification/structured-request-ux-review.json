@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-08T12:37:02.363239+00:00",
+  "model": "gpt-6.1-sol",
+  "method": "Actual configured model and server harness, catalogue and validator. Latest complete conversations merged after corrected reruns. Wider response inspection; distinct from assertions in the HTTP/SSE intention suite.",
+  "chatConversations": 115,
+  "chatTurns": 327,
+  "scenarioDefinitions": 115,
+  "missingDefinitions": [],
+  "statuses": {
+    "complete": 264,
+    "needs_clarification": 61,
+    "conflict": 1,
+    "error": 1
+  },
+  "expectedErrors": [
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Swap these selected players.",
+      "message": "A selected player is no longer available."
+    }
+  ],
+  "sourceReports": [
+    "gambit-reasoning-review-all.json",
+    "gambit-verified-intentions-final.json",
+    "gambit-scenario-state-final.json",
+    "gambit-blocked-pick-final.json",
+    "gambit-exchange-final.json",
+    "gambit-rule-copy-final.json",
+    "gambit-copy-state-final.json",
+    "gambit-pick-copy-final.json"
+  ],
+  "browserProof": "scoped-replacement.png",
+  "limits": "Representative use cases and edge cases, not every possible utterance. Manifest verification is source/coverage verification, not a manual visual audit of every viewport."
+}

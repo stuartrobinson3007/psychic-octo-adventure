@@ -1,0 +1,14 @@
+{
+  "completedAt": "2026-10-10T01:01:32.614Z",
+  "backendRevision": "ffcba59e68424a56287d906e2c05669c83309c6d119a5108b58cce25d7816fc9",
+  "conversations": 170,
+  "recordedTurns": 475,
+  "incomplete": [],
+  "uiScenarios": 218,
+  "viewportViews": 2100,
+  "recordingsCurrent": 170,
+  "scenarioEndpointStatus": 200,
+  "previewRouteStatus": 200,
+  "finalBrowserInspection": "Unavailable after browser provider interruption; no new frozen captures claimed",
+  "note": "Recorded responses are observations, not semantic pass assertions."
+}

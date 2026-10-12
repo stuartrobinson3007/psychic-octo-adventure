@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T09:26:10.280Z",
+  "title": "Design System: Gambit",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "White canvas",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Deep zinc",
+        "canonical": "oklch(0.141 0.005 285.823)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "White card",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "popover": {
+        "role": "neutral",
+        "displayName": "White popover",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Emerald action",
+        "canonical": "oklch(0.508 0.118 165.612)",
+        "tonalRamp": [
+          "oklch(26.2% 0.051 172.552)",
+          "oklch(37.8% 0.077 168.94)",
+          "oklch(50.8% 0.118 165.612)",
+          "oklch(59.6% 0.145 163.225)",
+          "oklch(69.6% 0.17 162.48)",
+          "oklch(84.5% 0.143 164.978)",
+          "oklch(95% 0.052 163.051)",
+          "oklch(97.9% 0.021 166.113)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "primary-foreground": {
+        "role": "primary",
+        "displayName": "Pale emerald text",
+        "canonical": "oklch(0.979 0.021 166.113)",
+        "tonalRamp": [
+          "oklch(26.2% 0.051 172.552)",
+          "oklch(37.8% 0.077 168.94)",
+          "oklch(50.8% 0.118 165.612)",
+          "oklch(59.6% 0.145 163.225)",
+          "oklch(69.6% 0.17 162.48)",
+          "oklch(84.5% 0.143 164.978)",
+          "oklch(95% 0.052 163.051)",
+          "oklch(97.9% 0.021 166.113)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "secondary": {
+        "role": "neutral",
+        "displayName": "Soft zinc control",
+        "canonical": "oklch(0.967 0.001 286.375)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "secondary-foreground": {
+        "role": "neutral",
+        "displayName": "Zinc control text",
+        "canonical": "oklch(0.21 0.006 285.885)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Soft zinc surface",
+        "canonical": "oklch(0.967 0.001 286.375)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Mid zinc text",
+        "canonical": "oklch(0.552 0.016 285.938)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Fine zinc divider",
+        "canonical": "oklch(0.92 0.004 286.32)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "input": {
+        "role": "neutral",
+        "displayName": "Fine zinc input border",
+        "canonical": "oklch(0.92 0.004 286.32)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "ring": {
+        "role": "neutral",
+        "displayName": "Zinc focus ring",
+        "canonical": "oklch(0.705 0.015 286.067)",
+        "tonalRamp": [
+          "oklch(14.1% 0.005 285.823)",
+          "oklch(21% 0.006 285.885)",
+          "oklch(37% 0.013 285.805)",
+          "oklch(44.2% 0.017 285.786)",
+          "oklch(55.2% 0.016 285.938)",
+          "oklch(87.1% 0.006 286.286)",
+          "oklch(96.7% 0.001 286.375)",
+          "oklch(98.5% 0 none)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      },
+      "warning": {
+        "role": "neutral",
+        "displayName": "Warning amber",
+        "canonical": "oklch(0.79 0.15 80)",
+        "tonalRamp": [
+          "oklch(0.15 0.15 80)",
+          "oklch(0.25 0.15 80)",
+          "oklch(0.35 0.15 80)",
+          "oklch(0.45 0.15 80)",
+          "oklch(0.55 0.15 80)",
+          "oklch(0.65 0.15 80)",
+          "oklch(0.8 0.15 80)",
+          "oklch(0.95 0.15 80)"
+        ],
+        "rampPurpose": "Synthesized OKLCH lightness steps for the panel preview; the canonical token alone is normative."
+      },
+      "warning-foreground": {
+        "role": "neutral",
+        "displayName": "Deep warning amber",
+        "canonical": "oklch(0.44 0.1 70)",
+        "tonalRamp": [
+          "oklch(0.15 0.1 70)",
+          "oklch(0.25 0.1 70)",
+          "oklch(0.35 0.1 70)",
+          "oklch(0.45 0.1 70)",
+          "oklch(0.55 0.1 70)",
+          "oklch(0.65 0.1 70)",
+          "oklch(0.8 0.1 70)",
+          "oklch(0.95 0.1 70)"
+        ],
+        "rampPurpose": "Synthesized OKLCH lightness steps for the panel preview; the canonical token alone is normative."
+      },
+      "destructive": {
+        "role": "neutral",
+        "displayName": "Destructive red",
+        "canonical": "oklch(0.577 0.245 27.325)",
+        "tonalRamp": [
+          "oklch(25.8% 0.092 26.042)",
+          "oklch(39.6% 0.141 25.723)",
+          "oklch(50.5% 0.213 27.518)",
+          "oklch(57.7% 0.245 27.325)",
+          "oklch(63.7% 0.237 25.331)",
+          "oklch(80.8% 0.114 19.571)",
+          "oklch(93.6% 0.032 17.717)",
+          "oklch(97.1% 0.013 17.38)"
+        ],
+        "rampSource": "Existing installed Tailwind theme, dark to light."
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Player identity",
+        "purpose": "Player detail heading."
+      },
+      "title": {
+        "displayName": "Panel title",
+        "purpose": "Panel titles; small cards use body-sized titles."
+      },
+      "body": {
+        "displayName": "Conversation body",
+        "purpose": "Chat bubbles, with relaxed line height."
+      },
+      "control": {
+        "displayName": "Action label",
+        "purpose": "Shared buttons and navigation."
+      },
+      "label": {
+        "displayName": "Supporting label",
+        "purpose": "Row metadata and footer notes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "extra-small",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Shared fields, outline buttons and cards."
+      },
+      {
+        "name": "medium",
+        "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "purpose": "Floating popover."
+      },
+      {
+        "name": "surface-ring",
+        "value": "0 0 0 1px color-mix(in oklab, var(--foreground) 10%, transparent)",
+        "purpose": "Card and popover boundary."
+      },
+      {
+        "name": "focus-ring",
+        "value": "0 0 0 3px color-mix(in oklab, var(--ring) 50%, transparent)",
+        "purpose": "Shared component focus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "resize-duration",
+        "value": "300ms",
+        "purpose": "Conversation and research dimensions; --resize-dur."
+      },
+      {
+        "name": "workspace-ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Resize, popup and disclosure curves."
+      },
+      {
+        "name": "dropdown-open-duration",
+        "value": "250ms",
+        "purpose": "Base UI popup opening; --dropdown-open-dur."
+      },
+      {
+        "name": "dropdown-close-duration",
+        "value": "150ms",
+        "purpose": "Base UI popup closing; --dropdown-close-dur."
+      },
+      {
+        "name": "dropdown-pre-scale",
+        "value": "0.97",
+        "purpose": "Popup starting scale."
+      },
+      {
+        "name": "dropdown-closing-scale",
+        "value": "0.99",
+        "purpose": "Popup ending scale."
+      },
+      {
+        "name": "disclosure-duration",
+        "value": "250ms",
+        "purpose": "Trade/filter panel height and chevron; --acc-expand, --acc-collapse, --acc-chevron."
+      },
+      {
+        "name": "component-state-duration",
+        "value": "150ms",
+        "purpose": "Imported Tailwind default state transition."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "research-compact",
+        "value": "1199px"
+      },
+      {
+        "name": "mobile",
+        "value": "767px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary small button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Deliberate proposal and player insertion actions.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\"><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M14 21L18 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M6 21L10 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M5 8H21\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M3 16H19\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg> Add to message</button>",
+      "css": ".ds-button-primary{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2rem;padding:0 0.625rem;border:1px solid transparent;border-radius:min(calc(var(--radius, 0.875rem) * 0.8), 10px);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-button-primary svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-button-primary:active{transform:translateY(1px);}.ds-button-primary:disabled{opacity:0.5;pointer-events:none;}.ds-button-primary:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-button-primary{background:var(--primary, oklch(0.508 0.118 165.612));color:var(--primary-foreground, oklch(0.979 0.021 166.113));}.ds-button-primary:hover{background:color-mix(in oklab,var(--primary, oklch(0.508 0.118 165.612)) 80%,transparent);}"
+    },
+    {
+      "name": "Secondary small button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting comparison actions.",
+      "html": "<button class=\"ds-button-secondary\" type=\"button\">Compare</button>",
+      "css": ".ds-button-secondary{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2rem;padding:0 0.625rem;border:1px solid transparent;border-radius:min(calc(var(--radius, 0.875rem) * 0.8), 10px);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-button-secondary svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-button-secondary:active{transform:translateY(1px);}.ds-button-secondary:disabled{opacity:0.5;pointer-events:none;}.ds-button-secondary:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-button-secondary{background:var(--secondary, oklch(0.967 0.001 286.375));color:var(--secondary-foreground, oklch(0.21 0.006 285.885));}.ds-button-secondary:hover{background:color-mix(in oklch,var(--secondary, oklch(0.967 0.001 286.375)),var(--foreground, oklch(0.141 0.005 285.823)) 5%);}"
+    },
+    {
+      "name": "Ghost small button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet browsing and panel actions.",
+      "html": "<button class=\"ds-button-ghost\" type=\"button\">Browse players</button>",
+      "css": ".ds-button-ghost{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2rem;padding:0 0.625rem;border:1px solid transparent;border-radius:min(calc(var(--radius, 0.875rem) * 0.8), 10px);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-button-ghost svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-button-ghost:active{transform:translateY(1px);}.ds-button-ghost:disabled{opacity:0.5;pointer-events:none;}.ds-button-ghost:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-button-ghost{background:transparent;color:var(--foreground, oklch(0.141 0.005 285.823));}.ds-button-ghost:hover{background:var(--muted, oklch(0.967 0.001 286.375));}"
+    },
+    {
+      "name": "Outlined button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Optional actions such as a conversation starter.",
+      "html": "<button class=\"ds-button-outline\" type=\"button\">Try a trade</button>",
+      "css": ".ds-button-outline{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2.25rem;padding:0 0.625rem;border:1px solid transparent;border-radius:calc(var(--radius, 0.875rem) * 0.8);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-button-outline svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-button-outline:active{transform:translateY(1px);}.ds-button-outline:disabled{opacity:0.5;pointer-events:none;}.ds-button-outline:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-button-outline{background:var(--background, oklch(1 0 0));color:var(--foreground, oklch(0.141 0.005 285.823));border-color:var(--border, oklch(0.92 0.004 286.32));box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);}.ds-button-outline:hover{background:var(--muted, oklch(0.967 0.001 286.375));}"
+    },
+    {
+      "name": "Player search field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "InputGroup with a leading icon and labelled search control.",
+      "html": "<label class=\"ds-search\"><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M17 17L21 21\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg><input class=\"ds-search-input\" type=\"search\" aria-label=\"Search players\" placeholder=\"Search players\" /></label>",
+      "css": ".ds-search{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:flex;align-items:center;gap:0.5rem;height:2.25rem;width:100%;border:1px solid var(--input, oklch(0.92 0.004 286.32));border-radius:calc(var(--radius,0.875rem) * 0.8);color:var(--foreground, oklch(0.141 0.005 285.823));box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);transition:color 150ms ease,box-shadow 150ms ease;}.ds-search svg{width:16px;height:16px;flex-shrink:0;margin-left:0.5rem;color:var(--muted-foreground, oklch(0.552 0.016 285.938));}.ds-search-input{font-family:var(--font-sans, \"Inter Variable\", sans-serif);width:100%;min-width:0;height:2.25rem;border:0;border-radius:0;background:transparent;padding:0.25rem 0.625rem;color:var(--foreground, oklch(0.141 0.005 285.823));font-size:1rem;line-height:1.5rem;outline:none;}.ds-search-input::placeholder{color:var(--muted-foreground, oklch(0.552 0.016 285.938));}.ds-search:hover{border-color:var(--input, oklch(0.92 0.004 286.32));}.ds-search:has(.ds-search-input:focus-visible){border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}@media(min-width:768px){.ds-search-input{font-size:0.875rem;}}"
+    },
+    {
+      "name": "Workspace view navigation",
+      "kind": "nav",
+      "refersTo": "navigation-toggle",
+      "description": "Header ToggleGroup for players and saved proposals.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Workspace views\"><button class=\"ds-nav-toggle\" type=\"button\" aria-pressed=\"true\">Players</button><button class=\"ds-nav-toggle\" type=\"button\" aria-pressed=\"false\">Saved trades</button></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:0.25rem;}.ds-nav-toggle{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2.25rem;min-width:2.25rem;padding:0 0.625rem;border:0;border-radius:calc(var(--radius,0.875rem) * 0.8);font-size:0.875rem;font-weight:500;line-height:1.25rem;color:var(--foreground, oklch(0.141 0.005 285.823));background:transparent;white-space:nowrap;cursor:pointer;transition:color 150ms ease,box-shadow 150ms ease;}.ds-nav-toggle:hover,.ds-nav-toggle[aria-pressed=\"true\"]{background:var(--muted, oklch(0.967 0.001 286.375));}.ds-nav-toggle:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}"
+    },
+    {
+      "name": "Resolved player badge",
+      "kind": "chip",
+      "refersTo": "player-badge",
+      "description": "An exact player reference embedded in editable text. Team image omitted from this asset-independent preview.",
+      "html": "<span class=\"ds-player-badge\" tabindex=\"0\"><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M14 21L18 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M6 21L10 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M5 8H21\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M3 16H19\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg>Player name</span>",
+      "css": ".ds-player-badge{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:1.5rem;padding:0.125rem 0.375rem;margin:0 0.125rem;vertical-align:baseline;border:1px solid transparent;border-radius:calc(var(--radius,0.875rem) * 0.8);background:var(--secondary, oklch(0.967 0.001 286.375));color:var(--secondary-foreground, oklch(0.21 0.006 285.885));font-size:0.75rem;font-weight:500;white-space:nowrap;transition:all 150ms ease;}.ds-player-badge svg{width:12px;height:12px;pointer-events:none;}.ds-player-badge:hover{background:var(--secondary, oklch(0.967 0.001 286.375));}.ds-player-badge:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}"
+    },
+    {
+      "name": "Unresolved player badge",
+      "kind": "chip",
+      "refersTo": "unresolved-badge",
+      "description": "An ambiguous reference that must be resolved before submission.",
+      "html": "<button class=\"ds-unresolved-badge\" type=\"button\" aria-label=\"Resolve player reference\"><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M14 21L18 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M6 21L10 3\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M5 8H21\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M3 16H19\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></circle><path d=\"M9.5 9.5C9.5 8.11929 10.6193 7 12 7C13.3807 7 14.5 8.11929 14.5 9.5C14.5 10.3569 14.0689 11.1131 13.4117 11.5636C12.7283 12.0319 12 12.6716 12 13.5\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M12.125 16.75H12M12.25 16.75C12.25 16.8881 12.1381 17 12 17C11.8619 17 11.75 16.8881 11.75 16.75C11.75 16.6119 11.8619 16.5 12 16.5C12.1381 16.5 12.25 16.6119 12.25 16.75Z\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg>Player name</button>",
+      "css": ".ds-unresolved-badge{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:1.5rem;padding:0.125rem 0.375rem;margin:0 0.125rem;vertical-align:baseline;border:1px solid transparent;border-radius:calc(var(--radius,0.875rem) * 0.8);background:color-mix(in oklab,var(--warning, oklch(0.79 0.15 80)) 15%,transparent);color:var(--warning-foreground, oklch(0.44 0.1 70));font-size:0.75rem;font-weight:500;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-unresolved-badge svg{width:12px;height:12px;pointer-events:none;}.ds-unresolved-badge:hover{background:color-mix(in oklab,var(--warning, oklch(0.79 0.15 80)) 15%,transparent);}.ds-unresolved-badge:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}"
+    },
+    {
+      "name": "Small trade card",
+      "kind": "card",
+      "refersTo": "trade-card",
+      "description": "Shared Card shell and summary treatment for inspectable trade evidence.",
+      "html": "<article class=\"ds-trade-card\"><div class=\"ds-card-header\"><button class=\"ds-card-summary\" type=\"button\"><span class=\"ds-card-title\">Trade proposal</span><span class=\"ds-card-description\">Review swap</span></button></div><div class=\"ds-card-content\">Confirm the package before checking.</div></article>",
+      "css": ".ds-trade-card{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:flex;flex-direction:column;gap:1rem;overflow:hidden;padding:1rem 0;border-radius:calc(var(--radius,0.875rem) * 1.4);background:var(--card, oklch(1 0 0));color:var(--foreground, oklch(0.141 0.005 285.823));font-size:0.875rem;box-shadow:0 0 0 1px color-mix(in oklab,var(--foreground, oklch(0.141 0.005 285.823)) 10%,transparent),0 1px 2px 0 rgb(0 0 0 / 0.05);}.ds-card-header{display:flex;align-items:center;gap:0.5rem;padding:0 1rem;}.ds-card-summary{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:flex;flex:1;min-width:0;flex-direction:column;align-items:flex-start;gap:0.25rem;padding:0 0.625rem;border:1px solid transparent;border-radius:calc(var(--radius,0.875rem) * 0.8);background:transparent;color:var(--foreground, oklch(0.141 0.005 285.823));text-align:left;cursor:pointer;transition:all 150ms ease;}.ds-card-summary:hover{background:var(--muted, oklch(0.967 0.001 286.375));}.ds-card-summary:active{transform:translateY(1px);}.ds-card-summary:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-card-title{font-size:0.875rem;font-weight:500;line-height:1.5;}.ds-card-description{font-size:0.875rem;font-weight:400;color:var(--muted-foreground, oklch(0.552 0.016 285.938));}.ds-card-content{display:flex;flex-direction:column;gap:0.75rem;padding:0 1rem;color:var(--muted-foreground, oklch(0.552 0.016 285.938));}"
+    },
+    {
+      "name": "Trade composer",
+      "kind": "custom",
+      "refersTo": "composer",
+      "description": "Lexical editing surface translated to editable HTML inside the shared InputGroup shell.",
+      "html": "<div class=\"ds-composer\" role=\"group\"><div class=\"ds-composer-editor\" contenteditable=\"true\" role=\"textbox\" aria-label=\"Trade message\" aria-multiline=\"true\">Describe a trade…</div><div class=\"ds-composer-toolbar\"><button class=\"ds-composer-browse\" type=\"button\">Browse players</button><button class=\"ds-composer-send\" type=\"button\" aria-label=\"Send message\"><svg class=\"ds-icon\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M12 5.5V19\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path><path d=\"M18 11C18 11 13.5811 5.00001 12 5C10.4188 4.99999 6 11 6 11\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.7\"></path></svg></button></div></div>",
+      "css": ".ds-composer{font-family:var(--font-sans, \"Inter Variable\", sans-serif);position:relative;display:flex;flex-direction:column;width:100%;min-width:0;border:1px solid var(--input, oklch(0.92 0.004 286.32));border-radius:calc(var(--radius,0.875rem) * 0.8);box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);transition:color 150ms ease,box-shadow 150ms ease;}.ds-composer:has(.ds-composer-editor:focus-visible){border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-composer-editor{min-height:72px;max-height:192px;padding:16px 18px 12px;overflow-y:auto;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--foreground, oklch(0.141 0.005 285.823));caret-color:var(--primary, oklch(0.508 0.118 165.612));font-size:14px;line-height:1.9;outline:none;}.ds-composer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:0.5rem;padding:0.375rem 0.625rem 0.5rem;}.ds-composer-browse{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2rem;padding:0 0.625rem;border:1px solid transparent;border-radius:min(calc(var(--radius, 0.875rem) * 0.8), 10px);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-composer-browse svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-composer-browse:active{transform:translateY(1px);}.ds-composer-browse:disabled{opacity:0.5;pointer-events:none;}.ds-composer-browse:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-composer-browse{background:transparent;color:var(--foreground, oklch(0.141 0.005 285.823));}.ds-composer-browse:hover{background:var(--muted, oklch(0.967 0.001 286.375));}.ds-composer-send{font-family:var(--font-sans, \"Inter Variable\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:0.25rem;height:2.25rem;padding:0 0.625rem;border:1px solid transparent;border-radius:calc(var(--radius,0.875rem) * 0.8);font-size:0.875rem;font-weight:500;line-height:1.25rem;white-space:nowrap;cursor:pointer;transition:all 150ms ease;}.ds-composer-send svg{flex-shrink:0;pointer-events:none;width:16px;height:16px;}.ds-composer-send:active{transform:translateY(1px);}.ds-composer-send:disabled{opacity:0.5;pointer-events:none;}.ds-composer-send:focus-visible{outline:none;border-color:var(--ring, oklch(0.705 0.015 286.067));box-shadow:0 0 0 3px color-mix(in oklab,var(--ring, oklch(0.705 0.015 286.067)) 50%,transparent);}.ds-composer-send{width:2.25rem;padding:0;background:var(--primary, oklch(0.508 0.118 165.612));color:var(--primary-foreground, oklch(0.979 0.021 166.113));}.ds-composer-send:hover{background:color-mix(in oklab,var(--primary, oklch(0.508 0.118 165.612)) 80%,transparent);}@media(max-width:767px){.ds-composer-editor{min-height:76px;padding:14px;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Conversation is the working surface",
+    "overview": "Gambit retains its incumbent white, zinc and emerald system. Inter Variable, shadcn components backed by Base UI, Hugeicons and restrained rounded controls support a readable conversation with progressively revealed research. This document records the implementation; it does not introduce a new visual identity.\n\nSurfaces stay quiet and copy explains an action or state. Team marks identify the assets being researched. Structural dividers, compact control groups and tabular numbers make detailed trade evidence easier to inspect without turning the workspace into a dashboard.",
+    "keyCharacteristics": [
+      "White surfaces and zinc hierarchy.",
+      "Emerald actions with explicit warning and error states.",
+      "One Inter family for conversation, controls and evidence.",
+      "Rounded shadcn controls and fine structural dividers.",
+      "Progressive supporting space with reduced-motion alternatives."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning Before Colour Rule",
+        "body": "Pair state colour with a readable label or icon; the implementation names unresolved references and trade verdicts explicitly.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Keep headings, conversation and evidence in Inter Variable; use weight, spacing and size for hierarchy.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "**Do** preserve white/zinc surfaces, emerald actions and the source's semantic OKLCH tokens.",
+      "**Do** use shared shadcn/Base UI controls for actions, fields, selection, navigation and disclosure.",
+      "**Do** keep Inter Variable, tabular numbers for evidence, and explicit labels for state.",
+      "**Do** reveal research progressively and preserve conversation state across viewport changes.",
+      "**Do** honour reduced motion for resizing, popovers and disclosure."
+    ],
+    "donts": [
+      "**Don't** add decorative copy or use team marks as panel ornament.",
+      "**Don't** silently resolve ambiguous player identities or make browsing mutate a proposal.",
+      "**Don't** present illustrative performance as measured player data.",
+      "**Don't** introduce a competing visual identity when extending this workspace."
+    ]
+  }
+}

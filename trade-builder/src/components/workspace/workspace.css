@@ -1,0 +1,201 @@
+.gambit-app {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+}
+.gambit-app :is(h1, h2, h3, h4, h5, h6) {
+  @apply leading-heading text-balance;
+}
+.gambit-app p:not(.composer-paragraph) {
+  @apply leading-body text-pretty;
+}
+
+.workspace-content {
+  --player-list-width: 360px;
+  --player-inspector-width: 520px;
+  --saved-pane-width: 460px;
+  --pick-pane-width: 460px;
+  --reserved-list-width: 0px;
+  --reserved-inspector-width: 0px;
+  --reserved-saved-width: 0px;
+  --reserved-width: calc(
+    var(--reserved-list-width) + var(--reserved-inspector-width) +
+      var(--reserved-saved-width)
+  );
+  /* Sibling movement and chat reflow share a single duration. */
+  --panel-close-dur: var(--panel-open-dur);
+  container-type: inline-size;
+}
+.workspace-content[data-list-open="true"] {
+  --reserved-list-width: var(--player-list-width);
+}
+.workspace-content[data-inspector-open="true"] {
+  --reserved-inspector-width: var(--player-inspector-width);
+}
+.workspace-content[data-saved-open="true"] {
+  --reserved-saved-width: var(--saved-pane-width);
+}
+.workspace-content[data-picks-open="true"] {
+  --reserved-list-width: var(--pick-pane-width);
+}
+.pick-pane { width: var(--pick-pane-width); }
+.pick-token-host { display: inline-block; max-width: 100%; vertical-align: middle; }
+.chat-frame {
+  --resize-dur: var(--panel-close-dur);
+  width: 100%;
+}
+.connection-notice {
+  --notice-gutter: 36px;
+  width: calc(min(100%, 760px) - 2 * var(--notice-gutter));
+}
+.workspace-content[data-research="true"] .chat-frame {
+  --resize-dur: var(--panel-open-dur);
+  width: calc(100% - var(--reserved-width));
+}
+.saved-pane {
+  width: var(--saved-pane-width);
+}
+.saved-pane,
+.saved-pane .research-resize-content {
+  background: color-mix(in oklab, var(--muted) 50%, var(--background));
+}
+/* Horizontal, full-width travel for the transitions-dev panel recipe. */
+.research-pane.t-panel-slide {
+  transform: translateX(100%);
+}
+.research-pane.t-panel-slide[data-open="true"] {
+  transform: translateX(0);
+}
+/* Only the empty chat uses a centered welcome group. */
+.chat-panel[data-empty="true"] > [data-slot="message-scroller"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.chat-panel[data-empty="true"] .composer-area {
+  position: absolute;
+  /* Lift the welcome group slightly to balance the header and composer weight. */
+  top: calc(50% - clamp(24px, 5dvh, 48px));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Account for the upward offset when the welcome group needs to scroll. */
+  max-height: calc(100% - 2 * clamp(24px, 5dvh, 48px));
+}
+.chat-panel[data-empty="true"] .composer-area-content {
+  /* Keep the focus ring and entrance travel inside the scroll viewport. */
+  padding-block: calc(4px + var(--stagger-distance));
+  gap: 28px;
+}
+
+.player-token-host,
+.player-badge-host {
+  display: inline-block;
+  height: 1em;
+  margin-inline: 0.125em;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+/* Keep the line box text-sized while the taller badge overlaps it evenly. */
+.player-token-host > :is([data-variant="player"], [data-variant="warning"]),
+.player-badge-host > [data-slot="badge"] {
+  position: relative;
+  top: 50%;
+  display: flex;
+  margin-inline: 0;
+  transform: translateY(-50%);
+}
+
+/* A 20px team mark sits 2px from each edge of the 24px badge, including its border. */
+:is(.player-token-host, .player-badge-host)
+  > [data-slot="badge"]:has(> .team-mark:first-child) {
+  padding-inline-start: 1px;
+}
+
+.player-badge-host
+  > [data-slot="badge"][data-logo-shape="freeform"]:has(
+    > .team-mark[data-team-logo-status="loaded"]:first-child
+  ) {
+  padding-inline-start: 4px;
+}
+.browser-layout[data-detail="true"]
+  .player-list.t-panel-slide[data-open="true"] {
+  transform: translateX(calc(-1 * var(--player-inspector-width)));
+}
+.player-inspector {
+  width: var(--player-inspector-width);
+}
+.player-list {
+  width: var(--player-list-width);
+}
+@media (max-width: 1199px) {
+  .connection-notice {
+    --notice-gutter: 24px;
+  }
+  .workspace-content {
+    --player-list-width: 46cqw;
+    --player-inspector-width: 46cqw;
+    --saved-pane-width: 46cqw;
+    --pick-pane-width: 46cqw;
+  }
+  .workspace-content[data-inspector-open="true"] {
+    --reserved-list-width: 0px;
+  }
+  .browser-layout[data-detail="true"] .player-list {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .connection-notice {
+    --notice-gutter: 14px;
+  }
+  .workspace-content {
+    --player-list-width: 100cqw;
+    --player-inspector-width: 100cqw;
+    --saved-pane-width: 100cqw;
+    --pick-pane-width: 100cqw;
+  }
+  .workspace-content .t-resize {
+    transition: none;
+  }
+  .workspace-content .chat-frame,
+  .workspace-content[data-research="true"] .chat-frame {
+    width: 100%;
+  }
+  .workspace-content[data-research="true"] .chat-frame {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gambit-app *,
+  .gambit-app *::before,
+  .gambit-app *::after {
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Base UI measures its panels; the existing motion curve keeps expansion consistent. */
+.trade-panel,
+.filter-panel {
+  height: var(--collapsible-panel-height);
+  overflow: hidden;
+  transition:
+    height var(--acc-expand) var(--acc-ease),
+    opacity var(--acc-expand) var(--acc-ease);
+}
+.trade-panel[data-starting-style],
+.trade-panel[data-ending-style],
+.filter-panel[data-starting-style],
+.filter-panel[data-ending-style] {
+  height: 0;
+  opacity: 0;
+}
+
+/* Resizing belongs to the panel's contents; the existing outer slide shell stays
+   mounted and keeps its open/close transform and timing. */
+.research-pane[data-open="true"] .research-resize-content,
+.research-pane[data-open="true"] .research-resize-handle {
+  pointer-events: auto;
+}
+.workspace-content[data-resizing="true"] .chat-frame,
+.workspace-content[data-resizing="true"] .research-pane {
+  transition: none;
+}

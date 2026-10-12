@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-09T00:29:05.197Z",
+  "serviceUnavailable": true,
+  "scenarios": [
+    {
+      "name": "discovery eligibility: sibling replacement and signing",
+      "expectedTurns": 3
+    },
+    {
+      "name": "discovery eligibility: Seth Curry",
+      "expectedTurns": 1
+    },
+    {
+      "name": "discovery eligibility: Amari Williams",
+      "expectedTurns": 1
+    },
+    {
+      "name": "discovery eligibility: package cannot silently omit unsigned player",
+      "expectedTurns": 1
+    },
+    {
+      "name": "discovery eligibility: change active player and source",
+      "expectedTurns": 3
+    }
+  ],
+  "verificationNote": "Completed live responses only. A separate pagination attempt and subsequent rerun were blocked by provider credits.",
+  "results": [
+    {
+      "scenario": "discovery eligibility: Amari Williams",
+      "input": "Find trades for Amari Williams.",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 8557,
+      "status": "complete",
+      "message": "Amari Williams has a two-way contract. Trade searches currently support players on active standard contracts."
+    },
+    {
+      "scenario": "discovery eligibility: Seth Curry",
+      "input": "Find trades for Seth Curry.",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 8621,
+      "status": "complete",
+      "message": "Seth Curry is unsigned, so he can\u2019t be traded. We can explore signing him instead."
+    },
+    {
+      "scenario": "discovery eligibility: sibling replacement and signing",
+      "input": "find trades for steph curry",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 11078,
+      "status": "complete",
+      "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+    },
+    {
+      "scenario": "discovery eligibility: sibling replacement and signing",
+      "input": "do his brother instead",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 6976,
+      "status": "complete",
+      "message": "Seth Curry is unsigned, so he can\u2019t be traded. We can explore signing him instead."
+    },
+    {
+      "scenario": "discovery eligibility: sibling replacement and signing",
+      "input": "Sign him to Boston on a one-year minimum contract instead.",
+      "passed": true,
+      "verificationNote": "Corrected assertion from teamId to signingTeamId and rechecked the saved live response.",
+      "elapsedMs": 15067,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked."
+    },
+    {
+      "scenario": "discovery eligibility: package cannot silently omit unsigned player",
+      "input": "Find trades for Stephen Curry and Seth Curry.",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 5189,
+      "status": "complete",
+      "message": "Seth Curry is unsigned, so he can\u2019t be traded. We can explore signing him instead."
+    },
+    {
+      "scenario": "discovery eligibility: change active player and source",
+      "input": "find trades for steph curry",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 6357,
+      "status": "complete",
+      "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+    },
+    {
+      "scenario": "discovery eligibility: change active player and source",
+      "input": "do KD instead",
+      "passed": true,
+      "verificationNote": null,
+      "elapsedMs": 7445,
+      "status": "complete",
+      "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+    }
+  ]
+}

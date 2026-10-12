@@ -1,0 +1,3849 @@
+{
+  "checkedAt": "2026-10-08T12:32:52.308099+00:00",
+  "model": "gpt-6.1-sol",
+  "reasoning": "low",
+  "method": "Initial live HTTP/SSE batch followed by complete reruns of corrected or affected conversations. No unit tests.",
+  "conversations": 44,
+  "turns": 112,
+  "scenarios": [
+    {
+      "scenario": "replace a scoped abbreviation and correct the first displayed trade",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5913,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "772749ea-0709-45ac-8798-40e9c096d4b2",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:45.232Z"
+          }
+        },
+        {
+          "input": "swap derrick for steph curry",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 5780,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "772749ea-0709-45ac-8798-40e9c096d4b2",
+            "revision": 2,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:51.137Z",
+            "parent": {
+              "proposalId": "772749ea-0709-45ac-8798-40e9c096d4b2",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "no i mean swap driick for steph in that first trade",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 5739,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "772749ea-0709-45ac-8798-40e9c096d4b2",
+            "revision": 3,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:56.678Z",
+            "parent": {
+              "proposalId": "772749ea-0709-45ac-8798-40e9c096d4b2",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "equivalent age limit: must not be over 25",
+      "turns": [
+        {
+          "input": "Find Chicago trades, one player for one player. Incoming players must not be over 25.",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 25 or younger.",
+          "elapsedMs": 5587,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "equivalent age limit: must be no older than 25",
+      "turns": [
+        {
+          "input": "Find Chicago trades, one player for one player. Incoming players must be no older than 25.",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 25 or younger.",
+          "elapsedMs": 6574,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "equivalent age limit: must be 25 or younger",
+      "turns": [
+        {
+          "input": "Find Chicago trades, one player for one player. Incoming players must be 25 or younger.",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 25 or younger.",
+          "elapsedMs": 6070,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "equivalent age limit: must be twenty five or younger",
+      "turns": [
+        {
+          "input": "Find Chicago trades, one player for one player. Incoming players must be twenty five or younger.",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 25 or younger.",
+          "elapsedMs": 6094,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "shortened given name discovery",
+      "turns": [
+        {
+          "input": "find a trade for steph curry",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 7201,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "shortened names in a specified swap",
+      "turns": [
+        {
+          "input": "Trade Steph Curry for Ant Edwards.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Minnesota Timberwolves do not satisfy salary matching requirements.",
+          "elapsedMs": 5299,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "29e61059-ecfe-4946-88d0-47519be1394c",
+            "revision": 1,
+            "teamIds": [
+              10,
+              18
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 18
+              },
+              {
+                "assetType": "player",
+                "assetId": 17252,
+                "fromTeamId": 18,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-08T12:14:43.212Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "distinct shortened and full names in the same package",
+      "turns": [
+        {
+          "input": "Trade Steph Curry for Seth Curry.",
+          "passed": true,
+          "status": "complete",
+          "message": "Seth Curry's contract status isn\u2019t supported for trades yet.",
+          "elapsedMs": 5333,
+          "streamedUpdates": 5,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "surname without a given name remains ambiguous",
+      "turns": [
+        {
+          "input": "Find a trade for Curry.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cCurry\u201d do you mean?",
+          "elapsedMs": 5395,
+          "streamedUpdates": 5,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "turns": [
+        {
+          "input": "Build a three-team trade between Boston, Miami and Chicago.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which players would you like to include?",
+          "elapsedMs": 3698,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Derrick White, Andrew Wiggins and Tre Jones",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which team should receive Derrick White?",
+          "elapsedMs": 5008,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements.",
+          "elapsedMs": 6477,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "43c3c2ac-5e41-411a-896a-2165d56431a4",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16,
+              5
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 5
+              },
+              {
+                "assetType": "player",
+                "assetId": 17044,
+                "fromTeamId": 5,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:14:58.481Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "player question accepts a complete routed answer",
+      "turns": [
+        {
+          "input": "Build a three-team trade between Boston, Miami and Chicago.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which players would you like to include?",
+          "elapsedMs": 4478,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements.",
+          "elapsedMs": 5158,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "ddf779fe-512c-41d0-a69d-788db1a1f16f",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16,
+              5
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 5
+              },
+              {
+                "assetType": "player",
+                "assetId": 17044,
+                "fromTeamId": 5,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:14:53.164Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "turns": [
+        {
+          "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+          "passed": true,
+          "status": "complete",
+          "message": "### Derrick White vs. Andrew Wiggins\n\n| Catalogue detail | Derrick White | Andrew Wiggins |\n|---|---|---|\n| Team | Boston Celtics | Miami Heat |\n| Position | SG | SF |\n| Age | 32 | 32 |\n| NBA experience | 8 years | 11 years |\n| 2026\u201327 salary | $30,348,000 | $30,169,644 |\n| Contract remaining | 3 years | 3 years |\n| 2027\u201328 salary (estimated) | $32,775,840 | $32,583,216 |\n| 2028\u201329 salary (estimated) | $35,397,907 | $35,189,873 |\n\n**Bottom line:** Their catalogue contracts are very similar: White earns $178,356 more this season, and both have three years remaining. White is listed as a shooting guard, while Wiggins is a small forward with three more years of NBA experience. Both have full Bird rights and no listed player option, team option or no-trade clause.\n\nThese records don't include performance statistics, so they don't establish which player is better or a better fit. No trade was created.",
+          "elapsedMs": 10454,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "What is Derrick White's salary and contract length?",
+          "passed": true,
+          "status": "complete",
+          "message": "Derrick White\u2019s 2026\u201327 salary is **$30,348,000**. He has **3 years remaining** on his Celtics contract, through **2028\u201329**.",
+          "elapsedMs": 9641,
+          "streamedUpdates": 9,
+          "proposal": null
+        },
+        {
+          "input": "Swap Terry Rozier for Derrick White.",
+          "passed": true,
+          "status": "complete",
+          "message": "Terry Rozier's contract status isn\u2019t supported for trades yet.",
+          "elapsedMs": 5748,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Build a three-team trade between Boston, Miami and Chicago.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which players would you like to include?",
+          "elapsedMs": 4020,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Trade Michael Imaginary to Miami.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Who did you mean by \u201cMichael Imaginary\u201d?",
+          "elapsedMs": 12153,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Swap these selected players.",
+          "passed": true,
+          "status": "error",
+          "message": "A selected player is no longer available.",
+          "elapsedMs": 7,
+          "streamedUpdates": 5,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5863,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:45.115Z"
+          }
+        },
+        {
+          "input": "Pelle Larsson instead of Wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 3939,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 2,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:49.304Z",
+            "parent": {
+              "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "why doesn't that work?",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.\n\nBoston Celtics sends Derrick White ($30,348,000) and receives Pelle Larsson ($2,296,271). Payroll becomes $178,630,103 (Over Cap).\nExpanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $2.3M\nNote: Boston Celtics are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings\n\nMiami Heat sends Pelle Larsson ($2,296,271) and receives Derrick White ($30,348,000). Payroll becomes $234,987,685 (Over Second Apron).\nFirst apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE \u2014 would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M.\nNote: Miami Heat are a luxury tax team \u2014 limited to Taxpayer MLE ($6.1M) for future signings",
+          "elapsedMs": 3187,
+          "streamedUpdates": 7,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 2,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:49.304Z",
+            "parent": {
+              "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "put Wiggins back",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4747,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 3,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:24:57.196Z",
+            "parent": {
+              "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+              "revision": 2
+            }
+          }
+        },
+        {
+          "input": "remove him",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 4403,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 4,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:25:01.612Z",
+            "parent": {
+              "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+              "revision": 3
+            }
+          }
+        },
+        {
+          "input": "undo",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 3919,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+            "revision": 5,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:25:05.517Z",
+            "parent": {
+              "proposalId": "56e54f3d-f23b-4f77-a7f7-19f8e3fd7241",
+              "revision": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "cycle replacement",
+      "turns": [
+        {
+          "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 4605,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+            "revision": 1,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:30.155Z"
+          }
+        },
+        {
+          "input": "change curry for Giannis Antetokounmpo",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5530,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+            "revision": 2,
+            "teamIds": [
+              2,
+              8,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:35.384Z",
+            "parent": {
+              "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "undo that",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 4932,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+            "revision": 3,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:40.568Z",
+            "parent": {
+              "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+              "revision": 2
+            }
+          }
+        },
+        {
+          "input": "Buddy Hield instead of Curry",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Atlanta Hawks do not satisfy salary matching requirements.",
+          "elapsedMs": 4486,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+            "revision": 4,
+            "teamIds": [
+              2,
+              8,
+              1
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 1
+              },
+              {
+                "assetType": "player",
+                "assetId": 16975,
+                "fromTeamId": 1,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:45.113Z",
+            "parent": {
+              "proposalId": "b1165211-dd9e-4435-9825-056328fd125f",
+              "revision": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "owner retained when another player still trades",
+      "turns": [
+        {
+          "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry and Draymond Green to Boston.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 4858,
+          "streamedUpdates": 17,
+          "proposal": {
+            "proposalId": "2bd62dec-0c28-49ef-9495-fd617b495ddd",
+            "revision": 1,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17124,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:30.431Z"
+          }
+        },
+        {
+          "input": "change curry for Giannis Antetokounmpo",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics, Golden State Warriors do not satisfy salary matching requirements.",
+          "elapsedMs": 7408,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "2bd62dec-0c28-49ef-9495-fd617b495ddd",
+            "revision": 2,
+            "teamIds": [
+              2,
+              8,
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17124,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:15:37.803Z",
+            "parent": {
+              "proposalId": "2bd62dec-0c28-49ef-9495-fd617b495ddd",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "turns": [
+        {
+          "input": "trade nick for andrew",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cnick\u201d do you mean?",
+          "elapsedMs": 6395,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Nick Smith Jr.\n\nactually i mean dave",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Who did you mean by \u201cdave\u201d?",
+          "elapsedMs": 4425,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Dalen Terry",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201candrew\u201d do you mean?",
+          "elapsedMs": 4747,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Andrew Wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 5411,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "20ba82a8-7478-474b-bb9d-b6d9858f36e4",
+            "revision": 1,
+            "teamIds": [
+              23,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17340,
+                "fromTeamId": 23,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 23
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:38.923Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "turns": [
+        {
+          "input": "i want to trade white",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cwhite\u201d do you mean?",
+          "elapsedMs": 4767,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Derrick White",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 7702,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "the second one",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 3870,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "b55dc4a5-a11d-490d-89f0-614727436a58",
+            "revision": 1,
+            "createdAt": "2026-10-08T12:16:07.250Z",
+            "teamIds": [
+              2,
+              17
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 17
+              },
+              {
+                "assetType": "player",
+                "assetId": 17245,
+                "fromTeamId": 17,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17237,
+                "fromTeamId": 17,
+                "toTeamId": 2
+              }
+            ]
+          }
+        },
+        {
+          "input": "is it a good deal?",
+          "passed": true,
+          "status": "complete",
+          "message": "I can compare contracts, age and position, but I don\u2019t have the performance and team-fit information needed to judge whether this is a good deal for either team. Passing salary and roster checks alone does not establish basketball value.",
+          "elapsedMs": 3224,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "b55dc4a5-a11d-490d-89f0-614727436a58",
+            "revision": 1,
+            "createdAt": "2026-10-08T12:16:07.250Z",
+            "teamIds": [
+              2,
+              17
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 17
+              },
+              {
+                "assetType": "player",
+                "assetId": 17245,
+                "fromTeamId": 17,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17237,
+                "fromTeamId": 17,
+                "toTeamId": 2
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "duplicate full name and implicit two-team exchange",
+      "turns": [
+        {
+          "input": "trade ryan conwell, kam jones and andrew wiggins",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201ckam jones\u201d do you mean?",
+          "elapsedMs": 5384,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Kam Jones",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements.",
+          "elapsedMs": 6255,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "68b5eac5-689b-4160-9075-af553a374cc6",
+            "revision": 1,
+            "teamIds": [
+              16,
+              5
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17507,
+                "fromTeamId": 16,
+                "toTeamId": 5
+              },
+              {
+                "assetType": "player",
+                "assetId": 17164,
+                "fromTeamId": 5,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 5
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:06.538Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "full name transposition",
+      "turns": [
+        {
+          "input": "trade derrick whtie for andrew wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4245,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "e5eb082c-96c3-41e7-98f9-2c59d1e4504b",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:20.750Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "typo in a specified swap",
+      "turns": [
+        {
+          "input": "trade derrik white for andrew wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4408,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "711a1b80-8232-4565-8f39-3950f56d6e1b",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:20.983Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "replacement with an obvious full name typo",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4642,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "2487192c-7d81-48fd-9c1d-6de061425c57",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:21.179Z"
+          }
+        },
+        {
+          "input": "replace White with Jrue Holidy",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 5386,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "2487192c-7d81-48fd-9c1d-6de061425c57",
+            "revision": 2,
+            "teamIds": [
+              25,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 25
+              },
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:26.359Z",
+            "parent": {
+              "proposalId": "2487192c-7d81-48fd-9c1d-6de061425c57",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "turns": [
+        {
+          "input": "trade white for andrew wiggins",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cwhite\u201d do you mean?",
+          "elapsedMs": 4199,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Coby White",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4486,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "e93571ee-c16b-4969-9cd3-bc432f472273",
+            "revision": 1,
+            "teamIds": [
+              4,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 4
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:35.274Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "typo preserves a different first name",
+      "turns": [
+        {
+          "input": "trade coby whte for andrew wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 6302,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "535f50c8-8dc8-432d-ab2b-f26dc7a5e317",
+            "revision": 1,
+            "teamIds": [
+              4,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 4
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:32.673Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "turns": [
+        {
+          "input": "trade jalin williams for andrew wiggins",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cjalin williams\u201d do you mean?",
+          "elapsedMs": 7290,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Jaylin Williams",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+          "elapsedMs": 6470,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "8eb7edd9-f86c-45d2-8b26-07090ac3d548",
+            "revision": 1,
+            "teamIds": [
+              21,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17306,
+                "fromTeamId": 21,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 21
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:40.099Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "turns": [
+        {
+          "input": "Swap Michael Imaginary for Andrew Wiggins.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Who did you mean by \u201cMichael Imaginary\u201d?",
+          "elapsedMs": 4327,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Derrick White",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 6169,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "49cbe037-538b-464d-822b-dcecc4db6c01",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:16:50.576Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "fresh package and unrelated research",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 6324,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "7e92fc9a-48b4-4882-a811-9097c49f77e9",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:24.521Z"
+          }
+        },
+        {
+          "input": "swap Giannis Antetokounmpo for Stephen Curry",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 5056,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "25514b5c-c753-4df0-bfce-861dd9f784a9",
+            "revision": 1,
+            "teamIds": [
+              16,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:29.462Z"
+          }
+        },
+        {
+          "input": "compare Derrick White and Andrew Wiggins, don't change the trade",
+          "passed": true,
+          "status": "complete",
+          "message": "Your Giannis\u2013Curry trade remains unchanged.\n\n| Catalogue detail | Derrick White | Andrew Wiggins |\n|---|---|---|\n| Team | Boston Celtics | Miami Heat |\n| Position | SG | SF |\n| Age | 32 | 32 |\n| NBA experience | 8 years | 11 years |\n| 2026\u201327 salary | $30,348,000 | $30,169,644 |\n| Contract remaining | 3 years | 3 years |\n| 2027\u201328 salary (estimated) | $32,775,840 | $32,583,216 |\n| 2028\u201329 salary (estimated) | $35,397,907 | $35,189,873 |\n\nBoth have standard contracts, full Bird rights, and no listed player option, team option, or no-trade clause. White costs $178,356 more this season.\n\nBottom line: their age, contract length, and salaries are very similar; the clearest catalogue difference is White\u2019s guard position versus Wiggins\u2019s wing position. These records don\u2019t include performance statistics, so they don\u2019t establish which player is better or whether a swap is fair.",
+          "elapsedMs": 15122,
+          "streamedUpdates": 11,
+          "proposal": {
+            "proposalId": "25514b5c-c753-4df0-bfce-861dd9f784a9",
+            "revision": 1,
+            "teamIds": [
+              16,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:29.462Z"
+          }
+        },
+        {
+          "input": "what's Curry's salary?",
+          "passed": true,
+          "status": "complete",
+          "message": "Stephen Curry\u2019s 2026\u201327 salary is **$62,587,158**. He has **one year remaining** on his contract.",
+          "elapsedMs": 17905,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "25514b5c-c753-4df0-bfce-861dd9f784a9",
+            "revision": 1,
+            "teamIds": [
+              16,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:29.462Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "historical reference targets the original trade",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 6131,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "e82e382a-1722-4b7d-9a71-80f0a264bea1",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:24.093Z"
+          }
+        },
+        {
+          "input": "Trade Jrue Holiday for Anfernee Simons.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 5101,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "47eaca7e-35b8-48ac-8025-add04f620f16",
+            "revision": 1,
+            "teamIds": [
+              25,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 23
+              },
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 25
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:29.179Z"
+          }
+        },
+        {
+          "input": "Replace Wiggins with Pelle Larsson in the first trade.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 5085,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "e82e382a-1722-4b7d-9a71-80f0a264bea1",
+            "revision": 2,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:29:34.225Z",
+            "parent": {
+              "proposalId": "e82e382a-1722-4b7d-9a71-80f0a264bea1",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5105,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "28edbce7-84ee-4b18-8bb9-f02a9b4d5f01",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:17:21.124Z"
+          }
+        },
+        {
+          "input": "replace Wiggins with Williams",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cWilliams\u201d do you mean?",
+          "elapsedMs": 4928,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "28edbce7-84ee-4b18-8bb9-f02a9b4d5f01",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:17:21.124Z"
+          }
+        },
+        {
+          "input": "never mind that edit",
+          "passed": true,
+          "status": "complete",
+          "message": "The pending edit has been cancelled.",
+          "elapsedMs": 3255,
+          "streamedUpdates": 7,
+          "proposal": {
+            "proposalId": "28edbce7-84ee-4b18-8bb9-f02a9b4d5f01",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:17:21.124Z"
+          }
+        },
+        {
+          "input": "start over and clear the trade",
+          "passed": true,
+          "status": "complete",
+          "message": "Ready for a new trade. Your previous trades are still in the conversation.",
+          "elapsedMs": 4161,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "Trade Jrue Holiday for Anfernee Simons.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 3754,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "0ccd9676-2219-41c5-a4ef-9d3f90a87fa6",
+            "revision": 1,
+            "teamIds": [
+              25,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 23
+              },
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 25
+              }
+            ],
+            "createdAt": "2026-10-08T12:17:37.567Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "named outgoing filters pagination and changed source",
+      "turns": [
+        {
+          "input": "trade Derrick White, only with Miami and just one player back",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 1 checked option. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 8645,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "show more",
+          "passed": true,
+          "status": "complete",
+          "message": "No passing option was found in the checked shortlist. This does not prove that no possible trade exists.",
+          "elapsedMs": 7284,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "now find Chicago trades, one player for one center under 25",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 24 or younger; incoming positions C.",
+          "elapsedMs": 36036,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "vague and impossible discovery filters",
+      "turns": [
+        {
+          "input": "find Chicago trades for young guards",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "What age range do you want?",
+          "elapsedMs": 12735,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "under 25",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 24 or younger; incoming positions PG or SG.",
+          "elapsedMs": 5455,
+          "streamedUpdates": 7,
+          "proposal": null
+        },
+        {
+          "input": "more, but under 10",
+          "passed": true,
+          "status": "complete",
+          "message": "No new candidate package met the requested filters and exclusions in the combinations considered. This does not prove that no possible trade exists. Required: incoming players aged 9 or younger; incoming positions PG or SG.",
+          "elapsedMs": 7108,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Pelle Larsson.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 4825,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "0a7cc89d-9ddf-47af-86d8-2b81a040dfe5",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:12.815Z"
+          }
+        },
+        {
+          "input": "fix it, keep White but you can replace the other player",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 2 checked repairs. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 11130,
+          "streamedUpdates": 7,
+          "proposal": {
+            "proposalId": "0a7cc89d-9ddf-47af-86d8-2b81a040dfe5",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:12.815Z"
+          }
+        },
+        {
+          "input": "go with the first one",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 3971,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "48dcded0-eec0-4308-8cd4-3aa7a8bfe8bf",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:22.202Z",
+            "parent": {
+              "proposalId": "0a7cc89d-9ddf-47af-86d8-2b81a040dfe5",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "badge-only pair",
+      "turns": [
+        {
+          "input": "trade these",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4835,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "81fd5889-ff73-46fd-b572-bca2e22049f2",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:13.165Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "unsupported requests preserve the checked trade",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5571,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "ab793c26-a43d-4ada-aad2-4e8fa937ee8c",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:13.792Z"
+          }
+        },
+        {
+          "input": "find a five-team trade",
+          "passed": true,
+          "status": "complete",
+          "message": "Trades involving more than four teams aren\u2019t supported yet. Automatic multi-team searches aren\u2019t supported yet. You can build a trade with up to four named teams.",
+          "elapsedMs": 5191,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "ab793c26-a43d-4ada-aad2-4e8fa937ee8c",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:13.792Z"
+          }
+        },
+        {
+          "input": "find someone averaging 30 points to replace White",
+          "passed": true,
+          "status": "complete",
+          "message": "Performance filters for discovered trades aren\u2019t supported yet.",
+          "elapsedMs": 7642,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "ab793c26-a43d-4ada-aad2-4e8fa937ee8c",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:13.792Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "add fourth team reroute and undo",
+      "turns": [
+        {
+          "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 4612,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+            "revision": 1,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:32.888Z"
+          }
+        },
+        {
+          "input": "add Andrew Wiggins going to Boston",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 4120,
+          "streamedUpdates": 11,
+          "proposal": {
+            "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+            "revision": 2,
+            "teamIds": [
+              2,
+              8,
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:37.004Z",
+            "parent": {
+              "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "send Wiggins to Denver instead",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics, Denver Nuggets do not satisfy salary matching requirements.",
+          "elapsedMs": 4292,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+            "revision": 3,
+            "teamIds": [
+              2,
+              8,
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 8
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:41.290Z",
+            "parent": {
+              "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+              "revision": 2
+            }
+          }
+        },
+        {
+          "input": "undo that last change",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 5555,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+            "revision": 4,
+            "teamIds": [
+              2,
+              8,
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:46.322Z",
+            "parent": {
+              "proposalId": "718264f4-9172-4965-8882-72b13eb78d81",
+              "revision": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "compound package edits",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins and Pelle Larsson.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 4620,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "af46c09d-488e-47a4-bd8a-622871f28185",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:32.659Z"
+          }
+        },
+        {
+          "input": "remove Pelle and change Wiggins for Jrue Holiday",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 5187,
+          "streamedUpdates": 11,
+          "proposal": {
+            "proposalId": "af46c09d-488e-47a4-bd8a-622871f28185",
+            "revision": 2,
+            "teamIds": [
+              2,
+              25
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 25
+              },
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:38.073Z",
+            "parent": {
+              "proposalId": "af46c09d-488e-47a4-bd8a-622871f28185",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "shorthand request and ambiguous replacement",
+      "turns": [
+        {
+          "input": "Jrue for Simons",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 5020,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "dae20c3a-227e-47fc-9da3-b4475a29b9e8",
+            "revision": 1,
+            "teamIds": [
+              25,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 23
+              },
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 25
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:33.236Z"
+          }
+        },
+        {
+          "input": "white instead of jrue",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cwhite\u201d do you mean?",
+          "elapsedMs": 4654,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "dae20c3a-227e-47fc-9da3-b4475a29b9e8",
+            "revision": 1,
+            "teamIds": [
+              25,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 23
+              },
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 25
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:33.236Z"
+          }
+        },
+        {
+          "input": "Derrick White",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 4676,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "dae20c3a-227e-47fc-9da3-b4475a29b9e8",
+            "revision": 2,
+            "teamIds": [
+              2,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 23
+              }
+            ],
+            "createdAt": "2026-10-08T12:18:42.642Z",
+            "parent": {
+              "proposalId": "dae20c3a-227e-47fc-9da3-b4475a29b9e8",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "turns": [
+        {
+          "input": "i want to trade white",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cwhite\u201d do you mean?",
+          "elapsedMs": 4682,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "what is Stephen Curry's salary?",
+          "passed": true,
+          "status": "complete",
+          "message": "Stephen Curry\u2019s salary is **$62,587,158 for the 2026\u201327 season** with the Golden State Warriors.",
+          "elapsedMs": 11165,
+          "streamedUpdates": 9,
+          "proposal": null
+        },
+        {
+          "input": "Back to the trade, I meant Derrick White",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 6201,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 6859,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "d15b860b-b17d-47a0-bb8d-c4f6d83bd7d3",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:30:08.224Z"
+          }
+        },
+        {
+          "input": "replace Derrick White with Williams",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cWilliams\u201d do you mean?",
+          "elapsedMs": 4996,
+          "streamedUpdates": 5,
+          "proposal": {
+            "proposalId": "d15b860b-b17d-47a0-bb8d-c4f6d83bd7d3",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:30:08.224Z"
+          }
+        },
+        {
+          "input": "what is Stephen Curry's salary?",
+          "passed": true,
+          "status": "complete",
+          "message": "Stephen Curry\u2019s 2026\u201327 salary with the Golden State Warriors is **$62,587,158**.",
+          "elapsedMs": 8863,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "d15b860b-b17d-47a0-bb8d-c4f6d83bd7d3",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:30:08.224Z"
+          }
+        },
+        {
+          "input": "Back to that replacement, I meant Jaylin Williams",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+          "elapsedMs": 5307,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "d15b860b-b17d-47a0-bb8d-c4f6d83bd7d3",
+            "revision": 2,
+            "teamIds": [
+              21,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 21
+              },
+              {
+                "assetType": "player",
+                "assetId": 17306,
+                "fromTeamId": 21,
+                "toTeamId": 16
+              }
+            ],
+            "createdAt": "2026-10-08T12:30:28.564Z",
+            "parent": {
+              "proposalId": "d15b860b-b17d-47a0-bb8d-c4f6d83bd7d3",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "turns": [
+        {
+          "input": "trade Jayson Tatum, Stephen Curry and Nikola Jokic",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which team should receive Jayson Tatum?",
+          "elapsedMs": 7846,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Send Jayson Tatum to Denver Nuggets.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which team should receive Stephen Curry?",
+          "elapsedMs": 4792,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Send Stephen Curry to Boston Celtics.",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which team should receive Nikola Jokic?",
+          "elapsedMs": 4130,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "Send Nikola Jokic to Golden State Warriors.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 13567,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "5ccf8662-c5fa-4edf-905e-1aae21107baa",
+            "revision": 1,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-08T12:19:17.025Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "turns": [
+        {
+          "input": "i want to trade white",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which \u201cwhite\u201d do you mean?",
+          "elapsedMs": 4309,
+          "streamedUpdates": 5,
+          "proposal": null
+        },
+        {
+          "input": "what is Williams' salary?",
+          "passed": true,
+          "status": "needs_clarification",
+          "message": "Which Williams do you mean?",
+          "elapsedMs": 9468,
+          "streamedUpdates": 9,
+          "proposal": null
+        },
+        {
+          "input": "Amari Williams",
+          "passed": true,
+          "status": "complete",
+          "message": "Amari Williams is on a two-way contract with the Boston Celtics for 2026\u201327. The catalogue lists his salary as $0; that is the recorded figure, not confirmation that he receives no pay.",
+          "elapsedMs": 9797,
+          "streamedUpdates": 9,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "explicitly retaining the original team",
+      "turns": [
+        {
+          "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "elapsedMs": 5100,
+          "streamedUpdates": 15,
+          "proposal": {
+            "proposalId": "f295ec76-5fdd-48bd-8513-11fa8a98f9b6",
+            "revision": 1,
+            "teamIds": [
+              2,
+              8,
+              10
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:19:31.080Z"
+          }
+        },
+        {
+          "input": "replace Stephen Curry with Giannis Antetokounmpo, but keep Golden State receiving Jokic",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+          "elapsedMs": 4824,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "f295ec76-5fdd-48bd-8513-11fa8a98f9b6",
+            "revision": 2,
+            "teamIds": [
+              2,
+              8,
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 8
+              },
+              {
+                "assetType": "player",
+                "assetId": 17090,
+                "fromTeamId": 8,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:19:36.161Z",
+            "parent": {
+              "proposalId": "f295ec76-5fdd-48bd-8513-11fa8a98f9b6",
+              "revision": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "same-team outgoing package searches immediately",
+      "turns": [
+        {
+          "input": "I'd like to trade Derrick White and Jayson Tatum",
+          "passed": true,
+          "status": "complete",
+          "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+          "elapsedMs": 6113,
+          "streamedUpdates": 7,
+          "proposal": null
+        }
+      ]
+    },
+    {
+      "scenario": "fresh salary-invalid trade then a legal swap",
+      "turns": [
+        {
+          "input": "Trade Jrue Holiday for Anfernee Simons",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+          "elapsedMs": 6245,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "d8f7a496-9b4b-4c5e-9dd4-6e97000adddb",
+            "revision": 1,
+            "teamIds": [
+              25,
+              23
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17361,
+                "fromTeamId": 25,
+                "toTeamId": 23
+              },
+              {
+                "assetType": "player",
+                "assetId": 17049,
+                "fromTeamId": 23,
+                "toTeamId": 25
+              }
+            ],
+            "createdAt": "2026-10-08T12:19:55.883Z"
+          }
+        },
+        {
+          "input": "instead let's trade Derrick White for Andrew Wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks.",
+          "elapsedMs": 5054,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "c59f4cb2-8ead-4cf3-bb86-9ced97eac176",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:20:00.994Z"
+          }
+        }
+      ]
+    },
+    {
+      "scenario": "mixed picks retained through replacement and removal",
+      "turns": [
+        {
+          "input": "Trade Derrick White for Andrew Wiggins and Miami's 2029 first-round pick to Boston.",
+          "passed": true,
+          "status": "complete",
+          "message": "This trade passes the 2026-27 salary and roster checks. Pick ownership and availability were checked; existing protections are retained.",
+          "elapsedMs": 25106,
+          "streamedUpdates": 19,
+          "proposal": {
+            "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "pick",
+                "assetId": 12305,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:20:10.995Z"
+          }
+        },
+        {
+          "input": "Pelle instead of Wiggins",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 4853,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+            "revision": 2,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "pick",
+                "assetId": 12305,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:20:19.633Z",
+            "parent": {
+              "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+              "revision": 1
+            }
+          }
+        },
+        {
+          "input": "remove the pick",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 21108,
+          "streamedUpdates": 13,
+          "proposal": {
+            "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+            "revision": 3,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:20:37.848Z",
+            "parent": {
+              "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+              "revision": 2
+            }
+          }
+        },
+        {
+          "input": "undo",
+          "passed": true,
+          "status": "complete",
+          "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+          "elapsedMs": 3762,
+          "streamedUpdates": 9,
+          "proposal": {
+            "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+            "revision": 4,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "pick",
+                "assetId": 12305,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T12:20:44.387Z",
+            "parent": {
+              "proposalId": "110994b3-a826-49e1-9a62-9ddf9acea75c",
+              "revision": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "machineConversations": 6,
+  "machineTurns": 20,
+  "machineResults": [
+    {
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T12:14:20.619Z"
+      },
+      "tools": []
+    },
+    {
+      "input": "What if Derrick White's salary were $18 million instead?",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 2,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T12:14:28.732Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 3
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 1
+        }
+      },
+      "tools": [
+        "edit_contract",
+        "request_verdict",
+        "explain_verdict"
+      ]
+    },
+    {
+      "input": "Give Derrick White two remaining years instead, keeping the hypothetical salary.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 3,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T12:14:42.567Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 2
+        }
+      },
+      "tools": [
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Add Juhann Begarin's draft rights to Miami.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 4,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:14:51.239Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 3
+        }
+      },
+      "tools": []
+    },
+    {
+      "input": "Send Juhann Begarin's rights to Chicago instead.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 5,
+        "teamIds": [
+          2,
+          16,
+          5
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 5
+          }
+        ],
+        "createdAt": "2026-10-08T12:14:56.348Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 4
+        }
+      },
+      "tools": []
+    },
+    {
+      "input": "Undo that last change.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 6,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:15:00.501Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 5
+        }
+      },
+      "tools": []
+    },
+    {
+      "input": "Use Boston's Anfernee Simons trade exception.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 7,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:15:12.055Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 6
+        },
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249,
+            "sourcePlayerName": "Anfernee Simons"
+          }
+        ]
+      },
+      "tools": [
+        "list_trade_exceptions",
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Explain Boston's salary matching and the hypothetical contracts.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.\n\nDerrick White: $18,000,000/year for 2 years (hypothetical contract)\n\nBOS uses Anfernee Simons $27,678,571 trade exception (expires 2027-02-05)\n\nBoston Celtics sends Derrick White, Juhann Begarin draft rights ($18,000,000) and receives Andrew Wiggins ($30,169,644). Payroll becomes $206,503,476 (Over Luxury Tax).\nTPE absorbed (\u00a76(j)(2)): Boston Celtics uses a $27.7M TPE \u2014 expanded TPE ($27.1M) + $27.7M TPE = $54.8M total capacity \u2265 $30.2M to match",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 7,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:15:12.055Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 6
+        },
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249,
+            "sourcePlayerName": "Anfernee Simons"
+          }
+        ]
+      },
+      "tools": []
+    },
+    {
+      "input": "Remove Boston's selected trade exception.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 8,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:15:31.867Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 7
+        },
+        "exceptions": []
+      },
+      "tools": [
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Reset Derrick White's contract to its original values.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+        "revision": 9,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:15:44.626Z",
+        "salaryOverrides": [],
+        "parent": {
+          "proposalId": "ffa3797e-c4a5-4816-b502-2bad519c4fa5",
+          "revision": 8
+        },
+        "exceptions": []
+      },
+      "tools": [
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "What contract options does Boston have for Tre Scott?",
+      "passed": true,
+      "status": "complete",
+      "message": "Boston\u2019s currently eligible option for Tre Scott is the **veteran minimum**:\n- **First-year salary:** $3,290,014\n- **Duration:** 1\u20132 years\n- **Permitted annual raise:** 5%\n\nOther options are unavailable under Boston\u2019s current cap situation:\n- **Bi-annual exception:** Boston is above the first apron.\n- **Room exception:** Boston is over the salary cap.\n- **Non-taxpayer mid-level exception:** Would exceed the first-apron hard cap.\n- **Maximum contract:** Requires full Bird rights or sufficient cap room.\n\nNo contract has been signed.",
+      "proposal": null,
+      "tools": [
+        "get_contract_options",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Sign Tre Scott to Boston on a one-year minimum contract.",
+      "passed": true,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "98f08488-4c79-4377-af13-997d3ad7ada5",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T12:16:18.360Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ]
+      },
+      "tools": [
+        "get_contract_options",
+        "sign_free_agent",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Now sign-and-trade Tre Scott to Miami.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "98f08488-4c79-4377-af13-997d3ad7ada5",
+        "revision": 2,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 17023,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:16:37.139Z",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ],
+        "parent": {
+          "proposalId": "98f08488-4c79-4377-af13-997d3ad7ada5",
+          "revision": 1
+        }
+      },
+      "tools": [
+        "set_teams",
+        "add_player",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Undo that last trade change.",
+      "passed": true,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "98f08488-4c79-4377-af13-997d3ad7ada5",
+        "revision": 3,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T12:16:46.409Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ],
+        "parent": {
+          "proposalId": "98f08488-4c79-4377-af13-997d3ad7ada5",
+          "revision": 2
+        }
+      },
+      "tools": []
+    },
+    {
+      "input": "Stretch and waive Derrick White's contract in Boston as a hypothetical.",
+      "passed": true,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "c0cfd569-2821-49b2-8a67-a62c45482f59",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T12:16:56.437Z",
+        "kind": "scenario",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 13006286,
+            "yearsRemaining": 7,
+            "isStretchAndWaive": true
+          }
+        ]
+      },
+      "tools": [
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Explain Boston's payroll after the stretch.",
+      "passed": true,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.\n\nDerrick White: $13,006,286/year for 7 years (stretch-and-waive obligation; player cannot be traded)\n\nCeltics sends no assets ($0) and receives no assets ($0). Payroll becomes $189,340,118 (Over Cap).",
+      "proposal": {
+        "proposalId": "c0cfd569-2821-49b2-8a67-a62c45482f59",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T12:16:56.437Z",
+        "kind": "scenario",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 13006286,
+            "yearsRemaining": 7,
+            "isStretchAndWaive": true
+          }
+        ]
+      },
+      "tools": []
+    },
+    {
+      "input": "Trade Juhann Begarin's draft rights from Boston to Miami.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "809e78bf-1e5d-46a3-9bbd-5e87e630adef",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T12:17:13.957Z"
+      },
+      "tools": []
+    },
+    {
+      "input": "Sign Tre Scott to Boston.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "What salary and contract length should Tre Scott receive in Boston?",
+      "proposal": null,
+      "tools": [
+        "get_contract_options",
+        "ask_clarification"
+      ]
+    },
+    {
+      "input": "One year at the minimum.",
+      "passed": true,
+      "status": "complete",
+      "message": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "b1a23c4a-e301-4572-9410-1f88fbd8fff6",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T12:17:40.139Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ]
+      },
+      "tools": [
+        "get_contract_options",
+        "sign_free_agent",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "input": "Trade Derrick White to Miami for Andrew Wiggins to Boston. Set White's hypothetical annual salary to $18 million, add Juhann Begarin's draft rights to Miami, and use Boston's Anfernee Simons trade exception.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "fb75841b-169d-4679-9f72-40105a0ed4dd",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T12:18:04.640Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 3
+          }
+        ],
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249,
+            "sourcePlayerName": "Anfernee Simons"
+          }
+        ]
+      },
+      "tools": [
+        "edit_contract",
+        "list_trade_exceptions",
+        "add_player",
+        "add_player",
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    }
+  ],
+  "transport": {
+    "checkedAt": "2026-10-08T11:50:38.236Z",
+    "endpoint": "http://127.0.0.1:3025",
+    "results": [
+      {
+        "name": "repeated request returns exactly its original reply",
+        "passed": true
+      },
+      {
+        "name": "a stale client preserves the checked trade",
+        "passed": true
+      },
+      {
+        "name": "unknown selected player preserves focus",
+        "passed": true
+      },
+      {
+        "name": "expired or forged clarification option preserves focus",
+        "passed": true
+      },
+      {
+        "name": "two simultaneous clients cannot both commit the same version",
+        "passed": true
+      },
+      {
+        "name": "malformed requests receive HTTP 400",
+        "passed": true
+      }
+    ]
+  }
+}

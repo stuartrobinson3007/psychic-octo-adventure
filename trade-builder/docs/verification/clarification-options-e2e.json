@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-09T00:39:23.006Z",
+  "passedTurns": 6,
+  "scenarios": [
+    {
+      "name": "clarification choices: signing team catalogue",
+      "expectedTurns": 4
+    },
+    {
+      "name": "clarification choices: free-text identity answer",
+      "expectedTurns": 2
+    }
+  ],
+  "results": [
+    {
+      "scenario": "clarification choices: free-text identity answer",
+      "input": "Trade Michael Imaginary for Derrick White.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 10613
+    },
+    {
+      "scenario": "clarification choices: signing team catalogue",
+      "input": "find trades for steph curry",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 12194
+    },
+    {
+      "scenario": "clarification choices: free-text identity answer",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9881
+    },
+    {
+      "scenario": "clarification choices: signing team catalogue",
+      "input": "do his brother instead",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8426
+    },
+    {
+      "scenario": "clarification choices: signing team catalogue",
+      "input": "ok, sign him",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6881
+    },
+    {
+      "scenario": "clarification choices: signing team catalogue",
+      "input": "Boston Celtics\n\non a one-year minimum contract",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 17168
+    }
+  ]
+}

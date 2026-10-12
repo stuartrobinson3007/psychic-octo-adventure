@@ -1,0 +1,1976 @@
+{
+  "checkedAt": "2026-10-08T09:31:21.546Z",
+  "endpoint": "http://127.0.0.1:3023",
+  "serviceUnavailable": false,
+  "scenarios": [
+    {
+      "name": "shortened given name discovery",
+      "expectedTurns": 1
+    },
+    {
+      "name": "shortened names in a specified swap",
+      "expectedTurns": 1
+    },
+    {
+      "name": "surname without a given name remains ambiguous",
+      "expectedTurns": 1
+    },
+    {
+      "name": "distinct shortened and full names in the same package",
+      "expectedTurns": 1
+    },
+    {
+      "name": "typo in a specified swap",
+      "expectedTurns": 1
+    },
+    {
+      "name": "equally close full name typos remain ambiguous",
+      "expectedTurns": 2
+    },
+    {
+      "name": "typo preserves a different first name",
+      "expectedTurns": 1
+    },
+    {
+      "name": "surname alone remains ambiguous in a swap",
+      "expectedTurns": 2
+    },
+    {
+      "name": "unknown name and typed recovery",
+      "expectedTurns": 2
+    }
+  ],
+  "results": [
+    {
+      "scenario": "shortened given name discovery",
+      "sessionId": "10adc4bd-cd94-4787-a6cc-3aec12edb632",
+      "requestId": "dc29780f-34fc-4e70-b728-1f0db69ca883",
+      "input": "find a trade for steph curry",
+      "passed": true,
+      "elapsedMs": 8127,
+      "result": {
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "dfa083a7-03a3-4eb2-b16e-f0346bbecbac",
+              "revision": 1,
+              "createdAt": "2026-10-08T09:30:43.814Z",
+              "teamIds": [
+                10,
+                25
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 25
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17365,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17201,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "dfa083a7-03a3-4eb2-b16e-f0346bbecbac",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:30:43.814Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62255797,
+                  "netSalaryChange": -331361,
+                  "newTotalSalary": 217159051,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.3M"
+                  ]
+                },
+                {
+                  "teamId": 25,
+                  "teamName": "Portland Trail Blazers",
+                  "salaryOut": 62255797,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 331361,
+                  "newTotalSalary": 194874255,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.3M, can receive up to $76.7M (first apron hard cap applies: $209.0M), matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "47af2b6a-c80e-497a-8619-e5fa0d7a92f8",
+              "revision": 1,
+              "createdAt": "2026-10-08T09:30:44.244Z",
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17223,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "47af2b6a-c80e-497a-8619-e5fa0d7a92f8",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:30:44.244Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62200000,
+                  "netSalaryChange": -387158,
+                  "newTotalSalary": 217103254,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 62200000,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 387158,
+                  "newTotalSalary": 207323114,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "6dc9ea04-767b-451e-9178-66664612200b",
+              "revision": 1,
+              "createdAt": "2026-10-08T09:30:44.245Z",
+              "teamIds": [
+                10,
+                30
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 30
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17443,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17434,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "6dc9ea04-767b-451e-9178-66664612200b",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:30:44.245Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62144886,
+                  "netSalaryChange": -442272,
+                  "newTotalSalary": 217048140,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.1M"
+                  ]
+                },
+                {
+                  "teamId": 30,
+                  "teamName": "Washington Wizards",
+                  "salaryOut": 62144886,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 442272,
+                  "newTotalSalary": 192525376,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.1M, can receive up to $77.9M, matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_PrWvls76WWq7NOND8cphhudZ",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_mPGMzuKhxdpscybinQuuSl3S",
+            "details": [
+              "I searched 1 Golden State Warriors player for 2 players from the same other team.",
+              "Checked 9 of 3324 matching candidate packages considered, prioritising close salaries and different trade partners."
+            ],
+            "visible": true,
+            "activeLabel": "Finding trade options…",
+            "label": "Found trade options",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 6611,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "surname without a given name remains ambiguous",
+      "sessionId": "42761171-f766-4e15-a0c1-3e729ee5a874",
+      "requestId": "4467c3fc-83a8-41fc-b306-4762285fd6d5",
+      "input": "Find a trade for Curry.",
+      "passed": true,
+      "elapsedMs": 10205,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Which “curry” do you mean?",
+        "clarification": {
+          "question": "Which “curry” do you mean?",
+          "options": [
+            {
+              "id": "player-17136",
+              "label": "Seth Curry",
+              "detail": "Golden State Warriors",
+              "value": "Seth Curry",
+              "playerId": 17136
+            },
+            {
+              "id": "player-17122",
+              "label": "Stephen Curry",
+              "detail": "Golden State Warriors",
+              "value": "Stephen Curry",
+              "playerId": 17122
+            }
+          ]
+        },
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_EJEmegDmoFrapmw5e5QDNB0M",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_RsIKnfXqdLMISBMSKcOXPusm",
+            "visible": true,
+            "activeLabel": "Searching for Curry…",
+            "label": "Searched for Curry",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8698,
+        "conversationVersion": 1,
+        "pendingClarification": {
+          "question": "Which “curry” do you mean?",
+          "options": [
+            {
+              "id": "player-17136",
+              "label": "Seth Curry",
+              "detail": "Golden State Warriors",
+              "value": "Seth Curry",
+              "playerId": 17136
+            },
+            {
+              "id": "player-17122",
+              "label": "Stephen Curry",
+              "detail": "Golden State Warriors",
+              "value": "Stephen Curry",
+              "playerId": 17122
+            }
+          ]
+        }
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "shortened names in a specified swap",
+      "sessionId": "6640360b-e9f3-4c00-8442-20c381eab225",
+      "requestId": "03935888-c132-41f3-9d67-29300b659a93",
+      "input": "Trade Steph Curry for Ant Edwards.",
+      "passed": true,
+      "elapsedMs": 12220,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Minnesota Timberwolves do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "2cfb3ba4-9bd9-44ba-bcd7-deb6f2d682d1",
+            "revision": 1,
+            "teamIds": [
+              10,
+              18
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 18
+              },
+              {
+                "assetType": "player",
+                "assetId": 17252,
+                "fromTeamId": 18,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-08T09:30:46.680Z"
+          },
+          "verdict": {
+            "proposalId": "2cfb3ba4-9bd9-44ba-bcd7-deb6f2d682d1",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:30:46.680Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Minnesota Timberwolves do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 48924624,
+                "netSalaryChange": -13662534,
+                "newTotalSalary": 203827878,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $48.9M"
+                ]
+              },
+              {
+                "teamId": 18,
+                "teamName": "Minnesota Timberwolves",
+                "salaryOut": 48924624,
+                "salaryIn": 62587158,
+                "netSalaryChange": 13662534,
+                "newTotalSalary": 229780834,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Minnesota Timberwolves over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Minnesota Timberwolves are limited to the Standard TPE (100% of outgoing = $48.9M). Sending $48.9M, must match $62.6M."
+                ],
+                "allowances": []
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected GSW and MIN.",
+          "Send Stephen Curry to MIN.",
+          "Send Anthony Edwards to GSW."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "2cfb3ba4-9bd9-44ba-bcd7-deb6f2d682d1",
+              "revision": 1,
+              "teamIds": [
+                10,
+                18
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 18
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17252,
+                  "fromTeamId": 18,
+                  "toTeamId": 10
+                }
+              ],
+              "createdAt": "2026-10-08T09:30:46.680Z"
+            },
+            "verdict": {
+              "proposalId": "2cfb3ba4-9bd9-44ba-bcd7-deb6f2d682d1",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:30:46.680Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Minnesota Timberwolves do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 48924624,
+                  "netSalaryChange": -13662534,
+                  "newTotalSalary": 203827878,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $48.9M"
+                  ]
+                },
+                {
+                  "teamId": 18,
+                  "teamName": "Minnesota Timberwolves",
+                  "salaryOut": 48924624,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 13662534,
+                  "newTotalSalary": 229780834,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "Hard cap violation: This trade would push Minnesota Timberwolves over the second apron hard cap ($221.7M)",
+                    "First-apron salary matching exceeded: Minnesota Timberwolves are limited to the Standard TPE (100% of outgoing = $48.9M). Sending $48.9M, must match $62.6M."
+                  ],
+                  "allowances": []
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_WaJvtG1NDDvcMsRl10LrWGcp",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_nGOp4wcjiQGL35nDsWWyohAZ",
+            "visible": true,
+            "activeLabel": "Searching for Stephen Curry…",
+            "label": "Searched for Stephen Curry",
+            "state": "complete"
+          },
+          {
+            "id": "call_OzgOZrycB6w2KfbHqaCfdar7",
+            "visible": true,
+            "activeLabel": "Searching for Anthony Edwards…",
+            "label": "Searched for Anthony Edwards",
+            "state": "complete"
+          },
+          {
+            "id": "call_d0KFw1K5qa9rm6VsFlEyOdxv",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_qAV1z1w3ikgjgGIIt8ygKLTc",
+            "visible": false,
+            "activeLabel": "Adding Stephen Curry…",
+            "label": "Added Stephen Curry",
+            "state": "complete"
+          },
+          {
+            "id": "call_8AHPtuDdCjo1bQop4p69HKBQ",
+            "visible": false,
+            "activeLabel": "Adding Anthony Edwards…",
+            "label": "Added Anthony Edwards",
+            "state": "complete"
+          },
+          {
+            "id": "call_3VC9cz4fgxYFdZWpSHTp1Kis",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_IfFky3IeMW5Wc9vN6T6c41np",
+            "visible": false,
+            "activeLabel": "Reviewing the trade rules…",
+            "label": "Reviewed the trade rules",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 10700,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 21
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "sessionId": "db62883c-cf97-4047-95ac-b8586d082d4d",
+      "requestId": "5845da0d-d3c0-493c-9b00-08d932c60ab2",
+      "input": "trade jalin williams for andrew wiggins",
+      "passed": true,
+      "elapsedMs": 7260,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Which “jalin williams” do you mean?",
+        "clarification": {
+          "question": "Which “jalin williams” do you mean?",
+          "options": [
+            {
+              "id": "player-17306",
+              "label": "Jaylin Williams",
+              "detail": "Oklahoma City Thunder",
+              "value": "Jaylin Williams",
+              "playerId": 17306
+            },
+            {
+              "id": "player-17308",
+              "label": "Jalen Williams",
+              "detail": "Oklahoma City Thunder",
+              "value": "Jalen Williams",
+              "playerId": 17308
+            }
+          ]
+        },
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_awxyfB75vLnyzxZCqoedpIhv",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_NSktBC9yrd0CPaGTc2YAbEKv",
+            "visible": true,
+            "activeLabel": "Searching for Jalin Williams…",
+            "label": "Searched for Jalin Williams",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 5163,
+        "conversationVersion": 1,
+        "pendingClarification": {
+          "question": "Which “jalin williams” do you mean?",
+          "options": [
+            {
+              "id": "player-17306",
+              "label": "Jaylin Williams",
+              "detail": "Oklahoma City Thunder",
+              "value": "Jaylin Williams",
+              "playerId": 17306
+            },
+            {
+              "id": "player-17308",
+              "label": "Jalen Williams",
+              "detail": "Oklahoma City Thunder",
+              "value": "Jalen Williams",
+              "playerId": 17308
+            }
+          ]
+        }
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "distinct shortened and full names in the same package",
+      "sessionId": "125eb8f7-4055-4104-a52c-d7a37e79ff75",
+      "requestId": "8198b60a-9822-40c3-a026-84d8869ee2f2",
+      "input": "Trade Steph Curry for Seth Curry.",
+      "passed": true,
+      "elapsedMs": 8005,
+      "result": {
+        "status": "complete",
+        "message": "Seth Curry is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.",
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_ApuLuuaV2n9bgMADA6aRH9wN",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 4064,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "typo in a specified swap",
+      "sessionId": "33b54ba4-55bb-4cde-aa37-be0af056f752",
+      "requestId": "8b002c21-06ff-41fe-a7dd-ad99d5c74e8c",
+      "input": "trade derrik white for andrew wiggins",
+      "passed": true,
+      "elapsedMs": 14066,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "9385dc46-5661-4769-9c0a-552144644c61",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T09:30:59.992Z"
+          },
+          "verdict": {
+            "proposalId": "9385dc46-5661-4769-9c0a-552144644c61",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:30:59.992Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 30348000,
+                "salaryIn": 30169644,
+                "netSalaryChange": -178356,
+                "newTotalSalary": 206503476,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 30348000,
+                "netSalaryChange": 178356,
+                "newTotalSalary": 207114312,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected BOS and MIA.",
+          "Send Derrick White to MIA.",
+          "Send Andrew Wiggins to BOS."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "9385dc46-5661-4769-9c0a-552144644c61",
+              "revision": 1,
+              "teamIds": [
+                2,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 16992,
+                  "fromTeamId": 2,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                }
+              ],
+              "createdAt": "2026-10-08T09:30:59.992Z"
+            },
+            "verdict": {
+              "proposalId": "9385dc46-5661-4769-9c0a-552144644c61",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:30:59.992Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 2,
+                  "teamName": "Boston Celtics",
+                  "salaryOut": 30348000,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": -178356,
+                  "newTotalSalary": 206503476,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                    "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 30348000,
+                  "netSalaryChange": 178356,
+                  "newTotalSalary": 207114312,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_3Kw6Sar4jCxE52Nb5M7SoiH2",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_7yq39eZskXHdKNncdGGAe02T",
+            "visible": true,
+            "activeLabel": "Searching for Derrick White…",
+            "label": "Searched for Derrick White",
+            "state": "complete"
+          },
+          {
+            "id": "call_x7JvA4NOuSDwPunI0cUiQ71v",
+            "visible": true,
+            "activeLabel": "Searching for Andrew Wiggins…",
+            "label": "Searched for Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_Pt4XlVqEZc6ZP1YQEBK8kKRr",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_8C8IXzUbq2RDSZIuE5ltVBSp",
+            "visible": false,
+            "activeLabel": "Adding Derrick White…",
+            "label": "Added Derrick White",
+            "state": "complete"
+          },
+          {
+            "id": "call_p3v2AsMlnfpZgrzsRMIBKudh",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_HddMWaE1m4XWxn56xJMS56Cl",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_eVWuSIF3ogu4Q97JecXvr3PB",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 13907,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 21
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "sessionId": "db62883c-cf97-4047-95ac-b8586d082d4d",
+      "requestId": "2867d646-4d0a-46c7-b071-c0bfce01b35d",
+      "input": "Jaylin Williams",
+      "selection": {
+        "id": "player-17306",
+        "label": "Jaylin Williams",
+        "detail": "Oklahoma City Thunder",
+        "value": "Jaylin Williams",
+        "playerId": 17306
+      },
+      "passed": true,
+      "elapsedMs": 8851,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "a9f47269-18f4-42f4-a384-6618feac91ce",
+            "revision": 1,
+            "teamIds": [
+              21,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17306,
+                "fromTeamId": 21,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 21
+              }
+            ],
+            "createdAt": "2026-10-08T09:31:01.527Z"
+          },
+          "verdict": {
+            "proposalId": "a9f47269-18f4-42f4-a384-6618feac91ce",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:31:01.527Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 21,
+                "teamName": "Oklahoma City Thunder",
+                "salaryOut": 7774648,
+                "salaryIn": 30169644,
+                "netSalaryChange": 22394996,
+                "newTotalSalary": 239045840,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Oklahoma City Thunder over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Oklahoma City Thunder are limited to the Standard TPE (100% of outgoing = $7.8M). Sending $7.8M, must match $30.2M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 7774648,
+                "netSalaryChange": -22394996,
+                "newTotalSalary": 184540960,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $7.8M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected OKC and MIA.",
+          "Send Jaylin Williams to MIA.",
+          "Send Andrew Wiggins to OKC."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "a9f47269-18f4-42f4-a384-6618feac91ce",
+              "revision": 1,
+              "teamIds": [
+                21,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17306,
+                  "fromTeamId": 21,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 21
+                }
+              ],
+              "createdAt": "2026-10-08T09:31:01.527Z"
+            },
+            "verdict": {
+              "proposalId": "a9f47269-18f4-42f4-a384-6618feac91ce",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:31:01.527Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 21,
+                  "teamName": "Oklahoma City Thunder",
+                  "salaryOut": 7774648,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": 22394996,
+                  "newTotalSalary": 239045840,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "Hard cap violation: This trade would push Oklahoma City Thunder over the second apron hard cap ($221.7M)",
+                    "First-apron salary matching exceeded: Oklahoma City Thunder are limited to the Standard TPE (100% of outgoing = $7.8M). Sending $7.8M, must match $30.2M."
+                  ],
+                  "allowances": []
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 7774648,
+                  "netSalaryChange": -22394996,
+                  "newTotalSalary": 184540960,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $7.8M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_FIiNFez0UrPSpn3lKYtA4wtV",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_dPPrjpwX1h4yU58IAjTONgpz",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_PWupqhKJuCsBBPJpXe1h5FMW",
+            "visible": false,
+            "activeLabel": "Adding Jaylin Williams…",
+            "label": "Added Jaylin Williams",
+            "state": "complete"
+          },
+          {
+            "id": "call_XhHq0cEUhPxDn7rT7aGJYHJa",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_kr6BKg31zPTweL1jgz5WoQaE",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_DdXPm2UjsiWyssZvJsFe6AIj",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8842,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "sessionId": "05a61550-d9e4-47b5-907c-b762a346f474",
+      "requestId": "8874e967-530f-4ebb-8155-a11e34699be9",
+      "input": "Swap Michael Imaginary for Andrew Wiggins.",
+      "passed": true,
+      "elapsedMs": 3268,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Who did you mean by “Michael Imaginary”?",
+        "clarification": {
+          "question": "Who did you mean by “Michael Imaginary”?",
+          "options": []
+        },
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_y8xc9XJxUbITHqmmu6K7iFs5",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_OeaMR4FlYEk1chUmSOfnr8Da",
+            "visible": false,
+            "activeLabel": "Preparing a question…",
+            "label": "Prepared a question",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 2944,
+        "conversationVersion": 1,
+        "pendingClarification": {
+          "question": "Who did you mean by “Michael Imaginary”?",
+          "options": []
+        }
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "sessionId": "e02ae180-f79b-4d33-9220-a05b195fd9ca",
+      "requestId": "136c0d22-abaf-454c-a871-d9651f9a4827",
+      "input": "trade white for andrew wiggins",
+      "passed": true,
+      "elapsedMs": 3633,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?",
+        "clarification": {
+          "question": "Which “white” do you mean?",
+          "options": [
+            {
+              "id": "player-17037",
+              "label": "Coby White",
+              "detail": "Charlotte Hornets",
+              "value": "Coby White",
+              "playerId": 17037
+            },
+            {
+              "id": "player-16992",
+              "label": "Derrick White",
+              "detail": "Boston Celtics",
+              "value": "Derrick White",
+              "playerId": 16992
+            }
+          ]
+        },
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_D8Qu6bM7A4FDzLlgWaNOZKi1",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_qugg9icw6wvq24BIEBpkdHQk",
+            "visible": true,
+            "activeLabel": "Searching for Derrick White…",
+            "label": "Searched for Derrick White",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 3628,
+        "conversationVersion": 1,
+        "pendingClarification": {
+          "question": "Which “white” do you mean?",
+          "options": [
+            {
+              "id": "player-17037",
+              "label": "Coby White",
+              "detail": "Charlotte Hornets",
+              "value": "Coby White",
+              "playerId": 17037
+            },
+            {
+              "id": "player-16992",
+              "label": "Derrick White",
+              "detail": "Boston Celtics",
+              "value": "Derrick White",
+              "playerId": 16992
+            }
+          ]
+        }
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "typo preserves a different first name",
+      "sessionId": "efe01fc6-65d1-444d-ab21-b6942387cee9",
+      "requestId": "d10201b7-2842-4874-8f42-dbe8b2981886",
+      "input": "trade coby whte for andrew wiggins",
+      "passed": true,
+      "elapsedMs": 10941,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "d2d3087e-3a94-4d8d-bc33-6454506eb12f",
+            "revision": 1,
+            "teamIds": [
+              4,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 4
+              }
+            ],
+            "createdAt": "2026-10-08T09:31:13.114Z"
+          },
+          "verdict": {
+            "proposalId": "d2d3087e-3a94-4d8d-bc33-6454506eb12f",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:31:13.114Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 30169644,
+                "netSalaryChange": 7330138,
+                "newTotalSalary": 184385901,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $30.2M"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 22839506,
+                "netSalaryChange": -7330138,
+                "newTotalSalary": 199605818,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $22.8M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected CHA and MIA.",
+          "Send Coby White to MIA.",
+          "Send Andrew Wiggins to CHA."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "d2d3087e-3a94-4d8d-bc33-6454506eb12f",
+              "revision": 1,
+              "teamIds": [
+                4,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17037,
+                  "fromTeamId": 4,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 4
+                }
+              ],
+              "createdAt": "2026-10-08T09:31:13.114Z"
+            },
+            "verdict": {
+              "proposalId": "d2d3087e-3a94-4d8d-bc33-6454506eb12f",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:31:13.114Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 4,
+                  "teamName": "Charlotte Hornets",
+                  "salaryOut": 22839506,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": 7330138,
+                  "newTotalSalary": 184385901,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $30.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 22839506,
+                  "netSalaryChange": -7330138,
+                  "newTotalSalary": 199605818,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $22.8M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_LYSthsAOOM3TileorCckbwpA",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_zdvwv1AM3UZhrPiFrn0tQIGu",
+            "visible": true,
+            "activeLabel": "Searching for Coby White…",
+            "label": "Searched for Coby White",
+            "state": "complete"
+          },
+          {
+            "id": "call_XyqKt2u1yiwHTL9vrxBLpiPC",
+            "visible": true,
+            "activeLabel": "Searching for Andrew Wiggins…",
+            "label": "Searched for Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_n2MXJniBvd93CloKuWUEsdQ1",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_hCspHsSpun9YFQ5scyDgXnwF",
+            "visible": false,
+            "activeLabel": "Adding Coby White…",
+            "label": "Added Coby White",
+            "state": "complete"
+          },
+          {
+            "id": "call_xpVCVIIZnkyeBXJB2P6GfVeQ",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_aIU4MGhtgtO3deMcXQwWiWG5",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_UZ5yIusbpmlkF3dsKI84WVXZ",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 10260,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 21
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "sessionId": "e02ae180-f79b-4d33-9220-a05b195fd9ca",
+      "requestId": "adb841ea-6dd4-49f8-b821-00e766444d93",
+      "input": "Coby White",
+      "selection": {
+        "id": "player-17037",
+        "label": "Coby White",
+        "detail": "Charlotte Hornets",
+        "value": "Coby White",
+        "playerId": 17037
+      },
+      "passed": true,
+      "elapsedMs": 9651,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "e76a6c7b-8f6d-4b93-894a-03f38c6c70d7",
+            "revision": 1,
+            "teamIds": [
+              4,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 4
+              }
+            ],
+            "createdAt": "2026-10-08T09:31:15.414Z"
+          },
+          "verdict": {
+            "proposalId": "e76a6c7b-8f6d-4b93-894a-03f38c6c70d7",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:31:15.414Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 30169644,
+                "netSalaryChange": 7330138,
+                "newTotalSalary": 184385901,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $30.2M"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 22839506,
+                "netSalaryChange": -7330138,
+                "newTotalSalary": 199605818,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $22.8M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected CHA and MIA.",
+          "Send Coby White to MIA.",
+          "Send Andrew Wiggins to CHA."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "e76a6c7b-8f6d-4b93-894a-03f38c6c70d7",
+              "revision": 1,
+              "teamIds": [
+                4,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17037,
+                  "fromTeamId": 4,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 4
+                }
+              ],
+              "createdAt": "2026-10-08T09:31:15.414Z"
+            },
+            "verdict": {
+              "proposalId": "e76a6c7b-8f6d-4b93-894a-03f38c6c70d7",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:31:15.414Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 4,
+                  "teamName": "Charlotte Hornets",
+                  "salaryOut": 22839506,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": 7330138,
+                  "newTotalSalary": 184385901,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $30.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 22839506,
+                  "netSalaryChange": -7330138,
+                  "newTotalSalary": 199605818,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $22.8M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_to8cBjb6xEhxPQgMZh1aH89y",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_suWkIqBUOkpYQvQLrfYsUlkf",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_SxbyZ9kePiHk8KHfAl1oXfFC",
+            "visible": false,
+            "activeLabel": "Adding Coby White…",
+            "label": "Added Coby White",
+            "state": "complete"
+          },
+          {
+            "id": "call_6ZK40q34gonWmA0hprr58FXf",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_shiwpL2TF6eCMkey6i5PfoKb",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_DFmHXlcWoEcIYZYQrdUgTXFw",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 9644,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "sessionId": "05a61550-d9e4-47b5-907c-b762a346f474",
+      "requestId": "699c5353-bec3-4402-a188-8b431b8fe022",
+      "input": "Derrick White",
+      "passed": true,
+      "elapsedMs": 13408,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "6d7a6149-943e-4cef-aefb-c1e056c1b09b",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-08T09:31:19.356Z"
+          },
+          "verdict": {
+            "proposalId": "6d7a6149-943e-4cef-aefb-c1e056c1b09b",
+            "revision": 1,
+            "evaluatedAt": "2026-10-08T09:31:19.356Z",
+            "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 30348000,
+                "salaryIn": 30169644,
+                "netSalaryChange": -178356,
+                "newTotalSalary": 206503476,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 30348000,
+                "netSalaryChange": 178356,
+                "newTotalSalary": 207114312,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected BOS and MIA.",
+          "Send Derrick White to MIA.",
+          "Send Andrew Wiggins to BOS."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "6d7a6149-943e-4cef-aefb-c1e056c1b09b",
+              "revision": 1,
+              "teamIds": [
+                2,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 16992,
+                  "fromTeamId": 2,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                }
+              ],
+              "createdAt": "2026-10-08T09:31:19.356Z"
+            },
+            "verdict": {
+              "proposalId": "6d7a6149-943e-4cef-aefb-c1e056c1b09b",
+              "revision": 1,
+              "evaluatedAt": "2026-10-08T09:31:19.356Z",
+              "dataFetchedAt": "2026-10-08T09:30:37.997Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 2,
+                  "teamName": "Boston Celtics",
+                  "salaryOut": 30348000,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": -178356,
+                  "newTotalSalary": 206503476,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                    "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 30348000,
+                  "netSalaryChange": 178356,
+                  "newTotalSalary": 207114312,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "call_uNHI40cj2mKdL3RjGIT6K32a",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understanding your request — couldn’t finish",
+            "state": "error"
+          },
+          {
+            "id": "call_QDDyDFefRS9T5j5lmG4ohxCW",
+            "visible": false,
+            "activeLabel": "Reviewing your answer…",
+            "label": "Reviewing your answer — couldn’t finish",
+            "state": "error"
+          },
+          {
+            "id": "call_Y3yfqC1vIQKrVibOSLvSGOcV",
+            "visible": false,
+            "activeLabel": "Reviewing your answer…",
+            "label": "Reviewing your answer — couldn’t finish",
+            "state": "error"
+          },
+          {
+            "id": "call_kQRVgQCIE68KmaQF9U6jbQwP",
+            "visible": false,
+            "activeLabel": "Reviewing your answer…",
+            "label": "Reviewed your answer",
+            "state": "complete"
+          },
+          {
+            "id": "call_woMCOZ5FOShfpsInHbzV6qdr",
+            "visible": false,
+            "activeLabel": "Understanding your request…",
+            "label": "Understood your request",
+            "state": "complete"
+          },
+          {
+            "id": "call_8SrchhHcKcvvT1rNUaBrJBtn",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_lMnmgjqYXBXErJIKdQt8kCL7",
+            "visible": false,
+            "activeLabel": "Adding Derrick White…",
+            "label": "Added Derrick White",
+            "state": "complete"
+          },
+          {
+            "id": "call_AaiIsGnSnijUAk7th3JBQSvL",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "call_41q7kZmvZnccNAYhaD7KVIl3",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          },
+          {
+            "id": "call_CNWGdrv2QTyzUzsT1RtSsnnI",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 13402,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 25
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+
+> build
+> vite build
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./tools/ux-review/vite-plugin" without a file extension (vite.config.ts:5:34). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./tools/ux-review/vite-plugin" without a file extension (vite.config.ts:5:34). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./tools/ux-review/vite-plugin" without a file extension (vite.config.ts:5:34). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+vite v8.3.3 building client environment for production...
+transforming...
+✓ 7153 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+dist/client/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+dist/client/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+dist/client/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+dist/client/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+dist/client/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+dist/client/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+dist/client/assets/styles-BmbMuVbV.css                            235.90 kB │ gzip:  36.33 kB
+dist/client/assets/routes-BUNq6_Tu.js                               0.08 kB │ gzip:   0.09 kB
+dist/client/assets/ux-review-DkOl2UH4.js                            0.21 kB │ gzip:   0.19 kB
+dist/client/assets/ux-review-playground-Dhy9vqcx.js                 0.29 kB │ gzip:   0.24 kB
+dist/client/assets/jsx-runtime-Dk72oS4N.js                          8.77 kB │ gzip:   3.33 kB
+dist/client/assets/preload-helper-CLdyA9xx.js                      15.10 kB │ gzip:   6.26 kB
+dist/client/assets/tooltip-D6nB1Mek.js                            126.04 kB │ gzip:  45.41 kB
+dist/client/assets/workspace-layout-CdmcnsAb.js                   216.00 kB │ gzip:  62.26 kB
+dist/client/assets/ux-review-frame-ZsPgJjYs.js                    284.98 kB │ gzip:  28.59 kB
+dist/client/assets/index-Mkcf52_b.js                              313.40 kB │ gzip: 100.38 kB
+dist/client/assets/player-browser-7OH0YQuH.js                     608.97 kB │ gzip: 188.77 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.92s
+vite v8.3.3 building ssr environment for production...
+transforming...
+✓ 178 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/server/assets/start-5Z2QO8AU.js                         0.14 kB │ gzip:  0.13 kB
+dist/server/assets/routes-reTYN7WV.js                        0.21 kB │ gzip:  0.16 kB
+dist/server/assets/empty-plugin-adapters-D9UWiqvJ.js         0.22 kB │ gzip:  0.16 kB
+dist/server/assets/ux-review-DQZ1PVQg.js                     0.32 kB │ gzip:  0.24 kB
+dist/server/assets/ux-review-playground-EqiV0335.js          0.42 kB │ gzip:  0.31 kB
+dist/server/assets/_tanstack-start-manifest_v-5NNqIHE0.js    1.67 kB │ gzip:  0.56 kB
+dist/server/assets/trade-functions-BjqJUML1.js               9.96 kB │ gzip:  2.89 kB
+dist/server/assets/trade-session-D4wu1ot-.js                43.89 kB │ gzip: 11.93 kB
+dist/server/assets/workspace-layout-mHSVXb5l.js             55.66 kB │ gzip: 13.22 kB
+dist/server/server.js                                       76.79 kB │ gzip: 19.58 kB
+dist/server/assets/player-browser-CNAyw3wM.js              211.48 kB │ gzip: 45.50 kB
+dist/server/assets/router-BwZtM_7-.js                      285.82 kB │ gzip: 72.78 kB
+dist/server/assets/ux-review-frame-BVz-8Lws.js             446.72 kB │ gzip: 32.11 kB
+
+✓ built in 1.16s

@@ -1,0 +1,255 @@
+{
+  "checkedAt": "2026-10-08T04:00:20.000Z",
+  "transport": "Live HTTP/SSE with configured model and validator",
+  "passedTurns": 15,
+  "conversations": 4,
+  "results": [
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which players would you like to include?",
+      "clarification": {
+        "question": "Which players would you like to include?",
+        "options": []
+      },
+      "players": []
+    },
+    {
+      "scenario": "player question accepts a complete routed answer",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which players would you like to include?",
+      "clarification": {
+        "question": "Which players would you like to include?",
+        "options": []
+      },
+      "players": []
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+      "passed": true,
+      "status": "complete",
+      "message": "Derrick White and Andrew Wiggins are both 32 years old and have 3 years remaining on their contracts for the 2026-27 season. Derrick White plays as a shooting guard (SG) for the Boston Celtics with a salary of $30,348,000, while Andrew Wiggins is a small forward (SF) for the Miami Heat with a salary of $30,169,644. White has 8 years of NBA experience, and Wiggins has 11 years. Both have standard contracts without player or team options, no no-trade clauses, and full Bird rights. Their salaries for the next two seasons are quite similar, with slight increases each year. Overall, they are comparable in age, contract length, and salary, but they play different positions and have different experience levels.",
+      "clarification": null,
+      "players": []
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "What is Derrick White's salary and contract length?",
+      "passed": true,
+      "status": "complete",
+      "message": "Derrick White's salary for the 2026-27 season is $30,348,000. He has a standard contract with 3 years remaining, covering the 2026-27, 2027-28, and 2028-29 seasons. His salary is set to increase each year, with $32,775,840 estimated for 2027-28 and $35,397,907 estimated for 2028-29.",
+      "clarification": null,
+      "players": []
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Derrick White, Andrew Wiggins and Tre Jones",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which team should receive Derrick White?",
+      "clarification": {
+        "question": "Which team should receive Derrick White?",
+        "options": [
+          {
+            "id": "destination-16992-5",
+            "label": "Chicago Bulls",
+            "value": "Send Derrick White to Chicago Bulls.",
+            "destination": {
+              "playerId": 16992,
+              "toTeamId": 5
+            }
+          },
+          {
+            "id": "destination-16992-16",
+            "label": "Miami Heat",
+            "value": "Send Derrick White to Miami Heat.",
+            "destination": {
+              "playerId": 16992,
+              "toTeamId": 16
+            }
+          }
+        ]
+      },
+      "players": []
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Swap Terry Rozier for Derrick White.",
+      "passed": true,
+      "status": "complete",
+      "message": "Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.",
+      "clarification": null,
+      "players": []
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which players would you like to include?",
+      "clarification": {
+        "question": "Which players would you like to include?",
+        "options": []
+      },
+      "players": []
+    },
+    {
+      "scenario": "player question accepts a complete routed answer",
+      "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements.",
+      "clarification": null,
+      "players": [
+        16992,
+        17222,
+        17044
+      ]
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Trade Michael Imaginary to Miami.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Michael Imaginary is not found in the player catalogue.",
+      "clarification": {
+        "question": "Michael Imaginary is not found in the player catalogue.",
+        "options": []
+      },
+      "players": []
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Swap these selected players.",
+      "passed": true,
+      "status": "error",
+      "message": "A selected player is no longer available.",
+      "clarification": null,
+      "players": []
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements.",
+      "clarification": null,
+      "players": [
+        16992,
+        17222,
+        17044
+      ]
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "trade Jayson Tatum, Stephen Curry and Nikola Jokic",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which team should receive Jayson Tatum?",
+      "clarification": {
+        "question": "Which team should receive Jayson Tatum?",
+        "options": [
+          {
+            "id": "destination-16990-8",
+            "label": "Denver Nuggets",
+            "value": "Send Jayson Tatum to Denver Nuggets.",
+            "destination": {
+              "playerId": 16990,
+              "toTeamId": 8
+            }
+          },
+          {
+            "id": "destination-16990-10",
+            "label": "Golden State Warriors",
+            "value": "Send Jayson Tatum to Golden State Warriors.",
+            "destination": {
+              "playerId": 16990,
+              "toTeamId": 10
+            }
+          }
+        ]
+      },
+      "players": []
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Jayson Tatum to Denver Nuggets.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which team should receive Stephen Curry?",
+      "clarification": {
+        "question": "Which team should receive Stephen Curry?",
+        "options": [
+          {
+            "id": "destination-17122-2",
+            "label": "Boston Celtics",
+            "value": "Send Stephen Curry to Boston Celtics.",
+            "destination": {
+              "playerId": 17122,
+              "toTeamId": 2
+            }
+          },
+          {
+            "id": "destination-17122-8",
+            "label": "Denver Nuggets",
+            "value": "Send Stephen Curry to Denver Nuggets.",
+            "destination": {
+              "playerId": 17122,
+              "toTeamId": 8
+            }
+          }
+        ]
+      },
+      "players": []
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Stephen Curry to Boston Celtics.",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which team should receive Nikola Jokic?",
+      "clarification": {
+        "question": "Which team should receive Nikola Jokic?",
+        "options": [
+          {
+            "id": "destination-17090-2",
+            "label": "Boston Celtics",
+            "value": "Send Nikola Jokic to Boston Celtics.",
+            "destination": {
+              "playerId": 17090,
+              "toTeamId": 2
+            }
+          },
+          {
+            "id": "destination-17090-10",
+            "label": "Golden State Warriors",
+            "value": "Send Nikola Jokic to Golden State Warriors.",
+            "destination": {
+              "playerId": 17090,
+              "toTeamId": 10
+            }
+          }
+        ]
+      },
+      "players": []
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Nikola Jokic to Golden State Warriors.",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "clarification": null,
+      "players": [
+        16990,
+        17122,
+        17090
+      ]
+    }
+  ]
+}

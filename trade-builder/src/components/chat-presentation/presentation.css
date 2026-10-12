@@ -1,0 +1,156 @@
+.presentation-viewer {
+  display: grid;
+  grid-template-columns: 192px minmax(0, 1fr);
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--muted);
+  color: var(--foreground);
+  font-size: 14px;
+}
+.presentation-viewer button {
+  cursor: pointer;
+}
+.presentation-viewer button:focus-visible,
+.presentation-timeline:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+.presentation-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 0;
+  padding: 28px 16px 24px;
+  border-right: 1px solid var(--border);
+  background: var(--background);
+}
+.presentation-sidebar h1 {
+  padding-inline: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.presentation-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+.presentation-sidebar nav button {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  line-height: 1.4;
+}
+.presentation-sidebar nav button:hover {
+  background: var(--muted);
+}
+.presentation-sidebar nav button[aria-current] {
+  background: var(--secondary);
+  color: var(--primary);
+  font-weight: 500;
+}
+.presentation-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.presentation-cached-scenario {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+.presentation-cached-scenario[aria-hidden="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.presentation-timeline {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted-foreground) transparent;
+}
+.presentation-stage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.presentation-screen {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--background);
+}
+.presentation-screen iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.presentation-screen .presentation-source {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.presentation-screen-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+.presentation-screen-status button,
+.presentation-error button {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.presentation-error {
+  padding: 24px;
+  color: var(--muted-foreground);
+}
+@media (max-width: 767px) {
+  .presentation-viewer {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .presentation-sidebar {
+    gap: 12px;
+    padding: 16px 16px 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .presentation-sidebar h1 {
+    padding-inline: 4px;
+    font-size: 16px;
+  }
+  .presentation-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .presentation-sidebar nav button {
+    flex-shrink: 0;
+    padding: 10px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,67 @@
+Gambit example tool-call flow
+Generation mode: built-in image_gen tool
+
+Initial generation prompt
+
+Use case: infographic-diagram.
+Asset: a second image for Gambit's README, showing a concrete example of the actual tool calls from user message to response.
+Style: same clean, flat editorial architecture style as a white/zinc/emerald Gambit diagram. Landscape 1536x1024. White background, charcoal type, restrained emerald-green connectors, fine gray rounded box outlines. Large clear plain sans-serif headings; tool names in bold monospace. Plenty of whitespace. No decorative textures, shadows, gradients, watermarks, tables or grid lines. Diagram must remain readable at README width.
+
+Title (exact): "One message, three tool calls"
+Subtitle (exact): "Illustrative flow • inputs abbreviated"
+
+Layout: a continuous readable top-to-bottom sequence with six numbered stages, arranged in a generous snake-shaped path to use the landscape canvas. No table. Each stage is a distinct rounded card, connected by clear green arrows. The three tool stages are visibly grouped inside a light frame titled "Agent + tools". A small side annotation inside that frame, linked to all three tool-return paths, says "Each result goes back to the model". This must visibly show that the model can decide its next step after a result, not a rigid pre-programmed pipeline.
+
+Stage 1 outside agent frame:
+Heading "Your message"
+Exact quoted request: "Trade Derrick White for Andrew Wiggins"
+Small speech-bubble icon.
+
+Stage 2 inside agent frame:
+Tool name "search_players"
+Small label "Input"
+"Derrick White + Andrew Wiggins"
+Small label "Returns"
+"Confirmed IDs, teams and contracts"
+Small supporting line "Celtics • Heat"
+This is reading authoritative player facts using candidate IDs from the directory, not guessing ownership.
+
+Stage 3 inside agent frame:
+Tool name "check_proposal"
+Small label "Input"
+"New proposal"
+"White → Miami • Wiggins → Boston"
+Small label "Returns"
+"Proposal version + validation evidence"
+A very small separate branch from this card leads to a compact "Trade checks" box labeled "Ownership • Routes • Salary rules"; its result returns only to check_proposal. No checkmarks, green valid badges, numerical salaries or invented outcomes. The checks can establish an invalid result too.
+
+Stage 4 inside agent frame:
+Tool name "finish_response"
+Small label "Input"
+"Explain the result + reference the checked proposal"
+Small label "Returns"
+"Response marked complete"
+
+Stage 5 outside agent frame:
+Heading "Gambit saves the turn"
+Supporting line "Messages, proposal and actual tool outcomes"
+Disk/database icon. Make clear saving happens after the tools finish.
+
+Stage 6 outside agent frame:
+Heading "Your response"
+Supporting line "Trade card + explanation of its checks"
+An abstract chat/card preview with neutral blocks only. Do not invent assistant success text or verdict.
+
+Bottom caption (exact): "Tool progress appears in chat while the agent works"
+Small footer (exact): "Actual calls depend on the request; unclear identities or destinations trigger a question."
+
+Constraints: tool names must be exact: search_players, check_proposal, finish_response. Do not invent other model tools. The external validator is a service called within check_proposal, not a fourth model tool. Stage labels must be accurately numbered in order and arrows clearly directed. No arrow through text. No actual numeric asset IDs needed; inputs explicitly abbreviated. Do not assert this is a recorded live trace or that the trade passed. Do not imply finish_response saves durable data itself. Use OpenAI model + Google ADK only as a small "Agent + tools" frame subtitle if space permits; no added agents.
+
+Final correction prompt
+
+Edit this Gambit tool-call flow diagram. Preserve its overall layout, palette, typography, six numbered stages, all tool names, all card contents, the message text, the trade routing and the title. Make only the following targeted corrections:
+1. Reverse BOTH vertical arrow directions between "Trade checks" and "check_proposal". The LEFT arrow beside "Send proposal for validation" MUST point UP from check_proposal to Trade checks. The RIGHT arrow beside "Return validation result" MUST point DOWN from Trade checks to check_proposal. Do not move the text labels or reverse their meanings.
+2. Remove the entire incorrect bottom feedback bus inside the Agent + tools frame: remove its thin horizontal green line and all three arrow branches pointing up into tool cards. Keep the main left-to-right chronological arrows between the three tool-call cards unchanged.
+3. Replace the pill caption "Each result goes back to the model" with a plain unobstructed caption beneath the three tool cards, exact text: "The model reads each result before choosing the next call". Do not add arrows to this caption. The numbered tool cards are examples of the calls the same model chooses in sequence.
+4. Keep the external message arrow, the finish_response-to-save arrow and the save-to-response arrow exactly as they are.
+No other edits, no invented calls or results, no added model or agent cards. All text must remain legible and correctly spelled.

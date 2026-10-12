@@ -1,0 +1,1615 @@
+{
+  "verifiedAt": "2026-10-08T02:05:35.778Z",
+  "cases": [
+    {
+      "request": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T02:00:39.574Z"
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:00:39.575Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 30348000,
+            "salaryIn": 30169644,
+            "netSalaryChange": -178356,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+              "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 30348000,
+            "netSalaryChange": 178356,
+            "newTotalSalary": 207114312,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "set_teams",
+        "add_player",
+        "add_player",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "What if Derrick White's salary were $18 million instead?",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 2,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T02:00:47.442Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 3
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 1
+        }
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 2,
+        "evaluatedAt": "2026-10-08T02:00:47.442Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "edit_contract",
+        "request_verdict",
+        "explain_verdict"
+      ]
+    },
+    {
+      "request": "Give Derrick White two remaining years instead, keeping the hypothetical salary.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 3,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          }
+        ],
+        "createdAt": "2026-10-08T02:00:55.142Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 2
+        }
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 3,
+        "evaluatedAt": "2026-10-08T02:00:55.142Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Add Juhann Begarin's draft rights to Miami.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 4,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:03.964Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 3
+        }
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 4,
+        "evaluatedAt": "2026-10-08T02:01:03.964Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "search_draft_rights",
+        "edit_draft_right",
+        "request_verdict",
+        "explain_verdict"
+      ]
+    },
+    {
+      "request": "Send Juhann Begarin's rights to Chicago instead.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 5,
+        "teamIds": [
+          2,
+          16,
+          5
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 5
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:11.731Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 4
+        }
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 5,
+        "evaluatedAt": "2026-10-08T02:01:11.731Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 5,
+            "teamName": "Chicago Bulls",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "newTotalSalary": 163695997,
+            "newCapStatus": "Under Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Cap room absorption: Chicago Bulls have $1.3M room + $0K outgoing; can receive up to $1.5M"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§6(j)(1)(v): Under-cap teams can absorb incoming salary up to cap room + outgoing + $250K"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "edit_draft_right",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Undo that last change.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 6,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:21.402Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 5
+        }
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 6,
+        "evaluatedAt": "2026-10-08T02:01:21.402Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "request_verdict",
+        "undo_trade_change",
+        "request_verdict",
+        "explain_verdict",
+        "explain_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Use Boston's Anfernee Simons trade exception.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 7,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:35.201Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 6
+        },
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 7,
+        "evaluatedAt": "2026-10-08T02:01:35.201Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "TPE absorbed (§6(j)(2)): Boston Celtics uses a $27.7M TPE — expanded TPE ($27.1M) + $27.7M TPE = $54.8M total capacity ≥ $30.2M to match"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "list_trade_exceptions",
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Explain Boston's salary matching and the hypothetical contracts.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.\n\nDerrick White: $18,000,000/year for 2 years (hypothetical contract)\n\nBOS uses $27,678,571 trade exception (expires 2027-02-05)\n\nBoston Celtics sends Derrick White, Juhann Begarin draft rights ($18,000,000) and receives Andrew Wiggins ($30,169,644). Payroll becomes $206,503,476 (Over Luxury Tax).\nTPE absorbed (§6(j)(2)): Boston Celtics uses a $27.7M TPE — expanded TPE ($27.1M) + $27.7M TPE = $54.8M total capacity ≥ $30.2M to match",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 7,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:35.201Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 6
+        },
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 7,
+        "evaluatedAt": "2026-10-08T02:01:35.201Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "TPE absorbed (§6(j)(2)): Boston Celtics uses a $27.7M TPE — expanded TPE ($27.1M) + $27.7M TPE = $54.8M total capacity ≥ $30.2M to match"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "explain_verdict"
+      ]
+    },
+    {
+      "request": "Remove Boston's selected trade exception.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 8,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:01:53.845Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 7
+        },
+        "exceptions": []
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 8,
+        "evaluatedAt": "2026-10-08T02:01:53.845Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": false,
+            "violations": [
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE. Sending $18.0M, must match $30.2M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "list_trade_exceptions",
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Reset Derrick White's contract to its original values.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 9,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:02:00.599Z",
+        "salaryOverrides": [],
+        "parent": {
+          "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+          "revision": 8
+        },
+        "exceptions": []
+      },
+      "verdict": {
+        "proposalId": "24c3256c-6900-46e6-828c-9431965cfa33",
+        "revision": 9,
+        "evaluatedAt": "2026-10-08T02:02:00.599Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 30348000,
+            "salaryIn": 30169644,
+            "netSalaryChange": -178356,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+              "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 30348000,
+            "netSalaryChange": 178356,
+            "newTotalSalary": 207114312,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "What contract options does Boston have for Tre Scott?",
+      "passed": true,
+      "status": "complete",
+      "reply": "Boston can sign Tre Scott to a Veteran Minimum contract for up to 2 years with a first-year salary of $3,290,014. Other contract options like the Bi-Annual Exception, Room Exception, Mid-Level Exception, and Maximum contract are not available to Boston for Tre Scott due to cap restrictions or eligibility requirements.",
+      "tools": [
+        "interpret_request",
+        "get_contract_options",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Sign Tre Scott to Boston on a one-year minimum contract.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T02:02:24.932Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:02:24.932Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 3290014,
+            "newTotalSalary": 209971846,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": []
+          }
+        ],
+        "appliedRules": [],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "get_contract_options",
+        "sign_free_agent",
+        "sign_free_agent",
+        "sign_free_agent",
+        "sign_free_agent",
+        "set_teams",
+        "sign_free_agent",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Now sign-and-trade Tre Scott to Miami.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+      "proposal": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 2,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 17023,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:02:34.847Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ],
+        "parent": {
+          "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+          "revision": 1
+        }
+      },
+      "verdict": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 2,
+        "evaluatedAt": "2026-10-08T02:02:34.847Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 3290014,
+            "salaryIn": 0,
+            "netSalaryChange": -3290014,
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "S&T sender (first apron): Boston Celtics are sending only — no salary received back"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 0,
+            "salaryIn": 3290014,
+            "netSalaryChange": 3290014,
+            "newTotalSalary": 210225970,
+            "newCapStatus": "Over First Apron",
+            "isValid": false,
+            "violations": [
+              "Sign-and-trade violation: Miami Heat are over the cap and this trade would leave them at $210.2M — at or above the first apron ($209.0M). To acquire via sign-and-trade the trade must bring their total salary below the first apron.",
+              "Miami Heat are over the cap and cannot receive salary without sending salary out"
+            ],
+            "allowances": [
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§8(e)(1): S&T sending teams at or above the first apron cannot receive any salary back",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "set_teams",
+        "add_player",
+        "request_verdict",
+        "explain_verdict"
+      ]
+    },
+    {
+      "request": "Undo that last trade change.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 3,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T02:02:43.420Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ],
+        "parent": {
+          "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+          "revision": 2
+        }
+      },
+      "verdict": {
+        "proposalId": "b48e17a5-bbe8-415e-8bb3-d6e508fc5bbe",
+        "revision": 3,
+        "evaluatedAt": "2026-10-08T02:02:43.420Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 3290014,
+            "newTotalSalary": 209971846,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": []
+          }
+        ],
+        "appliedRules": [],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "undo_trade_change",
+        "undo_trade_change",
+        "finish_response",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Stretch and waive Derrick White's contract in Boston as a hypothetical.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "bffbd652-b6d7-4948-b579-44663e801f6b",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T02:02:52.744Z",
+        "kind": "scenario",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 13006286,
+            "yearsRemaining": 7,
+            "isStretchAndWaive": true
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "bffbd652-b6d7-4948-b579-44663e801f6b",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:02:52.744Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": -17341714,
+            "newTotalSalary": 189340118,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": []
+          }
+        ],
+        "appliedRules": [],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "edit_contract",
+        "set_teams",
+        "edit_contract",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Explain Boston's payroll after the stretch.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.\n\nDerrick White: $13,006,286/year for 7 years (stretch-and-waive obligation; player cannot be traded)\n\nCeltics sends no assets ($0) and receives no assets ($0). Payroll becomes $189,340,118 (Over Cap).",
+      "proposal": {
+        "proposalId": "bffbd652-b6d7-4948-b579-44663e801f6b",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T02:02:52.744Z",
+        "kind": "scenario",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 13006286,
+            "yearsRemaining": 7,
+            "isStretchAndWaive": true
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "bffbd652-b6d7-4948-b579-44663e801f6b",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:02:52.744Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": -17341714,
+            "newTotalSalary": 189340118,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": []
+          }
+        ],
+        "appliedRules": [],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "explain_verdict"
+      ]
+    },
+    {
+      "request": "Trade Juhann Begarin's draft rights from Boston to Miami.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "eff92f2c-be88-47a7-82f0-f0fc6b18be6a",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:03:04.446Z"
+      },
+      "verdict": {
+        "proposalId": "eff92f2c-be88-47a7-82f0-f0fc6b18be6a",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:03:04.446Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "newTotalSalary": 206681832,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 0,
+            "newTotalSalary": 206935956,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "search_draft_rights",
+        "set_teams",
+        "edit_draft_right",
+        "edit_draft_right",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Sign Tre Scott to Boston.",
+      "passed": true,
+      "status": "needs_clarification",
+      "reply": "Tre Scott can be signed by Boston to a maximum of 2 years at the veteran minimum salary of $3,290,014 per year. How many years should the contract be?",
+      "tools": [
+        "interpret_request",
+        "get_contract_options",
+        "ask_clarification"
+      ]
+    },
+    {
+      "request": "One year at the minimum.",
+      "passed": true,
+      "status": "complete",
+      "reply": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+      "proposal": {
+        "proposalId": "0643eda2-1760-4847-8212-bf985d5003b0",
+        "revision": 1,
+        "teamIds": [
+          2
+        ],
+        "transfers": [],
+        "createdAt": "2026-10-08T02:03:23.722Z",
+        "kind": "scenario",
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "0643eda2-1760-4847-8212-bf985d5003b0",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:03:23.722Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Hypothetical payroll scenario updated. Signing contracts are checked individually against current team cap data; combined signing eligibility and trade salary matching have not been checked.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Celtics",
+            "salaryOut": 0,
+            "salaryIn": 0,
+            "netSalaryChange": 3290014,
+            "newTotalSalary": 209971846,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": []
+          }
+        ],
+        "appliedRules": [],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "sign_free_agent",
+        "get_contract_options",
+        "sign_free_agent",
+        "set_teams",
+        "sign_free_agent",
+        "request_verdict",
+        "finish_response"
+      ]
+    },
+    {
+      "request": "Trade Derrick White to Miami for Andrew Wiggins to Boston. Set White's hypothetical annual salary to $18 million, add Juhann Begarin's draft rights to Miami, and use Boston's Anfernee Simons trade exception.",
+      "passed": true,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.",
+      "proposal": {
+        "proposalId": "0f9a28cc-4253-4698-80fb-a9b4b6882cd2",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:03:33.915Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 3
+          }
+        ],
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "0f9a28cc-4253-4698-80fb-a9b4b6882cd2",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:03:33.915Z",
+        "dataFetchedAt": "2026-10-08T02:00:33.993Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "valid",
+        "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 30169644,
+            "netSalaryChange": 12169644,
+            "newTotalSalary": 206503476,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "TPE absorbed (§6(j)(2)): Boston Celtics uses a $27.7M TPE — expanded TPE ($27.1M) + $27.7M TPE = $54.8M total capacity ≥ $30.2M to match"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+        ],
+        "issues": []
+      },
+      "tools": [
+        "interpret_request",
+        "interpret_request",
+        "set_teams",
+        "search_draft_rights",
+        "list_trade_exceptions",
+        "add_player",
+        "add_player",
+        "edit_contract",
+        "edit_draft_right",
+        "set_trade_exception",
+        "request_verdict",
+        "finish_response"
+      ]
+    }
+  ],
+  "scope": "Historical live checks for retained trade-machine features; removed export flow excluded."
+}

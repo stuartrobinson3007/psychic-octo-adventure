@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "people": {
+    "Chris Boucher": {
+      "localPath": "/player-headshots/chris-boucher.png",
+      "sourceUrl": "https://cdn.nba.com/headshots/nba/latest/260x190/1628449.png",
+      "sourcePage": "https://www.nba.com/player/1628449/chris_boucher",
+      "nbaPersonId": 1628449,
+      "retrievedOn": "2026-10-12",
+      "width": 260,
+      "height": 190,
+      "bytes": 15055,
+      "sha256": "6d26baa26019c897e955be1c6ed463ae92f7d97b00fef07222ba926a6b8c3446",
+      "usage": "Portrait-only identity for named assets; not a trade-roster entry."
+    }
+  }
+}

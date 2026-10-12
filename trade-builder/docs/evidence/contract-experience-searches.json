@@ -1,0 +1,162 @@
+{
+  "verifiedAt": "2026-10-10T21:06:23.895Z",
+  "backendRevision": "88405dfe5d86171fffc96cfcc8d9e8c79aa07986d5f80af38ab7051238f47c9c",
+  "liveTurns": 16,
+  "browserFlow": "Combined expiring-contract and experience search, select one idea, submit, receive checked card with a summary and selection receipt.",
+  "generatedPackagesVerified": 18915,
+  "checks": [
+    {
+      "scenario": "unsupported search criteria",
+      "input": "Find Bulls trades for players averaging 25 points per game.",
+      "status": "complete",
+      "filters": null,
+      "packagesVerified": null
+    },
+    {
+      "scenario": "unsupported search criteria",
+      "input": "Find Bulls trades for expiring contracts.",
+      "status": "needs_clarification",
+      "filters": {
+        "minYearsRemaining": 1,
+        "maxYearsRemaining": 1,
+        "excludeContractOptions": true
+      },
+      "packagesVerified": 6135
+    },
+    {
+      "scenario": "unsupported search criteria",
+      "input": "Find Bulls trades for players with at least three contract years remaining.",
+      "status": "needs_clarification",
+      "filters": {
+        "minYearsRemaining": 3
+      },
+      "packagesVerified": 6435
+    },
+    {
+      "scenario": "unsupported search criteria",
+      "input": "Find Bulls trades for players with under three years of NBA experience.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 2
+      },
+      "packagesVerified": 4065
+    },
+    {
+      "scenario": "unsupported search criteria",
+      "input": "Find Bulls trades for players taller than 7 feet.",
+      "status": "complete",
+      "filters": null,
+      "packagesVerified": null
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Find Bulls one-for-one trades for players with under three years of NBA experience and at least three contract years remaining.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 2,
+        "minYearsRemaining": 3
+      },
+      "packagesVerified": 630
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Make that under two years of experience, keeping the contract limit.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 1,
+        "minYearsRemaining": 3
+      },
+      "packagesVerified": 525
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Keep those filters and limit incoming salary to $12 million.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 1,
+        "minYearsRemaining": 3,
+        "maxIncomingSalary": 12000000
+      },
+      "packagesVerified": 495
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Change to expiring contracts instead. Keep the experience and salary limits.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 1,
+        "minYearsRemaining": 1,
+        "maxYearsRemaining": 1,
+        "excludeContractOptions": true,
+        "maxIncomingSalary": 12000000
+      },
+      "packagesVerified": 255
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Show more of those ideas.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 1,
+        "minYearsRemaining": 1,
+        "maxYearsRemaining": 1,
+        "excludeContractOptions": true,
+        "maxIncomingSalary": 12000000
+      },
+      "packagesVerified": 255
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Only rookies with zero years of NBA experience now. Keep the expiring-contract and salary limits.",
+      "status": "needs_clarification",
+      "filters": {
+        "minExperience": 0,
+        "maxExperience": 0,
+        "minYearsRemaining": 1,
+        "maxYearsRemaining": 1,
+        "excludeContractOptions": true,
+        "maxIncomingSalary": 12000000
+      },
+      "packagesVerified": 120
+    },
+    {
+      "scenario": "contract and experience search refinements",
+      "input": "Kam Jones for Johni Broome",
+      "status": "complete",
+      "filters": null,
+      "packagesVerified": null
+    }
+  ],
+  "replacementPackagesVerified": 2,
+  "edgeChecks": [
+    {
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "status": "complete",
+      "message": "The Derrick White\u2013Andrew Wiggins swap passes the trade checks for both Boston and Miami."
+    },
+    {
+      "input": "In that trade, find a replacement for Andrew Wiggins with under three years of NBA experience and at least one contract year remaining. Keep Derrick White.",
+      "status": "needs_clarification",
+      "message": "Choose up to five trades to check."
+    },
+    {
+      "input": "Find Bulls trades for players with at least three fully guaranteed contract years remaining.",
+      "status": "complete",
+      "message": "I can filter Bulls trade ideas by reported contract years remaining, but I can\u2019t verify fully guaranteed years. Reported years can include option years and don\u2019t establish salary guarantees, so I can\u2019t reliably search for that requirement."
+    },
+    {
+      "input": "Find Bulls one-for-one trades for players with at least 99 years of NBA experience.",
+      "status": "complete",
+      "message": "No Bulls one-for-one trade ideas match the requirement of at least 99 years of NBA experience for the incoming player. This search covered two-team player swaps across all other teams, not picks or signings."
+    }
+  ],
+  "passed": true,
+  "unitTestsAdded": 0,
+  "screenshot": "/tmp/gambit-contract-experience-checked.jpg"
+}

@@ -1,0 +1,734 @@
+
+> test
+> node --test src/lib/*.test.ts src/lib/ux-review/*.test.ts src/server/*.test.ts
+
+✔ answered questions precede their receipts while the next unanswered question stays in its picker (9.070209ms)
+✔ unsubmitted choices stay in the picker; submitted and restored replies retain the question (0.350417ms)
+✔ the historical question matches the widget header and remains above a failed answer turn (0.355458ms)
+✔ player, team, package and plain-answer receipts split extra text without changing the backend message (1.821958ms)
+✔ selected option is recorded from the offered canonical choice and mismatched selections are ignored (0.340083ms)
+✔ older stored option replies recover receipts while freeform replies remain ordinary messages (0.186167ms)
+✔ custom-message player references retain their exact offsets after the selected choice is removed (0.144792ms)
+✔ duplicate option values never select an arbitrary identity (0.105084ms)
+✔ conversation entries preserve multiple versions and discovery cards without inventing focus (1.973125ms)
+✔ legacy archives keep candidate and checked-version references separate (1.126834ms)
+✔ message archives preserve only explicit badge ranges through import (0.322542ms)
+✔ typed and response player names remain plain text (1.567584ms)
+✔ only the inserted badge is preserved in mixed text (1.780417ms)
+✔ explicit badges preserve the selected identity for duplicate names (0.53125ms)
+✔ ambiguous surnames and fuzzy prose are never silently assigned (0.275ms)
+✔ persisted badge ranges preserve whitespace and selected identity (0.724584ms)
+✔ hover timestamps show local time today and dates on other calendar days (56.031667ms)
+✔ missing or invalid historical times do not acquire invented timestamps (0.155625ms)
+✔ pick browsing separates origin and ownership and never broadens unknown searches (33.353583ms)
+✔ pick references preserve exact IDs alongside colliding player IDs and reject overlapping ranges (1.174833ms)
+✔ clarification prefixes retain pick references with corrected offsets (1.767875ms)
+✔ full names survive misplaced spaces, accents and conservative typos (19.005375ms)
+✔ ambiguity preserves all matching identities while full names resolve uniquely (6.111792ms)
+✔ ordinary prose is retained and matches preserve surrounding text (6.908167ms)
+✔ a surname that is another player's first name cannot silently become a badge (0.522125ms)
+✔ short surrounding words are not swallowed as full-name typos (0.478208ms)
+✔ completed signing history removes recovered retries without hiding failures for other targets or later failures (2.106625ms)
+✔ older recorded signing retries are summarized using their known work stage (0.320167ms)
+✔ work duration uses compact elapsed time and does not invent timing for older messages (0.253125ms)
+✔ tool presentation uses friendly tenses and known player names without technical outputs (0.413583ms)
+✔ parallel calls display the first unfinished action and retain the last completed action between steps (0.219292ms)
+✔ only substantive lookups, checks and alternative searches appear, including older recorded labels (0.284666ms)
+✔ recognized labels preserve the explanation and numbers verbatim (1.39275ms)
+✔ unrecognized wording and embedded labels remain entirely untouched (2.104875ms)
+✔ empty explanations are not hidden behind a recognized label (0.211417ms)
+✔ option presentation counts distinct known players across label and detail (1823.166708ms)
+✔ same-name identity choices display only their canonical player (2.894083ms)
+✔ the two requested checkpoints offer named Williams and current-trade removal choices (1.935208ms)
+✔ review adapts an offered discovery reply but respects explicit text-only questions (3.988916ms)
+✔ a selection and message become one reply with exact badge offsets and identities (0.366958ms)
+✔ a clarification survives a failed send but disappears on an answer, cancellation or replacement question (0.33125ms)
+✔ selection questions omit interaction instructions across players, teams and generic answers (0.789875ms)
+✖ copy cleanup preserves real questions, useful requirements and text-only requests (2.955583ms)
+✔ legacy verdict copy retains seasons, failure reasons and salary evidence (1.029875ms)
+✔ review assistant messages use product copy while preserving recorded inputs and results (25.460542ms)
+✔ review catalogue resolves every displayed player, pick, right and exception (8.095ms)
+✔ all maintained conversation briefs are represented in the review (2.345791ms)
+✔ starting another trade preserves earlier cards and moves follow-up focus without clearing (1.103583ms)
+✔ preview expansion follows conversation focus rather than the last candidate card (0.181208ms)
+✔ review contains complete recorded conversations and separately labelled UI fixtures (4.26625ms)
+✔ new scenario names and their metadata are included without a registry edit (2.48375ms)
+✔ recorded choices and structured clarification survive review rendering (0.651833ms)
+✔ clarification and explanation preserve earlier cards without duplicating a preserved snapshot (0.246292ms)
+✔ a multi-card reply keeps one work history on its first card in both production and review (1.992167ms)
+✔ discovered alternatives render separately from the active checked trade (0.274958ms)
+✔ errors retain the production destructive treatment and review progress changes with content or width (1.585042ms)
+✔ a live catalogue failure rejects instead of serving bundled player data (3.179916ms)
+✔ the SDK stops after one request for exhausted credits, without leaking provider details (108.784208ms)
+✔ temporary rate limits pass through intact, while authentication failures need configuration (8.462625ms)
+✔ wrapped SDK failures distinguish quota, timeout and unknown failures (0.463458ms)
+✔ selected answer and typed wording remain separate for structured and legacy replies (2.237208ms)
+✔ duplicate full-name answers require an explicit identity and never select the first option (0.303542ms)
+✔ amending a reference rewrites the pending request and removes stale selections without mutating history (36.242959ms)
+✔ correcting the other reference preserves the selected answer (7.412042ms)
+✔ rewritten phrases reduce to the changed reference and preserve the user's spelling (9.493875ms)
+✔ a more specific name can retain the entirety of the earlier reference (4.8405ms)
+✔ multiple corrections apply to the original request without cascading replacements (1.854125ms)
+✔ overlapping corrections are rejected without changing the pending request (13.411792ms)
+✔ amendments require literal replacement evidence and a real earlier reference (7.187625ms)
+✔ similar names are suggestions, never assumed nickname identities (11.247333ms)
+✔ a second correction removes a provisional suggestion for an unmatched reference (13.266333ms)
+✔ a selection and its separate message survive a durable conversation reload (10.249791ms)
+✔ conversations survive reopening with exact messages, null focus and pending work (8.866042ms)
+✔ a longer turn keeps its conversation locked through its deadline and can commit (4.172333ms)
+✔ competing workers cannot claim or overwrite a conversation; expired owners cannot commit (4.028416ms)
+✔ new mixed trades permit additions and retain an attached ownership qualifier (89.313541ms)
+✔ picks match possessive team names, year and round without substituting origin for ownership (14.558417ms)
+✔ mixed payloads preserve colliding player/pick IDs and locally reject wrong owner, duplicates, blocked and swap assets (1.031042ms)
+✔ adding, rerouting, removing and undoing picks retains players, creates checked revisions, and never supplies salary (400.686875ms)
+✔ ambiguous picks cannot be guessed and a bare year answer resumes the exact pending edit (17.382791ms)
+✖ invented search qualifiers, unavailable picks and unrequested multi-team destinations preserve committed focus (11.538166ms)
+✔ pick-only packages and existing protections are supported without inventing salaries (2.02275ms)
+✔ attempts to change pick protections preserve the checked trade even if the model requests a replacement (2.770291ms)
+✔ player replacement with mixed assets preserves the pick and its destination (5.417709ms)
+✔ known pick-rule HTTP 400 rejections are illegal trades, while unfamiliar service errors remain unavailable (99.630208ms)
+✔ salary repairs preserve every original pick even when player replacements are authorized (4.168459ms)
+✔ an explicit pick badge resolves duplicate labels to its selected ID (7.840792ms)
+✔ changed pick ownership is rejected before a model or proposal edit (7.929208ms)
+✔ pick references survive server expiry and archive round trips (1.78225ms)
+✔ sent badges survive an AI response and a durable conversation reload (11.147792ms)
+✔ literal package references retain duplicate names without matching name prefixes (3.142625ms)
+✔ ambiguous surname cannot resolve a player or guessed first name (5.006708ms)
+✔ unique user-supplied surname and full names resolve grounded identities (0.847375ms)
+✔ a team filter must be grounded in the user message (0.447666ms)
+✔ an exact replacement name is found even when the model assumes the previous player's team (0.575042ms)
+✔ expanded names and inferred owner filters cannot select an ambiguous surname (2.065292ms)
+✔ unique literal first names ground search constraints without inventing an identity (1.968667ms)
+✔ whole name words take precedence over prefix matches (0.286292ms)
+✔ multi-team routing asks one destination with receiving-team options (14.286291ms)
+✔ multi-team destination evidence accepts user routes and cannot invent a cycle (4.254042ms)
+✔ routing choices retain each answer, prohibit guessed cycles and check only the complete package (1474.108666ms)
+✔ selected player owners ground a swap without guessed NBA team IDs (1.648583ms)
+✔ full names and explicit destinations use authoritative catalogue IDs (0.715708ms)
+✔ team identities pair exact numeric IDs with human-readable names (0.194333ms)
+✔ canonical transfers generate consistent sending and receiving arrays (42.420042ms)
+✔ rejects unknown IDs, ownership mismatch, duplicate assets and absent destinations (0.422833ms)
+✔ free agents and empty trades are excluded from the supported scope (0.15075ms)
+✔ integrity failure prevents any upstream request (29.568666ms)
+✔ valid evidence remains tied to the exact revision and catalogue (76.486208ms)
+✔ HTTP 200 with failed salary matching is an invalid trade (0.837208ms)
+✔ recognized HTTP 400 rule evidence is an invalid trade (0.76175ms)
+✔ schema failures, inconsistent identities and salary evidence are unavailable (48.309833ms)
+✔ transport failure cannot be mistaken for an illegal trade (0.594042ms)
+✔ multi-team validation preserves all routes and rejects duplicate, idle and more than four teams (13.738208ms)
+✔ repair offers fresh checked branches, preserves focus, persists options, and deduplicates retries (191.826375ms)
+✔ model prose cannot finish a repair instead of running the checking tool (9.865875ms)
+✔ choosing a checked repair uses its reference and preserves original lineage (50.218209ms)
+✔ three-player discovery and grounded incoming filters finish through the real tool loop (52.272583ms)
+✔ vague ages and unsupported performance finish deterministically without retry loops (15.229084ms)
+✔ explicit show more reuses the saved query even when the model requests clarification (20.366833ms)
+✔ answering an age clarification does not require choosing an optional partner (19.908166ms)
+✖ SDK transport emits progress before the final question and persists the history exactly once (733.998792ms)
+✔ failed tool operations are recorded as failures without exposing their technical errors (262.334584ms)
+✔ user hard filters are deterministically enforced without model-supplied filter fields (162.501208ms)
+✔ a unique first name fixes the outgoing player and supplies its catalogue owner (24.414792ms)
+✔ an ambiguous first name cannot authorize a fixed search player or its owner (3.353834ms)
+✔ show more retains every prior constraint, uses latest age override, and never repeats shown packages (6.57575ms)
+✔ a new search has neither prior hard filters nor previous package exclusions (10.523333ms)
+✔ a continuation cannot silently change source, partner, counts or fixed outgoing identities (21.020584ms)
+✔ ambiguous and unsupported filters cannot produce loosely matching candidate cards (1.083709ms)
+✔ explicit word, numeric and team-qualified package counts cannot be silently reduced (0.814375ms)
+✔ explicit four-to-six player requests are clearly rejected rather than clamped to three (14.501959ms)
+✔ an explicit three-for-three search retains its size when the roster is insufficient (5.13575ms)
+✔ age and salary numbers are never interpreted as package sizes (1.859667ms)
+✔ a model cannot omit uniquely named outgoing or explicitly excluded players (8.029042ms)
+✔ an explicit three-for-three request can return checked six-asset packages (1.340417ms)
+✔ a request to keep a named player does not make them a required outgoing asset (1.1925ms)
+✔ pagination reaches a clear limit rather than discarding old package identities and repeating them (3.184542ms)
+✔ one-for-two discovery chooses unspecified source players and routes both incoming players from one partner (18.54ms)
+✔ named outgoing players, requested partner, counts and exclusions are honoured (1.254083ms)
+✔ unsupported contracts and no-trade consent never enter generated packages (0.329625ms)
+✔ invalid requests cannot silently relax an explicit constraint or call the engine (0.494334ms)
+✔ invalid verdicts are excluded and an empty shortlist is not presented as proof no trade exists (0.754917ms)
+✔ unavailable, throwing and mismatched verdicts never become passing candidates (1.214458ms)
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'timeout' }
+✔ search budget and concurrent engine calls are bounded even when no candidate passes (14.136541ms)
+✔ cancelling the parent turn discards discoveries even if a validator resolves late (1.079792ms)
+✔ the agent returns checked candidate cards without committing a proposed choice, and deduplicates retries (244.525625ms)
+✔ discovering alternatives preserves the existing checked trade and revision history (20.262125ms)
+✖ find suitable matches resumes a prior team-level clarification without asking for outgoing names (34.343875ms)
+✖ discovery rejects invented teams and player constraints before validation (13.440417ms)
+✔ research cannot run discovery or alter checked proposals (3.073083ms)
+✔ new searches cannot borrow previous team or player identities, while explicit continuation can (82.558792ms)
+✔ aborted discovery does not commit candidates or search memory (8.484542ms)
+✔ age, positions and salary filters are conjunctive and apply only to incoming assets (12.796208ms)
+✔ impossible and malformed filter combinations fail without an upstream check (0.546042ms)
+✔ post-trade payroll checks the source team and requires unique finite upstream evidence (2.067042ms)
+✔ three-player outgoing and incoming packages are supported without duplicated assets (0.279958ms)
+✔ show more excludes only explicitly supplied package identities, independent of IDs and transfer order (0.643084ms)
+✔ three-player generation has explicit work limits even for a large cross product (62.328125ms)
+✔ a partner with too few matching players cannot trigger unbounded outgoing combination generation (0.492084ms)
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'timeout' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+✔ complete selected-player requests still require model interpretation and cannot create a trade after model failure (161.944292ms)
+✔ missing model configuration cannot assemble selected-player requests (2.869333ms)
+✔ initial unmatched player requests offer nearby choices even when the model sends an empty option list (161.623667ms)
+✔ nearby choices obey user-supplied team scope and are not narrowed by guessed teams (37.862167ms)
+✖ an unmatched name with no nearby candidates does not reuse another name's choices (11.469041ms)
+✔ player names supplied as answer strings render as distinct grounded player choices (21.436416ms)
+✔ full tool loop builds one checked revision and publishes the engine summary (8.172ms)
+✔ repeated player additions and verdict calls cannot duplicate assets or checks (12.669875ms)
+✔ choosing the outgoing identity resumes discovery without asking for a return preference (34.593125ms)
+✔ a legacy return preference reply retains the earlier player's identity and request (6.079875ms)
+✔ legacy return selections resume discovery and preserve the checked focus (18.079583ms)
+✔ outgoing-only packages search directly and cannot use unresolved or unrelated players (22.854625ms)
+✖ a mixed-team package retains an unsearched duplicate name and the chosen identity through routing (7.314792ms)
+✔ outgoing preferences cannot silently shorten a fully named same-team package (14.739708ms)
+✔ resolving an ambiguous surname completes the original swap (8.033ms)
+✔ clarification choices carry grounded player/team identities and can be answered with a selection plus text (13.116667ms)
+✖ suggested operations do not inherit unrelated ambiguous player choices (5.106958ms)
+✔ remove ambiguity offers only current trade players and rejects invented option identities (6.031125ms)
+✔ a changed team pair retains and reroutes the unaffected outgoing players (8.303541ms)
+✔ salary explanations use exact team directions and never create another revision (2.7455ms)
+✔ a model failure after checking a draft cannot partially commit the trade (6.904875ms)
+✔ exhausted AI credits identify the real blocker and preserve the checked trade (1.974916ms)
+✖ clarification after a checked draft preserves it without committing it (6.29625ms)
+✔ unsupported operations discard staged edits and keep the checked proposal (2.542834ms)
+✔ a one-way edit is checked, and undo restores it as a new revision (11.876167ms)
+✖ clearing and cancelling have explicit outcomes and preserve historical versions (4.7905ms)
+✔ an unavailable verdict is retried instead of being permanently reused (5.86925ms)
+✔ unavailable explanations cannot invent salary matching or a legality result (2.812875ms)
+✔ duplicate submissions reuse the exact reply without another model or engine call (3.661959ms)
+✔ concurrent edits with the same expected revision allow only one commit (3.176ms)
+✔ unknown selected players have no model or validation side effects (0.291375ms)
+✔ an aborted engine check never commits late results (5.690625ms)
+✔ a model ending without a terminal tool cannot publish an unverified success (2.37475ms)
+✔ research and explanation requests cannot execute edit or clear tools (11.987125ms)
+✔ incomplete trade requests cannot finish as a generic answer (3.685ms)
+✔ expired caches reload the durable focus (2.553125ms)
+✔ sessions do not share trades or pending clarifications (4.019ms)
+✖ unsupported players cannot be silently omitted from a checked package (2.15325ms)
+✔ a rejected asset blocks validation even when another asset is successfully added (6.108292ms)
+✔ correcting an invalid destination unblocks the complete proposal (3.958458ms)
+✔ unsupported feature requirements take precedence over missing details (2.762ms)
+✔ ambiguous pronoun removal cannot guess, and a named reply completes the edit (8.687875ms)
+✔ an undo request cannot finish by rechecking the unchanged proposal (3.581375ms)
+✔ value assessments cannot present salary validity as basketball value (2.309125ms)
+✔ a corrected invented ID does not permanently block the requested known player (4.357792ms)
+✔ changing teams does not turn a named replacement into removal of the retained player (5.168917ms)
+✔ atomic replacement changes the opponent without removing the retained player (5.643459ms)
+✔ an expanded ambiguous replacement asks for identity before teams and resumes the existing swap (13.583375ms)
+✔ a failed edit cannot publish a model's unverified validity claim as an unsupported response (3.041ms)
+✔ changing participants cannot silently drop an unmentioned current player (2.611792ms)
+✔ unimplemented discovery performance filters get a scope explanation without retry loops (1.955666ms)
+✔ a new package for the same teams starts empty and keeps older versions (3.587916ms)
+✖ research does not resume a clarification and a successful new trade supersedes it (6.054042ms)
+✖ failed fresh packages preserve pending work and the checked trade (4.63125ms)
+✔ edits to older versions branch explicitly and undo follows that branch's parent (13.033042ms)
+✔ conversation versions reject simultaneous requests even without a focused trade (2.254875ms)
+✔ history stores the displayed reply rather than unused model prose, and clear focus survives reload (4.0875ms)
+✔ durable writes roll back the whole operation on unexpected failure (0.688875ms)
+✔ an exact offered clarification choice resumes its original request despite a mistaken model operation (22.623792ms)
+✖ clarifications publish and persist the missing question without selection instructions (5.099417ms)
+✔ a badge plus a correction resolves the corrected reference before another missing player (14.351ms)
+✔ a grounded correction replaces the provisional answer while preserving the other player (7.500916ms)
+✔ accepting a selected answer with supplementary text still resumes the pending request (6.815625ms)
+✔ stale or inconsistent clarification metadata cannot hide typed corrections (5.241709ms)
+✔ a failed turn after reconciliation leaves the original pending work and focus intact (3.535333ms)
+✖ corrected identity requirements survive clarification follow-ups and prevent partial checks (10.969708ms)
+✔ three-team build checks every directed leg and replacement preserves other destinations (11.769583ms)
+✔ adding a fourth team preserves the existing cycle and undo restores the three-team version (9.681584ms)
+✖ multi-team replacement from a new owner adds that team without rerouting other players (8.499916ms)
+✖ missing multi-team destinations clarify and resume without committing a partial trade (4.404125ms)
+✔ removing a destination team cannot silently reroute an existing multi-team trade (14.005291ms)
+✔ rerouting a multi-team player changes only that destination (5.910583ms)
+✔ a checked multi-team edit cannot remove the newly added player afterward (7.539083ms)
+✖ a replacement belonging to the original receiving team can use an explicit new destination (6.993875ms)
+✔ a combined signing and swap remains actionable when classified as a scenario (95.375ms)
+✔ standalone and negated signing transfers stay signing-only (48.858833ms)
+✔ salary and duration edits retain all assets, are checked on a new revision and undo restores the original (6.543333ms)
+✔ a standalone stretch scenario computes the obligation, rejects trading the waived player and retains zero salary assets separately (1.471333ms)
+✔ contract failures cannot create a partially checked version and scenario fields cannot be changed after checking (3.717125ms)
+✔ draft rights use authoritative ownership, coexist with colliding pick/player ids and survive ordinary player edits (4.721625ms)
+✔ listing a team's ambiguous rights cannot choose an arbitrary asset (1.301125ms)
+✔ exceptions must belong to the selected team, remain unexpired and have been listed (5.111ms)
+✔ a free agent signs for the specified team and becomes a routed sign-and-trade without altering catalogue ownership (5.503167ms)
+✔ standalone payroll scenarios do not send invented teams or claim a trade check (1.224334ms)
+✔ generic signing requests cannot invent a tier or duration, and rejected offers retain the checked trade (2.803542ms)
+✔ a successful right edit recovers an unknown player-id mistake without clearing failures for real players (2.386792ms)
+✔ changing a named draft-right destination adds the requested third team and preserves other transfers (3.595417ms)
+✔ resetting the last standalone contract edit restores original payroll and keeps a reviewable scenario (2.095791ms)
+✔ exception source names do not create extra transfer destinations (0.14475ms)
+✔ scenario payroll accounts for contract changes and signings before transfers (0.157708ms)
+✔ plain signing terms resume a pending scenario rather than becoming a player-name amendment (23.408375ms)
+✔ fresh packages and draft-right edits cannot acquire spurious player-replacement requirements (13.185959ms)
+✔ undo of the last draft-right change restores its parent even if the model labels it as an ordinary edit (1.521708ms)
+✔ an exception's source player cannot ground an unrelated third team (0.288041ms)
+✔ a signing cannot substitute a different salary for the user's explicit offer (21.243583ms)
+✔ bounded context retains exact older conversations through recall after cache eviction (7.789542ms)
+✔ rechecks require a recorded version and never evaluate an unknown package (10.211667ms)
+✔ rechecks use the recorded package and create a child revision without mutating its source (6.635292ms)
+✔ default repairs add exactly one eligible player and preserve original lineage without mutating focus (15.4125ms)
+✔ replacement is considered only when explicitly allowed and pinned players never disappear (3.244375ms)
+✔ unsupported contracts, outside teams and invalid repair requests never generate passing packages (3.113792ms)
+✔ a trade that already passes is a no-op; stored evidence never replaces fresh candidate checks (1.181834ms)
+✔ checked failures produce bounded no-match copy without claiming exhaustive impossibility (0.78575ms)
+✔ unavailable and mismatched identity, teams, salaries, season or payroll never become checked repairs (8.029167ms)
+✔ repair budget is 18 fresh checks with at most three requests in flight (13.693709ms)
+✔ caller cancellation rejects promptly and late validator successes cannot escape (4.394333ms)
+✔ deadline closes the search even when the validator ignores abort (12.870417ms)
+✔ age, position, salary savings and payroll constraints apply to the requested team without relaxation (25.295875ms)
+✖ repair tool refuses absent focus, ungrounded pins, guessed teams and unauthorized replacements (24.284167ms)
+✔ repair tool automatically keeps named and selected players when replacements are permitted (1.8035ms)
+✔ explicit named replacement targets are replaceable while every other original player remains (1.703791ms)
+✔ model cannot omit requested filters and generic salary failures are repairable without a money limit (3.408709ms)
+✔ multi-team repairs explore each destination and preserve the original directed legs (2.39725ms)
+✔ age ranges are inclusive and absent age is excluded when constrained (4.591625ms)
+✔ positions are OR within canonical tokens and AND with age constraints (0.544ms)
+✔ salary filters use combined salaries and exact post-trade team payroll (0.260416ms)
+✔ request validation rejects wrong types, contradictory ranges, unknown keys, and missing payroll (0.43575ms)
+✔ parses common inclusive and exclusive age expressions without confusing salary amounts (20.765375ms)
+✔ recognizes position groups and exact salary constraints (0.742958ms)
+✔ grounding rejects invented constraints, changed bounds, and omitted requested filters (0.363958ms)
+✖ contradictory, ambiguous, excluded, and performance constraints require clarification (1.640667ms)
+✔ descriptions state per-player filters and combined financial limits (32.589166ms)
+✔ salary matching terminology is not interpreted as a monetary constraint (0.797917ms)
+✔ generic validation failures aren't treated as hard financial filters (0.373958ms)
+✔ vague age descriptions ask for age limits while retaining explicit positions (0.222417ms)
+✔ ability filters never disappear and shooting guards remain a supported position (0.534417ms)
+✔ contract, experience, and height bounds cannot become age limits (0.610542ms)
+ℹ tests 287
+ℹ suites 0
+ℹ pass 267
+ℹ fail 20
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3973.478916
+
+✖ failing tests:
+
+test at src/lib/trade-clarification.test.ts:267:1
+✖ copy cleanup preserves real questions, useful requirements and text-only requests (2.955583ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Which player do you mean?'
+  - 'Which player do you mean? Please type the full name.'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/trade-clarification.test.ts:276:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Which player do you mean?',
+    expected: 'Which player do you mean? Please type the full name.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/draft-picks.test.ts:384:1
+✖ invented search qualifiers, unavailable picks and unrequested multi-team destinations preserve committed focus (11.538166ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/draft-picks.test.ts:387:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at src/server/trade-chat-stream.test.ts:47:1
+✖ SDK transport emits progress before the final question and persists the history exactly once (733.998792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Which “Andrew” do you mean?'
+  - 'Which Andrew do you want to trade for?'
+           ^
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-chat-stream.test.ts:113:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Which “Andrew” do you mean?',
+    expected: 'Which Andrew do you want to trade for?',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-discovery.test.ts:334:1
+✖ find suitable matches resumes a prior team-level clarification without asking for outgoing names (34.343875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'error'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-discovery.test.ts:381:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'error',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-discovery.test.ts:386:1
+✖ discovery rejects invented teams and player constraints before validation (13.440417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'error'
+  - 'needs_clarification'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-discovery.test.ts:412:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'error',
+    expected: 'needs_clarification',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:500:1
+✖ an unmatched name with no nearby candidates does not reuse another name's choices (11.469041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     detail: 'Charlotte Hornets',
+  +     id: 'player-40',
+  +     label: 'Grant Williams',
+  +     playerId: 40,
+  +     value: 'Grant Williams'
+  +   },
+  +   {
+  +     detail: 'Chicago Bulls',
+  +     id: 'player-50',
+  +     label: 'Patrick Williams',
+  +     playerId: 50,
+  +     value: 'Patrick Williams'
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:522:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { id: 'player-40', label: 'Grant Williams', detail: 'Charlotte Hornets', value: 'Grant Williams', playerId: 40 }, { id: 'player-50', label: 'Patrick Williams', detail: 'Chicago Bulls', value: 'Patrick Williams', playerId: 50 } ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:858:1
+✖ a mixed-team package retains an unsearched duplicate name and the chosen identity through routing (7.314792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - [
+  -   70,
+  -   71
+  - ]
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:921:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [ 70, 71 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:1168:1
+✖ suggested operations do not inherit unrelated ambiguous player choices (5.106958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'Grant Williams',
+  +   'Patrick Williams'
+  -   'Replace a player',
+  -   'Add a player'
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:1189:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'Grant Williams', 'Patrick Williams' ],
+    expected: [ 'Replace a player', 'Add a player' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:1326:1
+✖ clarification after a checked draft preserves it without committing it (6.29625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:1369:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:1429:1
+✖ clearing and cancelling have explicit outcomes and preserve historical versions (4.7905ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'The conversation service could not finish this turn. Please try again.'
+  - 'The pending edit has been cancelled.'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:1450:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'The conversation service could not finish this turn. Please try again.',
+    expected: 'The pending edit has been cancelled.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:1671:1
+✖ unsupported players cannot be silently omitted from a checked package (2.15325ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.'
+  - "Terry Rozier's contract status isn’t supported for trades yet."
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:1694:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.',
+    expected: "Terry Rozier's contract status isn’t supported for trades yet.",
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2143:1
+✖ research does not resume a clarification and a successful new trade supersedes it (6.054042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'Which Williams?'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2174:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'Which Williams?',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2201:1
+✖ failed fresh packages preserve pending work and the checked trade (4.63125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'error'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2231:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'error',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2405:1
+✖ clarifications publish and persist the missing question without selection instructions (5.099417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Who did you mean by “trade”?'
+  - 'Which trade should I use?'
+       ^
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2435:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Who did you mean by “trade”?',
+    expected: 'Which trade should I use?',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2668:1
+✖ corrected identity requirements survive clarification follow-ups and prevent partial checks (10.969708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'complete'
+  - 'error'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2711:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'complete',
+    expected: 'error',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2824:1
+✖ multi-team replacement from a new owner adds that team without rerouting other players (8.499916ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      2,
+  +   4,
+  -   16,
+      5,
+  -   4
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2841:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 2, 4, 5 ],
+    expected: [ 2, 16, 5, 4 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2849:1
+✖ missing multi-team destinations clarify and resume without committing a partial trade (4.404125ms)
+  AssertionError [ERR_ASSERTION]: {"status":"error","message":"The conversation service could not finish this turn. Please try again.","snapshot":null,"changes":[],"snapshots":[],"toolCalls":[{"id":"call-2-0","visible":false,"activeLabel":"Understanding your request…","label":"Understanding your request — couldn’t finish","state":"error"}],"workDurationMs":2,"conversationVersion":2,"pendingClarification":{"question":"Which team should receive Derrick White?","options":[{"id":"destination-10-16","label":"Miami Heat","value":"Send Derrick White to Miami Heat.","destination":{"playerId":10,"toTeamId":16}},{"id":"destination-10-5","label":"Chicago Bulls","value":"Send Derrick White to Chicago Bulls.","destination":{"playerId":10,"toTeamId":5}}]}}
+  + actual - expected
+  
+  + 'error'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:2903:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'error',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-harness.test.ts:2993:1
+✖ a replacement belonging to the original receiving team can use an explicit new destination (6.993875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      {
+        assetId: 10,
+        assetType: 'player',
+        fromTeamId: 2,
+  +     toTeamId: 5
+  -     toTeamId: 16
+      },
+      {
+        assetId: 50,
+        assetType: 'player',
+        fromTeamId: 5,
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-harness.test.ts:3025:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { assetType: 'player', assetId: 10, fromTeamId: 2, toTeamId: 5 }, { assetType: 'player', assetId: 50, fromTeamId: 5, toTeamId: 2 }, { assetType: 'player', assetId: 55, fromTeamId: 5, toTeamId: 2 } ],
+    expected: [ { assetType: 'player', assetId: 10, fromTeamId: 2, toTeamId: 16 }, { assetType: 'player', assetId: 50, fromTeamId: 5, toTeamId: 2 }, { assetType: 'player', assetId: 55, fromTeamId: 5, toTeamId: 2 } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-repair.test.ts:468:1
+✖ repair tool refuses absent focus, ungrounded pins, guessed teams and unauthorized replacements (24.284167ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok("error" in result)
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-repair.test.ts:486:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at src/server/trade-search-constraints.test.ts:225:1
+✖ contradictory, ambiguous, excluded, and performance constraints require clarification (1.640667ms)
+  AssertionError [ERR_ASSERTION]: remove the salary limit
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-search-constraints.test.ts:249:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

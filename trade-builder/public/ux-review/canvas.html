@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UX journeys · Visual QA</title>
+    <link rel="stylesheet" href="./canvas.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" id="single-link">Single screen</a>
+      <h1>UX journeys</h1>
+      <nav aria-label="Frame filters" id="filters">
+        <button data-filter="all" aria-pressed="true">All</button
+        ><button data-filter="unseen">Unseen</button><button data-filter="affected">Affected</button
+        ><button data-filter="flagged">Flagged</button>
+      </nav>
+      <button id="outline-toggle" aria-expanded="false">Journeys</button
+      ><button id="fit">Fit</button><button id="minus" aria-label="Zoom out">−</button
+      ><output id="zoom">75%</output><button id="plus" aria-label="Zoom in">+</button
+      ><button id="keys">Keys</button>
+    </header>
+    <div class="workspace">
+      <aside id="outline" hidden>
+        <h2>Journeys</h2>
+        <nav id="journey-list" aria-label="Jump to journey"></nav>
+      </aside>
+      <main id="canvas" aria-label="Journey canvas" tabindex="0">
+        <div id="world">
+          <svg id="connections" aria-hidden="true"></svg>
+          <div id="cards"></div>
+        </div>
+        <div id="centre" aria-hidden="true"></div>
+        <p id="empty" hidden>No matching screens.</p>
+      </main>
+      <aside id="inspector">
+        <p id="handoff">Loading collection…</p>
+        <h2 id="selected-title">Select a screen</h2>
+        <p id="selected-state">Pan a screen through the centre dot to mark it Seen.</p>
+        <p id="selected-brief"></p>
+        <dl id="selected-context">
+          <dt id="selected-request-label">Request</dt>
+          <dd id="selected-request"></dd>
+          <dt>On screen</dt>
+          <dd id="selected-outcome"></dd>
+        </dl>
+        <div class="actions">
+          <button id="focus">Focus</button
+          ><button id="pixels" aria-pressed="false">Screenshot</button
+          ><button id="inspect" aria-pressed="false">Inspect elements</button
+          ><button id="flag">Flag</button><button id="open-app">Open in app</button
+          ><button id="resume" hidden>Resume / recover</button
+          ><button id="stop" hidden>Stop playground</button>
+        </div>
+        <p id="playground-status" role="status"></p>
+        <p id="limitations"></p>
+        <label for="note">Note</label
+        ><textarea id="note" rows="3" placeholder="What should change?"></textarea
+        ><button id="copy">Copy reference</button>
+        <pre id="reference" tabindex="0">Select an element in Inspect mode.</pre>
+        <p id="storage-warning" role="status"></p>
+      </aside>
+    </div>
+    <footer>
+      <output id="progress"></output>
+      <p>
+        Left/middle drag or scroll to pan · Ctrl/⌘ + scroll to zoom · Centre dot: 300 ms dwell · F: flag · I:
+        inspect · Enter: focus
+      </p>
+    </footer>
+    <dialog id="settings">
+      <h2>Navigation settings</h2>
+      <p>Shared with the single-screen reviewer.</p>
+      <fieldset>
+        <legend>Arrow keys</legend>
+        <label
+          ><input type="radio" name="navigation" value="axes" /> Left/right: states; up/down:
+          widths</label
+        ><label
+          ><input type="radio" name="navigation" value="paired" /> Left/right: desktop/mobile
+          sequence</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Review scope</legend>
+        <label><input type="radio" name="widths" value="primary" /> Desktop and mobile</label
+        ><label><input type="radio" name="widths" value="all" /> All four widths</label>
+      </fieldset>
+      <button id="settings-close">Close</button>
+    </dialog>
+    <script type="module" src="./canvas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-10T20:30:44.247Z",
+  "backendRevision": "eb20f0b32595facc49e4780bf10335954dbb6b85f33d930325cb6cf3946a8411",
+  "conversations": 5,
+  "turns": 15,
+  "cardReplies": 9,
+  "missingSummaries": 0,
+  "incomplete": [],
+  "restoredFiveCardSummaryOccurrences": 1,
+  "visualInspection": "Desktop and mobile; summary precedes the card; selected five-card reply has one summary",
+  "checks": [
+    "targeted lint",
+    "typecheck",
+    "production build",
+    "atlas verification"
+  ],
+  "scope": "Five focused recordings refreshed; other recordings retain their earlier backend revision."
+}

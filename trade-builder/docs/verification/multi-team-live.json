@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-08T00:44:50.710Z",
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "message": "Help me build a three-team trade. Where should we start?",
+      "passed": true,
+      "failure": null,
+      "status": "needs_clarification",
+      "reply": "Which three teams would you like to involve in the trade?"
+    },
+    {
+      "message": "Boston, Miami and Chicago.",
+      "passed": true,
+      "failure": null,
+      "status": "needs_clarification",
+      "reply": "Which players from Boston, Miami and Chicago would you like to include in the trade? Please specify outgoing players for each team."
+    },
+    {
+      "message": "Build a three-team trade: send Jordan Walsh from Boston to Miami, Ryan Conwell from Miami to Chicago, and Kam Jones from Chicago to Boston.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks."
+    },
+    {
+      "message": "Explain Chicago's salary matching.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.\n\nChicago Bulls sends Kam Jones ($2,150,917) and receives Ryan Conwell ($1,357,763).\nMinimum Salary Exception: Chicago Bulls — all $1.4M incoming is from minimum contracts — no salary matching required\nCap room absorption: Chicago Bulls have $1.3M room + $2.2M outgoing; can receive up to $3.7M"
+    },
+    {
+      "message": "Replace Ryan Conwell with Pelle Larsson.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks.\n\nChicago Bulls sends Kam Jones ($2,150,917) and receives Pelle Larsson ($2,296,271).\nCap room absorption: Chicago Bulls have $1.3M room + $2.2M outgoing; can receive up to $3.7M"
+    },
+    {
+      "message": "Undo that last change.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks."
+    },
+    {
+      "message": "Also add Grant Williams from Charlotte to Boston, retaining all current player destinations.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+    },
+    {
+      "message": "Undo that last change.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks."
+    },
+    {
+      "message": "Send Ryan Conwell to Boston instead of Chicago, keeping everyone else in place.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks."
+    },
+    {
+      "message": "Build a new four-team trade: Jordan Walsh to Miami, Ryan Conwell to Chicago, Kam Jones to Charlotte, and Grant Williams to Boston.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.\n\nBoston Celtics sends Jordan Walsh ($2,406,205) and receives Grant Williams ($14,265,750).\nFirst apron hard cap (Table row E): Boston Celtics cannot match $14.3M via Expanded TPE — would push team salary to $218.5M, above the first apron ($209.0M). Max matchable: $4.7M.\nNote: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+    },
+    {
+      "message": "Build a five-team trade with Boston, Miami, Chicago, Charlotte and Denver.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "Trades involving more than four teams aren’t supported yet. The current checked trade is unchanged."
+    },
+    {
+      "message": "Build a three-team trade with Jordan Walsh, Ryan Conwell and Kam Jones.",
+      "passed": true,
+      "failure": null,
+      "status": "needs_clarification",
+      "reply": "Which three teams should be involved in the trade with Jordan Walsh, Ryan Conwell and Kam Jones?"
+    },
+    {
+      "message": "Jordan Walsh to Miami, Ryan Conwell to Chicago, Kam Jones to Boston.",
+      "passed": true,
+      "failure": null,
+      "status": "complete",
+      "reply": "This trade passes the 2026-27 salary and roster checks."
+    }
+  ]
+}

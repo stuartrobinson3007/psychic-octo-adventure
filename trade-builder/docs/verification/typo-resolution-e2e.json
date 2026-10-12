@@ -1,0 +1,348 @@
+{
+  "checkedAt": "2026-10-08T03:30:39.326Z",
+  "method": "Real application HTTP/SSE, configured model, catalogue and validator; isolated SQLite conversations.",
+  "conversations": 10,
+  "turns": 21,
+  "results": [
+    {
+      "scenario": "duplicate full name and implicit two-team exchange",
+      "input": "trade ryan conwell, kam jones and andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “Kam Jones” do you mean?",
+      "options": [
+        {
+          "id": "player-17555",
+          "label": "Kam Jones",
+          "detail": "Milwaukee Bucks",
+          "value": "Kam Jones",
+          "playerId": 17555
+        },
+        {
+          "id": "player-17164",
+          "label": "Kam Jones",
+          "detail": "Chicago Bulls",
+          "value": "Kam Jones",
+          "playerId": 17164
+        }
+      ],
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “White” do you mean?",
+      "options": [
+        {
+          "id": "player-17037",
+          "label": "Coby White",
+          "detail": "Charlotte Hornets",
+          "value": "Coby White",
+          "playerId": 17037
+        },
+        {
+          "id": "player-16992",
+          "label": "Derrick White",
+          "detail": "Boston Celtics",
+          "value": "Derrick White",
+          "playerId": 16992
+        }
+      ],
+      "streamedUpdates": 11
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "trade nick for andrew",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “Nick” do you mean?",
+      "options": [
+        {
+          "id": "player-17199",
+          "label": "Nick Smith Jr.",
+          "detail": "Los Angeles Lakers",
+          "value": "Nick Smith Jr.",
+          "playerId": 17199
+        },
+        {
+          "id": "player-17547",
+          "label": "Nick Martinelli",
+          "detail": "Los Angeles Clippers",
+          "value": "Nick Martinelli",
+          "playerId": 17547
+        },
+        {
+          "id": "player-17054",
+          "label": "Nick Richards",
+          "detail": "Miami Heat",
+          "value": "Nick Richards",
+          "playerId": 17054
+        }
+      ],
+      "streamedUpdates": 13
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "Derrick White",
+      "passed": true,
+      "status": "complete",
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Nick Smith Jr.\n\nactually i mean dave",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Who did you mean by “dave”?",
+      "options": [
+        {
+          "id": "player-17481",
+          "label": "David Jones-Garcia",
+          "detail": "San Antonio Spurs",
+          "value": "David Jones-Garcia",
+          "playerId": 17481
+        },
+        {
+          "id": "player-17434",
+          "label": "Anthony Davis",
+          "detail": "Washington Wizards",
+          "value": "Anthony Davis",
+          "playerId": 17434
+        },
+        {
+          "id": "player-17340",
+          "label": "Dalen Terry",
+          "detail": "Philadelphia 76ers",
+          "value": "Dalen Terry",
+          "playerId": 17340
+        },
+        {
+          "id": "player-17448",
+          "label": "Dante Exum",
+          "detail": "Washington Wizards",
+          "value": "Dante Exum",
+          "playerId": 17448
+        }
+      ],
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Dalen Terry",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “Andrew” do you mean?",
+      "options": [
+        {
+          "id": "player-17154",
+          "label": "Andrew Nembhard",
+          "detail": "Indiana Pacers",
+          "value": "Andrew Nembhard",
+          "playerId": 17154
+        },
+        {
+          "id": "player-17222",
+          "label": "Andrew Wiggins",
+          "detail": "Miami Heat",
+          "value": "Andrew Wiggins",
+          "playerId": 17222
+        }
+      ],
+      "streamedUpdates": 11
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "the second one",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17245,
+        17237
+      ],
+      "streamedUpdates": 13
+    },
+    {
+      "scenario": "duplicate full name and implicit two-team exchange",
+      "input": "Kam Jones",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17507,
+        17164,
+        17222
+      ],
+      "streamedUpdates": 31
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Andrew Wiggins",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17340,
+        17222
+      ],
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "is it a good deal?",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17245,
+        17237
+      ],
+      "streamedUpdates": 13
+    },
+    {
+      "scenario": "replacement with an obvious full name typo",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17222
+      ],
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "typo in a specified swap",
+      "input": "trade derrik white for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17222
+      ],
+      "streamedUpdates": 21
+    },
+    {
+      "scenario": "full name transposition",
+      "input": "trade derrick whtie for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17222
+      ],
+      "streamedUpdates": 21
+    },
+    {
+      "scenario": "replacement with an obvious full name typo",
+      "input": "replace White with Jrue Holidy",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17222,
+        17361
+      ],
+      "streamedUpdates": 13
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "input": "trade white for andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “White” do you mean?",
+      "options": [
+        {
+          "id": "player-17037",
+          "label": "Coby White",
+          "detail": "Charlotte Hornets",
+          "value": "Coby White",
+          "playerId": 17037
+        },
+        {
+          "id": "player-16992",
+          "label": "Derrick White",
+          "detail": "Boston Celtics",
+          "value": "Derrick White",
+          "playerId": 16992
+        }
+      ],
+      "streamedUpdates": 11
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "input": "trade jalin williams for andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Which “jalin williams” do you mean?",
+      "options": [
+        {
+          "id": "player-17306",
+          "label": "Jaylin Williams",
+          "detail": "Oklahoma City Thunder",
+          "value": "Jaylin Williams",
+          "playerId": 17306
+        },
+        {
+          "id": "player-17308",
+          "label": "Jalen Williams",
+          "detail": "Oklahoma City Thunder",
+          "value": "Jalen Williams",
+          "playerId": 17308
+        }
+      ],
+      "streamedUpdates": 11
+    },
+    {
+      "scenario": "typo preserves a different first name",
+      "input": "trade coby whte for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17037,
+        17222
+      ],
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "input": "Coby White",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17037,
+        17222
+      ],
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "input": "Jaylin Williams",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        17306,
+        17222
+      ],
+      "streamedUpdates": 17
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "input": "Swap Michael Imaginary for Andrew Wiggins.",
+      "passed": true,
+      "status": "needs_clarification",
+      "question": "Who did you mean by “Michael Imaginary”?",
+      "options": [],
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "input": "Derrick White",
+      "passed": true,
+      "status": "complete",
+      "players": [
+        16992,
+        17222
+      ],
+      "streamedUpdates": 19
+    }
+  ]
+}

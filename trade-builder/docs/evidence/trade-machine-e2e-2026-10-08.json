@@ -1,0 +1,1593 @@
+{
+  "method": "Actual browser UI, configured model and live trade backend, isolated conversation DB",
+  "initialFailures": [
+    "Fully specified own pick became a player clarification",
+    "Rejected nonliteral pick query looped without assembling a checked proposal",
+    "Premature add_player for unsigned free agent incorrectly terminated supported sign-and-trade",
+    "Existing TPE re-selection unnecessarily required another choice",
+    "Pick reroute misclassification hid the reroute_pick tool"
+  ],
+  "sessionId": "052fa8cf-89fc-4270-b80b-b1aed5168347",
+  "steps": [
+    {
+      "name": "four-team players + two owned picks + draft rights",
+      "proposal": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 1,
+        "teamIds": [
+          2,
+          16,
+          8,
+          10
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17090,
+            "fromTeamId": 8,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "player",
+            "assetId": 17122,
+            "fromTeamId": 10,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12100,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12099,
+            "fromTeamId": 2,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 8
+          }
+        ],
+        "createdAt": "2026-10-08T02:37:37.083Z"
+      },
+      "verdict": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 1,
+        "evaluatedAt": "2026-10-08T02:37:37.083Z",
+        "dataFetchedAt": "2026-10-08T02:37:06.850Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 30348000,
+            "salaryIn": 62587158,
+            "netSalaryChange": 32239158,
+            "newTotalSalary": 238920990,
+            "newCapStatus": "Over Second Apron",
+            "isValid": false,
+            "violations": [
+              "First apron hard cap (Table row E): Boston Celtics cannot match $62.6M via Expanded TPE — would push team salary to $238.9M, above the first apron ($209.0M). Max matchable: $32.7M."
+            ],
+            "allowances": [
+              "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 30348000,
+            "netSalaryChange": 178356,
+            "newTotalSalary": 207114312,
+            "newCapStatus": "Over Luxury Tax",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 8,
+            "teamName": "Denver Nuggets",
+            "salaryOut": 59033114,
+            "salaryIn": 30169644,
+            "netSalaryChange": -28863470,
+            "newTotalSalary": 198919279,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+            ]
+          },
+          {
+            "teamId": 10,
+            "teamName": "Golden State Warriors",
+            "salaryOut": 62587158,
+            "salaryIn": 59033114,
+            "netSalaryChange": -3554044,
+            "newTotalSalary": 213936368,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+          "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+        ],
+        "issues": []
+      },
+      "status": "complete"
+    },
+    {
+      "name": "salary override + named TPE",
+      "proposal": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 2,
+        "teamIds": [
+          2,
+          16,
+          8,
+          10
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17090,
+            "fromTeamId": 8,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "player",
+            "assetId": 17122,
+            "fromTeamId": 10,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12100,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12099,
+            "fromTeamId": 2,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 8
+          }
+        ],
+        "createdAt": "2026-10-08T02:38:10.583Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ],
+        "parent": {
+          "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+          "revision": 1
+        }
+      },
+      "verdict": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 2,
+        "evaluatedAt": "2026-10-08T02:38:10.583Z",
+        "dataFetchedAt": "2026-10-08T02:37:06.850Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 18000000,
+            "salaryIn": 62587158,
+            "netSalaryChange": 44587158,
+            "newTotalSalary": 238920990,
+            "newCapStatus": "Over Second Apron",
+            "isValid": false,
+            "violations": [
+              "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+              "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $18.0M, must match $62.6M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 18000000,
+            "netSalaryChange": -12169644,
+            "newTotalSalary": 194766312,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 8,
+            "teamName": "Denver Nuggets",
+            "salaryOut": 59033114,
+            "salaryIn": 30169644,
+            "netSalaryChange": -28863470,
+            "newTotalSalary": 198919279,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+            ]
+          },
+          {
+            "teamId": 10,
+            "teamName": "Golden State Warriors",
+            "salaryOut": 62587158,
+            "salaryIn": 59033114,
+            "netSalaryChange": -3554044,
+            "newTotalSalary": 213936368,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+          "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+        ],
+        "issues": []
+      },
+      "status": "complete"
+    },
+    {
+      "name": "minimum signing + sign-and-trade",
+      "proposal": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 3,
+        "teamIds": [
+          2,
+          16,
+          8,
+          10
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17090,
+            "fromTeamId": 8,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "player",
+            "assetId": 17122,
+            "fromTeamId": 10,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12100,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12099,
+            "fromTeamId": 2,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17023,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:40:21.798Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          }
+        ],
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ],
+        "parent": {
+          "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+          "revision": 2
+        },
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ]
+      },
+      "verdict": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 3,
+        "evaluatedAt": "2026-10-08T02:40:21.798Z",
+        "dataFetchedAt": "2026-10-08T02:40:09.102Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 21290014,
+            "salaryIn": 62587158,
+            "netSalaryChange": 41297144,
+            "newTotalSalary": 238920990,
+            "newCapStatus": "Over Second Apron",
+            "isValid": false,
+            "violations": [
+              "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+              "Salary mismatch: Boston Celtics can receive up to $30.4M via S&T Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $21.3M, must match $62.6M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 21290014,
+            "netSalaryChange": -8879630,
+            "newTotalSalary": 198056326,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Sign-and-trade (§8(e)(1)): Miami Heat are over the cap, but this trade drops their salary to $198.1M, below the first apron ($209.0M) — S&T acquisition permitted",
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $21.3M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 8,
+            "teamName": "Denver Nuggets",
+            "salaryOut": 59033114,
+            "salaryIn": 30169644,
+            "netSalaryChange": -28863470,
+            "newTotalSalary": 198919279,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+            ]
+          },
+          {
+            "teamId": 10,
+            "teamName": "Golden State Warriors",
+            "salaryOut": 62587158,
+            "salaryIn": 59033114,
+            "netSalaryChange": -3554044,
+            "newTotalSalary": 213936368,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§6(j)(1)(iv) + §8(e)(1) + Table row J: S&T sender Expanded TPE — hard-capped at second apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+          "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+        ],
+        "issues": []
+      },
+      "status": "complete"
+    },
+    {
+      "name": "stretch and waive without transfer",
+      "proposal": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 4,
+        "teamIds": [
+          2,
+          16,
+          8,
+          10
+        ],
+        "transfers": [
+          {
+            "assetType": "player",
+            "assetId": 16992,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "player",
+            "assetId": 17222,
+            "fromTeamId": 16,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17090,
+            "fromTeamId": 8,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "player",
+            "assetId": 17122,
+            "fromTeamId": 10,
+            "toTeamId": 2
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12100,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          },
+          {
+            "assetType": "pick",
+            "assetId": 12099,
+            "fromTeamId": 2,
+            "toTeamId": 10
+          },
+          {
+            "assetType": "draft_right",
+            "assetId": 2177,
+            "fromTeamId": 2,
+            "toTeamId": 8
+          },
+          {
+            "assetType": "player",
+            "assetId": 17023,
+            "fromTeamId": 2,
+            "toTeamId": 16
+          }
+        ],
+        "createdAt": "2026-10-08T02:40:40.476Z",
+        "salaryOverrides": [
+          {
+            "playerId": 16992,
+            "salary": 18000000,
+            "yearsRemaining": 2
+          },
+          {
+            "playerId": 16993,
+            "salary": 4649235,
+            "yearsRemaining": 7,
+            "isStretchAndWaive": true
+          }
+        ],
+        "exceptions": [
+          {
+            "teamId": 2,
+            "exceptionId": 1249
+          }
+        ],
+        "parent": {
+          "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+          "revision": 3
+        },
+        "signings": [
+          {
+            "playerId": 17023,
+            "signingTeamId": 2,
+            "salary": 3290014,
+            "contractYears": 1,
+            "contractType": "minimum"
+          }
+        ],
+        "kind": "scenario"
+      },
+      "verdict": {
+        "proposalId": "d53bbacc-31f6-4eba-abd7-f80ff7cc1056",
+        "revision": 4,
+        "evaluatedAt": "2026-10-08T02:40:40.476Z",
+        "dataFetchedAt": "2026-10-08T02:40:09.102Z",
+        "season": "2026-27",
+        "source": "bball-gm",
+        "status": "invalid_trade",
+        "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "teams": [
+          {
+            "teamId": 2,
+            "teamName": "Boston Celtics",
+            "salaryOut": 21290014,
+            "salaryIn": 62587158,
+            "netSalaryChange": 41297144,
+            "newTotalSalary": 232722010,
+            "newCapStatus": "Over Second Apron",
+            "isValid": false,
+            "violations": [
+              "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+              "Salary mismatch: Boston Celtics can receive up to $30.4M via S&T Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $21.3M, must match $62.6M."
+            ],
+            "allowances": []
+          },
+          {
+            "teamId": 16,
+            "teamName": "Miami Heat",
+            "salaryOut": 30169644,
+            "salaryIn": 21290014,
+            "netSalaryChange": -8879630,
+            "newTotalSalary": 198056326,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Sign-and-trade (§8(e)(1)): Miami Heat are over the cap, but this trade drops their salary to $198.1M, below the first apron ($209.0M) — S&T acquisition permitted",
+              "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $21.3M",
+              "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+            ]
+          },
+          {
+            "teamId": 8,
+            "teamName": "Denver Nuggets",
+            "salaryOut": 59033114,
+            "salaryIn": 30169644,
+            "netSalaryChange": -28863470,
+            "newTotalSalary": 198919279,
+            "newCapStatus": "Over Cap",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+            ]
+          },
+          {
+            "teamId": 10,
+            "teamName": "Golden State Warriors",
+            "salaryOut": 62587158,
+            "salaryIn": 59033114,
+            "netSalaryChange": -3554044,
+            "newTotalSalary": 213936368,
+            "newCapStatus": "Over First Apron",
+            "isValid": true,
+            "violations": [],
+            "allowances": [
+              "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+            ]
+          }
+        ],
+        "appliedRules": [
+          "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+          "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+          "§6(j)(1)(iv) + §8(e)(1) + Table row J: S&T sender Expanded TPE — hard-capped at second apron level",
+          "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+          "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+          "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+          "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+          "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+          "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+        ],
+        "issues": []
+      },
+      "status": "complete"
+    }
+  ],
+  "finalRun": {
+    "sessionId": "c13e0d4f-5f26-40ba-951c-e507b50c480b",
+    "steps": [
+      {
+        "revision": 1,
+        "proposal": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 1,
+          "teamIds": [
+            2,
+            16,
+            8,
+            10
+          ],
+          "transfers": [
+            {
+              "assetType": "player",
+              "assetId": 16992,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "player",
+              "assetId": 17222,
+              "fromTeamId": 16,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17090,
+              "fromTeamId": 8,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "player",
+              "assetId": 17122,
+              "fromTeamId": 10,
+              "toTeamId": 2
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12100,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12099,
+              "fromTeamId": 2,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "draft_right",
+              "assetId": 2177,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            }
+          ],
+          "createdAt": "2026-10-08T03:06:33.077Z"
+        },
+        "verdict": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 1,
+          "evaluatedAt": "2026-10-08T03:06:33.077Z",
+          "dataFetchedAt": "2026-10-08T03:05:11.962Z",
+          "season": "2026-27",
+          "source": "bball-gm",
+          "status": "invalid_trade",
+          "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "teams": [
+            {
+              "teamId": 2,
+              "teamName": "Boston Celtics",
+              "salaryOut": 30348000,
+              "salaryIn": 62587158,
+              "netSalaryChange": 32239158,
+              "newTotalSalary": 238920990,
+              "newCapStatus": "Over Second Apron",
+              "isValid": false,
+              "violations": [
+                "First apron hard cap (Table row E): Boston Celtics cannot match $62.6M via Expanded TPE — would push team salary to $238.9M, above the first apron ($209.0M). Max matchable: $32.7M."
+              ],
+              "allowances": [
+                "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 16,
+              "teamName": "Miami Heat",
+              "salaryOut": 30169644,
+              "salaryIn": 30348000,
+              "netSalaryChange": 178356,
+              "newTotalSalary": 207114312,
+              "newCapStatus": "Over Luxury Tax",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 8,
+              "teamName": "Denver Nuggets",
+              "salaryOut": 59033114,
+              "salaryIn": 30169644,
+              "netSalaryChange": -28863470,
+              "newTotalSalary": 198919279,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+              ]
+            },
+            {
+              "teamId": 10,
+              "teamName": "Golden State Warriors",
+              "salaryOut": 62587158,
+              "salaryIn": 59033114,
+              "netSalaryChange": -3554044,
+              "newTotalSalary": 213936368,
+              "newCapStatus": "Over First Apron",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+              ]
+            }
+          ],
+          "appliedRules": [
+            "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+            "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+            "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+            "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+            "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+            "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+          ],
+          "issues": []
+        }
+      },
+      {
+        "revision": 2,
+        "proposal": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 2,
+          "teamIds": [
+            2,
+            16,
+            8,
+            10
+          ],
+          "transfers": [
+            {
+              "assetType": "player",
+              "assetId": 16992,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "player",
+              "assetId": 17222,
+              "fromTeamId": 16,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17090,
+              "fromTeamId": 8,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "player",
+              "assetId": 17122,
+              "fromTeamId": 10,
+              "toTeamId": 2
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12100,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12099,
+              "fromTeamId": 2,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "draft_right",
+              "assetId": 2177,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            }
+          ],
+          "createdAt": "2026-10-08T03:07:38.745Z",
+          "salaryOverrides": [
+            {
+              "playerId": 16992,
+              "salary": 18000000,
+              "yearsRemaining": 2
+            }
+          ],
+          "exceptions": [
+            {
+              "teamId": 2,
+              "exceptionId": 1249,
+              "sourcePlayerName": "Anfernee Simons"
+            }
+          ],
+          "parent": {
+            "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+            "revision": 1
+          }
+        },
+        "verdict": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 2,
+          "evaluatedAt": "2026-10-08T03:07:38.745Z",
+          "dataFetchedAt": "2026-10-08T03:05:11.962Z",
+          "season": "2026-27",
+          "source": "bball-gm",
+          "status": "invalid_trade",
+          "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "teams": [
+            {
+              "teamId": 2,
+              "teamName": "Boston Celtics",
+              "salaryOut": 18000000,
+              "salaryIn": 62587158,
+              "netSalaryChange": 44587158,
+              "newTotalSalary": 238920990,
+              "newCapStatus": "Over Second Apron",
+              "isValid": false,
+              "violations": [
+                "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+                "Salary mismatch: Boston Celtics can receive up to $27.1M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $18.0M, must match $62.6M."
+              ],
+              "allowances": []
+            },
+            {
+              "teamId": 16,
+              "teamName": "Miami Heat",
+              "salaryOut": 30169644,
+              "salaryIn": 18000000,
+              "netSalaryChange": -12169644,
+              "newTotalSalary": 194766312,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $18.0M",
+                "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 8,
+              "teamName": "Denver Nuggets",
+              "salaryOut": 59033114,
+              "salaryIn": 30169644,
+              "netSalaryChange": -28863470,
+              "newTotalSalary": 198919279,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+              ]
+            },
+            {
+              "teamId": 10,
+              "teamName": "Golden State Warriors",
+              "salaryOut": 62587158,
+              "salaryIn": 59033114,
+              "netSalaryChange": -3554044,
+              "newTotalSalary": 213936368,
+              "newCapStatus": "Over First Apron",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+              ]
+            }
+          ],
+          "appliedRules": [
+            "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+            "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+            "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+            "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+            "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+            "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+            "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+          ],
+          "issues": []
+        }
+      },
+      {
+        "revision": 3,
+        "proposal": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 3,
+          "teamIds": [
+            2,
+            16,
+            8,
+            10
+          ],
+          "transfers": [
+            {
+              "assetType": "player",
+              "assetId": 16992,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "player",
+              "assetId": 17222,
+              "fromTeamId": 16,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17090,
+              "fromTeamId": 8,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "player",
+              "assetId": 17122,
+              "fromTeamId": 10,
+              "toTeamId": 2
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12100,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12099,
+              "fromTeamId": 2,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "draft_right",
+              "assetId": 2177,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17023,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            }
+          ],
+          "createdAt": "2026-10-08T03:08:27.716Z",
+          "salaryOverrides": [
+            {
+              "playerId": 16992,
+              "salary": 18000000,
+              "yearsRemaining": 2
+            }
+          ],
+          "exceptions": [
+            {
+              "teamId": 2,
+              "exceptionId": 1249,
+              "sourcePlayerName": "Anfernee Simons"
+            }
+          ],
+          "parent": {
+            "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+            "revision": 2
+          },
+          "signings": [
+            {
+              "playerId": 17023,
+              "signingTeamId": 2,
+              "salary": 3290014,
+              "contractYears": 1,
+              "contractType": "minimum"
+            }
+          ]
+        },
+        "verdict": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 3,
+          "evaluatedAt": "2026-10-08T03:08:27.716Z",
+          "dataFetchedAt": "2026-10-08T03:05:11.962Z",
+          "season": "2026-27",
+          "source": "bball-gm",
+          "status": "invalid_trade",
+          "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "teams": [
+            {
+              "teamId": 2,
+              "teamName": "Boston Celtics",
+              "salaryOut": 21290014,
+              "salaryIn": 62587158,
+              "netSalaryChange": 41297144,
+              "newTotalSalary": 238920990,
+              "newCapStatus": "Over Second Apron",
+              "isValid": false,
+              "violations": [
+                "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+                "Salary mismatch: Boston Celtics can receive up to $30.4M via S&T Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $21.3M, must match $62.6M."
+              ],
+              "allowances": []
+            },
+            {
+              "teamId": 16,
+              "teamName": "Miami Heat",
+              "salaryOut": 30169644,
+              "salaryIn": 21290014,
+              "netSalaryChange": -8879630,
+              "newTotalSalary": 198056326,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Sign-and-trade (§8(e)(1)): Miami Heat are over the cap, but this trade drops their salary to $198.1M, below the first apron ($209.0M) — S&T acquisition permitted",
+                "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $21.3M",
+                "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 8,
+              "teamName": "Denver Nuggets",
+              "salaryOut": 59033114,
+              "salaryIn": 30169644,
+              "netSalaryChange": -28863470,
+              "newTotalSalary": 198919279,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+              ]
+            },
+            {
+              "teamId": 10,
+              "teamName": "Golden State Warriors",
+              "salaryOut": 62587158,
+              "salaryIn": 59033114,
+              "netSalaryChange": -3554044,
+              "newTotalSalary": 213936368,
+              "newCapStatus": "Over First Apron",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+              ]
+            }
+          ],
+          "appliedRules": [
+            "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+            "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+            "§6(j)(1)(iv) + §8(e)(1) + Table row J: S&T sender Expanded TPE — hard-capped at second apron level",
+            "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+            "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+            "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+            "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+            "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+            "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+          ],
+          "issues": []
+        }
+      },
+      {
+        "revision": 4,
+        "proposal": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 4,
+          "teamIds": [
+            2,
+            16,
+            8,
+            10
+          ],
+          "transfers": [
+            {
+              "assetType": "player",
+              "assetId": 16992,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "player",
+              "assetId": 17222,
+              "fromTeamId": 16,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17090,
+              "fromTeamId": 8,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "player",
+              "assetId": 17122,
+              "fromTeamId": 10,
+              "toTeamId": 2
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12100,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12099,
+              "fromTeamId": 2,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "draft_right",
+              "assetId": 2177,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17023,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            }
+          ],
+          "createdAt": "2026-10-08T03:08:55.392Z",
+          "salaryOverrides": [
+            {
+              "playerId": 16992,
+              "salary": 18000000,
+              "yearsRemaining": 2
+            },
+            {
+              "playerId": 16993,
+              "salary": 4649235,
+              "yearsRemaining": 7,
+              "isStretchAndWaive": true
+            }
+          ],
+          "exceptions": [
+            {
+              "teamId": 2,
+              "exceptionId": 1249,
+              "sourcePlayerName": "Anfernee Simons"
+            }
+          ],
+          "parent": {
+            "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+            "revision": 3
+          },
+          "signings": [
+            {
+              "playerId": 17023,
+              "signingTeamId": 2,
+              "salary": 3290014,
+              "contractYears": 1,
+              "contractType": "minimum"
+            }
+          ],
+          "kind": "scenario"
+        },
+        "verdict": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 4,
+          "evaluatedAt": "2026-10-08T03:08:55.392Z",
+          "dataFetchedAt": "2026-10-08T03:05:11.962Z",
+          "season": "2026-27",
+          "source": "bball-gm",
+          "status": "invalid_trade",
+          "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "teams": [
+            {
+              "teamId": 2,
+              "teamName": "Boston Celtics",
+              "salaryOut": 21290014,
+              "salaryIn": 62587158,
+              "netSalaryChange": 41297144,
+              "newTotalSalary": 232722010,
+              "newCapStatus": "Over Second Apron",
+              "isValid": false,
+              "violations": [
+                "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+                "Salary mismatch: Boston Celtics can receive up to $30.4M via S&T Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $21.3M, must match $62.6M."
+              ],
+              "allowances": []
+            },
+            {
+              "teamId": 16,
+              "teamName": "Miami Heat",
+              "salaryOut": 30169644,
+              "salaryIn": 21290014,
+              "netSalaryChange": -8879630,
+              "newTotalSalary": 198056326,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Sign-and-trade (§8(e)(1)): Miami Heat are over the cap, but this trade drops their salary to $198.1M, below the first apron ($209.0M) — S&T acquisition permitted",
+                "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $21.3M",
+                "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 8,
+              "teamName": "Denver Nuggets",
+              "salaryOut": 59033114,
+              "salaryIn": 30169644,
+              "netSalaryChange": -28863470,
+              "newTotalSalary": 198919279,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+              ]
+            },
+            {
+              "teamId": 10,
+              "teamName": "Golden State Warriors",
+              "salaryOut": 62587158,
+              "salaryIn": 59033114,
+              "netSalaryChange": -3554044,
+              "newTotalSalary": 213936368,
+              "newCapStatus": "Over First Apron",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+              ]
+            }
+          ],
+          "appliedRules": [
+            "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+            "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+            "§6(j)(1)(iv) + §8(e)(1) + Table row J: S&T sender Expanded TPE — hard-capped at second apron level",
+            "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+            "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+            "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+            "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+            "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+            "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+          ],
+          "issues": []
+        }
+      },
+      {
+        "revision": 5,
+        "proposal": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 5,
+          "teamIds": [
+            2,
+            16,
+            8,
+            10
+          ],
+          "transfers": [
+            {
+              "assetType": "player",
+              "assetId": 16992,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "player",
+              "assetId": 17222,
+              "fromTeamId": 16,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17090,
+              "fromTeamId": 8,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "player",
+              "assetId": 17122,
+              "fromTeamId": 10,
+              "toTeamId": 2
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12099,
+              "fromTeamId": 2,
+              "toTeamId": 10
+            },
+            {
+              "assetType": "draft_right",
+              "assetId": 2177,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            },
+            {
+              "assetType": "player",
+              "assetId": 17023,
+              "fromTeamId": 2,
+              "toTeamId": 16
+            },
+            {
+              "assetType": "pick",
+              "assetId": 12100,
+              "fromTeamId": 2,
+              "toTeamId": 8
+            }
+          ],
+          "createdAt": "2026-10-08T03:10:10.481Z",
+          "salaryOverrides": [
+            {
+              "playerId": 16992,
+              "salary": 18000000,
+              "yearsRemaining": 2
+            },
+            {
+              "playerId": 16993,
+              "salary": 4649235,
+              "yearsRemaining": 7,
+              "isStretchAndWaive": true
+            }
+          ],
+          "exceptions": [
+            {
+              "teamId": 2,
+              "exceptionId": 1249,
+              "sourcePlayerName": "Anfernee Simons"
+            }
+          ],
+          "parent": {
+            "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+            "revision": 4
+          },
+          "signings": [
+            {
+              "playerId": 17023,
+              "signingTeamId": 2,
+              "salary": 3290014,
+              "contractYears": 1,
+              "contractType": "minimum"
+            }
+          ],
+          "kind": "scenario"
+        },
+        "verdict": {
+          "proposalId": "ca057f0c-c9bb-4375-b707-338479466f24",
+          "revision": 5,
+          "evaluatedAt": "2026-10-08T03:10:10.481Z",
+          "dataFetchedAt": "2026-10-08T03:05:11.962Z",
+          "season": "2026-27",
+          "source": "bball-gm",
+          "status": "invalid_trade",
+          "summary": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+          "teams": [
+            {
+              "teamId": 2,
+              "teamName": "Boston Celtics",
+              "salaryOut": 21290014,
+              "salaryIn": 62587158,
+              "netSalaryChange": 41297144,
+              "newTotalSalary": 232722010,
+              "newCapStatus": "Over Second Apron",
+              "isValid": false,
+              "violations": [
+                "TPE usage rejected: This trade would push Boston Celtics over the second apron hard cap ($221.7M) — TPE cannot be used",
+                "Salary mismatch: Boston Celtics can receive up to $30.4M via S&T Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $21.3M, must match $62.6M."
+              ],
+              "allowances": []
+            },
+            {
+              "teamId": 16,
+              "teamName": "Miami Heat",
+              "salaryOut": 30169644,
+              "salaryIn": 21290014,
+              "netSalaryChange": -8879630,
+              "newTotalSalary": 198056326,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Sign-and-trade (§8(e)(1)): Miami Heat are over the cap, but this trade drops their salary to $198.1M, below the first apron ($209.0M) — S&T acquisition permitted",
+                "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $21.3M",
+                "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+              ]
+            },
+            {
+              "teamId": 8,
+              "teamName": "Denver Nuggets",
+              "salaryOut": 59033114,
+              "salaryIn": 30169644,
+              "netSalaryChange": -28863470,
+              "newTotalSalary": 198919279,
+              "newCapStatus": "Over Cap",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Note: Denver Nuggets are over the second apron — may not pay cash in trades"
+              ]
+            },
+            {
+              "teamId": 10,
+              "teamName": "Golden State Warriors",
+              "salaryOut": 62587158,
+              "salaryIn": 59033114,
+              "netSalaryChange": -3554044,
+              "newTotalSalary": 213936368,
+              "newCapStatus": "Over First Apron",
+              "isValid": true,
+              "violations": [],
+              "allowances": [
+                "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $59.0M"
+              ]
+            }
+          ],
+          "appliedRules": [
+            "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+            "§6(j)(2): Pre-existing Traded Player Exception — additive on top of normal matching capacity",
+            "§6(j)(1)(iv) + §8(e)(1) + Table row J: S&T sender Expanded TPE — hard-capped at second apron level",
+            "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+            "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+            "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+            "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+            "§8(a) + Table row I: Second-apron teams may not pay cash in any trade",
+            "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)"
+          ],
+          "issues": []
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "Create a new four-team trade:\n- Boston sends Derrick White to Miami.\n- Miami sends Andrew Wiggins to Denver.\n- Denver sends Nikola Jokic to Golden State.\n- Golden State sends Stephen Curry to Boston.\n- Boston sends its own 2031 first-round pick to Miami.\n- Boston sends the Charlotte 2030 second-round pick it owns to Golden State, retaining its existing protection.\n- Boston sends Juhann Begarin's unsigned draft rights to Denver.\n\nCheck the trade and show the full proposal even if it fails salary checks."
+      },
+      {
+        "role": "assistant",
+        "text": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "workDurationMs": 21162
+      },
+      {
+        "role": "user",
+        "text": "Keep everything in this trade. Change Derrick White's hypothetical annual salary to $18 million with two remaining years, and use Boston's Anfernee Simons trade exception. Recheck all four teams."
+      },
+      {
+        "role": "assistant",
+        "text": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "workDurationMs": 14172
+      },
+      {
+        "role": "user",
+        "text": "Keep everything else. Hypothetically sign Tre Scott to Boston for one year at the minimum, then sign-and-trade him from Boston to Miami. Recheck the complete proposal."
+      },
+      {
+        "role": "assistant",
+        "text": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "workDurationMs": 18334
+      },
+      {
+        "role": "user",
+        "text": "Keep every trade asset and scenario setting. Hypothetically stretch and waive Sam Hauser's current Boston contract. Do not trade Hauser. Recheck and explain each team's resulting payroll and any failed rules."
+      },
+      {
+        "role": "assistant",
+        "text": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "workDurationMs": 9613
+      },
+      {
+        "role": "user",
+        "text": "Keep everything else. Reroute Boston's own 2031 first-round pick to Denver instead."
+      },
+      {
+        "role": "assistant",
+        "text": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements.",
+        "workDurationMs": 33686
+      }
+    ],
+    "verified": "Original four messages completed without clarification; exact assets, routes and settings preserved across all edits."
+  },
+  "otherChecks": {
+    "savedScenarioSurvivesReload": true,
+    "undoOnlyRemovesLastStretchSetting": true,
+    "removedExportRoutes": {
+      "md": 404,
+      "svg": 404
+    },
+    "typecheck": "pass",
+    "lint": "pass",
+    "build": "pass",
+    "impeccableDetector": "Only pre-existing 11px/13px font-size advisories",
+    "pickReroute": {
+      "status": "pass",
+      "pickId": 12100,
+      "fromTeamId": 2,
+      "oldDestination": 16,
+      "newDestination": 8,
+      "allOtherAssetsAndSettingsPreserved": true
+    },
+    "keyboardDisclosure": "Space opens/closes scenario settings; exact salaries, duration, stretch obligation and named TPE remain available",
+    "failureDisclosure": "Both Boston failures revealed by Why it fails; other teams allowances available under Salary rules",
+    "responsive": {
+      "desktop": {
+        "width": 1365,
+        "pageWidth": 1365
+      },
+      "mobile": {
+        "width": 390,
+        "pageWidth": 390,
+        "teamRegionWidth": 318,
+        "teamRegionScrollWidth": 1064,
+        "scrollLeftAfterGesture": 636
+      },
+      "browserWarningsAndErrors": []
+    }
+  },
+  "uiChanges": [
+    "Collapsed scenario settings in checked and saved cards",
+    "Collapsed detailed rule failures behind Why it fails",
+    "Visible resulting payroll per team",
+    "Retained verified TPE source name in scenario notes"
+  ],
+  "observations": [
+    "Final original messages took 21, 14, 18 and 10 seconds; reroute took 34 seconds.",
+    "Four-team columns scroll horizontally, including desktop; mobile gesture verified.",
+    "Generic exception clarification selections still show a source player’s current team, which adds irrelevant context. The unnecessary clarification in the tested scenario was eliminated."
+  ]
+}

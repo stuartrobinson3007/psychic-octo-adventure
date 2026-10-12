@@ -1,0 +1,303 @@
+{
+  "checkedAt": "2026-10-08T03:45:42.392Z",
+  "transport": "Live HTTP/SSE with configured model and validator",
+  "passedTurns": 15,
+  "conversations": 5,
+  "results": [
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cWhite\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cWhite\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17037",
+            "label": "Coby White",
+            "detail": "Charlotte Hornets",
+            "value": "Coby White",
+            "playerId": 17037
+          },
+          {
+            "id": "player-16992",
+            "label": "Derrick White",
+            "detail": "Boston Celtics",
+            "value": "Derrick White",
+            "playerId": 16992
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "trade nick for andrew",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cNick\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cNick\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17199",
+            "label": "Nick Smith Jr.",
+            "detail": "Los Angeles Lakers",
+            "value": "Nick Smith Jr.",
+            "playerId": 17199
+          },
+          {
+            "id": "player-17547",
+            "label": "Nick Martinelli",
+            "detail": "Los Angeles Clippers",
+            "value": "Nick Martinelli",
+            "playerId": 17547
+          },
+          {
+            "id": "player-17054",
+            "label": "Nick Richards",
+            "detail": "Miami Heat",
+            "value": "Nick Richards",
+            "playerId": 17054
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "what is Stephen Curry's salary?",
+      "passed": true,
+      "status": "complete",
+      "message": "Stephen Curry's salary for the 2026-27 season is $62,587,158.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Nick Smith Jr.\n\nactually i mean dave",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Who did you mean by \u201cdave\u201d?",
+      "pendingClarification": {
+        "question": "Who did you mean by \u201cdave\u201d?",
+        "options": [
+          {
+            "id": "player-17481",
+            "label": "David Jones-Garcia",
+            "detail": "San Antonio Spurs",
+            "value": "David Jones-Garcia",
+            "playerId": 17481
+          },
+          {
+            "id": "player-17434",
+            "label": "Anthony Davis",
+            "detail": "Washington Wizards",
+            "value": "Anthony Davis",
+            "playerId": 17434
+          },
+          {
+            "id": "player-17340",
+            "label": "Dalen Terry",
+            "detail": "Philadelphia 76ers",
+            "value": "Dalen Terry",
+            "playerId": 17340
+          },
+          {
+            "id": "player-17448",
+            "label": "Dante Exum",
+            "detail": "Washington Wizards",
+            "value": "Dante Exum",
+            "playerId": 17448
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "typo in a specified swap",
+      "input": "trade derrik white for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Dalen Terry",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cAndrew\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cAndrew\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17154",
+            "label": "Andrew Nembhard",
+            "detail": "Indiana Pacers",
+            "value": "Andrew Nembhard",
+            "playerId": 17154
+          },
+          {
+            "id": "player-17222",
+            "label": "Andrew Wiggins",
+            "detail": "Miami Heat",
+            "value": "Andrew Wiggins",
+            "playerId": 17222
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "Back to the trade, I meant Derrick White",
+      "passed": true,
+      "status": "complete",
+      "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Andrew Wiggins",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cWhite\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cWhite\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17037",
+            "label": "Coby White",
+            "detail": "Charlotte Hornets",
+            "value": "Coby White",
+            "playerId": 17037
+          },
+          {
+            "id": "player-16992",
+            "label": "Derrick White",
+            "detail": "Boston Celtics",
+            "value": "Derrick White",
+            "playerId": 16992
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "what is Williams' salary?",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cWilliams\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cWilliams\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17446",
+            "label": "Alondes Williams",
+            "detail": "Washington Wizards",
+            "value": "Alondes Williams",
+            "playerId": 17446
+          },
+          {
+            "id": "player-17000",
+            "label": "Amari Williams",
+            "detail": "Boston Celtics",
+            "value": "Amari Williams",
+            "playerId": 17000
+          },
+          {
+            "id": "player-17432",
+            "label": "Vince Williams Jr.",
+            "detail": "Utah Jazz",
+            "value": "Vince Williams Jr.",
+            "playerId": 17432
+          },
+          {
+            "id": "player-17008",
+            "label": "Ziaire Williams",
+            "detail": "Los Angeles Lakers",
+            "value": "Ziaire Williams",
+            "playerId": 17008
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "message": "This trade passes the 2026-27 salary and roster checks.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "Amari Williams",
+      "passed": true,
+      "status": "complete",
+      "message": "Amari Williams, currently with the Boston Celtics, has a salary of $0 for the 2026-27 season. He is on a two-way contract with one year remaining.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "replace Derrick White with Williams",
+      "passed": true,
+      "status": "needs_clarification",
+      "message": "Which \u201cWilliams\u201d do you mean?",
+      "pendingClarification": {
+        "question": "Which \u201cWilliams\u201d do you mean?",
+        "options": [
+          {
+            "id": "player-17446",
+            "label": "Alondes Williams",
+            "detail": "Washington Wizards",
+            "value": "Alondes Williams",
+            "playerId": 17446
+          },
+          {
+            "id": "player-17000",
+            "label": "Amari Williams",
+            "detail": "Boston Celtics",
+            "value": "Amari Williams",
+            "playerId": 17000
+          },
+          {
+            "id": "player-17432",
+            "label": "Vince Williams Jr.",
+            "detail": "Utah Jazz",
+            "value": "Vince Williams Jr.",
+            "playerId": 17432
+          },
+          {
+            "id": "player-17008",
+            "label": "Ziaire Williams",
+            "detail": "Los Angeles Lakers",
+            "value": "Ziaire Williams",
+            "playerId": 17008
+          }
+        ]
+      }
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "what is Stephen Curry's salary?",
+      "passed": true,
+      "status": "complete",
+      "message": "Stephen Curry's salary for the 2026-27 season is $62,587,158.",
+      "pendingClarification": null
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "Back to that replacement, I meant Jaylin Williams",
+      "passed": true,
+      "status": "complete",
+      "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements.",
+      "pendingClarification": null
+    }
+  ]
+}

@@ -1,0 +1,535 @@
+{
+  "checkedAt": "2026-10-10T21:42:52.380Z",
+  "runId": "gambit-chat-76eb3758a12c",
+  "sourceRevision": "76eb3758a12c95f1b7dfee0f29806abe355bbfc0458c3e4aca96e3b3710ace35",
+  "backendRevision": "87fc0ecc25fa6c0d6dc832cd519e8ea11fee7436c585cebb290a856860b4222c",
+  "recordings": {
+    "backendRevision": "87fc0ecc25fa6c0d6dc832cd519e8ea11fee7436c585cebb290a856860b4222c",
+    "total": 171,
+    "current": 171,
+    "staleScenarioIds": []
+  },
+  "viewCount": 4080,
+  "limitations": "Browser observations verify the listed checkpoints and component states. Backend recordings are observations, not semantic pass claims for every response. No unit tests were added.",
+  "fixtures": [
+    {
+      "checked": 0,
+      "checkpoint": "ideas-loading:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.0/5CancelSearch trade ideasJordan Walsh for Dalen TerryCeltics with 76ersCeltics sendJordan WalshPF · Age 23 · 4 yr left$2.4MCeltics receiveDalen TerrySG · Age 24 · 1 yr left$2.6MBoston’s payroll rises by $178.3K to $206.9M.Mike Conley for Kasparas JakucionisCeltics with BucksCeltics sendMike ConleyPG · Age 39 · 1 ",
+      "spinners": 1,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "ideas-error:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.0/5CancelSearch trade ideasJordan Walsh for Dalen TerryCeltics with 76ersCeltics sendJordan WalshPF · Age 23 · 4 yr left$2.4MCeltics receiveDalen TerrySG · Age 24 · 1 yr left$2.6MBoston’s payroll rises by $178.3K to $206.9M.Mike Conley for Kasparas JakucionisCeltics with BucksCeltics sendMike ConleyPG · Age 39 · 1 ",
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "ideas-empty:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.0/5CancelSearch trade ideasNo matchesTry a different search.Clear search",
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "ideas-filtered:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.0/5CancelSearch trade ideasJordan Walsh for Dalen TerryCeltics with 76ersCeltics sendJordan WalshPF · Age 23 · 4 yr left$2.4MCeltics receiveDalen TerrySG · Age 24 · 1 yr left$2.6MBoston’s payroll rises by $178.3K to $206.9M.Showing 1 of 1",
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "ideas-selection-filtered:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.1/5CancelSearch trade ideasMike Conley for Kasparas JakucionisCeltics with BucksCeltics sendMike ConleyPG · Age 39 · 1 yr left$2.4MCeltics receiveKasparas JakucionisPG · Age 21 · 3 yr left$3.8MBoston’s payroll rises by $1.4M to $208.1M.Showing 1 of 1",
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 5,
+      "checkpoint": "ideas-selection-full:0:response",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.5/5CancelSearch trade ideasJordan Walsh for Dalen TerryCeltics with 76ersCeltics sendJordan WalshPF · Age 23 · 4 yr left$2.4MCeltics receiveDalen TerrySG · Age 24 · 1 yr left$2.6MBoston’s payroll rises by $178.3K to $206.9M.Mike Conley for Kasparas JakucionisCeltics with BucksCeltics sendMike ConleyPG · Age 39 · 1 ",
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "ideas-cancelled:0:response",
+      "hOverflow": false,
+      "spinners": 0,
+      "transcript": "Find Boston trade options for an incoming guard, one player for one player.Worked for 4sExplore Boston one-for-one trades bringing back a point guard or shooting guard.No options selected"
+    },
+    {
+      "checkpoint": "workspace-team-choice-empty:0:response",
+      "hOverflow": false,
+      "picker": "Which team should sign Seth Curry?CancelSearch teamsNo matchesTry a different search.Clear search",
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesSign Seth Curry.Waiting for your answer…Scroll to endWhich team should sign Seth Curry?CancelSearch teamsNo matchesTry a different search.Clear searchTrade messageYour answer…PlayersSearch playersFilter by teamAll teams629 playersSort playersSalary(High to low)Stephen CurryGSW · PG · 39$62.6M1 yrNikola JokicDEN · C · 32$59M2 yrJayson TatumBOS · PF · 29$58.5M4 yrAnthony DavisWAS · PF · 34$58.5M2 yrGiannis AntetokounmpoMIA · PF · 32$58.5M2 yrJoel EmbiidPHI · C · 33$58.1M3 yrJaylen BrownPHI · SF · 30$57.1M3 yrDevin BookerPHX · SG · 30$57.1M4 yrKarl"
+    },
+    {
+      "checkpoint": "workspace-team-choice-filtered:0:response",
+      "hOverflow": false,
+      "picker": "Which team should sign Seth Curry?CancelSearch teamsBoston Celtics",
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesSign Seth Curry.Waiting for your answer…Scroll to endWhich team should sign Seth Curry?CancelSearch teamsBoston CelticsTrade messageYour answer…PlayersSearch playersFilter by teamAll teams629 playersSort playersSalary(High to low)Stephen CurryGSW · PG · 39$62.6M1 yrNikola JokicDEN · C · 32$59M2 yrJayson TatumBOS · PF · 29$58.5M4 yrAnthony DavisWAS · PF · 34$58.5M2 yrGiannis AntetokounmpoMIA · PF · 32$58.5M2 yrJoel EmbiidPHI · C · 33$58.1M3 yrJaylen BrownPHI · SF · 30$57.1M3 yrDevin BookerPHX · SG · 30$57.1M4 yrKarl-Anthony TownsNYK · C · 31$57.1"
+    },
+    {
+      "checkpoint": "workspace-exact-team-selection-full:0:response",
+      "hOverflow": false,
+      "picker": "Which three teams do you want to involve?3/3CancelSearch teamsAtlanta HawksAtlanta HawksBoston CelticsBoston CelticsBrooklyn NetsBrooklyn NetsCharlotte HornetsCharlotte HornetsChic",
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesHelp me build a three-team trade.Waiting for your answer…Scroll to endWhich three teams do you want to involve?3/3CancelSearch teamsAtlanta HawksAtlanta HawksBoston CelticsBoston CelticsBrooklyn NetsBrooklyn NetsCharlotte HornetsCharlotte HornetsChicago BullsChicago BullsCleveland CavaliersCleveland CavaliersDallas MavericksDallas MavericksDenver NuggetsDenver NuggetsDetroit PistonsDetroit PistonsGolden State WarriorsGolden State WarriorsHouston RocketsHouston RocketsIndiana PacersIndiana PacersLos Angeles ClippersLos Angeles ClippersLos Angeles"
+    },
+    {
+      "checkpoint": "workspace-exact-team-selection:0:response",
+      "hOverflow": false,
+      "picker": "Which three teams do you want to involve?0/3CancelSearch teamsAtlanta HawksAtlanta HawksBoston CelticsBoston CelticsBrooklyn NetsBrooklyn NetsCharlotte HornetsCharlotte HornetsChic",
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesHelp me build a three-team trade.Waiting for your answer…Scroll to endWhich three teams do you want to involve?0/3CancelSearch teamsAtlanta HawksAtlanta HawksBoston CelticsBoston CelticsBrooklyn NetsBrooklyn NetsCharlotte HornetsCharlotte HornetsChicago BullsChicago BullsCleveland CavaliersCleveland CavaliersDallas MavericksDallas MavericksDenver NuggetsDenver NuggetsDetroit PistonsDetroit PistonsGolden State WarriorsGolden State WarriorsHouston RocketsHouston RocketsIndiana PacersIndiana PacersLos Angeles ClippersLos Angeles ClippersLos Angeles"
+    },
+    {
+      "checkpoint": "workspace-team-choice-search:0:response",
+      "hOverflow": false,
+      "picker": "Which team should sign Seth Curry?CancelSearch teamsAtlanta HawksBoston CelticsBrooklyn NetsCharlotte HornetsChicago BullsCleveland CavaliersDallas MavericksDenver NuggetsDetroit P",
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesSign Seth Curry.Waiting for your answer…Scroll to endWhich team should sign Seth Curry?CancelSearch teamsAtlanta HawksBoston CelticsBrooklyn NetsCharlotte HornetsChicago BullsCleveland CavaliersDallas MavericksDenver NuggetsDetroit PistonsGolden State WarriorsHouston RocketsIndiana PacersLos Angeles ClippersLos Angeles LakersMemphis GrizzliesMiami HeatMilwaukee BucksMinnesota TimberwolvesNew Orleans PelicansNew York KnicksOklahoma City ThunderOrlando MagicPhiladelphia 76ersPhoenix SunsPortland Trail BlazersSacramento KingsSan Antonio SpursToront"
+    },
+    {
+      "checkpoint": "workspace-free-text-question:0:response",
+      "hOverflow": false,
+      "text": "GambitTrade MachinePlayersDraft picksSaved tradesTrade Michael Imaginary for Derrick White.Who did you mean by “Michael Imaginary”?Scroll to endTrade messageDescribe a trade, or type # to find a player…PlayersSearch playersFilter by teamAll teams629 playersSort playersSalary(High to low)Stephen CurryGSW · PG · 39$62.6M1 yrNikola JokicDEN · C · 32$59M2 yrJayson TatumBOS · PF · 29$58.5M4 yrAnthony DavisWAS · PF · 34$58.5M2 yrGiannis AntetokounmpoMIA · PF · 32$58.5M2 yrJoel EmbiidPHI · C · 33$58.1M3 yrJaylen BrownPHI · SF · 30$57.1M3 yrDevin BookerPHX · SG · 30$57.1M4 yrKarl-Anthony TownsNYK · C "
+    },
+    {
+      "checkpoint": "workspace-loading:0:response",
+      "hOverflow": false,
+      "text": ""
+    },
+    {
+      "checkpoint": "workspace-data-error:0:response",
+      "hOverflow": false,
+      "text": "Trade data could not be loaded.Retry"
+    },
+    {
+      "checkpoint": "workspace-connection-error:0:response",
+      "hOverflow": false,
+      "inspector": "false",
+      "panel": "false",
+      "picker": false,
+      "research": "false",
+      "visibleText": [
+        "Your conversation couldn’t be loaded.Retry",
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-players:0:response",
+      "hOverflow": false,
+      "inspector": "false",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-player-filters:0:response",
+      "hOverflow": false,
+      "inspector": "false",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-player-empty:0:response",
+      "hOverflow": false,
+      "inspector": "false",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-player-details:0:response",
+      "hOverflow": false,
+      "inspector": "true",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Derrick White",
+        "Contract",
+        "Performance",
+        "BOS context",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-free-agent:0:response",
+      "hOverflow": false,
+      "inspector": "true",
+      "panel": "false",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Terry Rozier",
+        "Contract",
+        "Performance",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-comparison:0:response",
+      "hOverflow": false,
+      "inspector": "true",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-comparison-full:0:response",
+      "hOverflow": false,
+      "inspector": "true",
+      "panel": "true",
+      "picker": false,
+      "research": "true",
+      "visibleText": [
+        "Worked for 9s",
+        "Celtics receive",
+        "Heat receive",
+        "2026-27 salary and roster checks passed.",
+        "Salary rules",
+        "Players",
+        "Draft picks",
+        "334 picks",
+        "Saved trades"
+      ]
+    },
+    {
+      "checkpoint": "workspace-picks:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-filters:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-empty:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-protected:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-protection-unknown:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-unavailable:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-selected:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-refreshing:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "picks": "true",
+      "research": "true"
+    },
+    {
+      "checkpoint": "workspace-pick-refresh-error:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "workspace-saved-empty:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "true"
+    },
+    {
+      "checkpoint": "workspace-saved:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "true"
+    },
+    {
+      "checkpoint": "workspace-composer-players:0:response",
+      "composer": "Derrick White Andrew Wiggins ",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "welcome:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "long-draft:0:response",
+      "composer": "Can you find a Boston trade where we send exactly one player and get two players back from the same team? Keep Derrick White out of the package. Explain the salary matching for both sides and show me ",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "first-loading:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "edit-loading:0:response",
+      "composer": "",
+      "hOverflow": false,
+      "picker": false,
+      "saved": "false"
+    },
+    {
+      "checkpoint": "network-failure:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesReplace Andrew Wiggins with Pelle Larsson.The request couldn’t be completed. Please try again.Retry"
+    },
+    {
+      "checkpoint": "provider-unavailable:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesReplace Andrew Wiggins with Pelle Larsson.The trade assistant is unavailable right now. Try again later.Retry"
+    },
+    {
+      "checkpoint": "history-failure:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rules"
+    },
+    {
+      "checkpoint": "tool-history:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 12sSearched for Derrick WhiteSearched for Andrew WigginsChecked the tradeThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rules"
+    },
+    {
+      "checkpoint": "selected-player:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesWhich option do you mean?You selectedDerrick WhiteBoston CelticsKeep Andrew Wiggins in the trade, too."
+    },
+    {
+      "checkpoint": "selected-team:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesWhich option do you mean?You selectedMiami HeatEastern ConferenceKeep Andrew Wiggins in the trade, too."
+    },
+    {
+      "checkpoint": "selected-package:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesWhich option do you mean?You selectedKeep both playersDerrick WhiteBoston CelticsAndrew WigginsMiami HeatKeep Andrew Wiggins in the trade, too."
+    },
+    {
+      "checkpoint": "selected-answer:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesWhich option do you mean?You selectedYes"
+    },
+    {
+      "checkpoint": "selected-long-answer:0:response",
+      "hOverflow": false,
+      "picker": false,
+      "transcript": "Swap Derrick White for Andrew Wiggins.Worked for 9sThis trade passes the salary and roster checks.Derrick White for Andrew Wiggins2 playersValidCeltics receiveAndrew Wiggins$30.2MIn$30.2MOut$30.3MChange-$178.4KPayroll after$206.5MOver Luxury TaxHeat receiveDerrick White$30.3MIn$30.3MOut$30.2MChange+$178.4KPayroll after$207.1MOver Luxury Tax2026-27 salary and roster checks passed.Salary rulesWhich option do you mean?You selectedKeep the original players and find an option that lowers Boston's payroll without adding another teamKeep Andrew Wiggins in the trade, too."
+    }
+  ],
+  "recordedCheckpoints": [
+    {
+      "checkpoint": "financial-discovery:1:response",
+      "draft": "",
+      "hOverflow": false,
+      "request": [
+        "No options selectedShow more, but incoming players must be aged under 10.",
+        "Worked for 13sNo Bulls one-for-one ideas match an incoming age under 10 (9 or younger), with your $12 million incoming-salary cap, $5 million minimum savings and $142 million payroll cap retained."
+      ]
+    },
+    {
+      "checkpoint": "conversation-history-and-focus:2:input",
+      "draft": "Before choosing, what is Derrick White's salary?",
+      "hOverflow": false,
+      "request": [
+        "New trade: Derrick White for Williams.",
+        "Worked for 16sWhich Williams do you mean?"
+      ]
+    },
+    {
+      "checkpoint": "conversation-history-and-focus:2:response",
+      "draft": "",
+      "hOverflow": false,
+      "request": [
+        "Before choosing, what is Derrick White's salary?",
+        "Worked for 9sDerrick White’s salary is $30,348,000 for the 2026–27 season. He has three reported contract years remaining, including this season."
+      ]
+    },
+    {
+      "checkpoint": "research-while-an-identity-question-is-pending:0:response",
+      "draft": "",
+      "hOverflow": false,
+      "picker": "Which White do you mean?CancelDerrick WhiteBoston CelticsCoby WhiteCharlotte Hornets",
+      "request": [
+        "i want to trade white",
+        "Worked for 8sWaiting for your answer…"
+      ]
+    },
+    {
+      "checkpoint": "research-while-an-identity-question-is-pending:1:response",
+      "draft": "",
+      "hOverflow": false,
+      "request": [
+        "No options selectedwhat is Stephen Curry's salary?",
+        "Worked for 7sStephen Curry’s salary is $62,587,158 for the 2026–27 season with the Warriors."
+      ]
+    },
+    {
+      "checkpoint": "sparse-three-team-routing-choices:1:response",
+      "draft": "",
+      "hOverflow": false,
+      "request": [
+        "No options selectedSend Tatum to Denver, Curry to Boston, and Jokic to Golden State.",
+        "Worked for 14sThis routing fails Boston’s salary-matching rules; Denver and Golden State pass their checks.BOS · DEN · GSW3 teams · 3 playersInvalidCeltics receiveStephen CurryFrom GSW$62.6MIn$62.6MOut$58.5MChange+$4.1MPayroll after$210.8MOver First ApronNuggets receiveJayson TatumFrom BOS$58.5MIn$58.5MOut$59MChange-$576.5KPayroll after$227.2MOver Second ApronWarriors receiveNikola JokicFrom DEN$59MIn$59MOut$62.6MChange-$3.6MPayroll after$213.9MOver First ApronBoston Celtics do not satisfy salary matching requirements.First apron hard cap (Table row E): Boston Celtics cannot match $62.6M via Expanded TPE — would push team salary to $210.8M, above the first apron ($209.0M). Max matchable: $60.8M.Salary rules"
+      ]
+    },
+    {
+      "checkpoint": "signing-then-sign-and-trade:1:response",
+      "draft": "",
+      "hOverflow": false,
+      "request": [
+        "Sign Tre Scott to Boston on a one-year minimum contract.",
+        "Worked for 12sBoston’s hypothetical one-year veteran-minimum contract for Tre Scott checks out at $3,290,014. No actual signing has occurred.Boston signs Tre Scott$3.3M · 1 yearHypotheticalContract1 year · Veteran Minimum · $3,290,014Celtics payrollBefore$206,681,832Change+$3,290,014After$209,971,846Over First Apron"
+      ]
+    }
+  ],
+  "extraCheckpoints": [
+    {
+      "checked": 3,
+      "checkpoint": "historical-batches-and-replacement-search:1:input",
+      "hOverflow": false,
+      "picker": "Choose up to five trades to check.3/5CancelSearch trade ideasStephen Curry for Anfernee Si",
+      "transcript": "Find trades for Steph Curry.Worked for 8sExplore two-player returns for Stephen Curry from teams around the league.Waiting for your answer…"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "historical-batches-and-replacement-search:1:response",
+      "hOverflow": false,
+      "transcript": "deyWorked for 1sOf these 3 trades, 1 passes and 2 need changes.Stephen Curry ↔ Anfernee Simons +13 playersInvalidStephen Curry ↔ Myles Turner +13 playersValidStephen Curry ↔ Nic Claxton +13 playersInvalidWarriors receiveNic Claxton$23.1MJosh Giddey$25MIn$48.1MOut$62.6MChange-$14.4MPayroll after$203.1MOver Luxury TaxBulls receiveStephen Curry$62.6MIn$62.6MOut$48.1MChange+$14.4MPayroll after$178.1MOver CapChicago Bulls do not satisfy salary matching requirements.Exceeds cap room absorption: Chicago Bulls can absorb up to $49.7M (cap room + outgoing + $250K) but $62.6M must be matchedSalary rules"
+    },
+    {
+      "checked": 0,
+      "checkpoint": "workspace-saved:1:response",
+      "hOverflow": false,
+      "transcript": "ain Miami's salary matching.Miami sends out $30,169,644 for Wiggins and takes in $30,348,000 for White—an increase of just $178,356.\n\nThe checked proposal allows Miami to receive about $32.2 million under expanded salary matching, so White’s salary fits. Using that allowance imposes a first-apron hard cap of about $209.0 million.\n\nMiami’s payroll after the swap is $207,114,312, below that hard cap. That’s why Miami passes: the incoming salary fits its matching allowance, and its resulting payroll stays below the first apron. Being over the luxury-tax line does not, by itself, block this trade."
+    },
+    {
+      "checked": 0,
+      "checkpoint": "workspace-saved:2:response",
+      "hOverflow": false,
+      "transcript": "g Wiggins with Pelle Larsson makes the swap fail Miami’s salary-matching and first-apron hard-cap checks; Boston still passes.Derrick White for Pelle Larsson2 playersInvalidCeltics receivePelle Larsson$2.3MIn$2.3MOut$30.3MChange-$28.1MPayroll after$178.6MOver CapHeat receiveDerrick White$30.3MIn$30.3MOut$2.3MChange+$28.1MPayroll after$235MOver Second ApronMiami Heat do not satisfy salary matching requirements.First apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE — would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M.Salary rules"
+    }
+  ]
+}

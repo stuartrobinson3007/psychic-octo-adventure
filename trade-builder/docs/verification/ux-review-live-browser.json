@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-08T09:15:23.642Z",
+  "request": "I want to trade White",
+  "answer": "Derrick White",
+  "checks": [
+    "Question remains in widget until answered",
+    "Worked for appears above the assistant question",
+    "Answered question precedes user selection",
+    "Choosing the outgoing player starts discovery without another question",
+    "Three checked options appear with collapsed cards",
+    "Worked for appears before the discovery reply"
+  ],
+  "ax": "Browser tab: 20, Title: \"Gambit · review conversation\", URL: \"http://127.0.0.1:3021/ux-review-playground?scenario=welcome&step=0\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 42 text entry area (settable) Description: Trade message, ID: trade-message, Value: \n"
+}

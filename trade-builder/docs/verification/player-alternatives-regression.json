@@ -1,0 +1,581 @@
+{
+  "checkedAt": "2026-10-09T00:59:08.515Z",
+  "endpoint": "http://127.0.0.1:3025",
+  "serviceUnavailable": false,
+  "scenarios": [
+    {
+      "name": "repair and choose a suggestion",
+      "expectedTurns": 3
+    }
+  ],
+  "results": [
+    {
+      "scenario": "repair and choose a suggestion",
+      "sessionId": "c13a723f-028f-420f-89ef-795965cd053f",
+      "requestId": "21359410-3031-4b87-bd8c-c98970779af8",
+      "input": "Trade Derrick White for Pelle Larsson.",
+      "passed": true,
+      "elapsedMs": 6141,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:54.922Z"
+          },
+          "verdict": {
+            "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:54.922Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 30348000,
+                "salaryIn": 2296271,
+                "netSalaryChange": -28051729,
+                "newTotalSalary": 178630103,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $2.3M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 2296271,
+                "salaryIn": 30348000,
+                "netSalaryChange": 28051729,
+                "newTotalSalary": 234987685,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "First apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE — would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M."
+                ],
+                "allowances": [
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected BOS and MIA.",
+          "Send Derrick White to MIA.",
+          "Send Pelle Larsson to BOS."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+              "revision": 1,
+              "teamIds": [
+                2,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 16992,
+                  "fromTeamId": 2,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17229,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                }
+              ],
+              "createdAt": "2026-10-09T00:58:54.922Z"
+            },
+            "verdict": {
+              "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:54.922Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 2,
+                  "teamName": "Boston Celtics",
+                  "salaryOut": 30348000,
+                  "salaryIn": 2296271,
+                  "netSalaryChange": -28051729,
+                  "newTotalSalary": 178630103,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $2.3M",
+                    "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 2296271,
+                  "salaryIn": 30348000,
+                  "netSalaryChange": 28051729,
+                  "newTotalSalary": 234987685,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "First apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE — would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M."
+                  ],
+                  "allowances": [
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "3a459cda-c414-457b-8749-8fb7e9695429",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "8045a8c9-5c5f-4b52-be81-820057feb33d",
+            "visible": false,
+            "activeLabel": "Adding Derrick White…",
+            "label": "Added Derrick White",
+            "state": "complete"
+          },
+          {
+            "id": "b077c498-0ed9-4dfb-83d4-dab91a5c3f05",
+            "visible": false,
+            "activeLabel": "Adding Pelle Larsson…",
+            "label": "Added Pelle Larsson",
+            "state": "complete"
+          },
+          {
+            "id": "3ed76d0a-24e8-449b-930d-25ca8dfea690",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 6108,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 13
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "sessionId": "c13a723f-028f-420f-89ef-795965cd053f",
+      "requestId": "1ebbe1bd-b8e7-4855-b35c-d761d10e397c",
+      "input": "fix it, keep White but you can replace the other player",
+      "passed": true,
+      "elapsedMs": 9271,
+      "result": {
+        "status": "complete",
+        "message": "Found 2 checked repairs. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17229,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:54.922Z"
+          },
+          "verdict": {
+            "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:54.922Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 30348000,
+                "salaryIn": 2296271,
+                "netSalaryChange": -28051729,
+                "newTotalSalary": 178630103,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $2.3M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 2296271,
+                "salaryIn": 30348000,
+                "netSalaryChange": 28051729,
+                "newTotalSalary": 234987685,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "First apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE — would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M."
+                ],
+                "allowances": [
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "075d843e-f9dd-4a31-b156-f7826a10774c",
+              "revision": 1,
+              "teamIds": [
+                2,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 16992,
+                  "fromTeamId": 2,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                }
+              ],
+              "createdAt": "2026-10-09T00:59:02.109Z",
+              "parent": {
+                "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+                "revision": 1
+              }
+            },
+            "verdict": {
+              "proposalId": "075d843e-f9dd-4a31-b156-f7826a10774c",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:59:02.112Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 2,
+                  "teamName": "Boston Celtics",
+                  "salaryOut": 30348000,
+                  "salaryIn": 30169644,
+                  "netSalaryChange": -178356,
+                  "newTotalSalary": 206503476,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                    "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 30169644,
+                  "salaryIn": 30348000,
+                  "netSalaryChange": 178356,
+                  "newTotalSalary": 207114312,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "0b5e1347-2159-490a-b2ec-f35ccdbd2650",
+              "revision": 1,
+              "teamIds": [
+                2,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 16992,
+                  "fromTeamId": 2,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17229,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 2
+                }
+              ],
+              "createdAt": "2026-10-09T00:59:02.109Z",
+              "parent": {
+                "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+                "revision": 1
+              }
+            },
+            "verdict": {
+              "proposalId": "0b5e1347-2159-490a-b2ec-f35ccdbd2650",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:59:02.115Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 2,
+                  "teamName": "Boston Celtics",
+                  "salaryOut": 30348000,
+                  "salaryIn": 32465915,
+                  "netSalaryChange": 2117915,
+                  "newTotalSalary": 208799747,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $32.5M",
+                    "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 32465915,
+                  "salaryIn": 30348000,
+                  "netSalaryChange": -2117915,
+                  "newTotalSalary": 204818041,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $32.5M, can receive up to $34.5M (first apron hard cap applies: $209.0M), matching $30.3M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "593fc298-c7fa-4252-b412-734de3d1b972",
+            "details": [
+              "I searched one-player additions and replacements, keeping the players you specified.",
+              "Checked 18 of 41 candidate packages."
+            ],
+            "visible": true,
+            "activeLabel": "Finding trade adjustments…",
+            "label": "Found trade adjustments",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 9250,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "sessionId": "c13a723f-028f-420f-89ef-795965cd053f",
+      "requestId": "77484a01-3d80-4b71-95b2-9d7a86633acb",
+      "input": "go with the first one",
+      "passed": true,
+      "elapsedMs": 3520,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "075d843e-f9dd-4a31-b156-f7826a10774c",
+            "revision": 1,
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ],
+            "createdAt": "2026-10-09T00:59:02.109Z",
+            "parent": {
+              "proposalId": "8da51bf2-4f1a-4f6b-ad68-038150ee8618",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "075d843e-f9dd-4a31-b156-f7826a10774c",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:59:02.112Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 30348000,
+                "salaryIn": 30169644,
+                "netSalaryChange": -178356,
+                "newTotalSalary": 206503476,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $30.2M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 30169644,
+                "salaryIn": 30348000,
+                "netSalaryChange": 178356,
+                "newTotalSalary": 207114312,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $30.2M, can receive up to $32.2M (first apron hard cap applies: $209.0M), matching $30.3M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "conversationVersion": 3,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 5
+    }
+  ]
+}

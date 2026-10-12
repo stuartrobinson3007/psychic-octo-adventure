@@ -1,0 +1,13 @@
+# Pick avatar size refinement
+
+User requested parity with the player avatar. Pick markers now share the existing `.player-avatar` sizing rule through `.pick-avatar`: 48 × 48 px, with no flex shrinking. The same PickAsset renders in chat and saved cards; its round label, material and shape are retained.
+
+Rendered dimensions verified through the browser: both kinds measure 48 × 48 px at desktop 1280 × 1000 and mobile 390 × 844. The mobile saved card wraps labels without overflow. Captures: `pick-avatar-size-desktop.jpg` and `pick-avatar-size-mobile.jpg`. The temporary viewport override was reset after inspection.
+
+This is a local sizing correction in the incumbent system. No token or visual-world change; DESIGN.md and design.json are preserved. It supersedes the original 32px marker size documented in the draft-pick implementation report.
+
+Follow-up refinement: the user requested fully rounded corners and vertical centering. PickAsset now uses `rounded-full` and aligns the avatar with the complete label/metadata block using `items-center`. The 48 × 48 px shared size remains. Desktop measurements place the avatar and text center within 0.004px, including wrapped saved-card labels. Captures: `pick-avatar-rounded-desktop.jpg` and `pick-avatar-rounded-mobile.jpg`.
+
+Saved-card layout correction: the prior 330px two-column breakpoint squeezed 48px avatars beside narrow labels. SavedTradeCard now uses the existing named recipient grid, with automatic columns requiring at least 240px per team. Narrow cards stack recipient groups with 20px separation. Browser checks verified 403px recipient rows in the default desktop pane, 334px rows on mobile, and two 261.5px columns when the pane is widened. No horizontal overflow in the default desktop/mobile cards; resize width and viewport override were restored. Captures: `saved-trades-layout-desktop.jpg`, `saved-trades-layout-mobile.jpg`, and `saved-trades-layout-wide.jpg`. Component ESLint and production build passed. No design-system files changed.
+
+Saved-panel contrast refinement: saved cards now use solid `card` backgrounds with a border-only outline on the panel's `muted` ground, including the inner resize surface. Pick circles use `foreground` with `background` text only in saved cards. Rendered desktop and mobile checks confirm white cards, muted panel ground, dark 48px circles, and no horizontal overflow. Computed pick text contrast exceeds 19:1; metadata exceeds 4.5:1 on the card. Captures: `saved-trades-contrast-desktop.jpg` and `saved-trades-contrast-mobile.jpg`. Production build passed. Existing theme tokens and design-system files are preserved.
