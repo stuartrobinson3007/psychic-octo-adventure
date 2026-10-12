@@ -1,0 +1,97 @@
+Gambit tool-call flow: four alternative layouts
+Generation mode: built-in image_gen tool
+
+01-sequence
+
+Use case: infographic-diagram. Asset: one of four alternative diagrams for Gambit's README, illustrating an example tool-call flow.
+Audience: readers who know what a web app is, but are new to agents. Plain, highly legible English. White background, zinc-gray thin outlines and dark text, restrained emerald-green accents matching Gambit. Flat editorial graphic, clean sans-serif, bold monospace tool names. Large text at README width, generous whitespace, no gradients, shadows, watermarks, unrelated decorations or tables.
+Facts and EXACT tool names:
+User message: "Trade Derrick White for Andrew Wiggins"
+One OpenAI model, coordinated by Google ADK, chooses each call after reading the previous result.
+Call 1 is search_players. Abbreviated input: "Derrick White + Andrew Wiggins". Result: "Confirmed IDs, teams and contracts". Current source facts in this example: "White: Celtics • Wiggins: Heat".
+Call 2 is check_proposal. Abbreviated input: "White → Miami • Wiggins → Boston". Result: "Proposal version + validation evidence". Local ownership/routes checks and external trade validation happen inside this tool; an external validator is NOT a fourth model tool.
+Call 3 is finish_response. Abbreviated input: "Explain the checks + reference the proposal". Result: "Completed response".
+After the calls finish, the Gambit harness saves messages, proposal and execution evidence, then the browser displays "Trade card + explanation".
+Any arrow labelled tool call points from model to tool; any arrow labelled result points back from tool to model. Saving is done by the harness after completion, never by the model directly. This is an illustrative sequence, NOT a recorded live trace. Do not invent salaries, numeric IDs, a passing verdict, or actual success quotes. Use caption "Illustrative example • inputs abbreviated". No extra agents or invented model calls. Branches and checks must not introduce a wrong numbered order. Footer caption "Calls can change when the request needs clarification."
+Layout 1: a crisp SEQUENCE DIAGRAM with vertical timelines and directional message arrows. Landscape 1536x1024. Title "The calls and their replies". Three vertical lanes ONLY, headed "Browser", "Agent", "Gambit server". The server includes tools and saving. Very subtle dashed vertical lifelines, no row grid. Time runs down.
+Top: Browser sends the user message to Gambit server; Gambit server passes "Message + conversation context" to Agent.
+Then three clearly separated call-and-return pairs from Agent to Gambit server and back, in chronological order:
+outward arrow "1  search_players", inward arrow "IDs, teams and contracts".
+outward arrow "2  check_proposal", inward arrow "Proposal version + validation evidence".
+outward arrow "3  finish_response", inward arrow "Completed response".
+Place the abbreviated input beneath each outward arrow, and do not place labels on top of arrows. Tool call arrows solid green; returning result arrows dashed gray. Tiny legend "Call" / "Result" uses matching line styles.
+A small side note at check_proposal says "Ownership, routes and trade validation" without drawing a fourth tool lane.
+Near bottom of server lane an activation box "Harness saves the turn"; then a server-to-Browser arrow labelled "Trade card + explanation".
+A side annotation in the Agent lane says "Reads each result before the next call". This design emphasizes precise call and response direction, not boxes marching left to right. All labels spacious and legible.
+
+02-story
+
+Use case: infographic-diagram. Asset: one of four alternative diagrams for Gambit's README, illustrating an example tool-call flow.
+Audience: readers who know what a web app is, but are new to agents. Plain, highly legible English. White background, zinc-gray thin outlines and dark text, restrained emerald-green accents matching Gambit. Flat editorial graphic, clean sans-serif, bold monospace tool names. Large text at README width, generous whitespace, no gradients, shadows, watermarks, unrelated decorations or tables.
+Facts and EXACT tool names:
+User message: "Trade Derrick White for Andrew Wiggins"
+One OpenAI model, coordinated by Google ADK, chooses each call after reading the previous result.
+Call 1 is search_players. Abbreviated input: "Derrick White + Andrew Wiggins". Result: "Confirmed IDs, teams and contracts". Current source facts in this example: "White: Celtics • Wiggins: Heat".
+Call 2 is check_proposal. Abbreviated input: "White → Miami • Wiggins → Boston". Result: "Proposal version + validation evidence". Local ownership/routes checks and external trade validation happen inside this tool; an external validator is NOT a fourth model tool.
+Call 3 is finish_response. Abbreviated input: "Explain the checks + reference the proposal". Result: "Completed response".
+After the calls finish, the Gambit harness saves messages, proposal and execution evidence, then the browser displays "Trade card + explanation".
+Any arrow labelled tool call points from model to tool; any arrow labelled result points back from tool to model. Saving is done by the harness after completion, never by the model directly. This is an illustrative sequence, NOT a recorded live trace. Do not invent salaries, numeric IDs, a passing verdict, or actual success quotes. Use caption "Illustrative example • inputs abbreviated". No extra agents or invented model calls. Branches and checks must not introduce a wrong numbered order. Footer caption "Calls can change when the request needs clarification."
+Layout 2: a VERTICAL STORYBOARD for a simple reader, portrait 1024x1536. Title "Follow one trade request". Use six spacious stacked illustrated step cards with one obvious connecting downward line, big numbered emerald circles and no columns or table.
+1 "You send a message" with the exact user message in a speech bubble.
+2 "Find the players" with tool name search_players prominent, Input and Result in separate short lines. Include the source-team fact line "White: Celtics • Wiggins: Heat".
+3 "Build and check the trade" with tool name check_proposal prominent, Input showing the two transfer directions, Result "Proposal version + validation evidence". Small neutral shield icon; no pass badge. A short supporting line "Gambit checks ownership, routes and trade rules".
+4 "Explain what happened" with tool name finish_response prominent, abbreviated Input and Result labels as specified.
+5 "Save the finished turn" with a database icon and text "Gambit stores messages, proposal and tool outcomes".
+6 "Show the response" with an abstract trade-card illustration and caption "Trade card + explanation".
+Mark steps 2–4 with one subtle side bracket labelled "Agent chooses each call" and a compact explanatory caption "The model reads the result before moving on". The chronology is illustrated with simple icon + copy, not a technical swimlane. No repeating model icon or extra tool calls. Plenty of white space. This should be substantially different from the wide horizontal existing diagram.
+
+03-decisions
+
+Use case: infographic-diagram. Asset: one of four alternative diagrams for Gambit's README, illustrating an example tool-call flow.
+Audience: readers who know what a web app is, but are new to agents. Plain, highly legible English. White background, zinc-gray thin outlines and dark text, restrained emerald-green accents matching Gambit. Flat editorial graphic, clean sans-serif, bold monospace tool names. Large text at README width, generous whitespace, no gradients, shadows, watermarks, unrelated decorations or tables.
+Facts and EXACT tool names:
+User message: "Trade Derrick White for Andrew Wiggins"
+One OpenAI model, coordinated by Google ADK, chooses each call after reading the previous result.
+Call 1 is search_players. Abbreviated input: "Derrick White + Andrew Wiggins". Result: "Confirmed IDs, teams and contracts". Current source facts in this example: "White: Celtics • Wiggins: Heat".
+Call 2 is check_proposal. Abbreviated input: "White → Miami • Wiggins → Boston". Result: "Proposal version + validation evidence". Local ownership/routes checks and external trade validation happen inside this tool; an external validator is NOT a fourth model tool.
+Call 3 is finish_response. Abbreviated input: "Explain the checks + reference the proposal". Result: "Completed response".
+After the calls finish, the Gambit harness saves messages, proposal and execution evidence, then the browser displays "Trade card + explanation".
+Any arrow labelled tool call points from model to tool; any arrow labelled result points back from tool to model. Saving is done by the harness after completion, never by the model directly. This is an illustrative sequence, NOT a recorded live trace. Do not invent salaries, numeric IDs, a passing verdict, or actual success quotes. Use caption "Illustrative example • inputs abbreviated". No extra agents or invented model calls. Branches and checks must not introduce a wrong numbered order. Footer caption "Calls can change when the request needs clarification."
+Layout 3: a MODEL DECISION PATH, landscape 1536x1024, using a clear zigzag between three small agent decision bubbles and three larger tool-result cards. Title "What the agent decides next". The layout shows the SAME agent at successive moments, not three different agents; caption "One agent, successive decisions".
+User speech bubble at top-left contains the exact message.
+Decision bubble 1 "Read both players' facts" points to card search_players. Card contains abbreviated Input then Result and source-team fact line. A return arrow comes back to the next decision bubble, labelled "Reads the facts".
+Decision bubble 2 "Build this exchange" points to card check_proposal. Card contains Input transfer directions and Result validation evidence. A return arrow leads to decision bubble 3, labelled "Reads the checks".
+Decision bubble 3 "Explain the checked proposal" points to card finish_response. Card contains abbreviated Input and Result. Its return goes to a separate box "Harness saves the finished turn", then to "Trade card + explanation".
+Use two clean columns with offset cards and diagonal connectors so the eye can follow top to bottom without crossings. Decisions use an outlined speech bubble and small emerald dot, no anthropomorphic robot. Tools use rectangular cards and small neutral line icons. Prefix tool cards with 1, 2, 3 so order remains evident.
+Within check_proposal show a small labeled inset "Ownership + routes + trade validation"; this is explanatory text, not another model tool. Don't add a fourth decision that writes the database. No unconnected arrows. Make model reasoning and returned evidence the central visual idea.
+
+04-trace
+
+Use case: infographic-diagram. Asset: one of four alternative diagrams for Gambit's README, illustrating an example tool-call flow.
+Audience: readers who know what a web app is, but are new to agents. Plain, highly legible English. White background, zinc-gray thin outlines and dark text, restrained emerald-green accents matching Gambit. Flat editorial graphic, clean sans-serif, bold monospace tool names. Large text at README width, generous whitespace, no gradients, shadows, watermarks, unrelated decorations or tables.
+Facts and EXACT tool names:
+User message: "Trade Derrick White for Andrew Wiggins"
+One OpenAI model, coordinated by Google ADK, chooses each call after reading the previous result.
+Call 1 is search_players. Abbreviated input: "Derrick White + Andrew Wiggins". Result: "Confirmed IDs, teams and contracts". Current source facts in this example: "White: Celtics • Wiggins: Heat".
+Call 2 is check_proposal. Abbreviated input: "White → Miami • Wiggins → Boston". Result: "Proposal version + validation evidence". Local ownership/routes checks and external trade validation happen inside this tool; an external validator is NOT a fourth model tool.
+Call 3 is finish_response. Abbreviated input: "Explain the checks + reference the proposal". Result: "Completed response".
+After the calls finish, the Gambit harness saves messages, proposal and execution evidence, then the browser displays "Trade card + explanation".
+Any arrow labelled tool call points from model to tool; any arrow labelled result points back from tool to model. Saving is done by the harness after completion, never by the model directly. This is an illustrative sequence, NOT a recorded live trace. Do not invent salaries, numeric IDs, a passing verdict, or actual success quotes. Use caption "Illustrative example • inputs abbreviated". No extra agents or invented model calls. Branches and checks must not introduce a wrong numbered order. Footer caption "Calls can change when the request needs clarification."
+Layout 4: an ANNOTATED EXECUTION TRACE, landscape 1536x1024, very readable editorial developer-documentation style. Title "Inside a single chat turn".
+Large rounded main panel resembles a neutral activity log, with three substantial vertically stacked CALL / RESULT blocks. Do not draw a table or grid. No fake app screenshot, fabricated timestamps or green success statuses.
+Above the panel, the user message is a white speech bubble entering the trace.
+Each block has a left circular step marker, an emerald "CALL" tag, prominent monospace tool name, and a short indented Input line. Directly below, an outlined "RESULT" tag and the actual result description. Exact tool names and abbreviated inputs/results from the specification. For search_players include White: Celtics / Wiggins: Heat. For check_proposal include a small right-side inset note "Checks happen inside this tool".
+A thin green vertical line connects the three blocks at their step markers. Between blocks a small quiet separator caption reads "Model reads the result and chooses the next call".
+To the right of the main panel, two generous explanation callouts with simple curved gray leader lines: top callout "Tools return facts, not just text"; bottom callout "Proposal checks belong to one exact version". Leader lines terminate on the relevant result blocks, no arrow ambiguity.
+Below the trace panel, a clear separate footer flow "Harness saves turn" → "Browser shows trade card + explanation".
+This is a narrated trace with call/result pairs visible, rather than a responsibility chart or a pipeline of icons. Light surfaces, dark legible text, emerald only on call tags and the timeline.
+
+Final correction prompts
+
+01-sequence
+
+Edit this sequence diagram with one targeted architectural correction. Preserve its existing layout, title, three lanes, all three numbered tool calls and their return arrows, input text, save box, final browser response, legend and typography. Add the missing handoff after the Browser sends the message to the Gambit server and BEFORE search_players: a thin dashed gray arrow must point LEFT from the Gambit server lifeline to the Agent lifeline, labeled "Message + context". Fit this handoff in the gap between the initial message arrow and the first tool call; shift lower elements slightly only if needed for legibility. Remove the existing unconnected "Message + conversation context" text to the right of the first message arrow. The two first events should clearly read: Browser sends user message to server; server gives the agent message and context. Do not add any tool, agent or extra lane. Do not change any other labels or arrow direction.
+
+04-trace
+
+Edit this diagram by changing ONLY the body text in the upper-right callout headed "Tools return facts, not just text". Replace the body exactly with: "Tools return structured results that the model uses to decide what to do next." Keep the heading unchanged. Keep all other diagram elements, words, tool names, arrows, facts, layout, sizes, palette and typography unchanged. No extra words or changes.

@@ -1,0 +1,2554 @@
+{
+  "checkedAt": "2026-10-09T00:58:46.045Z",
+  "endpoint": "http://127.0.0.1:3025",
+  "serviceUnavailable": false,
+  "scenarios": [
+    {
+      "name": "player alternatives: historical middle proposal",
+      "expectedTurns": 6
+    },
+    {
+      "name": "player alternatives: invalid package and selection",
+      "expectedTurns": 4
+    },
+    {
+      "name": "player alternatives: filters and missing target",
+      "expectedTurns": 4
+    }
+  ],
+  "results": [
+    {
+      "scenario": "player alternatives: invalid package and selection",
+      "sessionId": "f029f80e-7aff-4f1d-adb0-ad6101ae173a",
+      "requestId": "e290744a-b3d7-4e6c-b1b2-065ec13f970c",
+      "input": "Trade Stephen Curry for Andrew Wiggins and Bam Adebayo.",
+      "passed": true,
+      "elapsedMs": 11217,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.491Z"
+          },
+          "verdict": {
+            "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.491Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected GSW and MIA.",
+          "Send Stephen Curry to MIA.",
+          "Send Andrew Wiggins to GSW.",
+          "Send Bam Adebayo to GSW."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+              "revision": 1,
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ],
+              "createdAt": "2026-10-09T00:58:08.491Z"
+            },
+            "verdict": {
+              "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:08.491Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 79969644,
+                  "netSalaryChange": 17382486,
+                  "newTotalSalary": 234872898,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                    "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                  ],
+                  "allowances": []
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 79969644,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": -17382486,
+                  "newTotalSalary": 189553470,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "752681e5-08b7-4920-9916-f9af37719064",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "b9cde427-d9a9-4152-9c7b-de27429da974",
+            "visible": false,
+            "activeLabel": "Adding Stephen Curry…",
+            "label": "Added Stephen Curry",
+            "state": "complete"
+          },
+          {
+            "id": "139199c6-71c7-46a7-85c9-0dec710a0870",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "1ad4921a-e039-4350-a319-fb9b0842ab7f",
+            "visible": false,
+            "activeLabel": "Adding Bam Adebayo…",
+            "label": "Added Bam Adebayo",
+            "state": "complete"
+          },
+          {
+            "id": "3335604f-46ea-4c0c-ab3f-fe24fe2db89a",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8538,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 15
+    },
+    {
+      "scenario": "player alternatives: filters and missing target",
+      "sessionId": "7f9b860d-8403-4b12-a1eb-f68730057670",
+      "requestId": "c9cecb0c-e696-47da-bb9e-e9a8fdaba613",
+      "input": "Trade Stephen Curry for Andrew Wiggins and Bam Adebayo.",
+      "passed": true,
+      "elapsedMs": 11301,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.800Z"
+          },
+          "verdict": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.800Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Selected GSW and MIA.",
+          "Send Stephen Curry to MIA.",
+          "Send Andrew Wiggins to GSW.",
+          "Send Bam Adebayo to GSW."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+              "revision": 1,
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17222,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ],
+              "createdAt": "2026-10-09T00:58:08.800Z"
+            },
+            "verdict": {
+              "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:08.800Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 79969644,
+                  "netSalaryChange": 17382486,
+                  "newTotalSalary": 234872898,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                    "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                  ],
+                  "allowances": []
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 79969644,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": -17382486,
+                  "newTotalSalary": 189553470,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "b597d77f-7c3b-4e8e-9983-b6fd0576cd23",
+            "visible": false,
+            "activeLabel": "Setting up the trade…",
+            "label": "Set up the trade",
+            "state": "complete"
+          },
+          {
+            "id": "13ed9f33-b2ee-497b-b4c3-1c1cdd215902",
+            "visible": false,
+            "activeLabel": "Adding Stephen Curry…",
+            "label": "Added Stephen Curry",
+            "state": "complete"
+          },
+          {
+            "id": "390d9bd1-c09b-4e9b-98e2-796545ebf9cc",
+            "visible": false,
+            "activeLabel": "Adding Andrew Wiggins…",
+            "label": "Added Andrew Wiggins",
+            "state": "complete"
+          },
+          {
+            "id": "e7eb8072-a809-4900-95cd-6cc9ac277c2f",
+            "visible": false,
+            "activeLabel": "Adding Bam Adebayo…",
+            "label": "Added Bam Adebayo",
+            "state": "complete"
+          },
+          {
+            "id": "6d36732c-c7d1-430b-ad11-4993969fdcec",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8626,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 15
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "a37126c3-967d-4626-a189-e367fa8d97f5",
+      "input": "find trades for steph curry",
+      "passed": true,
+      "elapsedMs": 12432,
+      "result": {
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "fcb04d59-1403-4d84-9727-9bea1b62b441",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:09.581Z",
+              "teamIds": [
+                10,
+                25
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 25
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17365,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17201,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "fcb04d59-1403-4d84-9727-9bea1b62b441",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:09.581Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62255797,
+                  "netSalaryChange": -331361,
+                  "newTotalSalary": 217159051,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.3M"
+                  ]
+                },
+                {
+                  "teamId": 25,
+                  "teamName": "Portland Trail Blazers",
+                  "salaryOut": 62255797,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 331361,
+                  "newTotalSalary": 194874255,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.3M, can receive up to $76.7M (first apron hard cap applies: $209.0M), matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "9d0c4bae-eab9-4ad6-a1fe-5323865be84b",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:10.068Z",
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17223,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "9d0c4bae-eab9-4ad6-a1fe-5323865be84b",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:10.068Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62200000,
+                  "netSalaryChange": -387158,
+                  "newTotalSalary": 217103254,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 62200000,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 387158,
+                  "newTotalSalary": 207323114,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:10.069Z",
+              "teamIds": [
+                10,
+                30
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 30
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17443,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17434,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:10.069Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62144886,
+                  "netSalaryChange": -442272,
+                  "newTotalSalary": 217048140,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.1M"
+                  ]
+                },
+                {
+                  "teamId": 30,
+                  "teamName": "Washington Wizards",
+                  "salaryOut": 62144886,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 442272,
+                  "newTotalSalary": 192525376,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.1M, can receive up to $77.9M, matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "cf9ad719-2431-433e-b557-1a874c00788b",
+            "details": [
+              "I searched 1 Golden State Warriors player for 2 players from the same other team.",
+              "Checked 9 of 3324 matching candidate packages considered, prioritising close salaries and different trade partners."
+            ],
+            "visible": true,
+            "activeLabel": "Finding trade options…",
+            "label": "Found trade options",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 9758,
+        "conversationVersion": 1,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: filters and missing target",
+      "sessionId": "7f9b860d-8403-4b12-a1eb-f68730057670",
+      "requestId": "f49782eb-65ca-48ee-9340-515ab131d9a8",
+      "input": "find a replacement for Wiggins, but only centers under 25",
+      "passed": true,
+      "elapsedMs": 5868,
+      "result": {
+        "status": "complete",
+        "message": "No checked replacement for Andrew Wiggins from Miami Heat passed salary and roster checks. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged. Required: incoming players aged 24 or younger; incoming positions C.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.800Z"
+          },
+          "verdict": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.800Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [],
+        "toolCalls": [
+          {
+            "id": "2881f2bb-1318-47c3-a305-f65f43b3b0d4",
+            "details": [
+              "Searched replacements for Andrew Wiggins from the same team. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged.",
+              "Checked 0 of 0 candidate packages."
+            ],
+            "visible": true,
+            "activeLabel": "Finding player alternatives…",
+            "label": "Found player alternatives",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 5861,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "44dc21a7-ea2d-4161-8e8d-bf73acdcf61c",
+      "input": "swap davis for white on that last trade",
+      "passed": true,
+      "elapsedMs": 5126,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?",
+        "clarification": {
+          "purpose": "player_identity",
+          "slot": {
+            "operationIndex": 0,
+            "field": "replacementQuery"
+          },
+          "identityQuery": "white",
+          "question": "Which “white” do you mean?",
+          "options": [
+            {
+              "id": "player-17037",
+              "label": "Coby White",
+              "detail": "Charlotte Hornets",
+              "value": "Coby White",
+              "playerId": 17037
+            },
+            {
+              "id": "player-16992",
+              "label": "Derrick White",
+              "detail": "Boston Celtics",
+              "value": "Derrick White",
+              "playerId": 16992
+            }
+          ],
+          "id": "10f28bd9-0c32-483a-8374-0ff6ade7214c"
+        },
+        "snapshot": null,
+        "changes": [],
+        "snapshots": [],
+        "conversationVersion": 2,
+        "pendingClarification": {
+          "purpose": "player_identity",
+          "slot": {
+            "operationIndex": 0,
+            "field": "replacementQuery"
+          },
+          "identityQuery": "white",
+          "question": "Which “white” do you mean?",
+          "options": [
+            {
+              "id": "player-17037",
+              "label": "Coby White",
+              "detail": "Charlotte Hornets",
+              "value": "Coby White",
+              "playerId": 17037
+            },
+            {
+              "id": "player-16992",
+              "label": "Derrick White",
+              "detail": "Boston Celtics",
+              "value": "Derrick White",
+              "playerId": 16992
+            }
+          ],
+          "id": "10f28bd9-0c32-483a-8374-0ff6ade7214c"
+        }
+      },
+      "streamedUpdates": 5
+    },
+    {
+      "scenario": "player alternatives: invalid package and selection",
+      "sessionId": "f029f80e-7aff-4f1d-adb0-ad6101ae173a",
+      "requestId": "a4b5d4b3-1002-4976-91dc-14350da5492e",
+      "input": "who else could take Wiggins' place here?",
+      "passed": true,
+      "elapsedMs": 7664,
+      "result": {
+        "status": "complete",
+        "message": "Found 1 checked alternative to Andrew Wiggins. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.491Z"
+          },
+          "verdict": {
+            "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.491Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+              "revision": 1,
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17223,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ],
+              "createdAt": "2026-10-09T00:58:14.723Z",
+              "parent": {
+                "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+                "revision": 1
+              }
+            },
+            "verdict": {
+              "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:14.724Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62200000,
+                  "netSalaryChange": -387158,
+                  "newTotalSalary": 217103254,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 62200000,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 387158,
+                  "newTotalSalary": 207323114,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "6d8a535f-d978-4ec4-ae61-db24b7738717",
+            "details": [
+              "Searched replacements for Andrew Wiggins from the same team. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged.",
+              "Checked 12 of 12 candidate packages."
+            ],
+            "visible": true,
+            "activeLabel": "Finding player alternatives…",
+            "label": "Found player alternatives",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 7657,
+        "conversationVersion": 2,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: invalid package and selection",
+      "sessionId": "f029f80e-7aff-4f1d-adb0-ad6101ae173a",
+      "requestId": "4a6958a9-ad97-4482-95fa-f3d8b49c442e",
+      "input": "go with the first one",
+      "passed": true,
+      "elapsedMs": 4545,
+      "result": {
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17223,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:14.723Z",
+            "parent": {
+              "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:14.724Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 62200000,
+                "netSalaryChange": -387158,
+                "newTotalSalary": 217103254,
+                "newCapStatus": "Over First Apron",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 62200000,
+                "salaryIn": 62587158,
+                "netSalaryChange": 387158,
+                "newTotalSalary": 207323114,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "conversationVersion": 3,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 5
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "c434432e-b2bf-4212-8b7b-c6f686e4ac63",
+      "input": "Coby White",
+      "selection": {
+        "id": "player-17037",
+        "label": "Coby White",
+        "detail": "Charlotte Hornets",
+        "value": "Coby White",
+        "playerId": 17037
+      },
+      "passed": true,
+      "elapsedMs": 6491,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "createdAt": "2026-10-09T00:58:21.459Z",
+            "teamIds": [
+              10,
+              30,
+              4
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 30
+              },
+              {
+                "assetType": "player",
+                "assetId": 17443,
+                "fromTeamId": 30,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 10
+              }
+            ],
+            "parent": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "evaluatedAt": "2026-10-09T00:58:21.459Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 26527826,
+                "netSalaryChange": -36059332,
+                "newTotalSalary": 181431080,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M"
+                ]
+              },
+              {
+                "teamId": 30,
+                "teamName": "Washington Wizards",
+                "salaryOut": 3688320,
+                "salaryIn": 62587158,
+                "netSalaryChange": 58898838,
+                "newTotalSalary": 250981942,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Salary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 0,
+                "netSalaryChange": -22839506,
+                "newTotalSalary": 154216257,
+                "newCapStatus": "Under Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [
+          "Replaced Anthony Davis with Coby White."
+        ],
+        "snapshots": [
+          {
+            "proposal": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 2,
+              "createdAt": "2026-10-09T00:58:21.459Z",
+              "teamIds": [
+                10,
+                30,
+                4
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 30
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17443,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17037,
+                  "fromTeamId": 4,
+                  "toTeamId": 10
+                }
+              ],
+              "parent": {
+                "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+                "revision": 1
+              }
+            },
+            "verdict": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 2,
+              "evaluatedAt": "2026-10-09T00:58:21.459Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "invalid_trade",
+              "summary": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 26527826,
+                  "netSalaryChange": -36059332,
+                  "newTotalSalary": 181431080,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M"
+                  ]
+                },
+                {
+                  "teamId": 30,
+                  "teamName": "Washington Wizards",
+                  "salaryOut": 3688320,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 58898838,
+                  "newTotalSalary": 250981942,
+                  "newCapStatus": "Over Second Apron",
+                  "isValid": false,
+                  "violations": [
+                    "Salary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M."
+                  ],
+                  "allowances": []
+                },
+                {
+                  "teamId": 4,
+                  "teamName": "Charlotte Hornets",
+                  "salaryOut": 22839506,
+                  "salaryIn": 0,
+                  "netSalaryChange": -22839506,
+                  "newTotalSalary": 154216257,
+                  "newCapStatus": "Under Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "682f3d8b-7068-421a-a06f-6c3b6db24ddb",
+            "visible": false,
+            "activeLabel": "Replacing a player…",
+            "label": "Replaced a player",
+            "state": "complete"
+          },
+          {
+            "id": "6c81f9c7-ade8-4b7a-9acc-3dd45b6fecbe",
+            "visible": true,
+            "activeLabel": "Checking the trade…",
+            "label": "Checked the trade",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 6484,
+        "conversationVersion": 3,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 9
+    },
+    {
+      "scenario": "player alternatives: filters and missing target",
+      "sessionId": "7f9b860d-8403-4b12-a1eb-f68730057670",
+      "requestId": "c83ff6c9-3eb2-408b-bce2-c6deaeab312d",
+      "input": "find alternatives to Mitchell in this trade",
+      "passed": true,
+      "elapsedMs": 7490,
+      "result": {
+        "status": "needs_clarification",
+        "message": "Which player in this trade would you like to replace?",
+        "clarification": {
+          "purpose": "player_identity",
+          "slot": {
+            "operationIndex": 0,
+            "field": "targetQuery"
+          },
+          "identityQuery": "Mitchell",
+          "question": "Which player in this trade would you like to replace?",
+          "options": [
+            {
+              "id": "player-17122",
+              "label": "Stephen Curry",
+              "detail": "Golden State Warriors",
+              "value": "Stephen Curry",
+              "playerId": 17122
+            },
+            {
+              "id": "player-17222",
+              "label": "Andrew Wiggins",
+              "detail": "Miami Heat",
+              "value": "Andrew Wiggins",
+              "playerId": 17222
+            },
+            {
+              "id": "player-17220",
+              "label": "Bam Adebayo",
+              "detail": "Miami Heat",
+              "value": "Bam Adebayo",
+              "playerId": 17220
+            }
+          ],
+          "id": "8c1aaead-7880-4f20-8f41-d2ad1e535088"
+        },
+        "snapshot": {
+          "proposal": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.800Z"
+          },
+          "verdict": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.800Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "conversationVersion": 3,
+        "pendingClarification": {
+          "purpose": "player_identity",
+          "slot": {
+            "operationIndex": 0,
+            "field": "targetQuery"
+          },
+          "identityQuery": "Mitchell",
+          "question": "Which player in this trade would you like to replace?",
+          "options": [
+            {
+              "id": "player-17122",
+              "label": "Stephen Curry",
+              "detail": "Golden State Warriors",
+              "value": "Stephen Curry",
+              "playerId": 17122
+            },
+            {
+              "id": "player-17222",
+              "label": "Andrew Wiggins",
+              "detail": "Miami Heat",
+              "value": "Andrew Wiggins",
+              "playerId": 17222
+            },
+            {
+              "id": "player-17220",
+              "label": "Bam Adebayo",
+              "detail": "Miami Heat",
+              "value": "Bam Adebayo",
+              "playerId": 17220
+            }
+          ],
+          "id": "8c1aaead-7880-4f20-8f41-d2ad1e535088"
+        }
+      },
+      "streamedUpdates": 5
+    },
+    {
+      "scenario": "player alternatives: invalid package and selection",
+      "sessionId": "f029f80e-7aff-4f1d-adb0-ad6101ae173a",
+      "requestId": "127e6f66-f59b-43ee-aa46-30652009ace0",
+      "input": "instead of that last search, show me more general Curry trade options",
+      "passed": true,
+      "elapsedMs": 8450,
+      "result": {
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17223,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:14.723Z",
+            "parent": {
+              "proposalId": "5b7b88a8-2385-4fe2-8fec-a753d353be0e",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "a3323260-bbef-4165-a539-5d5de46a86fd",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:14.724Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 62200000,
+                "netSalaryChange": -387158,
+                "newTotalSalary": 217103254,
+                "newCapStatus": "Over First Apron",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 62200000,
+                "salaryIn": 62587158,
+                "netSalaryChange": 387158,
+                "newTotalSalary": 207323114,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "709d2791-cabc-4da5-be1e-ca42f1c2c795",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:28.487Z",
+              "teamIds": [
+                10,
+                25
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 25
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17365,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17201,
+                  "fromTeamId": 25,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "709d2791-cabc-4da5-be1e-ca42f1c2c795",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:28.487Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62255797,
+                  "netSalaryChange": -331361,
+                  "newTotalSalary": 217159051,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.3M"
+                  ]
+                },
+                {
+                  "teamId": 25,
+                  "teamName": "Portland Trail Blazers",
+                  "salaryOut": 62255797,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 331361,
+                  "newTotalSalary": 194874255,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.3M, can receive up to $76.7M (first apron hard cap applies: $209.0M), matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "e2c49402-fe34-4816-ab6f-c537c23a8d0a",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:28.876Z",
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17223,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "e2c49402-fe34-4816-ab6f-c537c23a8d0a",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:28.876Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62200000,
+                  "netSalaryChange": -387158,
+                  "newTotalSalary": 217103254,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 62200000,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 387158,
+                  "newTotalSalary": 207323114,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          },
+          {
+            "proposal": {
+              "proposalId": "955beb3b-9378-475a-9db6-b2c35bb11630",
+              "revision": 1,
+              "createdAt": "2026-10-09T00:58:28.876Z",
+              "teamIds": [
+                10,
+                30
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 30
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17443,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17434,
+                  "fromTeamId": 30,
+                  "toTeamId": 10
+                }
+              ]
+            },
+            "verdict": {
+              "proposalId": "955beb3b-9378-475a-9db6-b2c35bb11630",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:28.876Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62144886,
+                  "netSalaryChange": -442272,
+                  "newTotalSalary": 217048140,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.1M"
+                  ]
+                },
+                {
+                  "teamId": 30,
+                  "teamName": "Washington Wizards",
+                  "salaryOut": 62144886,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 442272,
+                  "newTotalSalary": 192525376,
+                  "newCapStatus": "Over Cap",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.1M, can receive up to $77.9M, matching $62.6M"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "8df35da0-ff7e-46c5-8375-677d64b24657",
+            "details": [
+              "I searched 1 Golden State Warriors player for 2 players from the same other team.",
+              "Checked 9 of 3324 matching candidate packages considered, prioritising close salaries and different trade partners."
+            ],
+            "visible": true,
+            "activeLabel": "Finding trade options…",
+            "label": "Found trade options",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8437,
+        "conversationVersion": 4,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: filters and missing target",
+      "sessionId": "7f9b860d-8403-4b12-a1eb-f68730057670",
+      "requestId": "9591215f-290f-4adf-8a5c-3fe8ca9e57b9",
+      "input": "Andrew Wiggins",
+      "selection": {
+        "id": "player-17222",
+        "label": "Andrew Wiggins",
+        "detail": "Miami Heat",
+        "value": "Andrew Wiggins",
+        "playerId": 17222
+      },
+      "passed": true,
+      "elapsedMs": 8442,
+      "result": {
+        "status": "complete",
+        "message": "Found 1 checked alternative to Andrew Wiggins. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "teamIds": [
+              10,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17220,
+                "fromTeamId": 16,
+                "toTeamId": 10
+              }
+            ],
+            "createdAt": "2026-10-09T00:58:08.800Z"
+          },
+          "verdict": {
+            "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T00:58:08.800Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 79969644,
+                "netSalaryChange": 17382486,
+                "newTotalSalary": 234872898,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Hard cap violation: This trade would push Golden State Warriors over the second apron hard cap ($221.7M)",
+                  "First-apron salary matching exceeded: Golden State Warriors are limited to the Standard TPE (100% of outgoing = $62.6M). Sending $62.6M, must match $80.0M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 79969644,
+                "salaryIn": 62587158,
+                "netSalaryChange": -17382486,
+                "newTotalSalary": 189553470,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $80.0M, can receive up to $82.0M (first apron hard cap applies: $209.0M), matching $62.6M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [
+          {
+            "proposal": {
+              "proposalId": "b60e9d87-5e85-44af-ab6c-dce4893fed1d",
+              "revision": 1,
+              "teamIds": [
+                10,
+                16
+              ],
+              "transfers": [
+                {
+                  "assetType": "player",
+                  "assetId": 17122,
+                  "fromTeamId": 10,
+                  "toTeamId": 16
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17223,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                },
+                {
+                  "assetType": "player",
+                  "assetId": 17220,
+                  "fromTeamId": 16,
+                  "toTeamId": 10
+                }
+              ],
+              "createdAt": "2026-10-09T00:58:28.563Z",
+              "parent": {
+                "proposalId": "14d7839b-d057-43de-875c-6301e441895d",
+                "revision": 1
+              }
+            },
+            "verdict": {
+              "proposalId": "b60e9d87-5e85-44af-ab6c-dce4893fed1d",
+              "revision": 1,
+              "evaluatedAt": "2026-10-09T00:58:28.564Z",
+              "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+              "season": "2026-27",
+              "source": "bball-gm",
+              "status": "valid",
+              "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+              "teams": [
+                {
+                  "teamId": 10,
+                  "teamName": "Golden State Warriors",
+                  "salaryOut": 62587158,
+                  "salaryIn": 62200000,
+                  "netSalaryChange": -387158,
+                  "newTotalSalary": 217103254,
+                  "newCapStatus": "Over First Apron",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $62.2M"
+                  ]
+                },
+                {
+                  "teamId": 16,
+                  "teamName": "Miami Heat",
+                  "salaryOut": 62200000,
+                  "salaryIn": 62587158,
+                  "netSalaryChange": 387158,
+                  "newTotalSalary": 207323114,
+                  "newCapStatus": "Over Luxury Tax",
+                  "isValid": true,
+                  "violations": [],
+                  "allowances": [
+                    "Expanded TPE: Sending $62.2M, can receive up to $64.3M (first apron hard cap applies: $209.0M), matching $62.6M",
+                    "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                  ]
+                }
+              ],
+              "appliedRules": [
+                "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+                "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+                "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+                "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+                "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+              ],
+              "issues": []
+            }
+          }
+        ],
+        "toolCalls": [
+          {
+            "id": "c2f018ca-3f9e-4d15-9b45-1ef969fd4c82",
+            "details": [
+              "Searched replacements for Andrew Wiggins from the same team. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged.",
+              "Checked 12 of 12 candidate packages."
+            ],
+            "visible": true,
+            "activeLabel": "Finding player alternatives…",
+            "label": "Found player alternatives",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8431,
+        "conversationVersion": 4,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "038e12d7-aaa4-4b5d-9f5a-68c45178d15a",
+      "input": "what player could we swap mitchell for on that middle trade?",
+      "passed": true,
+      "elapsedMs": 10850,
+      "result": {
+        "status": "complete",
+        "message": "No checked replacement for Davion Mitchell from Miami Heat passed salary and roster checks. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "createdAt": "2026-10-09T00:58:21.459Z",
+            "teamIds": [
+              10,
+              30,
+              4
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 30
+              },
+              {
+                "assetType": "player",
+                "assetId": 17443,
+                "fromTeamId": 30,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 10
+              }
+            ],
+            "parent": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "evaluatedAt": "2026-10-09T00:58:21.459Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 26527826,
+                "netSalaryChange": -36059332,
+                "newTotalSalary": 181431080,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M"
+                ]
+              },
+              {
+                "teamId": 30,
+                "teamName": "Washington Wizards",
+                "salaryOut": 3688320,
+                "salaryIn": 62587158,
+                "netSalaryChange": 58898838,
+                "newTotalSalary": 250981942,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Salary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 0,
+                "netSalaryChange": -22839506,
+                "newTotalSalary": 154216257,
+                "newCapStatus": "Under Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "candidates": [],
+        "toolCalls": [
+          {
+            "id": "589052e1-f8ff-4e97-a982-ef6bc01f9ba9",
+            "details": [
+              "Searched replacements for Davion Mitchell from the same team. Stephen Curry and Bam Adebayo stay in place; all other assets and destinations are unchanged.",
+              "Checked 12 of 12 candidate packages."
+            ],
+            "visible": true,
+            "activeLabel": "Finding player alternatives…",
+            "label": "Found player alternatives",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 10821,
+        "conversationVersion": 4,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "ddabb618-0b9b-45a7-a071-694558f81900",
+      "input": "can you tell me how you interpreted my last message?",
+      "passed": true,
+      "elapsedMs": 8616,
+      "result": {
+        "status": "complete",
+        "message": "I interpreted “what player could we swap Mitchell for on that middle trade?” as asking for a replacement for Davion Mitchell in the Curry–Mitchell–Bam Adebayo option.\n\nThe search kept Curry going to Miami and Bam going to Golden State, and tested other Miami players in Mitchell’s place. It checked all 12 candidate packages; none passed salary and roster checks.\n\nI narrowed the search to Miami players, even though you hadn’t explicitly required that. I did not search replacements from other teams or broader changes to the package.",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "createdAt": "2026-10-09T00:58:21.459Z",
+            "teamIds": [
+              10,
+              30,
+              4
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 30
+              },
+              {
+                "assetType": "player",
+                "assetId": 17443,
+                "fromTeamId": 30,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 10
+              }
+            ],
+            "parent": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "evaluatedAt": "2026-10-09T00:58:21.459Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 26527826,
+                "netSalaryChange": -36059332,
+                "newTotalSalary": 181431080,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M"
+                ]
+              },
+              {
+                "teamId": 30,
+                "teamName": "Washington Wizards",
+                "salaryOut": 3688320,
+                "salaryIn": 62587158,
+                "netSalaryChange": 58898838,
+                "newTotalSalary": 250981942,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Salary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 0,
+                "netSalaryChange": -22839506,
+                "newTotalSalary": 154216257,
+                "newCapStatus": "Under Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "call_aAvQ25VvthOJ3GR8MlTshIF8",
+            "visible": false,
+            "activeLabel": "Preparing your reply…",
+            "label": "Prepared your reply",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 8535,
+        "conversationVersion": 5,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    },
+    {
+      "scenario": "player alternatives: historical middle proposal",
+      "sessionId": "a8423779-4def-4b5c-8e01-4131f80a6933",
+      "requestId": "dcefdf02-0efc-450a-ba03-e1ea0ae58b1a",
+      "input": "why is my current trade invalid?",
+      "passed": true,
+      "elapsedMs": 4455,
+      "result": {
+        "status": "complete",
+        "message": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.\n\nGolden State Warriors sends Stephen Curry ($62,587,158) and receives Will Riley, Coby White ($26,527,826). Payroll becomes $181,431,080 (Over Cap).\nStandard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M\n\nWashington Wizards sends Will Riley ($3,688,320) and receives Stephen Curry ($62,587,158). Payroll becomes $250,981,942 (Over Second Apron).\nSalary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M.\n\nCharlotte Hornets sends Coby White ($22,839,506) and receives no assets ($0). Payroll becomes $154,216,257 (Under Cap).\nExpanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K",
+        "snapshot": {
+          "proposal": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "createdAt": "2026-10-09T00:58:21.459Z",
+            "teamIds": [
+              10,
+              30,
+              4
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17122,
+                "fromTeamId": 10,
+                "toTeamId": 30
+              },
+              {
+                "assetType": "player",
+                "assetId": 17443,
+                "fromTeamId": 30,
+                "toTeamId": 10
+              },
+              {
+                "assetType": "player",
+                "assetId": 17037,
+                "fromTeamId": 4,
+                "toTeamId": 10
+              }
+            ],
+            "parent": {
+              "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+              "revision": 1
+            }
+          },
+          "verdict": {
+            "proposalId": "f57d0042-5aee-4771-8e2c-c59ee1035c14",
+            "revision": 2,
+            "evaluatedAt": "2026-10-09T00:58:21.459Z",
+            "dataFetchedAt": "2026-10-09T00:58:00.702Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_trade",
+            "summary": "Trade is invalid. Washington Wizards do not satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 10,
+                "teamName": "Golden State Warriors",
+                "salaryOut": 62587158,
+                "salaryIn": 26527826,
+                "netSalaryChange": -36059332,
+                "newTotalSalary": 181431080,
+                "newCapStatus": "Over Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $62.6M, can receive up to $62.6M (100%), matching $26.5M"
+                ]
+              },
+              {
+                "teamId": 30,
+                "teamName": "Washington Wizards",
+                "salaryOut": 3688320,
+                "salaryIn": 62587158,
+                "netSalaryChange": 58898838,
+                "newTotalSalary": 250981942,
+                "newCapStatus": "Over Second Apron",
+                "isValid": false,
+                "violations": [
+                  "Salary mismatch: Washington Wizards can receive up to $7.4M via Expanded TPE (§6(j)(3) buffer: $0 — trade would push team over first apron). Sending $3.7M, must match $62.6M."
+                ],
+                "allowances": []
+              },
+              {
+                "teamId": 4,
+                "teamName": "Charlotte Hornets",
+                "salaryOut": 22839506,
+                "salaryIn": 0,
+                "netSalaryChange": -22839506,
+                "newTotalSalary": 154216257,
+                "newCapStatus": "Under Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $22.8M, can receive up to $31.9M, matching $0K"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level"
+            ],
+            "issues": []
+          }
+        },
+        "changes": [],
+        "snapshots": [],
+        "toolCalls": [
+          {
+            "id": "2041a66e-def5-46af-96fa-2986b151c610",
+            "visible": false,
+            "activeLabel": "Reviewing the trade rules…",
+            "label": "Reviewed the trade rules",
+            "state": "complete"
+          }
+        ],
+        "workDurationMs": 4419,
+        "conversationVersion": 6,
+        "pendingClarification": null
+      },
+      "streamedUpdates": 7
+    }
+  ]
+}

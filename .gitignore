@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+.env*
+!.env.example
+.dev.vars*
+.gambit/
+.wrangler/
+.ux-review/
+dist/
+dist-cloudflare/
+.output/
+*.tsbuildinfo

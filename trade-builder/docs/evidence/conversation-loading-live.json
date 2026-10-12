@@ -1,0 +1,321 @@
+{
+  "checkedAt": "2026-10-09T04:34:39.601Z",
+  "checks": [
+    {
+      "name": "All historical proposals checked, invalid archives preserved, duplicate references share evidence, signing link retained",
+      "snapshots": [
+        {
+          "proposal": {
+            "proposalId": "86dcb78a-e5cd-40ea-8fe4-dfdf89477b8d",
+            "revision": 1,
+            "createdAt": "2026-10-09T02:02:00.825Z",
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16999,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17228,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ]
+          },
+          "verdict": {
+            "proposalId": "86dcb78a-e5cd-40ea-8fe4-dfdf89477b8d",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T04:34:42.591Z",
+            "dataFetchedAt": "2026-10-09T04:34:42.590Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Trade is valid under NBA CBA rules. All 2 teams satisfy salary matching requirements.",
+            "teams": [
+              {
+                "teamId": 2,
+                "teamName": "Boston Celtics",
+                "salaryOut": 91210771,
+                "salaryIn": 91210749,
+                "netSalaryChange": -22,
+                "newTotalSalary": 206681810,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $91.2M, can receive up to $93.5M (first apron hard cap applies: $209.0M), matching $91.2M",
+                  "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              },
+              {
+                "teamId": 16,
+                "teamName": "Miami Heat",
+                "salaryOut": 91210749,
+                "salaryIn": 91210771,
+                "netSalaryChange": 22,
+                "newTotalSalary": 206935978,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Expanded TPE: Sending $91.2M, can receive up to $93.3M (first apron hard cap applies: $209.0M), matching $91.2M",
+                  "Note: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+              "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season"
+            ],
+            "issues": []
+          }
+        },
+        {
+          "proposal": {
+            "proposalId": "85b8eede-ac58-4eae-9bce-f6f7ede3e8e7",
+            "revision": 1,
+            "kind": "scenario",
+            "relatedTrade": {
+              "proposalId": "6b80ab5f-d149-4da0-b91a-d4ddc885e28d",
+              "revision": 1
+            },
+            "createdAt": "2026-10-09T04:29:11.018Z",
+            "teamIds": [
+              20
+            ],
+            "transfers": [],
+            "signings": [
+              {
+                "playerId": 17146,
+                "signingTeamId": 20,
+                "salary": 3290014,
+                "contractYears": 1,
+                "contractType": "minimum",
+                "tierId": "minimum",
+                "fundingLabel": "Veteran Minimum"
+              }
+            ]
+          },
+          "verdict": {
+            "proposalId": "85b8eede-ac58-4eae-9bce-f6f7ede3e8e7",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T04:34:42.600Z",
+            "dataFetchedAt": "2026-10-09T04:34:42.590Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "valid",
+            "summary": "Signing contracts checked against current team payroll. Eligibility after the related trade has not been checked.",
+            "teams": [
+              {
+                "teamId": 20,
+                "teamName": "Knicks",
+                "salaryOut": 0,
+                "salaryIn": 0,
+                "netSalaryChange": 3290014,
+                "newTotalSalary": 223293770,
+                "newCapStatus": "Over Second Apron",
+                "isValid": true,
+                "violations": [],
+                "allowances": []
+              }
+            ],
+            "appliedRules": [],
+            "issues": []
+          }
+        },
+        {
+          "proposal": {
+            "proposalId": "e3458f79-8003-4c85-af3c-f11a1ff24768",
+            "revision": 1,
+            "kind": "trade",
+            "createdAt": "2026-10-09T04:29:00.247Z",
+            "teamIds": [
+              11,
+              15
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 17146,
+                "fromTeamId": 11,
+                "toTeamId": 15
+              }
+            ],
+            "signings": [
+              {
+                "playerId": 17146,
+                "signingTeamId": 11,
+                "salary": 3290014,
+                "contractYears": 3,
+                "contractType": "minimum",
+                "tierId": "bird-rights",
+                "fundingLabel": "Bird rights",
+                "firstYearGuaranteed": true
+              }
+            ]
+          },
+          "verdict": {
+            "proposalId": "e3458f79-8003-4c85-af3c-f11a1ff24768",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T04:34:42.603Z",
+            "dataFetchedAt": "2026-10-09T04:34:42.590Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "validation_incomplete",
+            "summary": "The available salary checks passed. Some signing requirements could not be checked.",
+            "teams": [
+              {
+                "teamId": 11,
+                "teamName": "Houston Rockets",
+                "salaryOut": 3290014,
+                "salaryIn": 0,
+                "netSalaryChange": -3290014,
+                "newTotalSalary": 208071882,
+                "newCapStatus": "Over Luxury Tax",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Standard TPE (first apron): Sending $3.3M, can receive up to $3.3M (100%), matching $0K"
+                ]
+              },
+              {
+                "teamId": 15,
+                "teamName": "Memphis Grizzlies",
+                "salaryOut": 0,
+                "salaryIn": 3290014,
+                "netSalaryChange": 3290014,
+                "newTotalSalary": 156625600,
+                "newCapStatus": "Under Cap",
+                "isValid": true,
+                "violations": [],
+                "allowances": [
+                  "Cap room absorption: Memphis Grizzlies have $11.6M room + $0K outgoing; can receive up to $11.9M"
+                ]
+              }
+            ],
+            "appliedRules": [
+              "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+              "§6(j)(1)(i) + Table row E: First-apron teams are limited to the Standard TPE (100% of outgoing salary; Expanded TPE unavailable)",
+              "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+              "§6(j)(1)(v): Under-cap teams can absorb incoming salary up to cap room + outgoing + $250K"
+            ],
+            "issues": [],
+            "limitations": [
+              "Aaron Holiday’s previous-season roster eligibility and sign-and-trade timing have not been verified.",
+              "Aaron Holiday’s previous salary and bonuses are unavailable, so any special sign-and-trade salary-matching adjustment has not been checked.",
+              "Contracts were checked individually. Shared signing funds and roster space after all moves have not been checked."
+            ]
+          }
+        },
+        {
+          "proposal": {
+            "proposalId": "0ae2a6a1-1cb4-4602-8a58-3947cab50a77",
+            "revision": 1,
+            "createdAt": "2026-10-09T02:02:00.825Z",
+            "teamIds": [
+              2,
+              16
+            ],
+            "transfers": [
+              {
+                "assetType": "player",
+                "assetId": 16999,
+                "fromTeamId": 999999,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 16992,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 16990,
+                "fromTeamId": 2,
+                "toTeamId": 16
+              },
+              {
+                "assetType": "player",
+                "assetId": 17228,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17222,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              },
+              {
+                "assetType": "player",
+                "assetId": 17235,
+                "fromTeamId": 16,
+                "toTeamId": 2
+              }
+            ]
+          },
+          "verdict": {
+            "proposalId": "0ae2a6a1-1cb4-4602-8a58-3947cab50a77",
+            "revision": 1,
+            "evaluatedAt": "2026-10-09T04:34:42.603Z",
+            "dataFetchedAt": "2026-10-09T04:34:42.590Z",
+            "season": "2026-27",
+            "source": "bball-gm",
+            "status": "invalid_proposal",
+            "summary": "Jordan Walsh does not belong to the sending team.",
+            "issues": [
+              "Jordan Walsh does not belong to the sending team.",
+              "Jordan Walsh must move between the selected teams."
+            ],
+            "teams": [],
+            "appliedRules": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reload preserves checked historical versions without another service check"
+    },
+    {
+      "name": "Existing server evidence reaches older visible cards without rechecking"
+    },
+    {
+      "name": "Missing evidence in an older server conversation is repaired automatically"
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

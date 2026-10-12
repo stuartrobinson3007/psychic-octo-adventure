@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-09T11:57:15.116Z",
+  "checks": [
+    {
+      "name": "Multi-megabyte Unicode conversation survives bounded SQL rows",
+      "utf8Bytes": 6000026
+    },
+    {
+      "name": "A failed outbox write rolls back conversation history and its version"
+    },
+    {
+      "name": "Cancelled in-flight work cannot overwrite newer state"
+    },
+    {
+      "name": "Duplicate start delivery and reopen preserve the resumed cursor"
+    }
+  ]
+}

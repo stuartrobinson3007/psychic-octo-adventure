@@ -1,0 +1,1087 @@
+{
+  "checkedAt": "2026-10-09T00:22:27.713864+00:00",
+  "method": "Latest fully passing real-model HTTP/SSE conversation per scenario; corrected scenarios rerun in full.",
+  "passedTurns": 154,
+  "conversations": 66,
+  "identityConversations": 22,
+  "results": [
+    {
+      "scenario": "replace a scoped abbreviation and correct the first displayed trade",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7499
+    },
+    {
+      "scenario": "equivalent age limit: must not be over 25",
+      "input": "Find Chicago trades, one player for one player. Incoming players must not be over 25.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8078
+    },
+    {
+      "scenario": "equivalent age limit: must be no older than 25",
+      "input": "Find Chicago trades, one player for one player. Incoming players must be no older than 25.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8081
+    },
+    {
+      "scenario": "replace a scoped abbreviation and correct the first displayed trade",
+      "input": "swap derrick for steph curry",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6115
+    },
+    {
+      "scenario": "replace a scoped abbreviation and correct the first displayed trade",
+      "input": "no i mean swap driick for steph in that first trade",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7828
+    },
+    {
+      "scenario": "equivalent age limit: must be twenty five or younger",
+      "input": "Find Chicago trades, one player for one player. Incoming players must be twenty five or younger.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6585
+    },
+    {
+      "scenario": "equivalent age limit: must be 25 or younger",
+      "input": "Find Chicago trades, one player for one player. Incoming players must be 25 or younger.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6624
+    },
+    {
+      "scenario": "shortened given name discovery",
+      "input": "find a trade for steph curry",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7338
+    },
+    {
+      "scenario": "shortened names in a specified swap",
+      "input": "Trade Steph Curry for Ant Edwards.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5234
+    },
+    {
+      "scenario": "surname without a given name remains ambiguous",
+      "input": "Find a trade for Curry.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5703
+    },
+    {
+      "scenario": "distinct shortened and full names in the same package",
+      "input": "Trade Steph Curry for Seth Curry.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5708
+    },
+    {
+      "scenario": "player question accepts a complete routed answer",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 4168
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 4170
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9603
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Derrick White, Andrew Wiggins and Tre Jones",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6229
+    },
+    {
+      "scenario": "player question accepts a complete routed answer",
+      "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6531
+    },
+    {
+      "scenario": "named teams ask for players before destinations",
+      "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6117
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "What is Derrick White's salary and contract length?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9900
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Swap Terry Rozier for Derrick White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4829
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Build a three-team trade between Boston, Miami and Chicago.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 3416
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Trade Michael Imaginary to Miami.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 4104
+    },
+    {
+      "scenario": "research and unsupported requests",
+      "input": "Swap these selected players.",
+      "passed": true,
+      "status": "error",
+      "elapsedMs": 1641
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5697
+    },
+    {
+      "scenario": "cycle replacement",
+      "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6907
+    },
+    {
+      "scenario": "owner retained when another player still trades",
+      "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry and Draymond Green to Boston.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7607
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "Pelle Larsson instead of Wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6974
+    },
+    {
+      "scenario": "cycle replacement",
+      "input": "change curry for Giannis Antetokounmpo",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6665
+    },
+    {
+      "scenario": "owner retained when another player still trades",
+      "input": "change curry for Giannis Antetokounmpo",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6310
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "why doesn't that work?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4686
+    },
+    {
+      "scenario": "cycle replacement",
+      "input": "undo that",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4051
+    },
+    {
+      "scenario": "cycle replacement",
+      "input": "Buddy Hield instead of Curry",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5852
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "put Wiggins back",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6303
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "remove him",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6676
+    },
+    {
+      "scenario": "ordinary revisions and pronouns",
+      "input": "undo",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4011
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5305
+    },
+    {
+      "scenario": "duplicate full name and implicit two-team exchange",
+      "input": "trade ryan conwell, kam jones and andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6804
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "Derrick White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6621
+    },
+    {
+      "scenario": "duplicate full name and implicit two-team exchange",
+      "input": "Kam Jones",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6477
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "the second one",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 3560
+    },
+    {
+      "scenario": "outgoing goal and natural option selection",
+      "input": "is it a good deal?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 3671
+    },
+    {
+      "scenario": "replacement with an obvious full name typo",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5447
+    },
+    {
+      "scenario": "full name transposition",
+      "input": "trade derrick whtie for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5531
+    },
+    {
+      "scenario": "typo in a specified swap",
+      "input": "trade derrik white for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5565
+    },
+    {
+      "scenario": "replacement with an obvious full name typo",
+      "input": "replace White with Jrue Holidy",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5890
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "input": "trade white for andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5291
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "input": "trade jalin williams for andrew wiggins",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5712
+    },
+    {
+      "scenario": "typo preserves a different first name",
+      "input": "trade coby whte for andrew wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6069
+    },
+    {
+      "scenario": "surname alone remains ambiguous in a swap",
+      "input": "Coby White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6449
+    },
+    {
+      "scenario": "equally close full name typos remain ambiguous",
+      "input": "Jaylin Williams",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6239
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "input": "Swap Michael Imaginary for Andrew Wiggins.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5393
+    },
+    {
+      "scenario": "historical reference targets the original trade",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5880
+    },
+    {
+      "scenario": "fresh package and unrelated research",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6033
+    },
+    {
+      "scenario": "unknown name and typed recovery",
+      "input": "Derrick White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5423
+    },
+    {
+      "scenario": "fresh package and unrelated research",
+      "input": "swap Giannis Antetokounmpo for Stephen Curry",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5061
+    },
+    {
+      "scenario": "historical reference targets the original trade",
+      "input": "Trade Jrue Holiday for Anfernee Simons.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5384
+    },
+    {
+      "scenario": "historical reference targets the original trade",
+      "input": "Replace Wiggins with Pelle Larsson in the first trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5781
+    },
+    {
+      "scenario": "fresh package and unrelated research",
+      "input": "compare Derrick White and Andrew Wiggins, don't change the trade",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 12684
+    },
+    {
+      "scenario": "fresh package and unrelated research",
+      "input": "what's Curry's salary?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7535
+    },
+    {
+      "scenario": "vague and impossible discovery filters",
+      "input": "find Chicago trades for young guards",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5303
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5666
+    },
+    {
+      "scenario": "named outgoing filters pagination and changed source",
+      "input": "trade Derrick White, only with Miami and just one player back",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8120
+    },
+    {
+      "scenario": "vague and impossible discovery filters",
+      "input": "under 25",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5037
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "input": "replace Wiggins with Williams",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 10111
+    },
+    {
+      "scenario": "vague and impossible discovery filters",
+      "input": "more, but under 10",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7004
+    },
+    {
+      "scenario": "named outgoing filters pagination and changed source",
+      "input": "show more",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9506
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "input": "never mind that edit",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 3534
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "input": "start over and clear the trade",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 3431
+    },
+    {
+      "scenario": "named outgoing filters pagination and changed source",
+      "input": "now find Chicago trades, one player for one center under 25",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5772
+    },
+    {
+      "scenario": "cancellation preserves focus and clear removes focus",
+      "input": "Trade Jrue Holiday for Anfernee Simons.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5625
+    },
+    {
+      "scenario": "unsupported requests preserve the checked trade",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5810
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "input": "Trade Derrick White for Pelle Larsson.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5859
+    },
+    {
+      "scenario": "badge-only pair",
+      "input": "trade these",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5943
+    },
+    {
+      "scenario": "unsupported requests preserve the checked trade",
+      "input": "find a five-team trade",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7870
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "input": "fix it, keep White but you can replace the other player",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7934
+    },
+    {
+      "scenario": "repair and choose a suggestion",
+      "input": "go with the first one",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4165
+    },
+    {
+      "scenario": "unsupported requests preserve the checked trade",
+      "input": "find someone averaging 30 points to replace White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7993
+    },
+    {
+      "scenario": "shorthand request and ambiguous replacement",
+      "input": "Jrue for Simons",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6805
+    },
+    {
+      "scenario": "add fourth team reroute and undo",
+      "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6985
+    },
+    {
+      "scenario": "compound package edits",
+      "input": "Trade Derrick White for Andrew Wiggins and Pelle Larsson.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7299
+    },
+    {
+      "scenario": "add fourth team reroute and undo",
+      "input": "add Andrew Wiggins going to Boston",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4568
+    },
+    {
+      "scenario": "shorthand request and ambiguous replacement",
+      "input": "white instead of jrue",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5057
+    },
+    {
+      "scenario": "compound package edits",
+      "input": "remove Pelle and change Wiggins for Jrue Holiday",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6288
+    },
+    {
+      "scenario": "add fourth team reroute and undo",
+      "input": "send Wiggins to Denver instead",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5151
+    },
+    {
+      "scenario": "shorthand request and ambiguous replacement",
+      "input": "Derrick White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6978
+    },
+    {
+      "scenario": "add fourth team reroute and undo",
+      "input": "undo that last change",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4289
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5566
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5638
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "trade Jayson Tatum, Stephen Curry and Nikola Jokic",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6264
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Jayson Tatum to Denver Nuggets.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5630
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "what is Stephen Curry's salary?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8388
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "replace Derrick White with Williams",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 9371
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Stephen Curry to Boston Celtics.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5632
+    },
+    {
+      "scenario": "research while an identity question is pending",
+      "input": "Back to the trade, I meant Derrick White",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6251
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "what is Stephen Curry's salary?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8803
+    },
+    {
+      "scenario": "sparse three-team routing choices",
+      "input": "Send Nikola Jokic to Golden State Warriors.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6472
+    },
+    {
+      "scenario": "research dismisses pending edit choices",
+      "input": "Back to that replacement, I meant Jaylin Williams",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5567
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "i want to trade white",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5022
+    },
+    {
+      "scenario": "same-team outgoing package searches immediately",
+      "input": "I'd like to trade Derrick White and Jayson Tatum",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6418
+    },
+    {
+      "scenario": "explicitly retaining the original team",
+      "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6573
+    },
+    {
+      "scenario": "explicitly retaining the original team",
+      "input": "replace Stephen Curry with Giannis Antetokounmpo, but keep Golden State receiving Jokic",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7533
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "what is Williams' salary?",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 12554
+    },
+    {
+      "scenario": "a different research question replaces the picker",
+      "input": "Amari Williams",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9462
+    },
+    {
+      "scenario": "fresh salary-invalid trade then a legal swap",
+      "input": "Trade Jrue Holiday for Anfernee Simons",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5592
+    },
+    {
+      "scenario": "fresh salary-invalid trade then a legal swap",
+      "input": "instead let's trade Derrick White for Andrew Wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5635
+    },
+    {
+      "scenario": "mixed picks retained through replacement and removal",
+      "input": "Trade Derrick White for Andrew Wiggins and Miami's 2029 first-round pick to Boston.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 22584
+    },
+    {
+      "scenario": "mixed picks retained through replacement and removal",
+      "input": "Pelle instead of Wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5765
+    },
+    {
+      "scenario": "mixed picks retained through replacement and removal",
+      "input": "remove the pick",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 14118
+    },
+    {
+      "scenario": "mixed picks retained through replacement and removal",
+      "input": "undo",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 4077
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "trade nick for andrew",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5966
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Nick Smith Jr.\n\nactually i mean dave",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6187
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Dalen Terry.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5166
+    },
+    {
+      "scenario": "correction overrides a selected identity",
+      "input": "Andrew Wiggins",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5061
+    },
+    {
+      "scenario": "semantic identity: KD",
+      "input": "Trade KD for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9971
+    },
+    {
+      "scenario": "semantic identity: SGA",
+      "input": "Trade SGA for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9984
+    },
+    {
+      "scenario": "semantic identity: the Joker",
+      "input": "Trade the Joker for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5945
+    },
+    {
+      "scenario": "semantic identity: King James",
+      "input": "Trade King James for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7642
+    },
+    {
+      "scenario": "semantic identity: AD",
+      "input": "Trade AD for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5353
+    },
+    {
+      "scenario": "semantic identity: Nikola Joki\u0107",
+      "input": "Trade Nikola Joki\u0107 for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5435
+    },
+    {
+      "scenario": "semantic identity: Derrik Wite",
+      "input": "Trade Derrik Wite for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5614
+    },
+    {
+      "scenario": "semantic identity: pronoun after nickname research",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5395
+    },
+    {
+      "scenario": "semantic identity: pronoun after nickname research",
+      "input": "What is Derrick's salary?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8681
+    },
+    {
+      "scenario": "semantic identity: pronoun after nickname research",
+      "input": "Replace him with KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5624
+    },
+    {
+      "scenario": "semantic identity: research nickname and collection",
+      "input": "What's KD's salary and team?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7251
+    },
+    {
+      "scenario": "semantic identity: research nickname and collection",
+      "input": "Show me all the players called White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 10412
+    },
+    {
+      "scenario": "semantic identity: research nickname and collection",
+      "input": "Can Pat Riley be traded as a player?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9948
+    },
+    {
+      "scenario": "semantic identity: the Greek Freak",
+      "input": "Trade the Greek Freak for Derrick White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7599
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Imaginary",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6733
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Imaginary",
+      "input": "Replace Derrick with Michael Imaginary.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6719
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Imaginary",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6328
+    },
+    {
+      "scenario": "semantic identity: unavailable Taylor Swift",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6838
+    },
+    {
+      "scenario": "semantic identity: unavailable Taylor Swift",
+      "input": "Replace Derrick with Taylor Swift.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6347
+    },
+    {
+      "scenario": "semantic identity: unavailable Taylor Swift",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6339
+    },
+    {
+      "scenario": "semantic identity: unavailable Stephen Imaginary",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7062
+    },
+    {
+      "scenario": "semantic identity: unavailable Stephen Imaginary",
+      "input": "Replace Derrick with Stephen Imaginary.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6299
+    },
+    {
+      "scenario": "semantic identity: unavailable Stephen Imaginary",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6097
+    },
+    {
+      "scenario": "semantic identity: ambiguous name and nickname answer",
+      "input": "Trade Curry for Andrew Wiggins.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 4829
+    },
+    {
+      "scenario": "semantic identity: ambiguous name and nickname answer",
+      "input": "Steph.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6285
+    },
+    {
+      "scenario": "semantic identity: scoped nickname and historical typo",
+      "input": "Trade the Greek Freak for Derrick White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6409
+    },
+    {
+      "scenario": "semantic identity: scoped nickname and historical typo",
+      "input": "Replace the Greek Freak with KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5602
+    },
+    {
+      "scenario": "semantic identity: scoped nickname and historical typo",
+      "input": "No, replace gianis with Steph in the first trade.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6628
+    },
+    {
+      "scenario": "semantic identity: ambiguous nickname",
+      "input": "Trade Ant for Andrew Wiggins.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 6468
+    },
+    {
+      "scenario": "semantic identity: ambiguous nickname",
+      "input": "Anthony Edwards",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5675
+    },
+    {
+      "scenario": "semantic identity: nickname discovery and more",
+      "input": "Find a trade for KD, one player for one player.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7484
+    },
+    {
+      "scenario": "semantic identity: nickname discovery and more",
+      "input": "Show more with the same player.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6765
+    },
+    {
+      "scenario": "semantic identity: relationship signing",
+      "input": "Sign Steph's brother to Boston for the minimum for one year.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 16819
+    },
+    {
+      "scenario": "semantic identity: nickname repair pin",
+      "input": "Trade KD for Derrick White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 5489
+    },
+    {
+      "scenario": "semantic identity: nickname repair pin",
+      "input": "Find a way to fix it. Keep KD but you can replace White.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 9346
+    },
+    {
+      "scenario": "semantic identity: nickname contract",
+      "input": "What if KD made $20 million per year for two years?",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 18185
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Jordan",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7973
+    },
+    {
+      "scenario": "semantic identity: unavailable Pat Riley",
+      "input": "Trade Derrick White for Andrew Wiggins.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 8951
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Jordan",
+      "input": "Replace Derrick with Michael Jordan.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5265
+    },
+    {
+      "scenario": "semantic identity: unavailable Pat Riley",
+      "input": "Replace Derrick with Pat Riley.",
+      "passed": true,
+      "status": "needs_clarification",
+      "elapsedMs": 5659
+    },
+    {
+      "scenario": "semantic identity: unavailable Michael Jordan",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 7122
+    },
+    {
+      "scenario": "semantic identity: unavailable Pat Riley",
+      "input": "I meant KD.",
+      "passed": true,
+      "status": "complete",
+      "elapsedMs": 6660
+    }
+  ]
+}

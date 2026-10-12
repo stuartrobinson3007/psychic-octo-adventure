@@ -1,0 +1,116 @@
+Full Gambit example flow
+Generation mode: built-in image_gen tool
+
+01-timeline
+
+Use case: infographic-diagram. Asset: an image explaining ONE illustrative Gambit request, as one of four layout options for a README. Make a genuinely different layout for each supplied design. Audience: people new to agent harnesses. Plain English, large readable typography. White background, zinc-gray thin outlines and dark text, emerald-green accents. Flat editorial graphic, ample whitespace, no gradients, textures, watermarks, fake success statuses, tables or grid lines. Tool names in legible bold monospace.
+The image MUST include all nine stages IN THIS ORDER, with explicit stage numbers and actual model calls:
+1. User sends message: "Trade Derrick White for Andrew Wiggins". Small metadata caption: "Conversation ID • Request ID • Version".
+2. Harness prepares: "Load catalogue + conversation"; "Check retries + conflicting changes"; "Supply instructions, recent messages and player directory".
+3. MODEL CALL 1: "search_players"; abbreviated input "Derrick White + Andrew Wiggins".
+4. TOOL RESULT: "Confirmed IDs, teams, contracts and eligibility".
+5. MODEL CALL 2: "check_proposal"; abbreviated input "New proposal: White → Miami • Wiggins → Boston".
+6. TOOL EXECUTION + RESULT: "Stage the exchange"; "Check ownership + destinations"; "Call trade validator"; "Match evidence to this proposal"; result "Proposal version + verdict".
+7. MODEL CALL 3: "finish_response"; abbreviated input "Explanation + checked proposal reference"; tool returns "Response complete".
+8. HARNESS: "Save completed turn"; "Messages • Proposal • Checks • Tool outcomes".
+9. BROWSER: "Show explanation + trade card".
+Stages 3,5,7 are three successive calls of the SAME OpenAI model, coordinated by Google ADK, not three agents. Model reads the stage4 result before model call2 and the stage6 verdict before model call3. After finish_response, the harness saves and responds; NO extra model call follows.
+Side note or footer titled "Skipped in this example": "read_records / recall_conversation — no earlier deal needed"; "ask_question — identities and destinations are clear"; "Search / signing tools — specified player exchange"; "Extra model summary — finish_response completes the reply".
+A separate quiet progress strip says "Tool progress streams while work happens".
+A small caption says "Illustrative flow • inputs abbreviated • verdict may be invalid".
+Architecture constraints: The harness owns lasting records, checking and saving. The model chooses calls and reads returned evidence; it never writes the database directly. The external validator runs INSIDE check_proposal and is not a fourth model tool. A staged proposal is not saved until step8. No invented salaries, IDs, passing verdicts or successful execution claims. Don't add extra steps, agents or tools. No ambiguity or signing branch in the main flow. Only the sidebar explains omitted steps. All arrows must reflect this chronology and never cross text.
+Design 1: TALL VERTICAL TIMELINE, portrait about 1200x1920. Title "One trade request, start to finish". Nine generously spaced horizontal step cards stacked vertically, connected by one thin gray spine down the left with clearly numbered circles 1–9. Use small role tags: USER, HARNESS, MODEL CALL 1, TOOL RESULT, MODEL CALL 2, TOOL RESULT, MODEL CALL 3, HARNESS, BROWSER. Model-call cards have pale emerald background; application and result cards are white, distinctly alternating. Tool names are largest text in stages 3,5,7. Step6 is taller, with its internal actions laid out as a small inline sequence and its result separated at bottom. Under stages4 and6, a short unobtrusive "Model reads result" caption on the timeline connector. Metadata smaller but still readable. At the bottom a separate compact "Skipped in this example" block and the progress caption. Do not use tables, columns or a generic loop. This should read like the agreed nine-step list turned into a carefully designed illustrated timeline.
+
+02-phases
+
+Use case: infographic-diagram. Asset: an image explaining ONE illustrative Gambit request, as one of four layout options for a README. Make a genuinely different layout for each supplied design. Audience: people new to agent harnesses. Plain English, large readable typography. White background, zinc-gray thin outlines and dark text, emerald-green accents. Flat editorial graphic, ample whitespace, no gradients, textures, watermarks, fake success statuses, tables or grid lines. Tool names in legible bold monospace.
+The image MUST include all nine stages IN THIS ORDER, with explicit stage numbers and actual model calls:
+1. User sends message: "Trade Derrick White for Andrew Wiggins". Small metadata caption: "Conversation ID • Request ID • Version".
+2. Harness prepares: "Load catalogue + conversation"; "Check retries + conflicting changes"; "Supply instructions, recent messages and player directory".
+3. MODEL CALL 1: "search_players"; abbreviated input "Derrick White + Andrew Wiggins".
+4. TOOL RESULT: "Confirmed IDs, teams, contracts and eligibility".
+5. MODEL CALL 2: "check_proposal"; abbreviated input "New proposal: White → Miami • Wiggins → Boston".
+6. TOOL EXECUTION + RESULT: "Stage the exchange"; "Check ownership + destinations"; "Call trade validator"; "Match evidence to this proposal"; result "Proposal version + verdict".
+7. MODEL CALL 3: "finish_response"; abbreviated input "Explanation + checked proposal reference"; tool returns "Response complete".
+8. HARNESS: "Save completed turn"; "Messages • Proposal • Checks • Tool outcomes".
+9. BROWSER: "Show explanation + trade card".
+Stages 3,5,7 are three successive calls of the SAME OpenAI model, coordinated by Google ADK, not three agents. Model reads the stage4 result before model call2 and the stage6 verdict before model call3. After finish_response, the harness saves and responds; NO extra model call follows.
+Side note or footer titled "Skipped in this example": "read_records / recall_conversation — no earlier deal needed"; "ask_question — identities and destinations are clear"; "Search / signing tools — specified player exchange"; "Extra model summary — finish_response completes the reply".
+A separate quiet progress strip says "Tool progress streams while work happens".
+A small caption says "Illustrative flow • inputs abbreviated • verdict may be invalid".
+Architecture constraints: The harness owns lasting records, checking and saving. The model chooses calls and reads returned evidence; it never writes the database directly. The external validator runs INSIDE check_proposal and is not a fourth model tool. A staged proposal is not saved until step8. No invented salaries, IDs, passing verdicts or successful execution claims. Don't add extra steps, agents or tools. No ambiguity or signing branch in the main flow. Only the sidebar explains omitted steps. All arrows must reflect this chronology and never cross text.
+Design 2: THREE PHASES around an expanded agent loop, landscape about 2048x1536. Title "Prepare → Work → Save and show". Three visually distinct vertical regions with NO grid lines: narrower left "Prepare" contains step1 message and step2 harness setup; broad center "Agent + tools" contains steps3–7; narrower right "Finish" contains steps8 save and9 response. Use arrows connecting the regions.
+Center region shows three large green-tagged model-call cards in a vertical succession, with the returned results in separate smaller white cards between them: step3 MODEL CALL1 search_players, step4 returned facts, step5 MODEL CALL2 check_proposal, step6 returned verdict with the four checking actions shown inside a compact sub-panel, step7 MODEL CALL3 finish_response. Give tools enough space for readable actual names and abbreviated inputs. Use a caption at the top "One OpenAI model • Google ADK manages the loop". A subtle arrow after each returned result leads to the next model call.
+Right phase clearly begins only after finish_response, showing save before browser render. Along the full bottom include the progress strip and an independently boxed skipped-tools note. This design emphasizes the preparation and finish surrounding a model/tool loop, rather than treating the calls as the entire request lifecycle.
+
+03-sequence
+
+Use case: infographic-diagram. Asset: an image explaining ONE illustrative Gambit request, as one of four layout options for a README. Make a genuinely different layout for each supplied design. Audience: people new to agent harnesses. Plain English, large readable typography. White background, zinc-gray thin outlines and dark text, emerald-green accents. Flat editorial graphic, ample whitespace, no gradients, textures, watermarks, fake success statuses, tables or grid lines. Tool names in legible bold monospace.
+The image MUST include all nine stages IN THIS ORDER, with explicit stage numbers and actual model calls:
+1. User sends message: "Trade Derrick White for Andrew Wiggins". Small metadata caption: "Conversation ID • Request ID • Version".
+2. Harness prepares: "Load catalogue + conversation"; "Check retries + conflicting changes"; "Supply instructions, recent messages and player directory".
+3. MODEL CALL 1: "search_players"; abbreviated input "Derrick White + Andrew Wiggins".
+4. TOOL RESULT: "Confirmed IDs, teams, contracts and eligibility".
+5. MODEL CALL 2: "check_proposal"; abbreviated input "New proposal: White → Miami • Wiggins → Boston".
+6. TOOL EXECUTION + RESULT: "Stage the exchange"; "Check ownership + destinations"; "Call trade validator"; "Match evidence to this proposal"; result "Proposal version + verdict".
+7. MODEL CALL 3: "finish_response"; abbreviated input "Explanation + checked proposal reference"; tool returns "Response complete".
+8. HARNESS: "Save completed turn"; "Messages • Proposal • Checks • Tool outcomes".
+9. BROWSER: "Show explanation + trade card".
+Stages 3,5,7 are three successive calls of the SAME OpenAI model, coordinated by Google ADK, not three agents. Model reads the stage4 result before model call2 and the stage6 verdict before model call3. After finish_response, the harness saves and responds; NO extra model call follows.
+Side note or footer titled "Skipped in this example": "read_records / recall_conversation — no earlier deal needed"; "ask_question — identities and destinations are clear"; "Search / signing tools — specified player exchange"; "Extra model summary — finish_response completes the reply".
+A separate quiet progress strip says "Tool progress streams while work happens".
+A small caption says "Illustrative flow • inputs abbreviated • verdict may be invalid".
+Architecture constraints: The harness owns lasting records, checking and saving. The model chooses calls and reads returned evidence; it never writes the database directly. The external validator runs INSIDE check_proposal and is not a fourth model tool. A staged proposal is not saved until step8. No invented salaries, IDs, passing verdicts or successful execution claims. Don't add extra steps, agents or tools. No ambiguity or signing branch in the main flow. Only the sidebar explains omitted steps. All arrows must reflect this chronology and never cross text.
+Design 3: FULL SEQUENCE DIAGRAM, landscape about 2048x1536. Title "A request across browser, harness, model and tools". Four vertical lifelines headed Browser, Harness, Model, Tools. Harness and Tools are visibly bracketed as "Gambit server" so they're not portrayed as separate external apps. Time flows downward. No row grid or tables.
+Step1 Browser → Harness message, with metadata.
+Step2 Harness self-activation box with preparation actions. A Harness → Model arrow supplies message + context before any tool call.
+Step3 Model → Tools arrow labeled "MODEL CALL 1: search_players" with its abbreviated input. Step4 Tools → Model return arrow labeled confirmed facts.
+Step5 Model → Tools arrow labeled "MODEL CALL 2: check_proposal" with the transfers. Step6 is a Tools self-activation inset with four internal checks, followed by a Tools → Model return arrow labeled "Proposal version + verdict".
+Step7 Model → Tools arrow labeled "MODEL CALL 3: finish_response". Show the application completion signal returning to Harness with "Response complete", and note "No further model call".
+Step8 Harness self-box saves all completed records.
+Step9 Harness → Browser arrow "Explanation + trade card".
+Calls use solid emerald arrows; results use dashed gray arrows. Number each event clearly. No model-to-database arrow. Keep long labels away from arrows and lifelines. The legend is compact. A bottom sidebar shows skipped tools and a slim caption states progress streams during tools. This is about precise handoffs and returned evidence.
+
+04-storyboard
+
+Use case: infographic-diagram. Asset: an image explaining ONE illustrative Gambit request, as one of four layout options for a README. Make a genuinely different layout for each supplied design. Audience: people new to agent harnesses. Plain English, large readable typography. White background, zinc-gray thin outlines and dark text, emerald-green accents. Flat editorial graphic, ample whitespace, no gradients, textures, watermarks, fake success statuses, tables or grid lines. Tool names in legible bold monospace.
+The image MUST include all nine stages IN THIS ORDER, with explicit stage numbers and actual model calls:
+1. User sends message: "Trade Derrick White for Andrew Wiggins". Small metadata caption: "Conversation ID • Request ID • Version".
+2. Harness prepares: "Load catalogue + conversation"; "Check retries + conflicting changes"; "Supply instructions, recent messages and player directory".
+3. MODEL CALL 1: "search_players"; abbreviated input "Derrick White + Andrew Wiggins".
+4. TOOL RESULT: "Confirmed IDs, teams, contracts and eligibility".
+5. MODEL CALL 2: "check_proposal"; abbreviated input "New proposal: White → Miami • Wiggins → Boston".
+6. TOOL EXECUTION + RESULT: "Stage the exchange"; "Check ownership + destinations"; "Call trade validator"; "Match evidence to this proposal"; result "Proposal version + verdict".
+7. MODEL CALL 3: "finish_response"; abbreviated input "Explanation + checked proposal reference"; tool returns "Response complete".
+8. HARNESS: "Save completed turn"; "Messages • Proposal • Checks • Tool outcomes".
+9. BROWSER: "Show explanation + trade card".
+Stages 3,5,7 are three successive calls of the SAME OpenAI model, coordinated by Google ADK, not three agents. Model reads the stage4 result before model call2 and the stage6 verdict before model call3. After finish_response, the harness saves and responds; NO extra model call follows.
+Side note or footer titled "Skipped in this example": "read_records / recall_conversation — no earlier deal needed"; "ask_question — identities and destinations are clear"; "Search / signing tools — specified player exchange"; "Extra model summary — finish_response completes the reply".
+A separate quiet progress strip says "Tool progress streams while work happens".
+A small caption says "Illustrative flow • inputs abbreviated • verdict may be invalid".
+Architecture constraints: The harness owns lasting records, checking and saving. The model chooses calls and reads returned evidence; it never writes the database directly. The external validator runs INSIDE check_proposal and is not a fourth model tool. A staged proposal is not saved until step8. No invented salaries, IDs, passing verdicts or successful execution claims. Don't add extra steps, agents or tools. No ambiguity or signing branch in the main flow. Only the sidebar explains omitted steps. All arrows must reflect this chronology and never cross text.
+Design 4: EDITORIAL STORYBOARD / PATH, landscape about 2048x1536. Title "What happens after you send a trade". Use three generous horizontal story bands without any table grid. Band1 "Before the model" contains step1 message and step2 harness preparation, connected left to right. Band2 "Three model calls" is the main central region, showing three successive call-and-result pairs: steps3+4 search_players + returned player facts; steps5+6 check_proposal + its checking process and returned verdict; step7 finish_response + completed response. Make each model call visibly tagged MODEL CALL1/2/3 and show numbers3,4,5,6,7 separately. Between the pairs add small "Reads facts" and "Reads verdict" connectors, to show decisions based on results. Under check_proposal include a neutral inset listing stage, ownership/routes checks, validator call and evidence match, clearly internal to this tool.
+Band3 "After completion" contains step8 save and step9 browser response, left to right. One continuous curved path links the bands in the correct numeric order. Use simple line icons (message, context documents, magnifying glass, neutral shield, reply, database, browser), but prioritize actual tool names and labels over decoration.
+On the right or along bottom, a pale compact "Skipped in this example" sidebar with the actual omitted tool names and reasons. Include progress caption and illustrative caption. No invented chat response, fabricated app screenshot, colored pass/fail badge or extra agent. This should feel like a guided walkthrough with clear beginning, working section and ending.
+
+Corrections
+
+02-phases
+
+Make one targeted connector correction to this diagram. Preserve every box, word, number, region, icon, typeface and color. REMOVE the horizontal green arrow that currently goes from the middle "Agent + tools" region at the height of check_proposal directly into the Browser step9 region. It incorrectly skips finishing and saving. Replace it with a clean green elbow connector that begins at the step7 finish_response card, exits the right edge of that card, runs in the gap between the center and right regions, and ends with an arrowhead on step8 "Harness" / "Save completed turn". Keep the existing step8-down-to-step9 arrow unchanged. The only path out of the model/tool work must be step7 → step8 → step9. If needed increase the gap between regions very slightly for the elbow; do not cross any text or frame labels. Change nothing else.
+
+03-sequence
+
+Correct three specific details in this sequence diagram; preserve the layout, lifelines, all stage numbers, tool names, facts, other arrows and text.
+1. In step7 change the wrong label "MODEL CALL 2: finish_response" to "MODEL CALL 3: finish_response", exactly.
+2. Remove the green bracket and label "Gambit server" above the Harness, Model and Tools headers. This bracket wrongly encloses the OpenAI model as if it were the server. Keep the existing Harness and Tools descriptions explaining what they own and where they run; do not add a new bracket or lane.
+3. Change the last dashed "Response complete" return arrow so it goes from the Tools lifeline LEFT to the Harness lifeline, not stopping at the Model lifeline. It should reach the Harness just before step8 save. Move its label below the line if needed. Keep "No further model call" as a short note near the Model lifeline. A dashed completion event may cross the Model lifeline without arrowhead there; the only destination arrowhead is at Harness. This application completion signal triggers saving without another model request.
+No other edits, no new calls, no invented results, no text overlaps.
+
+04-storyboard
+
+Edit only the outer green connectors in this nine-step storyboard. Keep every card, number, label, icon, content and all small arrows within the three bands unchanged. The current long outer green connector reaches Browser step9 before saving; fix it.
+Remove the entire long outer green snake path around the left/bottom of the "Three model calls" band and the connector attaching to the right edge of step9. Replace it with TWO independent, clear directed elbow arrows:
+- From the bottom of step2 "Harness prepares" to the top of step3 "MODEL CALL1 / search_players". Route within the whitespace between the first and second bands. Arrowhead must terminate at step3.
+- From the bottom of step7 "MODEL CALL3 / finish_response" to the top of step8 "Harness / Save completed turn". Route through the whitespace separating the second and third bands, outside the cards. Arrowhead must terminate at step8, never step9. Use a gray or green elbow with sufficient clearance; it may run horizontally in the gap between bands.
+Keep the existing small step8 → step9 arrow unchanged. After the edit the main chronology is unmistakably 1→2→3→4→5→6→7→8→9. No connector should intersect text, sidebar or content. Do not change anything else.

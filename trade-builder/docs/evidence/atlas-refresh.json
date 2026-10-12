@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-09T09:17:49.776821+00:00",
+  "runId": "gambit-chat-6a358847be4e",
+  "sourceRevision": "6a358847be4e0ab47f113c8c759df5ee20155285ea9d2061b14c4d6cbe87547d",
+  "backendRefresh": {
+    "conversations": 162,
+    "turns": 449,
+    "firstRecordedAt": "2026-10-09T07:22:57.356Z",
+    "lastRecordedAt": "2026-10-09T07:46:01.826Z",
+    "responses": {
+      "complete": 376,
+      "needs_clarification": 71,
+      "conflict": 1,
+      "error": 1
+    },
+    "expectedRecoveryExamples": [
+      "Invalid selected player ID",
+      "Stale conversation version"
+    ],
+    "limitation": "Fresh recordings are observations, not a semantic pass verdict for every assistant response."
+  },
+  "atlas": {
+    "scenarios": 199,
+    "checkpoints": 488,
+    "viewports": [
+      "mobile",
+      "tablet",
+      "laptop",
+      "desktop"
+    ],
+    "freshFrozenViews": 1952,
+    "firstCapturedAt": "2026-10-09T07:51:40.281Z",
+    "lastCapturedAt": "2026-10-09T09:12:45.045Z",
+    "imageFormats": {
+      ".svg": 1940,
+      ".jpg": 12
+    }
+  },
+  "verification": {
+    "strictAllCaptures": true,
+    "sourceFreshness": true,
+    "actualPixelDimensions": true,
+    "unalteredEmbeddedPixels": true,
+    "screenshotAndHTMLHashes": true,
+    "elementIndexes": true,
+    "scopedLint": true,
+    "typecheck": true,
+    "productionBuild": true,
+    "unitTestsAdded": false,
+    "browserFrozenScreenshot": true,
+    "browserLiveInspection": true,
+    "viewportReset": true
+  },
+  "proof": "docs/evidence/atlas-refresh-proof.jpg"
+}

@@ -1,0 +1,487 @@
+[
+  {
+    "id": "player-identities",
+    "title": "Player identities and corrections",
+    "scenarios": [
+      "ambiguous name clarification",
+      "duplicate full name in mixed-team package",
+      "typo in a specified swap",
+      "full name transposition",
+      "equally close full name typos remain ambiguous",
+      "case punctuation and accents",
+      "unknown name and typed recovery",
+      "selected answer with correction",
+      "shortened given name discovery",
+      "shortened names in a specified swap",
+      "surname without a given name remains ambiguous",
+      "distinct shortened and full names in the same package",
+      "semantic identity: KD",
+      "semantic identity: the Greek Freak",
+      "semantic identity: SGA",
+      "semantic identity: the Joker",
+      "semantic identity: King James",
+      "semantic identity: AD",
+      "semantic identity: Derrik Wite",
+      "semantic identity: Nikola Joki\u0107",
+      "semantic identity: unavailable Pat Riley",
+      "semantic identity: unavailable Michael Jordan",
+      "semantic identity: unavailable Michael Imaginary",
+      "semantic identity: unavailable Taylor Swift",
+      "semantic identity: unavailable Stephen Imaginary",
+      "semantic identity: ambiguous nickname",
+      "semantic identity: ambiguous name and nickname answer",
+      "semantic identity: scoped nickname and historical typo",
+      "semantic identity: pronoun after nickname research",
+      "semantic identity: research nickname and collection",
+      "semantic identity: nickname discovery and more",
+      "semantic identity: nickname contract",
+      "semantic identity: relationship signing",
+      "semantic identity: nickname repair pin"
+    ],
+    "checks": [
+      "Unique names and typos resolve",
+      "Ambiguous names ask before choosing",
+      "Every requested player is retained",
+      "Typed corrections override provisional badges",
+      "Model interprets nicknames, initials, typos and contextual names against the catalogue",
+      "Unknown people and absent players have no unrelated spelling suggestions",
+      "Nickname answers retain their original pending role",
+      "Explicit name collections do not ask users to choose one person"
+    ]
+  },
+  {
+    "id": "conversation-context",
+    "title": "Conversation context and references",
+    "scenarios": [
+      "conversation history and focus",
+      "independent proposals",
+      "historical reference targets the original trade",
+      "research while an identity question is pending",
+      "research dismisses pending edit choices",
+      "pending question abandoned for a fresh swap",
+      "unknown historical option"
+    ],
+    "checks": [
+      "Research preserves saved proposals and hides unresolved options",
+      "Answered questions remain in the transcript",
+      "Fresh requests do not inherit pending assets",
+      "Historical references target the intended version"
+    ]
+  },
+  {
+    "id": "trade-edits",
+    "title": "Create, replace, remove, reroute and undo",
+    "scenarios": [
+      "trade revisions",
+      "ordinary revisions and pronouns",
+      "compound package edits",
+      "add fourth team reroute and undo",
+      "cycle replacement",
+      "explicitly retaining the original team",
+      "same asset on both sides"
+    ],
+    "checks": [
+      "Replacements preserve destinations and unrelated assets",
+      "Unused teams disappear",
+      "Explicitly retained teams remain",
+      "Undo restores the prior checked version",
+      "No-op edits do not lose assets"
+    ]
+  },
+  {
+    "id": "routing",
+    "title": "Two-, three- and four-team routing",
+    "scenarios": [
+      "duplicate full name and implicit two-team exchange",
+      "multi team setup and routing",
+      "sparse three-team routing choices",
+      "named teams ask for players before destinations",
+      "player question accepts a complete routed answer",
+      "multi team and export limits"
+    ],
+    "checks": [
+      "Two-team exchanges infer the other destination",
+      "Multi-team requests ask only missing destinations",
+      "Explicit routes are not asked again",
+      "More than four teams are rejected without changing saved proposals"
+    ]
+  },
+  {
+    "id": "discovery",
+    "title": "Trade discovery and pagination",
+    "scenarios": [
+      "incomplete request clarification",
+      "same-team outgoing package searches immediately",
+      "outgoing-only identity clarification",
+      "filtered discovery",
+      "financial filters with matches",
+      "package sizes",
+      "fixed outgoing and exclusions",
+      "fresh search resets filters",
+      "search filter relaxation",
+      "financial discovery",
+      "vague filters",
+      "discovery eligibility: sibling replacement and signing",
+      "discovery eligibility: Seth Curry",
+      "discovery eligibility: Amari Williams",
+      "discovery eligibility: package cannot silently omit unsigned player",
+      "discovery eligibility: change active player and source"
+    ],
+    "checks": [
+      "Outgoing goals search immediately",
+      "Team-wide searches delegate player selection",
+      "Age, position and combined financial limits are enforced",
+      "Fresh searches reset filters",
+      "Continued searches retain filters and avoid repeats",
+      "Impossible filters produce honest empty results",
+      "Resolve relationship references before checking outgoing-player eligibility.",
+      "Explain unsigned and two-way contract restrictions before searching; preserve the prior search and support a signing follow-up."
+    ]
+  },
+  {
+    "id": "repair",
+    "title": "Checked repairs and choosing alternatives",
+    "scenarios": [
+      "repair additions",
+      "pinned replacements",
+      "repair team perspective",
+      "repair and choose a suggestion",
+      "duplicate pick and retained repairs"
+    ],
+    "checks": [
+      "Required players and picks are retained",
+      "Only permitted replacements occur",
+      "Team perspective is clear",
+      "Candidates remain separately addressable proposals"
+    ]
+  },
+  {
+    "id": "picks",
+    "title": "Pick packages, ownership and protections",
+    "scenarios": [
+      "pick only explicit origins",
+      "ambiguous pick year",
+      "blocked picks and swap rights",
+      "protected pick current ownership",
+      "mixed picks retained through replacement and removal",
+      "duplicate pick and retained repairs"
+    ],
+    "checks": [
+      "Original team is distinguished from current owner",
+      "Existing protections survive edits",
+      "Ambiguous year/round asks for missing information",
+      "Unavailable picks and swap rights are rejected",
+      "Picks never supply matching salary"
+    ]
+  },
+  {
+    "id": "rights",
+    "title": "Draft rights",
+    "scenarios": [
+      "draft rights clarification and removal",
+      "draft rights ownership errors",
+      "standalone draft rights exchange",
+      "contracts rights and exceptions"
+    ],
+    "checks": [
+      "Rights use their own identities and current owners",
+      "Zero-salary packages render",
+      "Unknown rights and unsupported automatic selection recover",
+      "Remove and undo preserve unrelated assets"
+    ]
+  },
+  {
+    "id": "contracts",
+    "title": "Contract and payroll scenarios",
+    "scenarios": [
+      "standalone contract payroll reset",
+      "contract annual versus total",
+      "stretch trading restriction and reset",
+      "stretch and waive scenario",
+      "combined contract rights and exception"
+    ],
+    "checks": [
+      "Annual salary differs from total contract value",
+      "Hypothetical contracts are identified",
+      "Stretch-and-waive restrictions are enforced",
+      "Reset and undo restore catalogue terms"
+    ]
+  },
+  {
+    "id": "signings",
+    "title": "Free agents and sign-and-trades",
+    "scenarios": [
+      "unsigned free agent then signing",
+      "signing offer rejected preserves trade",
+      "signing unspecified tier and undo",
+      "missing signing terms clarification",
+      "signing then sign and trade",
+      "signing transactions: trade plus a New York signing",
+      "signing transactions: short contract cannot be traded immediately",
+      "signing transactions: eligible structure still needs evidence",
+      "signing transactions: replacements retain direct signing",
+      "signing transactions: sign-and-trade with a return"
+    ],
+    "checks": [
+      "Unsigned players cannot be traded as ordinary assets",
+      "Missing salary/tier and duration are requested",
+      "Rejected offers preserve saved proposals",
+      "Sign-and-trades use the hypothetical signing owner",
+      "Trade + signing lists direct signings with incoming assets and separates trade salary from signing salary.",
+      "Sign-and-trades require the previous signing team, three or four years, and a guaranteed first year; prohibited exception routes are rejected.",
+      "Receiving-team first-apron restrictions and combined payroll are checked; missing eligibility evidence is Needs review.",
+      "Replacement searches retain the signing and expose incomplete eligibility."
+    ]
+  },
+  {
+    "id": "exceptions",
+    "title": "Trade exceptions",
+    "scenarios": [
+      "trade exception clarification",
+      "exception ownership and combination limits",
+      "contracts rights and exceptions"
+    ],
+    "checks": [
+      "Multiple exceptions need a concrete source or amount",
+      "Unavailable exceptions produce a useful response",
+      "Exceptions cannot be merged",
+      "Removal restores ordinary matching"
+    ]
+  },
+  {
+    "id": "research-and-limits",
+    "title": "Research, basketball value and unsupported requests",
+    "scenarios": [
+      "catalogue research",
+      "research and unsupported requests",
+      "unsupported search criteria",
+      "research and automatic asset limits",
+      "unsupported requests preserve the checked trade",
+      "basketball opinion without performance evidence"
+    ],
+    "checks": [
+      "Research does not construct a trade",
+      "Absent performance data is not invented",
+      "Value judgments do not equate legality with fairness",
+      "Unsupported features explain the limitation and available alternative"
+    ]
+  },
+  {
+    "id": "recovery",
+    "title": "Recheck, cancel, reset and transport recovery",
+    "scenarios": [
+      "recheck and no op",
+      "cancellation reset and preservation",
+      "stale conversation version",
+      "clear during identity question then fresh request",
+      "empty identity correction recovery"
+    ],
+    "fixtures": [
+      "workspace-loading",
+      "workspace-data-error",
+      "workspace-connection-error",
+      "network-failure",
+      "provider-unavailable",
+      "history-failure",
+      "first-loading",
+      "edit-loading"
+    ],
+    "checks": [
+      "Rechecks retain the proposal",
+      "Cancel preserves the last checked trade",
+      "Clear removes pending work",
+      "Stale clients and invalid identities preserve saved proposals",
+      "Network, assistant and storage failures remain recoverable"
+    ]
+  },
+  {
+    "id": "tool-history",
+    "title": "Progress, tool history and timestamps",
+    "scenarios": [
+      "tool activity history"
+    ],
+    "fixtures": [
+      "tool-history",
+      "first-loading",
+      "edit-loading"
+    ],
+    "checks": [
+      "One active operation at a time",
+      "Friendly operation names",
+      "Routine bookkeeping is hidden",
+      "Worked for appears before the reply, question or card",
+      "Message time is available on hover"
+    ]
+  },
+  {
+    "id": "player-browser",
+    "title": "Player browsing and comparison",
+    "fixtures": [
+      "workspace-players",
+      "workspace-player-filters",
+      "workspace-player-empty",
+      "workspace-player-details",
+      "workspace-free-agent",
+      "workspace-comparison",
+      "workspace-comparison-full"
+    ],
+    "checks": [
+      "Search, clear, combined filters, sort and pagination",
+      "Details, contracts, estimates and missing evidence",
+      "Comparison add/remove and four-player limit",
+      "Add to message and close/return focus",
+      "Desktop resizing and full-width mobile research"
+    ]
+  },
+  {
+    "id": "pick-browser",
+    "title": "Draft-pick browsing and selection",
+    "fixtures": [
+      "workspace-picks",
+      "workspace-pick-filters",
+      "workspace-pick-empty",
+      "workspace-pick-protected",
+      "workspace-pick-protection-unknown",
+      "workspace-pick-unavailable",
+      "workspace-pick-selected",
+      "workspace-pick-refreshing",
+      "workspace-pick-refresh-error"
+    ],
+    "checks": [
+      "Search, owner, origin, year, round and availability filters",
+      "Sort, pagination and clearing filters",
+      "Protected and unavailable pick details",
+      "Duplicate insertion disabled",
+      "Refresh preserves the draft and filters",
+      "Exact badges reopen their asset"
+    ]
+  },
+  {
+    "id": "saved",
+    "title": "Saved trade versions",
+    "fixtures": [
+      "workspace-saved-empty",
+      "workspace-saved"
+    ],
+    "checks": [
+      "Save and unsave independently of history",
+      "View the exact version",
+      "Players, picks, rights, scenarios and validation status",
+      "Empty panel and closing it"
+    ]
+  },
+  {
+    "id": "composer",
+    "title": "Composing and clarification replies",
+    "fixtures": [
+      "welcome",
+      "long-draft",
+      "workspace-composer-players",
+      "workspace-pick-selected",
+      "selected-player",
+      "selected-team",
+      "selected-package",
+      "selected-answer",
+      "selected-long-answer",
+      "workspace-team-choice-search",
+      "workspace-free-text-question",
+      "workspace-team-choice-empty",
+      "workspace-team-choice-filtered",
+      "workspace-exact-team-selection-full"
+    ],
+    "checks": [
+      "Text, player and pick badges",
+      "# picker search, tabs, keyboard and escape",
+      "Badge removal and undo/redo",
+      "Option selection with supplementary text",
+      "Empty send disabled and Enter submission",
+      "Long content at all viewport sizes",
+      "Questions without choices appear as assistant messages above a normal composer.",
+      "Searchable options filter labels, details and aliases without changing submitted option values; clearing and no-match states remain usable.",
+      "Multiple-choice questions use square checkboxes and a right-aligned x/y count; single choices retain circles.",
+      "Selected options survive filtering, the maximum is enforced, and submission requires the minimum selection.",
+      "All selected options and supplemental text survive submission and saved conversation history."
+    ],
+    "scenarios": [
+      "clarification choices: signing team catalogue",
+      "clarification choices: free-text identity answer",
+      "multi choice: three teams and compound reply",
+      "multi choice: single identity remains single"
+    ]
+  },
+  {
+    "id": "player-alternatives",
+    "title": "Replace one asset without rebuilding the package",
+    "scenarios": [
+      "player alternatives: historical middle proposal",
+      "player alternatives: invalid package and selection",
+      "player alternatives: filters and missing target"
+    ],
+    "checks": [
+      "Historical references select the requested card and revision",
+      "Every other asset and transfer direction remains unchanged",
+      "Searches preserve the referenced proposal and record each returned option separately",
+      "Only freshly validated alternatives are shown",
+      "No passing replacement gives an honest scoped empty result",
+      "Replacement filters do not filter out the preserved players",
+      "Missing targets clarify against the referenced trade",
+      "Conversation explanations use recorded tool work, not intended actions"
+    ]
+  },
+  {
+    "id": "linked-conversation-records",
+    "title": "Linked proposals, searches, questions and hypothetical branches",
+    "scenarios": [
+      "historical batches and replacement search",
+      "multi-team and hypothetical branches",
+      "signing identity and ownership",
+      "clarification interruptions and corrections",
+      "filters and search refinement",
+      "exception identity and atomic assumptions",
+      "compound explicit destinations"
+    ],
+    "checks": [
+      "Exact batch order survives later searches and edits",
+      "Replacement searches keep the rest of the referenced package fixed",
+      "Search continuation uses its recorded filters and excludes shown packages",
+      "Independent proposals do not inherit scenario assumptions",
+      "Four-team edits retain explicit and implicit transfer directions",
+      "Relationship changes re-read the new player\u2019s actual status and ownership",
+      "Questions are recorded after an answer and hidden during unrelated research",
+      "Compound contract, rights and exception edits are checked together"
+    ]
+  },
+  {
+    "id": "trade-idea-selection",
+    "title": "Browse ideas and check selected trades",
+    "scenarios": [
+      "Trade idea selection with financial filters",
+      "Incoming guard selection and five checks",
+      "Package browsing with player inspection",
+      "Cancel trade ideas"
+    ],
+    "fixtures": [
+      "workspace-exact-team-selection",
+      "ideas-loading",
+      "ideas-error",
+      "ideas-empty",
+      "ideas-filtered",
+      "ideas-selection-filtered",
+      "ideas-selection-full",
+      "ideas-cancelled"
+    ],
+    "checks": [
+      "Browsing makes no validator calls",
+      "All 160 Bulls filter matches are available across pages",
+      "Filtering and paging preserve selected ideas",
+      "Choose one to five trades and check exactly those proposals",
+      "Exact three-team questions require three selections",
+      "Square checkboxes and a right-aligned counter",
+      "Historical proposals and search versions remain independent",
+      "Filtering keeps the opening height; empty and short lists have no scrollbar.",
+      "Empty search shows one centered recovery state without a result count.",
+      "Loading fades the choices beneath the shared 16 px spinner; errors offer retry.",
+      "Five selected ideas disable remaining choices; cancellation is recorded in the thread."
+    ]
+  }
+]

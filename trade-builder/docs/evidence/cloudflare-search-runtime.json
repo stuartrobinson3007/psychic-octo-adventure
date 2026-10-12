@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-09T11:51:04.674Z",
+  "checks": [
+    "Global batch leases reject overlapping excess work",
+    "Workspace schema initializes and unauthenticated reads remain blocked",
+    "Large Unicode history round-trips through bounded rows in the production Durable Object store",
+    "A scheduled production alarm detects changed data without a browser or chat request; another browser cannot read its job"
+  ]
+}

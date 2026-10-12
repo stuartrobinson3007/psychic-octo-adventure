@@ -1,0 +1,73 @@
+Clean Gambit sequence variants
+Generation mode: built-in image_gen tool
+Copy guidance: Impeccable clarify and layout references
+Selected illustration: 02-wide-tools, saved as ../harness-request-flow.png
+
+01-spacious
+
+Use case: infographic-diagram. Asset: THREE cleaner generations of the attached Gambit sequence diagram for its README. Treat the attached image as a STRUCTURE AND STYLE REFERENCE, not an exact layout to preserve.
+Primary request: Keep the four-lane sequence diagram and nine-step example. Remove EXCESS COPY, rather than merely abbreviating all useful labels. Preserve actual tool names and meaningful returned evidence. Make step6 much easier to follow.
+Style: incumbent white/zinc/emerald Gambit palette, plain Inter-like typography, fine gray lifelines, restrained emerald arrows, ample whitespace. Large readable tool names. No logos, avatars, large role icons, shading, giant boxed footers, nested cards, tables or grid backgrounds.
+Content policy from Impeccable: say each idea once; role headings already explain the actor, so no role subtitles; no "Input:" prefixes, repeated "MODEL CALL" banners or "Tool execution inside check_proposal" heading. Remove request metadata, the legend, ownership disclaimers, repeated completion explanations, "No further model call", and the three big footer boxes. Keep useful labels naturally worded. No dense fine-print footers.
+
+Use EXACT actor headers: "Browser", "Harness", "Model", "Tools". No subtitle beneath these names. Do NOT put the Model inside a Gambit-server bracket.
+Title: "A trade request"
+Content and chronology:
+Step1 Browser → Harness, text: "Trade Derrick White for Andrew Wiggins"
+Step2 Harness prepares locally. A compact unboxed or lightly bordered group has exactly these three lines: "Check request"; "Load conversation and roster"; "Supply model context". Harness then sends message + context to Model, label "Message + context".
+Step3 Model → Tools, actual call name "search_players", smaller arguments "Derrick White + Andrew Wiggins".
+Step4 Tools → Model, return label "IDs, teams, contracts and eligibility".
+Step5 Model → Tools, actual call name "check_proposal", smaller arguments "White → Miami • Wiggins → Boston".
+Step6 tool work INSIDE check_proposal, a dedicated generous space with these four natural labels only: "Stage exchange"; "Check ownership and destinations"; "Run trade validation"; "Match evidence to proposal". No repeated headline. After these actions, a separate Tools → Model return arrow has label "Proposal version + verdict". No arrow or label overlaps this group.
+Step7 Model → Tools, actual call name "finish_response", smaller arguments "Explanation + proposal reference". Completion signal Tools → Harness, label "Response complete"; it must NOT end at Model. No further model call.
+Step8 Harness locally saves, label "Save completed turn".
+Step9 Harness → Browser, label "Explanation + trade card".
+Exactly nine main step markers, each 1–9 once. No separate 1/2/3 call counters. Green solid arrows point outward for calls; gray dashed arrows return results. Calls 3,5,7 are chosen by the same model, not different agents. Checks and storage are application operations. The external trade validator is internal to check_proposal, not another model tool. Saving happens after response completion and before browser response. No made-up values or pass badges.
+Footer maximum two short lines ONLY: "Example flow • inputs abbreviated" and "No history lookup or clarification needed." These add useful scope information without repeating the diagram. Do not add any other copy. Avoid cutting off labels at the right edge.
+Layout treatment1: AIRY CLASSIC SEQUENCE, landscape around 2048x1536. Preserve four clearly separated vertical lifelines, chronological horizontal arrows and a broad right-side margin. Place Tools lifeline with a generous 340px-wide area to its right INSIDE the canvas so step6's four-line action group fits without overlapping the lifeline. Reserve a full-height band solely for step6, clearly between check_proposal and its returned verdict. Then give the verdict a completely separate horizontal row before finish_response. Keep step2 compact and close to Harness. Position text above arrows, arguments below calls. Emphasize the three actual tool names through weight, not duplicated banners. Four equally restrained lane headings, consistent step markers, one continuous reading order down the page. Do not decorate unused whitespace. This is the closest clean refinement to the user's selected image.
+
+02-wide-tools
+
+Use case: infographic-diagram. Asset: THREE cleaner generations of the attached Gambit sequence diagram for its README. Treat the attached image as a STRUCTURE AND STYLE REFERENCE, not an exact layout to preserve.
+Primary request: Keep the four-lane sequence diagram and nine-step example. Remove EXCESS COPY, rather than merely abbreviating all useful labels. Preserve actual tool names and meaningful returned evidence. Make step6 much easier to follow.
+Style: incumbent white/zinc/emerald Gambit palette, plain Inter-like typography, fine gray lifelines, restrained emerald arrows, ample whitespace. Large readable tool names. No logos, avatars, large role icons, shading, giant boxed footers, nested cards, tables or grid backgrounds.
+Content policy from Impeccable: say each idea once; role headings already explain the actor, so no role subtitles; no "Input:" prefixes, repeated "MODEL CALL" banners or "Tool execution inside check_proposal" heading. Remove request metadata, the legend, ownership disclaimers, repeated completion explanations, "No further model call", and the three big footer boxes. Keep useful labels naturally worded. No dense fine-print footers.
+
+Use EXACT actor headers: "Browser", "Harness", "Model", "Tools". No subtitle beneath these names. Do NOT put the Model inside a Gambit-server bracket.
+Title: "A trade request"
+Content and chronology:
+Step1 Browser → Harness, text: "Trade Derrick White for Andrew Wiggins"
+Step2 Harness prepares locally. A compact unboxed or lightly bordered group has exactly these three lines: "Check request"; "Load conversation and roster"; "Supply model context". Harness then sends message + context to Model, label "Message + context".
+Step3 Model → Tools, actual call name "search_players", smaller arguments "Derrick White + Andrew Wiggins".
+Step4 Tools → Model, return label "IDs, teams, contracts and eligibility".
+Step5 Model → Tools, actual call name "check_proposal", smaller arguments "White → Miami • Wiggins → Boston".
+Step6 tool work INSIDE check_proposal, a dedicated generous space with these four natural labels only: "Stage exchange"; "Check ownership and destinations"; "Run trade validation"; "Match evidence to proposal". No repeated headline. After these actions, a separate Tools → Model return arrow has label "Proposal version + verdict". No arrow or label overlaps this group.
+Step7 Model → Tools, actual call name "finish_response", smaller arguments "Explanation + proposal reference". Completion signal Tools → Harness, label "Response complete"; it must NOT end at Model. No further model call.
+Step8 Harness locally saves, label "Save completed turn".
+Step9 Harness → Browser, label "Explanation + trade card".
+Exactly nine main step markers, each 1–9 once. No separate 1/2/3 call counters. Green solid arrows point outward for calls; gray dashed arrows return results. Calls 3,5,7 are chosen by the same model, not different agents. Checks and storage are application operations. The external trade validator is internal to check_proposal, not another model tool. Saving happens after response completion and before browser response. No made-up values or pass badges.
+Footer maximum two short lines ONLY: "Example flow • inputs abbreviated" and "No history lookup or clarification needed." These add useful scope information without repeating the diagram. Do not add any other copy. Avoid cutting off labels at the right edge.
+Layout treatment2: UNEQUAL LANES WITH A WIDE TOOL WORKSPACE, landscape around 2048x1536. Keep Browser and Harness lifelines on the left, Model at center, and Tools at roughly the right-hand 70% of the canvas, leaving the entire rightmost 25% for local tool work. A slim vertical activation bar on the Tools lifeline spans check_proposal through its verdict. To its right, show step6's four actions as a small vertical internal path with three short downward connectors, no surrounding box, no extra numbered substeps. Return the verdict below the bottom of the activation bar, with a long clear dashed arrow back to Model. This separates local work from cross-lane messages. Use slightly stronger horizontal typography on call names but no repeated actor/call prefixes. Finish_response sits lower, then its completion arrow runs straight back to Harness. No arrow crosses an action label. All copy exactly as specified, no added instructional headings or footer panels.
+
+03-check-band
+
+Use case: infographic-diagram. Asset: THREE cleaner generations of the attached Gambit sequence diagram for its README. Treat the attached image as a STRUCTURE AND STYLE REFERENCE, not an exact layout to preserve.
+Primary request: Keep the four-lane sequence diagram and nine-step example. Remove EXCESS COPY, rather than merely abbreviating all useful labels. Preserve actual tool names and meaningful returned evidence. Make step6 much easier to follow.
+Style: incumbent white/zinc/emerald Gambit palette, plain Inter-like typography, fine gray lifelines, restrained emerald arrows, ample whitespace. Large readable tool names. No logos, avatars, large role icons, shading, giant boxed footers, nested cards, tables or grid backgrounds.
+Content policy from Impeccable: say each idea once; role headings already explain the actor, so no role subtitles; no "Input:" prefixes, repeated "MODEL CALL" banners or "Tool execution inside check_proposal" heading. Remove request metadata, the legend, ownership disclaimers, repeated completion explanations, "No further model call", and the three big footer boxes. Keep useful labels naturally worded. No dense fine-print footers.
+
+Use EXACT actor headers: "Browser", "Harness", "Model", "Tools". No subtitle beneath these names. Do NOT put the Model inside a Gambit-server bracket.
+Title: "A trade request"
+Content and chronology:
+Step1 Browser → Harness, text: "Trade Derrick White for Andrew Wiggins"
+Step2 Harness prepares locally. A compact unboxed or lightly bordered group has exactly these three lines: "Check request"; "Load conversation and roster"; "Supply model context". Harness then sends message + context to Model, label "Message + context".
+Step3 Model → Tools, actual call name "search_players", smaller arguments "Derrick White + Andrew Wiggins".
+Step4 Tools → Model, return label "IDs, teams, contracts and eligibility".
+Step5 Model → Tools, actual call name "check_proposal", smaller arguments "White → Miami • Wiggins → Boston".
+Step6 tool work INSIDE check_proposal, a dedicated generous space with these four natural labels only: "Stage exchange"; "Check ownership and destinations"; "Run trade validation"; "Match evidence to proposal". No repeated headline. After these actions, a separate Tools → Model return arrow has label "Proposal version + verdict". No arrow or label overlaps this group.
+Step7 Model → Tools, actual call name "finish_response", smaller arguments "Explanation + proposal reference". Completion signal Tools → Harness, label "Response complete"; it must NOT end at Model. No further model call.
+Step8 Harness locally saves, label "Save completed turn".
+Step9 Harness → Browser, label "Explanation + trade card".
+Exactly nine main step markers, each 1–9 once. No separate 1/2/3 call counters. Green solid arrows point outward for calls; gray dashed arrows return results. Calls 3,5,7 are chosen by the same model, not different agents. Checks and storage are application operations. The external trade validator is internal to check_proposal, not another model tool. Saving happens after response completion and before browser response. No made-up values or pass badges.
+Footer maximum two short lines ONLY: "Example flow • inputs abbreviated" and "No history lookup or clarification needed." These add useful scope information without repeating the diagram. Do not add any other copy. Avoid cutting off labels at the right edge.
+Layout treatment3: DEDICATED VALIDATION BAND, landscape around 2048x1536. Same four-lane vertical sequence diagram, but set a very faint emerald-tinted horizontal band across the Model–Tools region for the interval from check_proposal through the returned verdict. Do not use this band as a table row or put a heading on it. At its top is step5 check_proposal outward arrow. Within the band, step6's four tool actions form a tidy, spaced two-by-two GROUP OF TEXT LABELS (no cards, no grid lines, no invented simultaneous execution); a thin small sequential connector shows the order Stage exchange → Check ownership and destinations → Run trade validation → Match evidence to proposal. Keep this internal path wholly to the right of the Tools lifeline in a generous right margin. At the bottom of the tinted band is the separate returned "Proposal version + verdict" arrow to Model. Leave a clear white gap before finish_response. Rest of the sequence is restrained, with no frames around ordinary messages. Main hierarchy is the three real tool names, not explanatory captions. Preserve four roles, all nine steps and minimal copy. No Tools group protrudes beyond image edge.

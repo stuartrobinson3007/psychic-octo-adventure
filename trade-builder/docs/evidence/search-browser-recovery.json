@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-09T12:01:03.635Z",
+  "beforeReload": {
+    "examined": 1404,
+    "total": 10920,
+    "found": 195
+  },
+  "afterReload": {
+    "examined": 1536,
+    "total": 10920,
+    "found": 227
+  },
+  "checks": [
+    "Same transcript and proposal order retained after browser refresh",
+    "The running two-for-two search progressed after refresh",
+    "Normal chat cancellation stopped the exact refined search"
+  ],
+  "transcript": "Find Boston one-for-one trade options with Cleveland.\nWorked for 10s\nThese one-for-one Boston–Cleveland options pass salary and roster checks; basketball value and either team’s willingness haven’t been assessed. This search covers player-only exchanges, not picks or signings.\n\nSearch complete · 224/224 combinations considered\n\n224 checked · 50 passing.\n\nSearch scope\nJordan Walsh for Jaylon Tyson\n2 players\nValid\nJordan Walsh for Mario Hezonja\n2 players\nValid\nJordan Walsh for Thomas Bryant\n2 players\nValid\nMake that search two Boston players for two Cleveland players instead.\nWorked for 15s\nUpdated to two Boston players for two Cleveland players. These options pass salary and roster checks; value, fit and willingness haven’t been assessed. Picks and signings remain outside this search.\n\nSearch stopped · 1,716/10,920 combinations considered\n\n1,716 checked · 282 passing.\n\nSearch stopped. The options already found are saved.\n\nSearch scope\nJordan Walsh +1 ↔ Mario Hezonja +1\n4 players\nValid\nJordan Walsh +1 ↔ Thomas Bryant +1\n4 players\nValid\nJordan Walsh +1 ↔ Nae'Qwan Tomlin +1\n4 players\nValid\nStop that two-for-two search.\nStopped the Boston–Cleveland two-for-two search. Previously displayed options remain available.\nScroll to end\nTrade message\n\n\n\n\nDescribe a trade, or type # to find a player…"
+}

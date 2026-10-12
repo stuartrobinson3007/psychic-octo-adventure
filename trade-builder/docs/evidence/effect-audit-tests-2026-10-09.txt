@@ -1,0 +1,497 @@
+
+> test
+> node --test src/lib/*.test.ts src/lib/ux-review/*.test.ts src/server/*.test.ts
+
+✖ answered questions precede their receipts while the next unanswered question stays in its picker (14.404459ms)
+✔ unsubmitted choices stay in the picker; submitted and restored replies retain the question (1.641417ms)
+✔ the historical question matches the widget header and remains above a failed answer turn (0.200125ms)
+✔ player, team, package and plain-answer receipts split extra text without changing the backend message (5.186084ms)
+✔ selected option is recorded from the offered canonical choice and mismatched selections are ignored (1.953625ms)
+✖ older stored option replies recover receipts while freeform replies remain ordinary messages (1.118459ms)
+✔ custom-message player references retain their exact offsets after the selected choice is removed (0.232209ms)
+✖ duplicate option values never select an arbitrary identity (0.289541ms)
+✔ conversation entries preserve multiple versions and discovery cards without inventing focus (1.670916ms)
+✔ legacy archives keep candidate and checked-version references separate (2.617875ms)
+✔ message archives preserve only explicit badge ranges through import (0.870125ms)
+✔ typed and response player names remain plain text (2.149291ms)
+✔ only the inserted badge is preserved in mixed text (0.398792ms)
+✔ explicit badges preserve the selected identity for duplicate names (0.230208ms)
+✔ ambiguous surnames and fuzzy prose are never silently assigned (0.243042ms)
+✔ persisted badge ranges preserve whitespace and selected identity (0.655916ms)
+✔ hover timestamps show local time today and dates on other calendar days (99.731292ms)
+✔ missing or invalid historical times do not acquire invented timestamps (0.163583ms)
+✔ pick browsing separates origin and ownership and never broadens unknown searches (35.079333ms)
+✔ pick references preserve exact IDs alongside colliding player IDs and reject overlapping ranges (1.0935ms)
+✔ clarification prefixes retain pick references with corrected offsets (0.610083ms)
+✔ full names survive misplaced spaces, accents and conservative typos (20.173958ms)
+✔ ambiguity preserves all matching identities while full names resolve uniquely (7.139792ms)
+✔ ordinary prose is retained and matches preserve surrounding text (18.617167ms)
+✔ a surname that is another player's first name cannot silently become a badge (2.391625ms)
+✔ short surrounding words are not swallowed as full-name typos (0.336875ms)
+✔ completed signing history removes recovered retries without hiding failures for other targets or later failures (2.09475ms)
+✔ older recorded signing retries are summarized using their known work stage (0.711959ms)
+✔ work duration uses compact elapsed time and does not invent timing for older messages (0.987209ms)
+✔ tool presentation uses friendly tenses and known player names without technical outputs (0.331792ms)
+✔ parallel calls display the first unfinished action and retain the last completed action between steps (0.279125ms)
+✔ only substantive lookups, checks and alternative searches appear, including older recorded labels (1.435875ms)
+✔ recognized labels preserve the explanation and numbers verbatim (2.682792ms)
+✔ unrecognized wording and embedded labels remain entirely untouched (0.317625ms)
+✔ empty explanations are not hidden behind a recognized label (0.17575ms)
+✔ option presentation counts distinct known players across label and detail (1277.498042ms)
+✔ same-name identity choices display only their canonical player (0.329375ms)
+✖ the two requested checkpoints offer named Williams and current-trade removal choices (2.156209ms)
+✔ review adapts an offered discovery reply but respects explicit text-only questions (4.122ms)
+✖ a selection and message become one reply with exact badge offsets and identities (1.092542ms)
+✔ a clarification survives a failed send but disappears on an answer, cancellation or replacement question (0.363375ms)
+✔ selection questions omit interaction instructions across players, teams and generic answers (0.446666ms)
+✖ copy cleanup preserves real questions, useful requirements and text-only requests (0.303792ms)
+✔ legacy verdict copy retains seasons, failure reasons and salary evidence (4.419125ms)
+✖ review assistant messages use product copy while preserving recorded inputs and results (70.000875ms)
+✔ review catalogue resolves every displayed player, pick, right and exception (13.962459ms)
+✔ all maintained conversation briefs are represented in the review (5.820542ms)
+✖ starting another trade preserves earlier cards and moves follow-up focus without clearing (7.8865ms)
+✖ preview expansion follows conversation focus rather than the last candidate card (0.914667ms)
+✖ review contains complete recorded conversations and separately labelled UI fixtures (0.64775ms)
+✔ new scenario names and their metadata are included without a registry edit (0.878625ms)
+✔ recorded choices and structured clarification survive review rendering (9.07675ms)
+✔ clarification and explanation preserve earlier cards without duplicating a preserved snapshot (1.769041ms)
+✔ a multi-card reply keeps one work history on its first card in both production and review (27.58975ms)
+✔ discovered alternatives render separately from the active checked trade (2.316584ms)
+✔ errors retain the production destructive treatment and review progress changes with content or width (3.0585ms)
+✔ the shared password creates distinct signed identities without exposing the password (28.039916ms)
+✔ forged browser identities, forged expiration and changed passwords invalidate access (5.132458ms)
+✔ expired access can preserve the signed identity when the browser re-enters the password (2.485083ms)
+✔ cookies are restricted to the HTTPS host and writes require the same origin (83.249583ms)
+✔ a live catalogue failure rejects instead of serving bundled player data (4.304334ms)
+✔ the SDK stops after one request for exhausted credits, without leaking provider details (154.804833ms)
+✔ temporary rate limits pass through intact, while authentication failures need configuration (12.003125ms)
+✔ wrapped SDK failures distinguish quota, timeout and unknown failures (0.808458ms)
+✖ a selection and its separate message survive a durable conversation reload (14.023333ms)
+✔ two visitors using the same conversation ID cannot read or overwrite each other's records (3.626209ms)
+✔ conversations survive reopening with exact messages, null focus and pending work (12.575833ms)
+✔ a longer turn keeps its conversation locked through its deadline and can commit (9.766791ms)
+✔ competing workers cannot claim or overwrite a conversation; expired owners cannot commit (7.370209ms)
+✔ sent badges survive an AI response and a durable conversation reload (20.368791ms)
+✔ canonical transfers generate consistent sending and receiving arrays (3.31925ms)
+✔ rejects unknown IDs, ownership mismatch, duplicate assets and absent destinations (0.58725ms)
+✔ free agents and empty trades are excluded from the supported scope (0.35ms)
+✔ integrity failure prevents any upstream request (2.994541ms)
+✖ valid evidence remains tied to the exact revision and catalogue (170.828791ms)
+✖ HTTP 200 with failed salary matching is an invalid trade (7.833542ms)
+✖ recognized HTTP 400 rule evidence is an invalid trade (4.226417ms)
+✔ schema failures, inconsistent identities and salary evidence are unavailable (3.850917ms)
+✔ transport failure cannot be mistaken for an illegal trade (0.56775ms)
+✖ multi-team validation preserves all routes and rejects duplicate, idle and more than four teams (2.745166ms)
+Trade chat failed { kind: 'unknown' }
+Trade chat failed { kind: 'unknown' }
+✖ SDK transport emits progress before the final question and persists the history exactly once (2036.075167ms)
+✖ failed tool operations are recorded as failures without exposing their technical errors (24.788292ms)
+✔ one-for-two discovery chooses unspecified source players and routes both incoming players from one partner (106.153459ms)
+✔ named outgoing players, requested partner, counts and exclusions are honoured (7.596709ms)
+✔ unsupported contracts and no-trade consent never enter generated packages (3.009875ms)
+✔ invalid requests cannot silently relax an explicit constraint or call the engine (3.723ms)
+✔ invalid verdicts are excluded and an empty shortlist is not presented as proof no trade exists (4.50675ms)
+✔ unavailable, throwing and mismatched verdicts never become passing candidates (9.3685ms)
+✔ search budget and concurrent engine calls are bounded even when no candidate passes (8.849125ms)
+✔ cancelling the parent turn discards discoveries even if a validator resolves late (1.243542ms)
+✔ age, positions and salary filters are conjunctive and apply only to incoming assets (45.51775ms)
+✔ impossible and malformed filter combinations fail without an upstream check (1.072875ms)
+✔ post-trade payroll checks the source team and requires unique finite upstream evidence (6.92775ms)
+✔ three-player outgoing and incoming packages are supported without duplicated assets (0.446541ms)
+✔ show more excludes only explicitly supplied package identities, independent of IDs and transfer order (2.737916ms)
+✔ three-player generation has explicit work limits even for a large cross product (63.932084ms)
+✔ a partner with too few matching players cannot trigger unbounded outgoing combination generation (1.128791ms)
+✔ rechecks require a recorded version and never evaluate an unknown package (12.995541ms)
+✔ rechecks use the recorded package and create a child revision without mutating its source (5.868ms)
+✔ default repairs add exactly one eligible player and preserve original lineage without mutating focus (18.563917ms)
+✔ replacement is considered only when explicitly allowed and pinned players never disappear (2.864625ms)
+✔ unsupported contracts, outside teams and invalid repair requests never generate passing packages (0.839083ms)
+✔ a trade that already passes is a no-op; stored evidence never replaces fresh candidate checks (1.210167ms)
+✔ checked failures produce bounded no-match copy without claiming exhaustive impossibility (3.833958ms)
+✔ unavailable and mismatched identity, teams, salaries, season or payroll never become checked repairs (7.419833ms)
+✔ repair budget is 18 fresh checks with at most three requests in flight (13.630542ms)
+✔ caller cancellation rejects promptly and late validator successes cannot escape (3.637791ms)
+✔ deadline closes the search even when the validator ignores abort (11.957875ms)
+✔ age, position, salary savings and payroll constraints apply to the requested team without relaxation (30.16375ms)
+✔ multi-team repairs explore each destination and preserve the original directed legs (1.395625ms)
+✔ age ranges are inclusive and absent age is excluded when constrained (3.327667ms)
+✔ positions are OR within canonical tokens and AND with age constraints (0.681083ms)
+✔ salary filters use combined salaries and exact post-trade team payroll (0.379541ms)
+✔ request validation rejects wrong types, contradictory ranges, unknown keys, and missing payroll (0.605709ms)
+✔ descriptions state per-player filters and combined financial limits (93.855042ms)
+ℹ tests 115
+ℹ suites 0
+ℹ pass 98
+ℹ fail 17
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3698.074292
+
+✖ failing tests:
+
+test at src/lib/clarification-selection.test.ts:36:1
+✖ answered questions precede their receipts while the next unanswered question stays in its picker (14.404459ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 2
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/clarification-selection.test.ts:51:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/clarification-selection.test.ts:159:1
+✖ older stored option replies recover receipts while freeform replies remain ordinary messages (1.118459ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - {
+  -   detail: 'Boston Celtics',
+  -   id: 'player-10',
+  -   label: 'Derrick White',
+  -   playerId: 10,
+  -   value: 'Derrick White'
+  - }
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/clarification-selection.test.ts:167:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { id: 'player-10', label: 'Derrick White', detail: 'Boston Celtics', value: 'Derrick White', playerId: 10 },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/clarification-selection.test.ts:216:1
+✖ duplicate option values never select an arbitrary identity (0.289541ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'player-11'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/clarification-selection.test.ts:231:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'player-11',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/trade-clarification.test.ts:97:1
+✖ the two requested checkpoints offer named Williams and current-trade removal choices (2.156209ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  12 !== 4
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/trade-clarification.test.ts:105:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 12,
+    expected: 4,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/trade-clarification.test.ts:164:1
+✖ a selection and message become one reply with exact badge offsets and identities (1.092542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   optionIds: [
+  +     'grant'
+  +   ],
+  -   optionId: 'grant',
+      text: 'Keep White.'
+    }
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/trade-clarification.test.ts:181:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { optionIds: [ 'grant' ], text: 'Keep White.' },
+    expected: { optionId: 'grant', text: 'Keep White.' },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/trade-clarification.test.ts:267:1
+✖ copy cleanup preserves real questions, useful requirements and text-only requests (0.303792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Which player do you mean?'
+  - 'Which player do you mean? Please type the full name.'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/trade-clarification.test.ts:276:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Which player do you mean?',
+    expected: 'Which player do you mean? Please type the full name.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/trade-response-copy.test.ts:27:1
+✖ review assistant messages use product copy while preserving recorded inputs and results (70.000875ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /trade is unchanged/i. Input:
+  
+  'Derrick White is already included, going to Miami for Andrew Wiggins. He can’t be added a second time; the trade is unchanged.'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/trade-response-copy.test.ts:42:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Derrick White is already included, going to Miami for Andrew Wiggins. He can’t be added a second time; the trade is unchanged.',
+    expected: /trade is unchanged/i,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at src/lib/ux-review/model.test.ts:63:1
+✖ starting another trade preserves earlier cards and moves follow-up focus without clearing (7.8865ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/ux-review/model.test.ts:64:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at src/lib/ux-review/model.test.ts:86:1
+✖ preview expansion follows conversation focus rather than the last candidate card (0.914667ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '5e1f443a-0ba2-4b38-bbf2-91c3b0f2c9a8'
+  - '89321ee8-7865-440e-a073-bde13e4d8e0c'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/ux-review/model.test.ts:94:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '5e1f443a-0ba2-4b38-bbf2-91c3b0f2c9a8',
+    expected: '89321ee8-7865-440e-a073-bde13e4d8e0c',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/lib/ux-review/model.test.ts:100:1
+✖ review contains complete recorded conversations and separately labelled UI fixtures (0.64775ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  37 !== 13
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/lib/ux-review/model.test.ts:105:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 37,
+    expected: 13,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/clarification-selection.test.ts:12:1
+✖ a selection and its separate message survive a durable conversation reload (14.023333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + undefined
+  - {
+  -   detail: 'Boston Celtics',
+  -   id: 'player-10',
+  -   label: 'Derrick White',
+  -   playerId: 10,
+  -   value: 'Derrick White'
+  - }
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/clarification-selection.test.ts:68:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { id: 'player-10', label: 'Derrick White', detail: 'Boston Celtics', value: 'Derrick White', playerId: 10 },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-api.test.ts:175:1
+✖ valid evidence remains tied to the exact revision and catalogue (170.828791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'validation_unavailable'
+  - 'valid'
+          ^
+  
+      at file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:186:14
+      at async withResponse (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:100:5)
+      at async TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:176:3)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'validation_unavailable',
+    expected: 'valid',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-api.test.ts:195:1
+✖ HTTP 200 with failed salary matching is an invalid trade (7.833542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'validation_unavailable'
+  - 'invalid_trade'
+  
+      at file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:209:14
+      at async withResponse (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:100:5)
+      at async TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:196:3)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'validation_unavailable',
+    expected: 'invalid_trade',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-api.test.ts:217:1
+✖ recognized HTTP 400 rule evidence is an invalid trade (4.226417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'validation_unavailable'
+  - 'invalid_trade'
+  
+      at file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:231:14
+      at async withResponse (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:100:5)
+      at async TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:218:3)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'validation_unavailable',
+    expected: 'invalid_trade',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-api.test.ts:285:1
+✖ multi-team validation preserves all routes and rejects duplicate, idle and more than four teams (2.745166ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'validation_unavailable'
+  - 'valid'
+          ^
+  
+      at file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:367:14
+      at async withResponse (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:100:5)
+      at async TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-api.test.ts:357:3)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'validation_unavailable',
+    expected: 'valid',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/server/trade-chat-stream.test.ts:47:1
+✖ SDK transport emits progress before the final question and persists the history exactly once (2036.075167ms)
+  Error: Progress was buffered until completion
+      at Timeout._onTimeout (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-chat-stream.test.ts:102:24)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+test at src/server/trade-chat-stream.test.ts:145:1
+✖ failed tool operations are recorded as failures without exposing their technical errors (24.788292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'error'
+  
+      at TestContext.<anonymous> (file:///Users/stuartrobinson/Dropbox/Coding/gambit/psychic-octo-adventure/trade-builder/src/server/trade-chat-stream.test.ts:163:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'error',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

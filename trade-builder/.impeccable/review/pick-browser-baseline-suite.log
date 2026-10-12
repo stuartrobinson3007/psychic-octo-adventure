@@ -1,0 +1,2265 @@
+TAP version 13
+# Subtest: answered questions precede their receipts while the next unanswered question stays in its picker
+ok 1 - answered questions precede their receipts while the next unanswered question stays in its picker
+  ---
+  duration_ms: 37.975708
+  type: 'test'
+  ...
+# Subtest: unsubmitted choices stay in the picker; submitted and restored replies retain the question
+ok 2 - unsubmitted choices stay in the picker; submitted and restored replies retain the question
+  ---
+  duration_ms: 1.141709
+  type: 'test'
+  ...
+# Subtest: the historical question matches the widget header and remains above a failed answer turn
+ok 3 - the historical question matches the widget header and remains above a failed answer turn
+  ---
+  duration_ms: 0.457875
+  type: 'test'
+  ...
+# Subtest: player, team, package and plain-answer receipts split extra text without changing the backend message
+ok 4 - player, team, package and plain-answer receipts split extra text without changing the backend message
+  ---
+  duration_ms: 8.424375
+  type: 'test'
+  ...
+# Subtest: selected option is recorded from the offered canonical choice and mismatched selections are ignored
+ok 5 - selected option is recorded from the offered canonical choice and mismatched selections are ignored
+  ---
+  duration_ms: 0.486709
+  type: 'test'
+  ...
+# Subtest: older stored option replies recover receipts while freeform replies remain ordinary messages
+ok 6 - older stored option replies recover receipts while freeform replies remain ordinary messages
+  ---
+  duration_ms: 0.248542
+  type: 'test'
+  ...
+# Subtest: custom-message player references retain their exact offsets after the selected choice is removed
+ok 7 - custom-message player references retain their exact offsets after the selected choice is removed
+  ---
+  duration_ms: 0.479042
+  type: 'test'
+  ...
+# Subtest: duplicate option values never select an arbitrary identity
+ok 8 - duplicate option values never select an arbitrary identity
+  ---
+  duration_ms: 0.202917
+  type: 'test'
+  ...
+# Subtest: conversation entries preserve multiple versions and discovery cards without inventing focus
+ok 9 - conversation entries preserve multiple versions and discovery cards without inventing focus
+  ---
+  duration_ms: 1.495292
+  type: 'test'
+  ...
+# Subtest: legacy archives keep candidate and checked-version references separate
+ok 10 - legacy archives keep candidate and checked-version references separate
+  ---
+  duration_ms: 0.871833
+  type: 'test'
+  ...
+# Subtest: message archives preserve only explicit badge ranges through import
+ok 11 - message archives preserve only explicit badge ranges through import
+  ---
+  duration_ms: 0.623541
+  type: 'test'
+  ...
+# Subtest: typed and response player names remain plain text
+ok 12 - typed and response player names remain plain text
+  ---
+  duration_ms: 33.635833
+  type: 'test'
+  ...
+# Subtest: only the inserted badge is preserved in mixed text
+ok 13 - only the inserted badge is preserved in mixed text
+  ---
+  duration_ms: 10.242834
+  type: 'test'
+  ...
+# Subtest: explicit badges preserve the selected identity for duplicate names
+ok 14 - explicit badges preserve the selected identity for duplicate names
+  ---
+  duration_ms: 0.312916
+  type: 'test'
+  ...
+# Subtest: ambiguous surnames and fuzzy prose are never silently assigned
+ok 15 - ambiguous surnames and fuzzy prose are never silently assigned
+  ---
+  duration_ms: 0.179791
+  type: 'test'
+  ...
+# Subtest: persisted badge ranges preserve whitespace and selected identity
+ok 16 - persisted badge ranges preserve whitespace and selected identity
+  ---
+  duration_ms: 15.774667
+  type: 'test'
+  ...
+# Subtest: hover timestamps show local time today and dates on other calendar days
+ok 17 - hover timestamps show local time today and dates on other calendar days
+  ---
+  duration_ms: 121.79875
+  type: 'test'
+  ...
+# Subtest: missing or invalid historical times do not acquire invented timestamps
+ok 18 - missing or invalid historical times do not acquire invented timestamps
+  ---
+  duration_ms: 0.481166
+  type: 'test'
+  ...
+# Subtest: pick browsing separates origin and ownership and never broadens unknown searches
+ok 19 - pick browsing separates origin and ownership and never broadens unknown searches
+  ---
+  duration_ms: 155.043792
+  type: 'test'
+  ...
+# Subtest: pick references preserve exact IDs alongside colliding player IDs and reject overlapping ranges
+ok 20 - pick references preserve exact IDs alongside colliding player IDs and reject overlapping ranges
+  ---
+  duration_ms: 3.227375
+  type: 'test'
+  ...
+# Subtest: clarification prefixes retain pick references with corrected offsets
+not ok 21 - clarification prefixes retain pick references with corrected offsets
+  ---
+  duration_ms: 1.913959
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/pick-research.test.ts:127:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+    +     end: 25,
+    -     end: 33,
+          ownerTeamId: 2,
+          pickId: 1,
+    +     start: 0
+    -     start: 8
+        }
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      start: 8
+      end: 33
+      pickId: 1
+      ownerTeamId: 2
+  actual:
+    0:
+      start: 0
+      end: 25
+      pickId: 1
+      ownerTeamId: 2
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/pick-research.test.ts:139:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1397:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+    Test.postRun (node:internal/test_runner/test:1537:19)
+    Test.run (node:internal/test_runner/test:1462:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: full names survive misplaced spaces, accents and conservative typos
+ok 22 - full names survive misplaced spaces, accents and conservative typos
+  ---
+  duration_ms: 92.957167
+  type: 'test'
+  ...
+# Subtest: ambiguity preserves all matching identities while full names resolve uniquely
+ok 23 - ambiguity preserves all matching identities while full names resolve uniquely
+  ---
+  duration_ms: 14.784084
+  type: 'test'
+  ...
+# Subtest: ordinary prose is retained and matches preserve surrounding text
+ok 24 - ordinary prose is retained and matches preserve surrounding text
+  ---
+  duration_ms: 12.783375
+  type: 'test'
+  ...
+# Subtest: a surname that is another player's first name cannot silently become a badge
+ok 25 - a surname that is another player's first name cannot silently become a badge
+  ---
+  duration_ms: 0.650542
+  type: 'test'
+  ...
+# Subtest: short surrounding words are not swallowed as full-name typos
+ok 26 - short surrounding words are not swallowed as full-name typos
+  ---
+  duration_ms: 0.448542
+  type: 'test'
+  ...
+# Subtest: completed signing history removes recovered retries without hiding failures for other targets or later failures
+ok 27 - completed signing history removes recovered retries without hiding failures for other targets or later failures
+  ---
+  duration_ms: 3.51925
+  type: 'test'
+  ...
+# Subtest: older recorded signing retries are summarized using their known work stage
+ok 28 - older recorded signing retries are summarized using their known work stage
+  ---
+  duration_ms: 75.055083
+  type: 'test'
+  ...
+# Subtest: work duration uses compact elapsed time and does not invent timing for older messages
+ok 29 - work duration uses compact elapsed time and does not invent timing for older messages
+  ---
+  duration_ms: 14.05125
+  type: 'test'
+  ...
+# Subtest: tool presentation uses friendly tenses and known player names without technical outputs
+ok 30 - tool presentation uses friendly tenses and known player names without technical outputs
+  ---
+  duration_ms: 0.721583
+  type: 'test'
+  ...
+# Subtest: parallel calls display the first unfinished action and retain the last completed action between steps
+ok 31 - parallel calls display the first unfinished action and retain the last completed action between steps
+  ---
+  duration_ms: 1.035625
+  type: 'test'
+  ...
+# Subtest: only substantive lookups, checks and alternative searches appear, including older recorded labels
+ok 32 - only substantive lookups, checks and alternative searches appear, including older recorded labels
+  ---
+  duration_ms: 0.797208
+  type: 'test'
+  ...
+# Subtest: recognized labels preserve the explanation and numbers verbatim
+ok 33 - recognized labels preserve the explanation and numbers verbatim
+  ---
+  duration_ms: 1.50575
+  type: 'test'
+  ...
+# Subtest: unrecognized wording and embedded labels remain entirely untouched
+ok 34 - unrecognized wording and embedded labels remain entirely untouched
+  ---
+  duration_ms: 0.226042
+  type: 'test'
+  ...
+# Subtest: empty explanations are not hidden behind a recognized label
+ok 35 - empty explanations are not hidden behind a recognized label
+  ---
+  duration_ms: 0.156333
+  type: 'test'
+  ...
+# Subtest: option presentation counts distinct known players across label and detail
+ok 36 - option presentation counts distinct known players across label and detail
+  ---
+  duration_ms: 5577.622417
+  type: 'test'
+  ...
+# Subtest: same-name identity choices display only their canonical player
+ok 37 - same-name identity choices display only their canonical player
+  ---
+  duration_ms: 0.386292
+  type: 'test'
+  ...
+# Subtest: the two requested checkpoints offer named Williams and current-trade removal choices
+ok 38 - the two requested checkpoints offer named Williams and current-trade removal choices
+  ---
+  duration_ms: 1.4365
+  type: 'test'
+  ...
+# Subtest: review adapts an offered discovery reply but respects explicit text-only questions
+ok 39 - review adapts an offered discovery reply but respects explicit text-only questions
+  ---
+  duration_ms: 5.41725
+  type: 'test'
+  ...
+# Subtest: a selection and message become one reply with exact badge offsets and identities
+ok 40 - a selection and message become one reply with exact badge offsets and identities
+  ---
+  duration_ms: 0.544167
+  type: 'test'
+  ...
+# Subtest: a clarification survives a failed send but disappears on an answer, cancellation or replacement question
+ok 41 - a clarification survives a failed send but disappears on an answer, cancellation or replacement question
+  ---
+  duration_ms: 0.502
+  type: 'test'
+  ...
+# Subtest: selection questions omit interaction instructions across players, teams and generic answers
+ok 42 - selection questions omit interaction instructions across players, teams and generic answers
+  ---
+  duration_ms: 0.505541
+  type: 'test'
+  ...
+# Subtest: copy cleanup preserves real questions, useful requirements and text-only requests
+not ok 43 - copy cleanup preserves real questions, useful requirements and text-only requests
+  ---
+  duration_ms: 2.122459
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/trade-clarification.test.ts:267:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Which player do you mean?'
+    - 'Which player do you mean? Please type the full name.'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Which player do you mean? Please type the full name.'
+  actual: 'Which player do you mean?'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/trade-clarification.test.ts:276:10)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1397:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+    Test.postRun (node:internal/test_runner/test:1537:19)
+    Test.run (node:internal/test_runner/test:1462:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: legacy verdict copy retains seasons, failure reasons and salary evidence
+ok 44 - legacy verdict copy retains seasons, failure reasons and salary evidence
+  ---
+  duration_ms: 1.511208
+  type: 'test'
+  ...
+# Subtest: review assistant messages use product copy while preserving recorded inputs and results
+ok 45 - review assistant messages use product copy while preserving recorded inputs and results
+  ---
+  duration_ms: 139.045
+  type: 'test'
+  ...
+# Subtest: review catalogue resolves every displayed player, pick, right and exception
+ok 46 - review catalogue resolves every displayed player, pick, right and exception
+  ---
+  duration_ms: 27.177584
+  type: 'test'
+  ...
+# Subtest: all maintained conversation briefs are represented in the review
+not ok 47 - all maintained conversation briefs are represented in the review
+  ---
+  duration_ms: 0.822833
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/ux-review/model.test.ts:49:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, open '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/scripts/ux-review-cases.json'"
+  code: 'ENOENT'
+  stack: |-
+    readFileSync (node:fs:539:20)
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/lib/ux-review/model.test.ts:51:5)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1397:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+    Test.postRun (node:internal/test_runner/test:1537:19)
+    Test.run (node:internal/test_runner/test:1462:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: starting another trade preserves earlier cards and moves follow-up focus without clearing
+ok 48 - starting another trade preserves earlier cards and moves follow-up focus without clearing
+  ---
+  duration_ms: 4.071042
+  type: 'test'
+  ...
+# Subtest: preview expansion follows conversation focus rather than the last candidate card
+ok 49 - preview expansion follows conversation focus rather than the last candidate card
+  ---
+  duration_ms: 0.494791
+  type: 'test'
+  ...
+# Subtest: review contains complete recorded conversations and separately labelled UI fixtures
+ok 50 - review contains complete recorded conversations and separately labelled UI fixtures
+  ---
+  duration_ms: 5.792208
+  type: 'test'
+  ...
+# Subtest: new scenario names and their metadata are included without a registry edit
+ok 51 - new scenario names and their metadata are included without a registry edit
+  ---
+  duration_ms: 0.783584
+  type: 'test'
+  ...
+# Subtest: recorded choices and structured clarification survive review rendering
+ok 52 - recorded choices and structured clarification survive review rendering
+  ---
+  duration_ms: 0.721667
+  type: 'test'
+  ...
+# Subtest: clarification and explanation preserve earlier cards without duplicating a preserved snapshot
+ok 53 - clarification and explanation preserve earlier cards without duplicating a preserved snapshot
+  ---
+  duration_ms: 0.283209
+  type: 'test'
+  ...
+# Subtest: a multi-card reply keeps one work history on its first card in both production and review
+ok 54 - a multi-card reply keeps one work history on its first card in both production and review
+  ---
+  duration_ms: 6.502584
+  type: 'test'
+  ...
+# Subtest: discovered alternatives render separately from the active checked trade
+ok 55 - discovered alternatives render separately from the active checked trade
+  ---
+  duration_ms: 0.696708
+  type: 'test'
+  ...
+# Subtest: errors retain the production destructive treatment and review progress changes with content or width
+ok 56 - errors retain the production destructive treatment and review progress changes with content or width
+  ---
+  duration_ms: 1.581709
+  type: 'test'
+  ...
+# Subtest: a live catalogue failure rejects instead of serving bundled player data
+ok 57 - a live catalogue failure rejects instead of serving bundled player data
+  ---
+  duration_ms: 7.821958
+  type: 'test'
+  ...
+# Subtest: the SDK stops after one request for exhausted credits, without leaking provider details
+ok 58 - the SDK stops after one request for exhausted credits, without leaking provider details
+  ---
+  duration_ms: 492.021708
+  type: 'test'
+  ...
+# Subtest: temporary rate limits pass through intact, while authentication failures need configuration
+ok 59 - temporary rate limits pass through intact, while authentication failures need configuration
+  ---
+  duration_ms: 19.292291
+  type: 'test'
+  ...
+# Subtest: wrapped SDK failures distinguish quota, timeout and unknown failures
+ok 60 - wrapped SDK failures distinguish quota, timeout and unknown failures
+  ---
+  duration_ms: 0.806333
+  type: 'test'
+  ...
+# Subtest: selected answer and typed wording remain separate for structured and legacy replies
+ok 61 - selected answer and typed wording remain separate for structured and legacy replies
+  ---
+  duration_ms: 2.392917
+  type: 'test'
+  ...
+# Subtest: duplicate full-name answers require an explicit identity and never select the first option
+ok 62 - duplicate full-name answers require an explicit identity and never select the first option
+  ---
+  duration_ms: 0.393583
+  type: 'test'
+  ...
+# Subtest: amending a reference rewrites the pending request and removes stale selections without mutating history
+ok 63 - amending a reference rewrites the pending request and removes stale selections without mutating history
+  ---
+  duration_ms: 135.108833
+  type: 'test'
+  ...
+# Subtest: correcting the other reference preserves the selected answer
+ok 64 - correcting the other reference preserves the selected answer
+  ---
+  duration_ms: 25.841375
+  type: 'test'
+  ...
+# Subtest: rewritten phrases reduce to the changed reference and preserve the user's spelling
+ok 65 - rewritten phrases reduce to the changed reference and preserve the user's spelling
+  ---
+  duration_ms: 7.095209
+  type: 'test'
+  ...
+# Subtest: a more specific name can retain the entirety of the earlier reference
+ok 66 - a more specific name can retain the entirety of the earlier reference
+  ---
+  duration_ms: 4.524667
+  type: 'test'
+  ...
+# Subtest: multiple corrections apply to the original request without cascading replacements
+ok 67 - multiple corrections apply to the original request without cascading replacements
+  ---
+  duration_ms: 1.286
+  type: 'test'
+  ...
+# Subtest: overlapping corrections are rejected without changing the pending request
+ok 68 - overlapping corrections are rejected without changing the pending request
+  ---
+  duration_ms: 60.043125
+  type: 'test'
+  ...
+# Subtest: amendments require literal replacement evidence and a real earlier reference
+ok 69 - amendments require literal replacement evidence and a real earlier reference
+  ---
+  duration_ms: 31.419709
+  type: 'test'
+  ...
+# Subtest: similar names are suggestions, never assumed nickname identities
+ok 70 - similar names are suggestions, never assumed nickname identities
+  ---
+  duration_ms: 8.904709
+  type: 'test'
+  ...
+# Subtest: a second correction removes a provisional suggestion for an unmatched reference
+ok 71 - a second correction removes a provisional suggestion for an unmatched reference
+  ---
+  duration_ms: 14.708583
+  type: 'test'
+  ...
+# Subtest: a selection and its separate message survive a durable conversation reload
+ok 72 - a selection and its separate message survive a durable conversation reload
+  ---
+  duration_ms: 14.233833
+  type: 'test'
+  ...
+# Subtest: conversations survive reopening with exact messages, null focus and pending work
+ok 73 - conversations survive reopening with exact messages, null focus and pending work
+  ---
+  duration_ms: 11.571708
+  type: 'test'
+  ...
+# Subtest: a longer turn keeps its conversation locked through its deadline and can commit
+ok 74 - a longer turn keeps its conversation locked through its deadline and can commit
+  ---
+  duration_ms: 4.78125
+  type: 'test'
+  ...
+# Subtest: competing workers cannot claim or overwrite a conversation; expired owners cannot commit
+ok 75 - competing workers cannot claim or overwrite a conversation; expired owners cannot commit
+  ---
+  duration_ms: 4.191917
+  type: 'test'
+  ...
+# Subtest: new mixed trades permit additions and retain an attached ownership qualifier
+ok 76 - new mixed trades permit additions and retain an attached ownership qualifier
+  ---
+  duration_ms: 128.4365
+  type: 'test'
+  ...
+# Subtest: picks match possessive team names, year and round without substituting origin for ownership
+ok 77 - picks match possessive team names, year and round without substituting origin for ownership
+  ---
+  duration_ms: 3.124334
+  type: 'test'
+  ...
+# Subtest: mixed payloads preserve colliding player/pick IDs and locally reject wrong owner, duplicates, blocked and swap assets
+ok 78 - mixed payloads preserve colliding player/pick IDs and locally reject wrong owner, duplicates, blocked and swap assets
+  ---
+  duration_ms: 1.169125
+  type: 'test'
+  ...
+# Subtest: adding, rerouting, removing and undoing picks retains players, creates checked revisions, and never supplies salary
+ok 79 - adding, rerouting, removing and undoing picks retains players, creates checked revisions, and never supplies salary
+  ---
+  duration_ms: 184.57775
+  type: 'test'
+  ...
+# Subtest: ambiguous picks cannot be guessed and a bare year answer resumes the exact pending edit
+ok 80 - ambiguous picks cannot be guessed and a bare year answer resumes the exact pending edit
+  ---
+  duration_ms: 14.162625
+  type: 'test'
+  ...
+# Subtest: invented search qualifiers, unavailable picks and unrequested multi-team destinations preserve committed focus
+not ok 81 - invented search qualifiers, unavailable picks and unrequested multi-team destinations preserve committed focus
+  ---
+  duration_ms: 11.562416
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/draft-picks.test.ts:384:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/draft-picks.test.ts:387:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: pick-only packages and existing protections are supported without inventing salaries
+ok 82 - pick-only packages and existing protections are supported without inventing salaries
+  ---
+  duration_ms: 3.46375
+  type: 'test'
+  ...
+# Subtest: attempts to change pick protections preserve the checked trade even if the model requests a replacement
+ok 83 - attempts to change pick protections preserve the checked trade even if the model requests a replacement
+  ---
+  duration_ms: 1.161666
+  type: 'test'
+  ...
+# Subtest: player replacement with mixed assets preserves the pick and its destination
+ok 84 - player replacement with mixed assets preserves the pick and its destination
+  ---
+  duration_ms: 202.596375
+  type: 'test'
+  ...
+# Subtest: known pick-rule HTTP 400 rejections are illegal trades, while unfamiliar service errors remain unavailable
+ok 85 - known pick-rule HTTP 400 rejections are illegal trades, while unfamiliar service errors remain unavailable
+  ---
+  duration_ms: 730.392667
+  type: 'test'
+  ...
+# Subtest: salary repairs preserve every original pick even when player replacements are authorized
+ok 86 - salary repairs preserve every original pick even when player replacements are authorized
+  ---
+  duration_ms: 5.077125
+  type: 'test'
+  ...
+# Subtest: an explicit pick badge resolves duplicate labels to its selected ID
+not ok 87 - an explicit pick badge resolves duplicate labels to its selected ID
+  ---
+  duration_ms: 392.711125
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/message-pick-references.test.ts:49:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    2 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 2
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/message-pick-references.test.ts:84:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: changed pick ownership is rejected before a model or proposal edit
+ok 88 - changed pick ownership is rejected before a model or proposal edit
+  ---
+  duration_ms: 301.218042
+  type: 'test'
+  ...
+# Subtest: pick references survive server expiry and archive round trips
+ok 89 - pick references survive server expiry and archive round trips
+  ---
+  duration_ms: 5.139
+  type: 'test'
+  ...
+# Subtest: sent badges survive an AI response and a durable conversation reload
+ok 90 - sent badges survive an AI response and a durable conversation reload
+  ---
+  duration_ms: 9.921333
+  type: 'test'
+  ...
+# Subtest: literal package references retain duplicate names without matching name prefixes
+ok 91 - literal package references retain duplicate names without matching name prefixes
+  ---
+  duration_ms: 2.767291
+  type: 'test'
+  ...
+# Subtest: ambiguous surname cannot resolve a player or guessed first name
+ok 92 - ambiguous surname cannot resolve a player or guessed first name
+  ---
+  duration_ms: 162.623833
+  type: 'test'
+  ...
+# Subtest: unique user-supplied surname and full names resolve grounded identities
+ok 93 - unique user-supplied surname and full names resolve grounded identities
+  ---
+  duration_ms: 1.305709
+  type: 'test'
+  ...
+# Subtest: a team filter must be grounded in the user message
+ok 94 - a team filter must be grounded in the user message
+  ---
+  duration_ms: 0.483875
+  type: 'test'
+  ...
+# Subtest: an exact replacement name is found even when the model assumes the previous player's team
+ok 95 - an exact replacement name is found even when the model assumes the previous player's team
+  ---
+  duration_ms: 0.637334
+  type: 'test'
+  ...
+# Subtest: expanded names and inferred owner filters cannot select an ambiguous surname
+ok 96 - expanded names and inferred owner filters cannot select an ambiguous surname
+  ---
+  duration_ms: 5.684542
+  type: 'test'
+  ...
+# Subtest: unique literal first names ground search constraints without inventing an identity
+ok 97 - unique literal first names ground search constraints without inventing an identity
+  ---
+  duration_ms: 0.771292
+  type: 'test'
+  ...
+# Subtest: whole name words take precedence over prefix matches
+ok 98 - whole name words take precedence over prefix matches
+  ---
+  duration_ms: 0.306125
+  type: 'test'
+  ...
+# Subtest: multi-team routing asks one destination with receiving-team options
+ok 99 - multi-team routing asks one destination with receiving-team options
+  ---
+  duration_ms: 12.710875
+  type: 'test'
+  ...
+# Subtest: multi-team destination evidence accepts user routes and cannot invent a cycle
+ok 100 - multi-team destination evidence accepts user routes and cannot invent a cycle
+  ---
+  duration_ms: 4.182
+  type: 'test'
+  ...
+# Subtest: routing choices retain each answer, prohibit guessed cycles and check only the complete package
+ok 101 - routing choices retain each answer, prohibit guessed cycles and check only the complete package
+  ---
+  duration_ms: 7300.314333
+  type: 'test'
+  ...
+# Subtest: selected player owners ground a swap without guessed NBA team IDs
+ok 102 - selected player owners ground a swap without guessed NBA team IDs
+  ---
+  duration_ms: 1.663042
+  type: 'test'
+  ...
+# Subtest: full names and explicit destinations use authoritative catalogue IDs
+ok 103 - full names and explicit destinations use authoritative catalogue IDs
+  ---
+  duration_ms: 0.382292
+  type: 'test'
+  ...
+# Subtest: team identities pair exact numeric IDs with human-readable names
+ok 104 - team identities pair exact numeric IDs with human-readable names
+  ---
+  duration_ms: 0.168125
+  type: 'test'
+  ...
+# Subtest: canonical transfers generate consistent sending and receiving arrays
+ok 105 - canonical transfers generate consistent sending and receiving arrays
+  ---
+  duration_ms: 3.248458
+  type: 'test'
+  ...
+# Subtest: rejects unknown IDs, ownership mismatch, duplicate assets and absent destinations
+ok 106 - rejects unknown IDs, ownership mismatch, duplicate assets and absent destinations
+  ---
+  duration_ms: 0.545375
+  type: 'test'
+  ...
+# Subtest: free agents and empty trades are excluded from the supported scope
+ok 107 - free agents and empty trades are excluded from the supported scope
+  ---
+  duration_ms: 0.185708
+  type: 'test'
+  ...
+# Subtest: integrity failure prevents any upstream request
+ok 108 - integrity failure prevents any upstream request
+  ---
+  duration_ms: 2.214
+  type: 'test'
+  ...
+# Subtest: valid evidence remains tied to the exact revision and catalogue
+ok 109 - valid evidence remains tied to the exact revision and catalogue
+  ---
+  duration_ms: 147.509583
+  type: 'test'
+  ...
+# Subtest: HTTP 200 with failed salary matching is an invalid trade
+ok 110 - HTTP 200 with failed salary matching is an invalid trade
+  ---
+  duration_ms: 0.657958
+  type: 'test'
+  ...
+# Subtest: recognized HTTP 400 rule evidence is an invalid trade
+ok 111 - recognized HTTP 400 rule evidence is an invalid trade
+  ---
+  duration_ms: 0.491416
+  type: 'test'
+  ...
+# Subtest: schema failures, inconsistent identities and salary evidence are unavailable
+ok 112 - schema failures, inconsistent identities and salary evidence are unavailable
+  ---
+  duration_ms: 71.415042
+  type: 'test'
+  ...
+# Subtest: transport failure cannot be mistaken for an illegal trade
+ok 113 - transport failure cannot be mistaken for an illegal trade
+  ---
+  duration_ms: 3.417625
+  type: 'test'
+  ...
+# Subtest: multi-team validation preserves all routes and rejects duplicate, idle and more than four teams
+ok 114 - multi-team validation preserves all routes and rejects duplicate, idle and more than four teams
+  ---
+  duration_ms: 1.684917
+  type: 'test'
+  ...
+# Subtest: repair offers fresh checked branches, preserves focus, persists options, and deduplicates retries
+ok 115 - repair offers fresh checked branches, preserves focus, persists options, and deduplicates retries
+  ---
+  duration_ms: 761.34425
+  type: 'test'
+  ...
+# Subtest: model prose cannot finish a repair instead of running the checking tool
+ok 116 - model prose cannot finish a repair instead of running the checking tool
+  ---
+  duration_ms: 109.394875
+  type: 'test'
+  ...
+# Subtest: choosing a checked repair uses its reference and preserves original lineage
+ok 117 - choosing a checked repair uses its reference and preserves original lineage
+  ---
+  duration_ms: 119.24125
+  type: 'test'
+  ...
+# Subtest: three-player discovery and grounded incoming filters finish through the real tool loop
+ok 118 - three-player discovery and grounded incoming filters finish through the real tool loop
+  ---
+  duration_ms: 251.267167
+  type: 'test'
+  ...
+# Subtest: vague ages and unsupported performance finish deterministically without retry loops
+ok 119 - vague ages and unsupported performance finish deterministically without retry loops
+  ---
+  duration_ms: 17.3045
+  type: 'test'
+  ...
+# Subtest: explicit show more reuses the saved query even when the model requests clarification
+ok 120 - explicit show more reuses the saved query even when the model requests clarification
+  ---
+  duration_ms: 131.689458
+  type: 'test'
+  ...
+# Subtest: answering an age clarification does not require choosing an optional partner
+ok 121 - answering an age clarification does not require choosing an optional partner
+  ---
+  duration_ms: 114.721167
+  type: 'test'
+  ...
+# Subtest: SDK transport emits progress before the final question and persists the history exactly once
+not ok 122 - SDK transport emits progress before the final question and persists the history exactly once
+  ---
+  duration_ms: 2067.339583
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-chat-stream.test.ts:47:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Which “Andrew” do you mean?'
+    - 'Which Andrew do you want to trade for?'
+             ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Which Andrew do you want to trade for?'
+  actual: 'Which “Andrew” do you mean?'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-chat-stream.test.ts:113:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: failed tool operations are recorded as failures without exposing their technical errors
+ok 123 - failed tool operations are recorded as failures without exposing their technical errors
+  ---
+  duration_ms: 1160.636125
+  type: 'test'
+  ...
+# Subtest: user hard filters are deterministically enforced without model-supplied filter fields
+ok 124 - user hard filters are deterministically enforced without model-supplied filter fields
+  ---
+  duration_ms: 354.816125
+  type: 'test'
+  ...
+# Subtest: a unique first name fixes the outgoing player and supplies its catalogue owner
+ok 125 - a unique first name fixes the outgoing player and supplies its catalogue owner
+  ---
+  duration_ms: 15.697083
+  type: 'test'
+  ...
+# Subtest: an ambiguous first name cannot authorize a fixed search player or its owner
+ok 126 - an ambiguous first name cannot authorize a fixed search player or its owner
+  ---
+  duration_ms: 0.494375
+  type: 'test'
+  ...
+# Subtest: show more retains every prior constraint, uses latest age override, and never repeats shown packages
+ok 127 - show more retains every prior constraint, uses latest age override, and never repeats shown packages
+  ---
+  duration_ms: 82.437917
+  type: 'test'
+  ...
+# Subtest: a new search has neither prior hard filters nor previous package exclusions
+ok 128 - a new search has neither prior hard filters nor previous package exclusions
+  ---
+  duration_ms: 4.605417
+  type: 'test'
+  ...
+# Subtest: a continuation cannot silently change source, partner, counts or fixed outgoing identities
+ok 129 - a continuation cannot silently change source, partner, counts or fixed outgoing identities
+  ---
+  duration_ms: 158.517875
+  type: 'test'
+  ...
+# Subtest: ambiguous and unsupported filters cannot produce loosely matching candidate cards
+ok 130 - ambiguous and unsupported filters cannot produce loosely matching candidate cards
+  ---
+  duration_ms: 2.926458
+  type: 'test'
+  ...
+# Subtest: explicit word, numeric and team-qualified package counts cannot be silently reduced
+ok 131 - explicit word, numeric and team-qualified package counts cannot be silently reduced
+  ---
+  duration_ms: 6.878
+  type: 'test'
+  ...
+# Subtest: explicit four-to-six player requests are clearly rejected rather than clamped to three
+ok 132 - explicit four-to-six player requests are clearly rejected rather than clamped to three
+  ---
+  duration_ms: 37.590125
+  type: 'test'
+  ...
+# Subtest: an explicit three-for-three search retains its size when the roster is insufficient
+ok 133 - an explicit three-for-three search retains its size when the roster is insufficient
+  ---
+  duration_ms: 8.470792
+  type: 'test'
+  ...
+# Subtest: age and salary numbers are never interpreted as package sizes
+ok 134 - age and salary numbers are never interpreted as package sizes
+  ---
+  duration_ms: 5.767333
+  type: 'test'
+  ...
+# Subtest: a model cannot omit uniquely named outgoing or explicitly excluded players
+ok 135 - a model cannot omit uniquely named outgoing or explicitly excluded players
+  ---
+  duration_ms: 233.209209
+  type: 'test'
+  ...
+# Subtest: an explicit three-for-three request can return checked six-asset packages
+ok 136 - an explicit three-for-three request can return checked six-asset packages
+  ---
+  duration_ms: 2.211
+  type: 'test'
+  ...
+# Subtest: a request to keep a named player does not make them a required outgoing asset
+ok 137 - a request to keep a named player does not make them a required outgoing asset
+  ---
+  duration_ms: 3.703209
+  type: 'test'
+  ...
+# Subtest: pagination reaches a clear limit rather than discarding old package identities and repeating them
+ok 138 - pagination reaches a clear limit rather than discarding old package identities and repeating them
+  ---
+  duration_ms: 8.564125
+  type: 'test'
+  ...
+# Subtest: one-for-two discovery chooses unspecified source players and routes both incoming players from one partner
+ok 139 - one-for-two discovery chooses unspecified source players and routes both incoming players from one partner
+  ---
+  duration_ms: 62.123958
+  type: 'test'
+  ...
+# Subtest: named outgoing players, requested partner, counts and exclusions are honoured
+ok 140 - named outgoing players, requested partner, counts and exclusions are honoured
+  ---
+  duration_ms: 1.477292
+  type: 'test'
+  ...
+# Subtest: unsupported contracts and no-trade consent never enter generated packages
+ok 141 - unsupported contracts and no-trade consent never enter generated packages
+  ---
+  duration_ms: 0.539125
+  type: 'test'
+  ...
+# Subtest: invalid requests cannot silently relax an explicit constraint or call the engine
+ok 142 - invalid requests cannot silently relax an explicit constraint or call the engine
+  ---
+  duration_ms: 0.940333
+  type: 'test'
+  ...
+# Subtest: invalid verdicts are excluded and an empty shortlist is not presented as proof no trade exists
+ok 143 - invalid verdicts are excluded and an empty shortlist is not presented as proof no trade exists
+  ---
+  duration_ms: 1.259667
+  type: 'test'
+  ...
+# Subtest: unavailable, throwing and mismatched verdicts never become passing candidates
+ok 144 - unavailable, throwing and mismatched verdicts never become passing candidates
+  ---
+  duration_ms: 2.375542
+  type: 'test'
+  ...
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'timeout' }
+# Subtest: search budget and concurrent engine calls are bounded even when no candidate passes
+ok 145 - search budget and concurrent engine calls are bounded even when no candidate passes
+  ---
+  duration_ms: 185.989708
+  type: 'test'
+  ...
+# Subtest: cancelling the parent turn discards discoveries even if a validator resolves late
+ok 146 - cancelling the parent turn discards discoveries even if a validator resolves late
+  ---
+  duration_ms: 6.155
+  type: 'test'
+  ...
+# Subtest: the agent returns checked candidate cards without committing a proposed choice, and deduplicates retries
+ok 147 - the agent returns checked candidate cards without committing a proposed choice, and deduplicates retries
+  ---
+  duration_ms: 442.711417
+  type: 'test'
+  ...
+# Subtest: discovering alternatives preserves the existing checked trade and revision history
+ok 148 - discovering alternatives preserves the existing checked trade and revision history
+  ---
+  duration_ms: 83.455916
+  type: 'test'
+  ...
+# Subtest: find suitable matches resumes a prior team-level clarification without asking for outgoing names
+not ok 149 - find suitable matches resumes a prior team-level clarification without asking for outgoing names
+  ---
+  duration_ms: 69.055083
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-discovery.test.ts:334:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'error'
+    - 'complete'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'complete'
+  actual: 'error'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-discovery.test.ts:381:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: discovery rejects invented teams and player constraints before validation
+not ok 150 - discovery rejects invented teams and player constraints before validation
+  ---
+  duration_ms: 7.25775
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-discovery.test.ts:386:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'error'
+    - 'needs_clarification'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'needs_clarification'
+  actual: 'error'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-discovery.test.ts:412:12)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: research cannot run discovery or alter checked proposals
+ok 151 - research cannot run discovery or alter checked proposals
+  ---
+  duration_ms: 5.723875
+  type: 'test'
+  ...
+# Subtest: new searches cannot borrow previous team or player identities, while explicit continuation can
+ok 152 - new searches cannot borrow previous team or player identities, while explicit continuation can
+  ---
+  duration_ms: 128.784875
+  type: 'test'
+  ...
+# Subtest: aborted discovery does not commit candidates or search memory
+ok 153 - aborted discovery does not commit candidates or search memory
+  ---
+  duration_ms: 59.712708
+  type: 'test'
+  ...
+# Subtest: age, positions and salary filters are conjunctive and apply only to incoming assets
+ok 154 - age, positions and salary filters are conjunctive and apply only to incoming assets
+  ---
+  duration_ms: 10.608125
+  type: 'test'
+  ...
+# Subtest: impossible and malformed filter combinations fail without an upstream check
+ok 155 - impossible and malformed filter combinations fail without an upstream check
+  ---
+  duration_ms: 0.48575
+  type: 'test'
+  ...
+# Subtest: post-trade payroll checks the source team and requires unique finite upstream evidence
+ok 156 - post-trade payroll checks the source team and requires unique finite upstream evidence
+  ---
+  duration_ms: 1.720833
+  type: 'test'
+  ...
+# Subtest: three-player outgoing and incoming packages are supported without duplicated assets
+ok 157 - three-player outgoing and incoming packages are supported without duplicated assets
+  ---
+  duration_ms: 0.248458
+  type: 'test'
+  ...
+# Subtest: show more excludes only explicitly supplied package identities, independent of IDs and transfer order
+ok 158 - show more excludes only explicitly supplied package identities, independent of IDs and transfer order
+  ---
+  duration_ms: 0.579583
+  type: 'test'
+  ...
+# Subtest: three-player generation has explicit work limits even for a large cross product
+ok 159 - three-player generation has explicit work limits even for a large cross product
+  ---
+  duration_ms: 254.59425
+  type: 'test'
+  ...
+# Subtest: a partner with too few matching players cannot trigger unbounded outgoing combination generation
+ok 160 - a partner with too few matching players cannot trigger unbounded outgoing combination generation
+  ---
+  duration_ms: 1.273083
+  type: 'test'
+  ...
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'timeout' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Trade chat failed { kind: 'unknown' }
+# Subtest: complete selected-player requests still require model interpretation and cannot create a trade after model failure
+ok 161 - complete selected-player requests still require model interpretation and cannot create a trade after model failure
+  ---
+  duration_ms: 394.445791
+  type: 'test'
+  ...
+# Subtest: missing model configuration cannot assemble selected-player requests
+ok 162 - missing model configuration cannot assemble selected-player requests
+  ---
+  duration_ms: 4.207
+  type: 'test'
+  ...
+# Subtest: initial unmatched player requests offer nearby choices even when the model sends an empty option list
+ok 163 - initial unmatched player requests offer nearby choices even when the model sends an empty option list
+  ---
+  duration_ms: 523.754625
+  type: 'test'
+  ...
+# Subtest: nearby choices obey user-supplied team scope and are not narrowed by guessed teams
+ok 164 - nearby choices obey user-supplied team scope and are not narrowed by guessed teams
+  ---
+  duration_ms: 8.412083
+  type: 'test'
+  ...
+# Subtest: an unmatched name with no nearby candidates does not reuse another name's choices
+not ok 165 - an unmatched name with no nearby candidates does not reuse another name's choices
+  ---
+  duration_ms: 10.330625
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:500:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + [
+    +   {
+    +     detail: 'Charlotte Hornets',
+    +     id: 'player-40',
+    +     label: 'Grant Williams',
+    +     playerId: 40,
+    +     value: 'Grant Williams'
+    +   },
+    +   {
+    +     detail: 'Chicago Bulls',
+    +     id: 'player-50',
+    +     label: 'Patrick Williams',
+    +     playerId: 50,
+    +     value: 'Patrick Williams'
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      id: 'player-40'
+      label: 'Grant Williams'
+      detail: 'Charlotte Hornets'
+      value: 'Grant Williams'
+      playerId: 40
+    1:
+      id: 'player-50'
+      label: 'Patrick Williams'
+      detail: 'Chicago Bulls'
+      value: 'Patrick Williams'
+      playerId: 50
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:522:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: player names supplied as answer strings render as distinct grounded player choices
+ok 166 - player names supplied as answer strings render as distinct grounded player choices
+  ---
+  duration_ms: 13.028791
+  type: 'test'
+  ...
+# Subtest: full tool loop builds one checked revision and publishes the engine summary
+ok 167 - full tool loop builds one checked revision and publishes the engine summary
+  ---
+  duration_ms: 166.76175
+  type: 'test'
+  ...
+# Subtest: repeated player additions and verdict calls cannot duplicate assets or checks
+ok 168 - repeated player additions and verdict calls cannot duplicate assets or checks
+  ---
+  duration_ms: 81.515292
+  type: 'test'
+  ...
+# Subtest: choosing the outgoing identity resumes discovery without asking for a return preference
+ok 169 - choosing the outgoing identity resumes discovery without asking for a return preference
+  ---
+  duration_ms: 210.502791
+  type: 'test'
+  ...
+# Subtest: a legacy return preference reply retains the earlier player's identity and request
+ok 170 - a legacy return preference reply retains the earlier player's identity and request
+  ---
+  duration_ms: 14.302209
+  type: 'test'
+  ...
+# Subtest: legacy return selections resume discovery and preserve the checked focus
+ok 171 - legacy return selections resume discovery and preserve the checked focus
+  ---
+  duration_ms: 130.387625
+  type: 'test'
+  ...
+# Subtest: outgoing-only packages search directly and cannot use unresolved or unrelated players
+ok 172 - outgoing-only packages search directly and cannot use unresolved or unrelated players
+  ---
+  duration_ms: 189.341083
+  type: 'test'
+  ...
+# Subtest: a mixed-team package retains an unsearched duplicate name and the chosen identity through routing
+not ok 173 - a mixed-team package retains an unsearched duplicate name and the chosen identity through routing
+  ---
+  duration_ms: 50.952709
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:858:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + undefined
+    - [
+    -   70,
+    -   71
+    - ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 70
+    1: 71
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:921:12)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: outgoing preferences cannot silently shorten a fully named same-team package
+ok 174 - outgoing preferences cannot silently shorten a fully named same-team package
+  ---
+  duration_ms: 99.883959
+  type: 'test'
+  ...
+# Subtest: resolving an ambiguous surname completes the original swap
+ok 175 - resolving an ambiguous surname completes the original swap
+  ---
+  duration_ms: 90.374625
+  type: 'test'
+  ...
+# Subtest: clarification choices carry grounded player/team identities and can be answered with a selection plus text
+ok 176 - clarification choices carry grounded player/team identities and can be answered with a selection plus text
+  ---
+  duration_ms: 18.351667
+  type: 'test'
+  ...
+# Subtest: suggested operations do not inherit unrelated ambiguous player choices
+not ok 177 - suggested operations do not inherit unrelated ambiguous player choices
+  ---
+  duration_ms: 30.554791
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1168:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+    +   'Grant Williams',
+    +   'Patrick Williams'
+    -   'Replace a player',
+    -   'Add a player'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'Replace a player'
+    1: 'Add a player'
+  actual:
+    0: 'Grant Williams'
+    1: 'Patrick Williams'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1189:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: remove ambiguity offers only current trade players and rejects invented option identities
+ok 178 - remove ambiguity offers only current trade players and rejects invented option identities
+  ---
+  duration_ms: 5.760291
+  type: 'test'
+  ...
+# Subtest: a changed team pair retains and reroutes the unaffected outgoing players
+ok 179 - a changed team pair retains and reroutes the unaffected outgoing players
+  ---
+  duration_ms: 5.806625
+  type: 'test'
+  ...
+# Subtest: salary explanations use exact team directions and never create another revision
+ok 180 - salary explanations use exact team directions and never create another revision
+  ---
+  duration_ms: 40.4715
+  type: 'test'
+  ...
+# Subtest: a model failure after checking a draft cannot partially commit the trade
+ok 181 - a model failure after checking a draft cannot partially commit the trade
+  ---
+  duration_ms: 162.198584
+  type: 'test'
+  ...
+# Subtest: exhausted AI credits identify the real blocker and preserve the checked trade
+ok 182 - exhausted AI credits identify the real blocker and preserve the checked trade
+  ---
+  duration_ms: 45.619125
+  type: 'test'
+  ...
+# Subtest: clarification after a checked draft preserves it without committing it
+not ok 183 - clarification after a checked draft preserves it without committing it
+  ---
+  duration_ms: 17.0915
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1326:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1369:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: unsupported operations discard staged edits and keep the checked proposal
+ok 184 - unsupported operations discard staged edits and keep the checked proposal
+  ---
+  duration_ms: 4.451292
+  type: 'test'
+  ...
+# Subtest: a one-way edit is checked, and undo restores it as a new revision
+ok 185 - a one-way edit is checked, and undo restores it as a new revision
+  ---
+  duration_ms: 116.103916
+  type: 'test'
+  ...
+# Subtest: clearing and cancelling have explicit outcomes and preserve historical versions
+not ok 186 - clearing and cancelling have explicit outcomes and preserve historical versions
+  ---
+  duration_ms: 71.24725
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1429:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'The conversation service could not finish this turn. Please try again.'
+    - 'The pending edit has been cancelled.'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'The pending edit has been cancelled.'
+  actual: 'The conversation service could not finish this turn. Please try again.'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1450:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: an unavailable verdict is retried instead of being permanently reused
+ok 187 - an unavailable verdict is retried instead of being permanently reused
+  ---
+  duration_ms: 25.701625
+  type: 'test'
+  ...
+# Subtest: unavailable explanations cannot invent salary matching or a legality result
+ok 188 - unavailable explanations cannot invent salary matching or a legality result
+  ---
+  duration_ms: 52.869166
+  type: 'test'
+  ...
+# Subtest: duplicate submissions reuse the exact reply without another model or engine call
+ok 189 - duplicate submissions reuse the exact reply without another model or engine call
+  ---
+  duration_ms: 77.286542
+  type: 'test'
+  ...
+# Subtest: concurrent edits with the same expected revision allow only one commit
+ok 190 - concurrent edits with the same expected revision allow only one commit
+  ---
+  duration_ms: 12.027709
+  type: 'test'
+  ...
+# Subtest: unknown selected players have no model or validation side effects
+ok 191 - unknown selected players have no model or validation side effects
+  ---
+  duration_ms: 1.895625
+  type: 'test'
+  ...
+# Subtest: an aborted engine check never commits late results
+ok 192 - an aborted engine check never commits late results
+  ---
+  duration_ms: 13.4005
+  type: 'test'
+  ...
+# Subtest: a model ending without a terminal tool cannot publish an unverified success
+ok 193 - a model ending without a terminal tool cannot publish an unverified success
+  ---
+  duration_ms: 41.23625
+  type: 'test'
+  ...
+# Subtest: research and explanation requests cannot execute edit or clear tools
+ok 194 - research and explanation requests cannot execute edit or clear tools
+  ---
+  duration_ms: 73.761167
+  type: 'test'
+  ...
+# Subtest: incomplete trade requests cannot finish as a generic answer
+ok 195 - incomplete trade requests cannot finish as a generic answer
+  ---
+  duration_ms: 40.279458
+  type: 'test'
+  ...
+# Subtest: expired caches reload the durable focus
+ok 196 - expired caches reload the durable focus
+  ---
+  duration_ms: 26.900792
+  type: 'test'
+  ...
+# Subtest: sessions do not share trades or pending clarifications
+ok 197 - sessions do not share trades or pending clarifications
+  ---
+  duration_ms: 51.811833
+  type: 'test'
+  ...
+# Subtest: unsupported players cannot be silently omitted from a checked package
+not ok 198 - unsupported players cannot be silently omitted from a checked package
+  ---
+  duration_ms: 5.71175
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1671:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.'
+    - "Terry Rozier's contract status isn’t supported for trades yet."
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: "Terry Rozier's contract status isn’t supported for trades yet."
+  actual: 'Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms.'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:1694:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: a rejected asset blocks validation even when another asset is successfully added
+ok 199 - a rejected asset blocks validation even when another asset is successfully added
+  ---
+  duration_ms: 30.910667
+  type: 'test'
+  ...
+# Subtest: correcting an invalid destination unblocks the complete proposal
+ok 200 - correcting an invalid destination unblocks the complete proposal
+  ---
+  duration_ms: 88.449291
+  type: 'test'
+  ...
+# Subtest: unsupported feature requirements take precedence over missing details
+ok 201 - unsupported feature requirements take precedence over missing details
+  ---
+  duration_ms: 15.736667
+  type: 'test'
+  ...
+# Subtest: ambiguous pronoun removal cannot guess, and a named reply completes the edit
+ok 202 - ambiguous pronoun removal cannot guess, and a named reply completes the edit
+  ---
+  duration_ms: 54.067459
+  type: 'test'
+  ...
+# Subtest: an undo request cannot finish by rechecking the unchanged proposal
+ok 203 - an undo request cannot finish by rechecking the unchanged proposal
+  ---
+  duration_ms: 7.350166
+  type: 'test'
+  ...
+# Subtest: value assessments cannot present salary validity as basketball value
+ok 204 - value assessments cannot present salary validity as basketball value
+  ---
+  duration_ms: 11.101917
+  type: 'test'
+  ...
+# Subtest: a corrected invented ID does not permanently block the requested known player
+ok 205 - a corrected invented ID does not permanently block the requested known player
+  ---
+  duration_ms: 7.895
+  type: 'test'
+  ...
+# Subtest: changing teams does not turn a named replacement into removal of the retained player
+ok 206 - changing teams does not turn a named replacement into removal of the retained player
+  ---
+  duration_ms: 4.754375
+  type: 'test'
+  ...
+# Subtest: atomic replacement changes the opponent without removing the retained player
+ok 207 - atomic replacement changes the opponent without removing the retained player
+  ---
+  duration_ms: 66.76075
+  type: 'test'
+  ...
+# Subtest: an expanded ambiguous replacement asks for identity before teams and resumes the existing swap
+ok 208 - an expanded ambiguous replacement asks for identity before teams and resumes the existing swap
+  ---
+  duration_ms: 34.138417
+  type: 'test'
+  ...
+# Subtest: a failed edit cannot publish a model's unverified validity claim as an unsupported response
+ok 209 - a failed edit cannot publish a model's unverified validity claim as an unsupported response
+  ---
+  duration_ms: 16.202042
+  type: 'test'
+  ...
+# Subtest: changing participants cannot silently drop an unmentioned current player
+ok 210 - changing participants cannot silently drop an unmentioned current player
+  ---
+  duration_ms: 9.836041
+  type: 'test'
+  ...
+# Subtest: unimplemented discovery performance filters get a scope explanation without retry loops
+ok 211 - unimplemented discovery performance filters get a scope explanation without retry loops
+  ---
+  duration_ms: 4.139834
+  type: 'test'
+  ...
+# Subtest: a new package for the same teams starts empty and keeps older versions
+ok 212 - a new package for the same teams starts empty and keeps older versions
+  ---
+  duration_ms: 7.32275
+  type: 'test'
+  ...
+# Subtest: research does not resume a clarification and a successful new trade supersedes it
+not ok 213 - research does not resume a clarification and a successful new trade supersedes it
+  ---
+  duration_ms: 52.715166
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2143:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'Which Williams?'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Which Williams?'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2174:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: failed fresh packages preserve pending work and the checked trade
+not ok 214 - failed fresh packages preserve pending work and the checked trade
+  ---
+  duration_ms: 7.161666
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2201:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'error'
+    - 'complete'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'complete'
+  actual: 'error'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2231:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: edits to older versions branch explicitly and undo follows that branch's parent
+ok 215 - edits to older versions branch explicitly and undo follows that branch's parent
+  ---
+  duration_ms: 127.821458
+  type: 'test'
+  ...
+# Subtest: conversation versions reject simultaneous requests even without a focused trade
+ok 216 - conversation versions reject simultaneous requests even without a focused trade
+  ---
+  duration_ms: 5.309625
+  type: 'test'
+  ...
+# Subtest: history stores the displayed reply rather than unused model prose, and clear focus survives reload
+ok 217 - history stores the displayed reply rather than unused model prose, and clear focus survives reload
+  ---
+  duration_ms: 20.543125
+  type: 'test'
+  ...
+# Subtest: durable writes roll back the whole operation on unexpected failure
+ok 218 - durable writes roll back the whole operation on unexpected failure
+  ---
+  duration_ms: 1.862917
+  type: 'test'
+  ...
+# Subtest: an exact offered clarification choice resumes its original request despite a mistaken model operation
+ok 219 - an exact offered clarification choice resumes its original request despite a mistaken model operation
+  ---
+  duration_ms: 63.551333
+  type: 'test'
+  ...
+# Subtest: clarifications publish and persist the missing question without selection instructions
+not ok 220 - clarifications publish and persist the missing question without selection instructions
+  ---
+  duration_ms: 65.381541
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2405:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Who did you mean by “trade”?'
+    - 'Which trade should I use?'
+         ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Which trade should I use?'
+  actual: 'Who did you mean by “trade”?'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2435:12)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: a badge plus a correction resolves the corrected reference before another missing player
+ok 221 - a badge plus a correction resolves the corrected reference before another missing player
+  ---
+  duration_ms: 84.316042
+  type: 'test'
+  ...
+# Subtest: a grounded correction replaces the provisional answer while preserving the other player
+ok 222 - a grounded correction replaces the provisional answer while preserving the other player
+  ---
+  duration_ms: 18.1015
+  type: 'test'
+  ...
+# Subtest: accepting a selected answer with supplementary text still resumes the pending request
+ok 223 - accepting a selected answer with supplementary text still resumes the pending request
+  ---
+  duration_ms: 24.607416
+  type: 'test'
+  ...
+# Subtest: stale or inconsistent clarification metadata cannot hide typed corrections
+ok 224 - stale or inconsistent clarification metadata cannot hide typed corrections
+  ---
+  duration_ms: 158.483125
+  type: 'test'
+  ...
+# Subtest: a failed turn after reconciliation leaves the original pending work and focus intact
+ok 225 - a failed turn after reconciliation leaves the original pending work and focus intact
+  ---
+  duration_ms: 116.518875
+  type: 'test'
+  ...
+# Subtest: corrected identity requirements survive clarification follow-ups and prevent partial checks
+not ok 226 - corrected identity requirements survive clarification follow-ups and prevent partial checks
+  ---
+  duration_ms: 110.028541
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2668:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'complete'
+    - 'error'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'error'
+  actual: 'complete'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2711:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: three-team build checks every directed leg and replacement preserves other destinations
+ok 227 - three-team build checks every directed leg and replacement preserves other destinations
+  ---
+  duration_ms: 84.849833
+  type: 'test'
+  ...
+# Subtest: adding a fourth team preserves the existing cycle and undo restores the three-team version
+ok 228 - adding a fourth team preserves the existing cycle and undo restores the three-team version
+  ---
+  duration_ms: 32.301541
+  type: 'test'
+  ...
+# Subtest: multi-team replacement from a new owner adds that team without rerouting other players
+not ok 229 - multi-team replacement from a new owner adds that team without rerouting other players
+  ---
+  duration_ms: 207.555
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2824:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        2,
+    +   4,
+    -   16,
+        5,
+    -   4
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 2
+    1: 16
+    2: 5
+    3: 4
+  actual:
+    0: 2
+    1: 4
+    2: 5
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2841:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: missing multi-team destinations clarify and resume without committing a partial trade
+not ok 230 - missing multi-team destinations clarify and resume without committing a partial trade
+  ---
+  duration_ms: 190.07925
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2849:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"status":"error","message":"The conversation service could not finish this turn. Please try again.","snapshot":null,"changes":[],"snapshots":[],"toolCalls":[{"id":"call-2-0","visible":false,"activeLabel":"Understanding your request…","label":"Understanding your request — couldn’t finish","state":"error"}],"workDurationMs":22,"conversationVersion":2,"pendingClarification":{"question":"Which team should receive Derrick White?","options":[{"id":"destination-10-16","label":"Miami Heat","value":"Send Derrick White to Miami Heat.","destination":{"playerId":10,"toTeamId":16}},{"id":"destination-10-5","label":"Chicago Bulls","value":"Send Derrick White to Chicago Bulls.","destination":{"playerId":10,"toTeamId":5}}]}}
+    + actual - expected
+    
+    + 'error'
+    - 'complete'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'complete'
+  actual: 'error'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2903:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: removing a destination team cannot silently reroute an existing multi-team trade
+ok 231 - removing a destination team cannot silently reroute an existing multi-team trade
+  ---
+  duration_ms: 119.128958
+  type: 'test'
+  ...
+# Subtest: rerouting a multi-team player changes only that destination
+ok 232 - rerouting a multi-team player changes only that destination
+  ---
+  duration_ms: 405.416084
+  type: 'test'
+  ...
+# Subtest: a checked multi-team edit cannot remove the newly added player afterward
+ok 233 - a checked multi-team edit cannot remove the newly added player afterward
+  ---
+  duration_ms: 95.146958
+  type: 'test'
+  ...
+# Subtest: a replacement belonging to the original receiving team can use an explicit new destination
+not ok 234 - a replacement belonging to the original receiving team can use an explicit new destination
+  ---
+  duration_ms: 109.991375
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:2993:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        {
+          assetId: 10,
+          assetType: 'player',
+          fromTeamId: 2,
+    +     toTeamId: 5
+    -     toTeamId: 16
+        },
+        {
+          assetId: 50,
+          assetType: 'player',
+          fromTeamId: 5,
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0:
+      assetType: 'player'
+      assetId: 10
+      fromTeamId: 2
+      toTeamId: 16
+    1:
+      assetType: 'player'
+      assetId: 50
+      fromTeamId: 5
+      toTeamId: 2
+    2:
+      assetType: 'player'
+      assetId: 55
+      fromTeamId: 5
+      toTeamId: 2
+  actual:
+    0:
+      assetType: 'player'
+      assetId: 10
+      fromTeamId: 2
+      toTeamId: 5
+    1:
+      assetType: 'player'
+      assetId: 50
+      fromTeamId: 5
+      toTeamId: 2
+    2:
+      assetType: 'player'
+      assetId: 55
+      fromTeamId: 5
+      toTeamId: 2
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-harness.test.ts:3025:10)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: a combined signing and swap remains actionable when classified as a scenario
+ok 235 - a combined signing and swap remains actionable when classified as a scenario
+  ---
+  duration_ms: 488.791958
+  type: 'test'
+  ...
+# Subtest: standalone and negated signing transfers stay signing-only
+ok 236 - standalone and negated signing transfers stay signing-only
+  ---
+  duration_ms: 5.988041
+  type: 'test'
+  ...
+# Subtest: salary and duration edits retain all assets, are checked on a new revision and undo restores the original
+ok 237 - salary and duration edits retain all assets, are checked on a new revision and undo restores the original
+  ---
+  duration_ms: 84.576958
+  type: 'test'
+  ...
+# Subtest: a standalone stretch scenario computes the obligation, rejects trading the waived player and retains zero salary assets separately
+ok 238 - a standalone stretch scenario computes the obligation, rejects trading the waived player and retains zero salary assets separately
+  ---
+  duration_ms: 2.007166
+  type: 'test'
+  ...
+# Subtest: contract failures cannot create a partially checked version and scenario fields cannot be changed after checking
+ok 239 - contract failures cannot create a partially checked version and scenario fields cannot be changed after checking
+  ---
+  duration_ms: 4.985084
+  type: 'test'
+  ...
+# Subtest: draft rights use authoritative ownership, coexist with colliding pick/player ids and survive ordinary player edits
+ok 240 - draft rights use authoritative ownership, coexist with colliding pick/player ids and survive ordinary player edits
+  ---
+  duration_ms: 9.056084
+  type: 'test'
+  ...
+# Subtest: listing a team's ambiguous rights cannot choose an arbitrary asset
+ok 241 - listing a team's ambiguous rights cannot choose an arbitrary asset
+  ---
+  duration_ms: 1.707667
+  type: 'test'
+  ...
+# Subtest: exceptions must belong to the selected team, remain unexpired and have been listed
+ok 242 - exceptions must belong to the selected team, remain unexpired and have been listed
+  ---
+  duration_ms: 8.052334
+  type: 'test'
+  ...
+# Subtest: a free agent signs for the specified team and becomes a routed sign-and-trade without altering catalogue ownership
+ok 243 - a free agent signs for the specified team and becomes a routed sign-and-trade without altering catalogue ownership
+  ---
+  duration_ms: 66.997917
+  type: 'test'
+  ...
+# Subtest: standalone payroll scenarios do not send invented teams or claim a trade check
+ok 244 - standalone payroll scenarios do not send invented teams or claim a trade check
+  ---
+  duration_ms: 1.0535
+  type: 'test'
+  ...
+# Subtest: generic signing requests cannot invent a tier or duration, and rejected offers retain the checked trade
+ok 245 - generic signing requests cannot invent a tier or duration, and rejected offers retain the checked trade
+  ---
+  duration_ms: 7.45725
+  type: 'test'
+  ...
+# Subtest: a successful right edit recovers an unknown player-id mistake without clearing failures for real players
+ok 246 - a successful right edit recovers an unknown player-id mistake without clearing failures for real players
+  ---
+  duration_ms: 13.315584
+  type: 'test'
+  ...
+# Subtest: changing a named draft-right destination adds the requested third team and preserves other transfers
+ok 247 - changing a named draft-right destination adds the requested third team and preserves other transfers
+  ---
+  duration_ms: 3.346375
+  type: 'test'
+  ...
+# Subtest: resetting the last standalone contract edit restores original payroll and keeps a reviewable scenario
+ok 248 - resetting the last standalone contract edit restores original payroll and keeps a reviewable scenario
+  ---
+  duration_ms: 2.246333
+  type: 'test'
+  ...
+# Subtest: exception source names do not create extra transfer destinations
+ok 249 - exception source names do not create extra transfer destinations
+  ---
+  duration_ms: 0.155667
+  type: 'test'
+  ...
+# Subtest: scenario payroll accounts for contract changes and signings before transfers
+ok 250 - scenario payroll accounts for contract changes and signings before transfers
+  ---
+  duration_ms: 0.309417
+  type: 'test'
+  ...
+# Subtest: plain signing terms resume a pending scenario rather than becoming a player-name amendment
+ok 251 - plain signing terms resume a pending scenario rather than becoming a player-name amendment
+  ---
+  duration_ms: 95.738542
+  type: 'test'
+  ...
+# Subtest: fresh packages and draft-right edits cannot acquire spurious player-replacement requirements
+ok 252 - fresh packages and draft-right edits cannot acquire spurious player-replacement requirements
+  ---
+  duration_ms: 9.952208
+  type: 'test'
+  ...
+# Subtest: undo of the last draft-right change restores its parent even if the model labels it as an ordinary edit
+ok 253 - undo of the last draft-right change restores its parent even if the model labels it as an ordinary edit
+  ---
+  duration_ms: 3.48325
+  type: 'test'
+  ...
+# Subtest: an exception's source player cannot ground an unrelated third team
+ok 254 - an exception's source player cannot ground an unrelated third team
+  ---
+  duration_ms: 0.423083
+  type: 'test'
+  ...
+# Subtest: a signing cannot substitute a different salary for the user's explicit offer
+ok 255 - a signing cannot substitute a different salary for the user's explicit offer
+  ---
+  duration_ms: 7.8215
+  type: 'test'
+  ...
+# Subtest: bounded context retains exact older conversations through recall after cache eviction
+ok 256 - bounded context retains exact older conversations through recall after cache eviction
+  ---
+  duration_ms: 9.773084
+  type: 'test'
+  ...
+# Subtest: rechecks require a recorded version and never evaluate an unknown package
+ok 257 - rechecks require a recorded version and never evaluate an unknown package
+  ---
+  duration_ms: 8.706542
+  type: 'test'
+  ...
+# Subtest: rechecks use the recorded package and create a child revision without mutating its source
+ok 258 - rechecks use the recorded package and create a child revision without mutating its source
+  ---
+  duration_ms: 3.457583
+  type: 'test'
+  ...
+# Subtest: default repairs add exactly one eligible player and preserve original lineage without mutating focus
+ok 259 - default repairs add exactly one eligible player and preserve original lineage without mutating focus
+  ---
+  duration_ms: 89.260833
+  type: 'test'
+  ...
+# Subtest: replacement is considered only when explicitly allowed and pinned players never disappear
+ok 260 - replacement is considered only when explicitly allowed and pinned players never disappear
+  ---
+  duration_ms: 4.987167
+  type: 'test'
+  ...
+# Subtest: unsupported contracts, outside teams and invalid repair requests never generate passing packages
+ok 261 - unsupported contracts, outside teams and invalid repair requests never generate passing packages
+  ---
+  duration_ms: 1.977292
+  type: 'test'
+  ...
+# Subtest: a trade that already passes is a no-op; stored evidence never replaces fresh candidate checks
+ok 262 - a trade that already passes is a no-op; stored evidence never replaces fresh candidate checks
+  ---
+  duration_ms: 20.618125
+  type: 'test'
+  ...
+# Subtest: checked failures produce bounded no-match copy without claiming exhaustive impossibility
+ok 263 - checked failures produce bounded no-match copy without claiming exhaustive impossibility
+  ---
+  duration_ms: 0.75675
+  type: 'test'
+  ...
+# Subtest: unavailable and mismatched identity, teams, salaries, season or payroll never become checked repairs
+ok 264 - unavailable and mismatched identity, teams, salaries, season or payroll never become checked repairs
+  ---
+  duration_ms: 9.348125
+  type: 'test'
+  ...
+# Subtest: repair budget is 18 fresh checks with at most three requests in flight
+ok 265 - repair budget is 18 fresh checks with at most three requests in flight
+  ---
+  duration_ms: 55.229458
+  type: 'test'
+  ...
+# Subtest: caller cancellation rejects promptly and late validator successes cannot escape
+ok 266 - caller cancellation rejects promptly and late validator successes cannot escape
+  ---
+  duration_ms: 99.187666
+  type: 'test'
+  ...
+# Subtest: deadline closes the search even when the validator ignores abort
+ok 267 - deadline closes the search even when the validator ignores abort
+  ---
+  duration_ms: 14.698708
+  type: 'test'
+  ...
+# Subtest: age, position, salary savings and payroll constraints apply to the requested team without relaxation
+ok 268 - age, position, salary savings and payroll constraints apply to the requested team without relaxation
+  ---
+  duration_ms: 81.558
+  type: 'test'
+  ...
+# Subtest: repair tool refuses absent focus, ungrounded pins, guessed teams and unauthorized replacements
+not ok 269 - repair tool refuses absent focus, ungrounded pins, guessed teams and unauthorized replacements
+  ---
+  duration_ms: 164.702875
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-repair.test.ts:468:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok("error" in result)
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-repair.test.ts:486:12)
+    async Test.run (node:internal/test_runner/test:1404:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: repair tool automatically keeps named and selected players when replacements are permitted
+ok 270 - repair tool automatically keeps named and selected players when replacements are permitted
+  ---
+  duration_ms: 1.205375
+  type: 'test'
+  ...
+# Subtest: explicit named replacement targets are replaceable while every other original player remains
+ok 271 - explicit named replacement targets are replaceable while every other original player remains
+  ---
+  duration_ms: 0.957834
+  type: 'test'
+  ...
+# Subtest: model cannot omit requested filters and generic salary failures are repairable without a money limit
+ok 272 - model cannot omit requested filters and generic salary failures are repairable without a money limit
+  ---
+  duration_ms: 1.243167
+  type: 'test'
+  ...
+# Subtest: multi-team repairs explore each destination and preserve the original directed legs
+ok 273 - multi-team repairs explore each destination and preserve the original directed legs
+  ---
+  duration_ms: 0.726417
+  type: 'test'
+  ...
+# Subtest: age ranges are inclusive and absent age is excluded when constrained
+ok 274 - age ranges are inclusive and absent age is excluded when constrained
+  ---
+  duration_ms: 2.317667
+  type: 'test'
+  ...
+# Subtest: positions are OR within canonical tokens and AND with age constraints
+ok 275 - positions are OR within canonical tokens and AND with age constraints
+  ---
+  duration_ms: 0.468958
+  type: 'test'
+  ...
+# Subtest: salary filters use combined salaries and exact post-trade team payroll
+ok 276 - salary filters use combined salaries and exact post-trade team payroll
+  ---
+  duration_ms: 0.251291
+  type: 'test'
+  ...
+# Subtest: request validation rejects wrong types, contradictory ranges, unknown keys, and missing payroll
+ok 277 - request validation rejects wrong types, contradictory ranges, unknown keys, and missing payroll
+  ---
+  duration_ms: 0.539
+  type: 'test'
+  ...
+# Subtest: parses common inclusive and exclusive age expressions without confusing salary amounts
+ok 278 - parses common inclusive and exclusive age expressions without confusing salary amounts
+  ---
+  duration_ms: 183.391291
+  type: 'test'
+  ...
+# Subtest: recognizes position groups and exact salary constraints
+ok 279 - recognizes position groups and exact salary constraints
+  ---
+  duration_ms: 7.782583
+  type: 'test'
+  ...
+# Subtest: grounding rejects invented constraints, changed bounds, and omitted requested filters
+ok 280 - grounding rejects invented constraints, changed bounds, and omitted requested filters
+  ---
+  duration_ms: 0.632
+  type: 'test'
+  ...
+# Subtest: contradictory, ambiguous, excluded, and performance constraints require clarification
+not ok 281 - contradictory, ambiguous, excluded, and performance constraints require clarification
+  ---
+  duration_ms: 1.947125
+  type: 'test'
+  location: '/private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-search-constraints.test.ts:225:1'
+  failureType: 'testCodeFailure'
+  error: 'remove the salary limit'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///private/var/folders/z_/63svgyv57lz4pp33t982zv5h0000gn/T/gambit-pick-baseline-owe7fqw3/src/server/trade-search-constraints.test.ts:249:12)
+    Test.runInAsyncScope (node:async_hooks:226:14)
+    Test.run (node:internal/test_runner/test:1397:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+    Test.postRun (node:internal/test_runner/test:1537:19)
+    Test.run (node:internal/test_runner/test:1462:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+  ...
+# Subtest: descriptions state per-player filters and combined financial limits
+ok 282 - descriptions state per-player filters and combined financial limits
+  ---
+  duration_ms: 148.450041
+  type: 'test'
+  ...
+# Subtest: salary matching terminology is not interpreted as a monetary constraint
+ok 283 - salary matching terminology is not interpreted as a monetary constraint
+  ---
+  duration_ms: 1.63075
+  type: 'test'
+  ...
+# Subtest: generic validation failures aren't treated as hard financial filters
+ok 284 - generic validation failures aren't treated as hard financial filters
+  ---
+  duration_ms: 2.0755
+  type: 'test'
+  ...
+# Subtest: vague age descriptions ask for age limits while retaining explicit positions
+ok 285 - vague age descriptions ask for age limits while retaining explicit positions
+  ---
+  duration_ms: 0.775583
+  type: 'test'
+  ...
+# Subtest: ability filters never disappear and shooting guards remain a supported position
+ok 286 - ability filters never disappear and shooting guards remain a supported position
+  ---
+  duration_ms: 0.806708
+  type: 'test'
+  ...
+# Subtest: contract, experience, and height bounds cannot become age limits
+ok 287 - contract, experience, and height bounds cannot become age limits
+  ---
+  duration_ms: 0.893167
+  type: 'test'
+  ...
+1..287
+# tests 287
+# suites 0
+# pass 264
+# fail 23
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11522.723125

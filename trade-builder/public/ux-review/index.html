@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Visual QA Atlas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell" data-grid-open="false">
+      <aside class="sidebar">
+        <div class="product-lockup">
+          <div class="product-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <strong>Visual QA</strong>
+            <span id="run-label">Loading atlas…</span>
+          </div>
+        </div>
+        <p id="handoff-status" class="handoff-status" role="status"></p>
+        <div class="filter-row" id="filters" aria-label="Frame filters"></div>
+        <div class="review-summary">
+          <span id="review-progress"></span
+          ><button id="coverage-toggle" type="button">Coverage</button>
+        </div>
+        <nav id="scenario-nav" aria-label="Visual scenarios"></nav>
+      </aside>
+
+      <main class="viewer">
+        <section class="frame-header">
+          <div class="frame-heading">
+            <h1 id="frame-title">Loading…</h1>
+            <span class="breadcrumb" id="breadcrumb"></span>
+            <span id="seen-status" class="seen-status"></span>
+            <span id="frame-description" hidden></span>
+          </div>
+          <div class="frame-controls">
+            <a class="mode-button" href="./canvas.html" id="canvas-link">Canvas</a>
+            <button
+              id="sidebar-toggle"
+              class="mode-button sidebar-toggle"
+              type="button"
+              aria-controls="scenario-nav"
+              aria-expanded="false"
+            >
+              Screens
+            </button>
+            <label class="search-field">
+              <span aria-hidden="true">⌕</span>
+              <input
+                id="search"
+                name="search"
+                aria-label="Filter scenarios"
+                type="search"
+                placeholder="Filter  /"
+                autocomplete="off"
+              />
+            </label>
+            <button
+              id="grid-toggle"
+              class="icon-button"
+              type="button"
+              title="Toggle contact sheet (G)"
+            >
+              ▦
+            </button>
+            <div class="viewport-switcher" id="viewport-switcher" aria-label="Viewport"></div>
+            <button id="flag-toggle" class="flag-button" type="button" title="Flag this frame (F)">
+              Flag
+            </button>
+            <button
+              id="settings-toggle"
+              class="mode-button"
+              type="button"
+              title="Review settings"
+              aria-label="Review settings"
+            >
+              Keys
+            </button>
+            <button
+              id="help-toggle"
+              class="icon-button"
+              type="button"
+              title="Keyboard shortcuts (?)"
+            >
+              ?
+            </button>
+          </div>
+        </section>
+
+        <p id="flag-storage-warning" role="status" hidden></p>
+
+        <section id="image-stage" class="image-stage">
+          <div class="image-positioner">
+            <img id="current-image" class="frame-image current-image" alt="Current screenshot" />
+            <div id="empty-state" class="empty-state" hidden></div>
+          </div>
+          <button
+            id="previous-frame"
+            class="edge-nav edge-nav-left"
+            type="button"
+            title="Previous frame (←)"
+          >
+            ‹
+          </button>
+          <button
+            id="next-frame"
+            class="edge-nav edge-nav-right"
+            type="button"
+            title="Next frame (→)"
+          >
+            ›
+          </button>
+        </section>
+      </main>
+
+      <section id="grid-view" class="grid-view" aria-label="Contact sheet" hidden>
+        <div class="grid-header">
+          <div><span>Contact sheet</span><strong id="grid-title"></strong></div>
+          <button
+            id="grid-close"
+            class="icon-button"
+            type="button"
+            title="Close contact sheet (G or Escape)"
+          >
+            ×
+          </button>
+        </div>
+        <div id="grid-content" class="grid-content"></div>
+      </section>
+
+      <dialog id="help-dialog" class="help-dialog">
+        <div class="dialog-heading">
+          <div>
+            <span>Keyboard map</span>
+            <h2>Scrub without ceremony</h2>
+          </div>
+          <button id="help-close" class="icon-button" type="button">×</button>
+        </div>
+        <div class="shortcut-grid">
+          <kbd>←</kbd><span>Previous scenario frame</span> <kbd>→</kbd
+          ><span>Next scenario frame</span> <kbd>↑</kbd><span>Previous viewport</span> <kbd>↓</kbd
+          ><span>Next viewport</span> <kbd>1–4</kbd><span>Jump to a viewport</span> <kbd>⇧ ←/→</kbd
+          ><span>Previous or next scenario</span> <kbd>G</kbd><span>Toggle contact sheet</span>
+          <kbd>F</kbd><span>Flag a genuine problem</span> <kbd>/</kbd><span>Filter the atlas</span>
+          <kbd>?</kbd><span>Show this map</span>
+        </div>
+        <p>
+          Seen is recorded automatically after one second of viewing the loaded current image. It is
+          not approval or AI verification. Arrow behaviour is configurable in Review settings.
+        </p>
+      </dialog>
+
+      <dialog id="settings-dialog" class="help-dialog">
+        <div class="dialog-heading">
+          <h2>Review settings</h2>
+          <button
+            id="settings-close"
+            class="icon-button"
+            type="button"
+            aria-label="Close review settings"
+          >
+            ×
+          </button>
+        </div>
+        <fieldset>
+          <legend>Arrow keys</legend>
+          <label class="review-option"
+            ><input type="radio" name="navigation" value="axes" /> Separate axes
+            <small>←/→ states; ↑/↓ widths.</small></label
+          >
+          <label class="review-option"
+            ><input type="radio" name="navigation" value="paired" /> Desktop/mobile sequence
+            <small>←/→ desktop then mobile for each state; ↑/↓ still switches widths.</small></label
+          >
+        </fieldset>
+        <fieldset>
+          <legend>Review scope</legend>
+          <label class="review-option"
+            ><input type="radio" name="widths" value="primary" /> Desktop and mobile
+            <small>Tablet/laptop remain available as supplementary widths.</small></label
+          >
+          <label class="review-option"
+            ><input type="radio" name="widths" value="all" /> All four widths
+            <small>Include supplementary widths in progress and the sequence.</small></label
+          >
+        </fieldset>
+        <p>
+          Progress and preferences are saved in this browser. Flags are independent of Seen. Seen
+          means displayed, not approved.
+        </p>
+      </dialog>
+      <dialog id="coverage-dialog" class="help-dialog coverage-dialog">
+        <div class="dialog-heading">
+          <h2>Coverage inventory</h2>
+          <button
+            id="coverage-close"
+            class="icon-button"
+            type="button"
+            aria-label="Close coverage inventory"
+          >
+            ×
+          </button>
+        </div>
+        <div id="coverage-content">Loading coverage…</div>
+      </dialog>
+
+      <div id="fatal-error" class="fatal-error" hidden></div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+✔ pick browsing separates origin and ownership and never broadens unknown searches (17.956334ms)
+✔ pick references preserve exact IDs alongside colliding player IDs and reject overlapping ranges (2.094375ms)
+✔ clarification prefixes retain pick references with corrected offsets (0.592125ms)
+✔ an explicit pick badge resolves duplicate labels to its selected ID (9.286416ms)
+✔ changed pick ownership is rejected before a model or proposal edit (9.150083ms)
+✔ pick references survive server expiry and archive round trips (1.765958ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 494.831083

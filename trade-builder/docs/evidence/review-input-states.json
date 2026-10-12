@@ -1,0 +1,145 @@
+{
+  "verifiedAt": "2026-10-10T20:47:23.865Z",
+  "typedChecks": [
+    "conversation-history-and-focus:2",
+    "conversation-history-and-focus:3"
+  ],
+  "responsiveChecks": [
+    "desktop",
+    "mobile"
+  ],
+  "selectionFlows": [
+    {
+      "scenario": "selected-answer-with-correction",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "resolve-corrected-selections",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "resolve-corrected-selections",
+      "turn": 3,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "corrected-player-contract-restriction",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "duplicate-full-name-in-mixed-team-package",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "ambiguous-replacement-after-discovery",
+      "turn": 3,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "outgoing-only-identity-clarification",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "outgoing-goal-and-natural-option-selection",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "correction-overrides-a-selected-identity",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "correction-overrides-a-selected-identity",
+      "turn": 3,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "duplicate-full-name-and-implicit-two-team-exchange",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "shorthand-request-and-ambiguous-replacement",
+      "turn": 2,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "equally-close-full-name-typos-remain-ambiguous",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "surname-alone-remains-ambiguous-in-a-swap",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "a-different-research-question-replaces-the-picker",
+      "turn": 2,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "clarification-choices:-signing-team-catalogue",
+      "turn": 3,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "player-alternatives:-historical-middle-proposal",
+      "turn": 2,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "multi-choice:-three-teams-and-compound-reply",
+      "turn": 1,
+      "selected": 3,
+      "receipt": true
+    },
+    {
+      "scenario": "multi-choice:-single-identity-remains-single",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "Trade-idea-selection-with-financial-filters",
+      "turn": 1,
+      "selected": 1,
+      "receipt": true
+    },
+    {
+      "scenario": "Package-browsing-with-player-inspection",
+      "turn": 1,
+      "selected": 2,
+      "receipt": true
+    },
+    {
+      "scenario": "Incoming-guard-selection-and-five-checks",
+      "turn": 1,
+      "selected": 5,
+      "receipt": true
+    }
+  ]
+}

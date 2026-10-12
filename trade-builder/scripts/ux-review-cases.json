@@ -1,0 +1,2940 @@
+[
+  {
+    "name": "filtered discovery",
+    "title": "Young centers, more, then choose",
+    "description": "Age, position and payroll filters; more results without repeats; choosing a returned option.",
+    "tags": ["Discovery", "Age", "Position", "Pagination", "Selection"],
+    "turns": [
+      {
+        "message": "Find Chicago Bulls options, one player for one player, with incoming centers under 25 and without increasing payroll."
+      },
+      {
+        "message": "Show me more options with the same filters."
+      },
+      {
+        "message": "Use the first option."
+      }
+    ]
+  },
+  {
+    "name": "financial discovery",
+    "title": "Salary, savings and payroll limits",
+    "description": "Browse ideas within combined incoming salary, minimum savings and post-trade payroll limits, then add an impossible age limit.",
+    "tags": ["Discovery", "Financial filters", "No results"],
+    "turns": [
+      {
+        "message": "Find Bulls options: one player for one player, incoming salary at most $12 million, saving at least $5 million, post-trade payroll at most $142 million."
+      },
+      {
+        "message": "Show more, but incoming players must be aged under 10."
+      }
+    ]
+  },
+  {
+    "name": "package sizes",
+    "title": "Three players each",
+    "description": "Explicit three-for-three packages between Boston and Miami.",
+    "tags": ["Discovery", "Package sizes"],
+    "turns": [
+      {
+        "message": "Find Boston Celtics options: three players for three players from Miami Heat."
+      }
+    ]
+  },
+  {
+    "name": "fixed outgoing and exclusions",
+    "title": "Keep the outgoing player fixed",
+    "description": "A named outgoing player stays in the package while excluded players stay out.",
+    "tags": ["Discovery", "Fixed players", "Exclusions"],
+    "turns": [
+      {
+        "message": "Find Boston Celtics trades sending Derrick White for two Miami Heat players. Exclude Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "fresh search resets filters",
+    "title": "A fresh search changes the brief",
+    "description": "A new search changes teams and counts without carrying old age and position filters.",
+    "tags": ["Discovery", "Reset", "Filters"],
+    "turns": [
+      {
+        "message": "Find Bulls trades: one player for one incoming center under 25."
+      },
+      {
+        "message": "Start a new search: Boston sends two players for one Miami player. No age or position restrictions."
+      }
+    ]
+  },
+  {
+    "name": "vague filters",
+    "title": "Young guards, an age range, then no age limit",
+    "description": "Start with young guards, specify ages 20–24, then remove the age restriction while retaining the other filters.",
+    "tags": ["Clarification", "Discovery", "Age", "Position", "Scope limits"],
+    "turns": [
+      {
+        "message": "Find Bulls trades for young guards."
+      },
+      {
+        "message": "Incoming players aged 20 through 24 inclusive."
+      },
+      {
+        "message": "Remove the age restriction but keep everything else."
+      }
+    ]
+  },
+  {
+    "name": "repair additions",
+    "title": "Fix a trade by adding players",
+    "description": "An invalid trade, checked additions preserving its players, then selecting a repair.",
+    "tags": ["Repair", "Invalid trade", "Selection"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Pelle Larsson."
+      },
+      {
+        "message": "Fix this trade. Keep both original players and add someone if needed."
+      },
+      {
+        "message": "Use the first repair option."
+      }
+    ]
+  },
+  {
+    "name": "pinned replacements",
+    "title": "Repair while keeping White",
+    "description": "Allow replacements, pin a named player, then choose a freshly checked repair.",
+    "tags": ["Repair", "Pinned players", "Selection"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Pelle Larsson."
+      },
+      {
+        "message": "Suggest a legal version, keeping Derrick White. You may replace other players."
+      },
+      {
+        "message": "Use the first repair option."
+      }
+    ]
+  },
+  {
+    "name": "repair team perspective",
+    "title": "Incoming filters during a repair",
+    "description": "Apply age and position constraints to Boston's incoming players while repairing an invalid trade.",
+    "tags": ["Repair", "Filters", "No results"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Pelle Larsson."
+      },
+      {
+        "message": "Find a legal version, keeping Derrick White, with Boston's incoming players under 25 and guards. You may replace other players."
+      }
+    ]
+  },
+  {
+    "name": "conversation history and focus",
+    "title": "Research, return to an earlier trade, undo",
+    "description": "A research detour preserves a pending choice. Return to the original trade, branch a revision, undo, clear focus and recall earlier players.",
+    "tags": ["History", "Focus", "Research", "Undo", "Clarification"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "New trade: Derrick White for Williams."
+      },
+      {
+        "message": "Before choosing, what is Derrick White's salary?"
+      },
+      {
+        "message": "Grant Williams."
+      },
+      {
+        "message": "Explain Miami's salary matching in the original White for Wiggins trade.",
+        "original": true
+      },
+      {
+        "message": "In the original trade, replace Andrew Wiggins with Pelle Larsson.",
+        "original": true
+      },
+      {
+        "message": "Undo that change."
+      },
+      {
+        "message": "Forget that trade; let's start fresh."
+      },
+      {
+        "message": "What players were in the first trade we discussed?"
+      }
+    ]
+  },
+  {
+    "name": "independent proposals",
+    "title": "A new proposal starts fresh",
+    "description": "An independent explicit swap gets its own proposal instead of accumulating earlier players.",
+    "tags": ["History", "Focus", "Trade"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Add Pelle Larsson to that trade."
+      },
+      {
+        "message": "Now check a new trade: Derrick White for Grant Williams."
+      }
+    ]
+  },
+  {
+    "name": "correcting an ambiguous name",
+    "title": "Actually I meant Dave",
+    "description": "A correction while name clarification is pending. Shows the actual current handling, including any remaining ambiguity.",
+    "tags": ["Clarification", "Corrections"],
+    "turns": [
+      {
+        "message": "Trade Nick for Andrew."
+      },
+      {
+        "message": "Actually I mean Dave."
+      },
+      {
+        "message": "David Jones-Garcia for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "selected answer with correction",
+    "title": "A selected answer plus a correction",
+    "description": "An offered player choice arrives with correcting text through the real combined-reply protocol.",
+    "tags": ["Clarification", "Selected players", "Corrections"],
+    "turns": [
+      {
+        "message": "Trade Nick for Andrew."
+      },
+      {
+        "choose": "Nick Richards",
+        "extra": "Actually I mean Dave."
+      },
+      {
+        "message": "David Jones-Garcia for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "catalogue research",
+    "title": "Contracts, payroll and player facts",
+    "description": "Available player and team facts without creating a trade; distinguish factual research from basketball value.",
+    "tags": ["Research", "Contracts", "Salary"],
+    "turns": [
+      {
+        "message": "What are Derrick White's age, position, salary and remaining contract years?"
+      },
+      {
+        "message": "What is Boston's current payroll and cap status?"
+      },
+      {
+        "message": "Compare Derrick White and Andrew Wiggins. Is either better value based only on the data you have?"
+      }
+    ]
+  },
+  {
+    "name": "recheck and no op",
+    "title": "Recheck and a harmless repeat",
+    "description": "Revalidate a checked proposal, then repeat an existing player without duplicating the transfer.",
+    "tags": ["Recheck", "No-op"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Check this trade again."
+      },
+      {
+        "message": "Also add Derrick White again."
+      }
+    ]
+  },
+  {
+    "name": "unsupported search criteria",
+    "title": "Available filters and missing data",
+    "description": "Contract duration, expiring contracts and NBA experience open matching trade ideas. Performance and height filters explain the missing data without running a search.",
+    "tags": ["Contracts", "Experience", "Discovery", "Scope limits"],
+    "turns": [
+      {
+        "message": "Find Bulls trades for players averaging 25 points per game."
+      },
+      {
+        "message": "Find Bulls trades for expiring contracts."
+      },
+      {
+        "message": "Find Bulls trades for players with at least three contract years remaining."
+      },
+      {
+        "message": "Find Bulls trades for players with under three years of NBA experience."
+      },
+      {
+        "message": "Find Bulls trades for players taller than 7 feet."
+      }
+    ]
+  },
+  {
+    "name": "contract and experience search refinements",
+    "title": "Contract and experience filters",
+    "description": "Combine experience and contract duration, tighten salary limits, switch to expiring contracts, browse more ideas and include zero-year rookies without losing other filters.",
+    "tags": ["Contracts", "Experience", "Discovery", "Refinements"],
+    "turns": [
+      {
+        "message": "Find Bulls one-for-one trades for players with under three years of NBA experience and at least three contract years remaining."
+      },
+      {
+        "message": "Make that under two years of experience, keeping the contract limit."
+      },
+      {
+        "message": "Keep those filters and limit incoming salary to $12 million."
+      },
+      {
+        "message": "Change to expiring contracts instead. Keep the experience and salary limits."
+      },
+      { "message": "Show more of those ideas." },
+      {
+        "message": "Only rookies with zero years of NBA experience now. Keep the expiring-contract and salary limits."
+      },
+      { "chooseIdeaIndices": [0] }
+    ]
+  },
+  {
+    "name": "unsupported transaction mechanics",
+    "title": "Exception selection and player consent limits",
+    "description": "Ask for an existing trade exception, then a consent override, preserving the checked proposal when a request cannot be applied.",
+    "tags": ["Trade exceptions", "Scope limits", "Preservation"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Use Miami's trade exception instead of salary matching."
+      },
+      {
+        "message": "Ignore any no-trade clauses and assume all players consent."
+      }
+    ]
+  },
+  {
+    "name": "stale conversation version",
+    "title": "A conversation changed elsewhere",
+    "description": "Submit an edit against an old conversation version and inspect the conflict response with current focus preserved.",
+    "tags": ["Conflict", "Error", "Recovery"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Remove Andrew Wiggins.",
+        "stale": true
+      }
+    ]
+  },
+  {
+    "name": "financial filters with matches",
+    "title": "Financial limits with checked matches",
+    "description": "A fixed outgoing player, a named partner and combined salary, savings and payroll limits that admit a checked result.",
+    "tags": ["Discovery", "Financial filters", "Fixed players"],
+    "turns": [
+      {
+        "message": "Find Boston trades sending Derrick White for one Miami player, incoming salary at most $33 million, saving at least $100,000, and post-trade Boston payroll at most $209 million."
+      }
+    ]
+  },
+  {
+    "name": "missing player identity",
+    "title": "Who is “him”?",
+    "description": "Resolve an unspecified outgoing player before validating a swap.",
+    "tags": ["Clarification", "Trade"],
+    "turns": [
+      {
+        "message": "Trade him for Andrew Wiggins."
+      },
+      {
+        "message": "Derrick White."
+      }
+    ]
+  },
+  {
+    "name": "fresh search with new counts",
+    "title": "Change the teams and package size",
+    "description": "Start an explicit new search after a filtered search, giving the new teams and player counts.",
+    "tags": ["Discovery", "Reset", "Package sizes"],
+    "turns": [
+      {
+        "message": "Find Bulls trades: one player for one incoming center under 25."
+      },
+      {
+        "message": "New search: Boston Celtics sends two players for one Miami Heat player."
+      }
+    ]
+  },
+  {
+    "name": "resolve corrected selections",
+    "title": "Resolve a corrected player choice",
+    "description": "Choose a player, correct it in the same reply, supply the intended full name, then choose the return player. The original outgoing role is preserved.",
+    "tags": ["Clarification", "Selected players", "Corrections", "Trade"],
+    "turns": [
+      {
+        "message": "Trade Nick for Andrew."
+      },
+      {
+        "choose": "Nick Richards",
+        "extra": "Actually I mean Dave."
+      },
+      {
+        "message": "Dalen Terry."
+      },
+      {
+        "choose": "Andrew Wiggins"
+      }
+    ]
+  },
+  {
+    "name": "corrected player contract restriction",
+    "title": "The corrected player cannot be traded",
+    "description": "Choose a corrected player with an unsupported contract status and see the actual restriction response.",
+    "tags": [
+      "Clarification",
+      "Selected players",
+      "Corrections",
+      "Unsupported",
+      "Contracts"
+    ],
+    "turns": [
+      {
+        "message": "Trade Nick for Andrew."
+      },
+      {
+        "choose": "Nick Richards",
+        "extra": "Actually I mean Dave."
+      },
+      {
+        "message": "David Jones-Garcia."
+      }
+    ]
+  },
+  {
+    "name": "tool activity history",
+    "title": "Inspect a freshly checked reply",
+    "description": "A current backend check with the actual completed tool activity and work duration.",
+    "tags": ["Trade", "Tool activity"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "ambiguous replacement after discovery",
+    "title": "Find options, then replace Jrue with White",
+    "description": "A first-name search preserves the focused trade. An ambiguous replacement asks which White, then retains Simons and infers the destination.",
+    "tags": ["Discovery", "Clarification", "Replacement"],
+    "turns": [
+      {
+        "message": "Trade Jrue Holiday for Anfernee Simons."
+      },
+      {
+        "message": "find a suitable trade for Jrue"
+      },
+      {
+        "message": "change jrue for white"
+      },
+      {
+        "choose": "Derrick White",
+        "message": ""
+      }
+    ]
+  },
+  {
+    "name": "duplicate full name in mixed-team package",
+    "title": "Keep every player in a mixed-team request",
+    "description": "A duplicate full name is clarified before asking about the exchange. The complete package retains Ryan Conwell, the chosen Kam Jones and Andrew Wiggins.",
+    "tags": ["Clarification", "Packages", "Identity"],
+    "turns": [
+      {
+        "message": "trade ryan conwell, kam jones and andrew wiggins"
+      },
+      {
+        "chooseOptionId": "player-17164",
+        "message": ""
+      },
+      {
+        "message": "Send Ryan Conwell and Andrew Wiggins to Chicago, and Kam Jones to Miami."
+      }
+    ]
+  },
+  {
+    "name": "outgoing-only identity clarification",
+    "title": "Resolve White, then find options",
+    "description": "Resolve the outgoing player identity once, then immediately find checked return options without a second confirmation.",
+    "tags": ["Discovery", "Clarification", "Fixed players"],
+    "turns": [
+      {
+        "message": "i want to trade white"
+      },
+      {
+        "choose": "Derrick White",
+        "message": ""
+      }
+    ]
+  },
+  {
+    "name": "incomplete request clarification",
+    "title": "Find options for an outgoing player",
+    "description": "A desire to trade a known outgoing player starts the checked search immediately.",
+    "tags": ["Discovery", "Fixed players"],
+    "turns": [
+      {
+        "message": "I'd like to trade Derrick White."
+      }
+    ]
+  },
+  {
+    "name": "pick only exchange",
+    "title": "Pick ownership clarification and follow-ups",
+    "description": "An ambiguous owned pick asks for its origin. A rules question answers available facts without losing the pending choice; removal and undo do not invent an unchecked trade.",
+    "tags": ["Picks", "Clarification", "Recovery"],
+    "turns": [
+      {
+        "message": "Trade Boston's 2031 first-round pick to Chicago for Chicago's 2031 first-round pick to Boston."
+      },
+      {
+        "message": "Explain the pick rules and salary impact."
+      },
+      {
+        "message": "Remove Chicago's 2031 first-round pick."
+      },
+      {
+        "message": "Undo that removal."
+      }
+    ]
+  },
+  {
+    "name": "ambiguous pick year",
+    "title": "Which first-round pick?",
+    "description": "An unspecified pick year asks for clarification. A typed year answer narrows the available picks while preserving the rest of the trade.",
+    "tags": ["Picks", "Clarification"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Add Miami's first-round pick to Boston."
+      },
+      {
+        "message": "The 2029 first-round pick."
+      }
+    ]
+  },
+  {
+    "name": "blocked picks and swap rights",
+    "title": "Unavailable picks and swap rights",
+    "description": "Try a blocked pick, a swap asset and an unknown year while retaining the checked swap.",
+    "tags": ["Picks", "Unavailable assets", "Scope limits"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Add Miami's 2027 first-round pick to Boston."
+      },
+      {
+        "message": "Add Miami's 2027 second-round swap rights to Boston."
+      },
+      {
+        "message": "Add Miami's 2099 first-round pick to Boston."
+      }
+    ]
+  },
+  {
+    "name": "protected pick current ownership",
+    "title": "A protected pick owned by another team",
+    "description": "Boston sends the Charlotte-origin pick it actually owns. Existing protections remain visible; changing them is a separate unsupported request.",
+    "tags": ["Picks", "Ownership", "Protections"],
+    "turns": [
+      {
+        "message": "Trade Boston's Charlotte-origin 2030 second-round pick to Miami."
+      },
+      {
+        "message": "Make that pick unprotected instead."
+      }
+    ]
+  },
+  {
+    "name": "duplicate pick and retained repairs",
+    "title": "Do not duplicate a pick during repairs",
+    "description": "A repeated pick addition, player repair and selected alternative retain the original mixed assets.",
+    "tags": ["Picks", "No-op", "Repair"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Pelle Larsson and Miami's 2029 first-round pick to Boston."
+      },
+      {
+        "message": "Add Miami's 2029 first-round pick again."
+      },
+      {
+        "message": "Find a legal version, keeping Derrick White and the pick. You may replace other players."
+      },
+      {
+        "message": "Use the first repair option."
+      }
+    ]
+  },
+  {
+    "name": "draft rights clarification and removal",
+    "title": "Which Boston draft rights?",
+    "description": "Resolve a team-level draft-right request, remove the specific rights and undo without treating rights as salary.",
+    "tags": ["Draft rights", "Clarification", "Undo"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Add Boston's draft rights to Miami."
+      },
+      {
+        "message": "Juhann Begarin's draft rights."
+      },
+      {
+        "message": "Remove Juhann Begarin's rights."
+      },
+      {
+        "message": "Undo that removal."
+      }
+    ]
+  },
+  {
+    "name": "draft rights ownership errors",
+    "title": "Draft-right ownership and unknown names",
+    "description": "Wrong ownership and an unknown name show the current response without inventing a transferable asset.",
+    "tags": ["Draft rights", "Ownership", "Unknown names"],
+    "turns": [
+      {
+        "message": "Trade Juhann Begarin's draft rights from Miami to Boston."
+      },
+      {
+        "message": "Trade Michael Imaginary's draft rights to Miami."
+      }
+    ]
+  },
+  {
+    "name": "standalone contract payroll reset",
+    "title": "Contract what-if, payroll, then reset",
+    "description": "A single-team salary and duration scenario remains distinct from a trade verdict and can restore the original contract.",
+    "tags": ["Contracts", "Payroll scenario", "Reset"],
+    "turns": [
+      {
+        "message": "For Boston only, set Derrick White's hypothetical annual salary to $18 million with two years remaining. Do not create a trade."
+      },
+      {
+        "message": "Explain Boston's payroll after that change."
+      },
+      {
+        "message": "Reset Derrick White's contract to its original values."
+      }
+    ]
+  },
+  {
+    "name": "contract annual versus total",
+    "title": "Total contract value or annual salary?",
+    "description": "Clarify contract amounts and preserve annual salary and duration through later changes.",
+    "tags": ["Contracts", "Clarification"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "What if White had a $30 million contract over three years in total?"
+      },
+      {
+        "message": "I mean $10 million each year, for three remaining years."
+      },
+      {
+        "message": "Undo that hypothetical contract change."
+      }
+    ]
+  },
+  {
+    "name": "stretch trading restriction and reset",
+    "title": "A waived player cannot be traded",
+    "description": "Stretch-and-waive creates a payroll obligation; attempting to trade that player shows its restriction before a reset.",
+    "tags": ["Contracts", "Stretch and waive", "Unavailable assets"],
+    "turns": [
+      {
+        "message": "Stretch and waive Derrick White's contract in Boston as a hypothetical."
+      },
+      {
+        "message": "Now trade Derrick White to Miami."
+      },
+      {
+        "message": "Reset Derrick White's contract to its original values."
+      }
+    ]
+  },
+  {
+    "name": "signing offer rejected preserves trade",
+    "title": "An excessive signing offer keeps the trade",
+    "description": "An excessive explicit offer receives the current signing response or clarification, followed by an explanation of the preserved trade.",
+    "tags": ["Signings", "Rejected offer", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Sign Tre Scott to Boston for $100 million in the first year on a four-year contract."
+      },
+      {
+        "message": "Explain the White for Wiggins trade again."
+      }
+    ]
+  },
+  {
+    "name": "signing unspecified tier and undo",
+    "title": "Signing terms, no guessed tier",
+    "description": "A missing non-minimum salary and duration leads to clarification; a minimum offer can be added and removed.",
+    "tags": ["Signings", "Clarification", "Undo"],
+    "turns": [
+      {
+        "message": "Sign Tre Scott to Boston using an exception."
+      },
+      {
+        "message": "Use a one-year minimum contract instead."
+      },
+      {
+        "message": "Undo Tre Scott's hypothetical signing."
+      }
+    ]
+  },
+  {
+    "name": "unsigned free agent then signing",
+    "title": "Sign before trading a free agent",
+    "description": "A free agent cannot be traded first; explicit signing terms precede the sign-and-trade route.",
+    "tags": ["Signings", "Sign and trade", "Unavailable assets"],
+    "turns": [
+      {
+        "message": "Trade Tre Scott from Boston to Miami."
+      },
+      {
+        "message": "Sign Tre Scott to Boston on a one-year minimum contract."
+      },
+      {
+        "message": "Now send Tre Scott to Miami in a sign-and-trade."
+      }
+    ]
+  },
+  {
+    "name": "trade exception clarification",
+    "title": "Which trade exception?",
+    "description": "A team with multiple exceptions needs a specific choice, then returns to ordinary matching after removal.",
+    "tags": ["Trade exceptions", "Clarification", "Reset"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Use Boston's trade exception."
+      },
+      {
+        "message": "Use the Anfernee Simons exception."
+      },
+      {
+        "message": "Remove Boston's selected trade exception."
+      }
+    ]
+  },
+  {
+    "name": "exception ownership and combination limits",
+    "title": "Unavailable and combined exceptions",
+    "description": "Missing exceptions and requests to merge them show the current boundary while preserving a checked proposal.",
+    "tags": ["Trade exceptions", "Ownership", "Scope limits"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Use Miami's trade exception."
+      },
+      {
+        "message": "Combine Boston's Anfernee Simons and Chris Boucher trade exceptions to make a larger exception."
+      }
+    ]
+  },
+  {
+    "name": "multi team setup and routing",
+    "title": "Build a three-team trade from a vague request",
+    "description": "Identify the participants and every destination before checking the package.",
+    "tags": ["Multi-team", "Clarification", "Routing"],
+    "turns": [
+      {
+        "message": "Help me build a three-team trade. Where should we start?"
+      },
+      {
+        "chooseTeamIds": [2, 8, 10],
+        "extra": "With Jayson Tatum, Nikola Jokic and Stephen Curry."
+      },
+      {
+        "message": "Send Tatum to Denver, Jokic to Golden State, and Curry to Boston."
+      }
+    ]
+  },
+  {
+    "name": "multi team and export limits",
+    "title": "Discovery and export boundaries",
+    "description": "A checked multi-team package remains visible through unsupported discovery, fifth-team and export requests.",
+    "tags": ["Multi-team", "Scope limits", "Exports"],
+    "turns": [
+      {
+        "message": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston."
+      },
+      {
+        "message": "Automatically find legal three-team alternatives for this."
+      },
+      {
+        "message": "Add Andrew Wiggins to Boston and Grant Williams to Denver as a five-team trade."
+      },
+      {
+        "message": "Download this trade as a file."
+      },
+      {
+        "message": "Export a share-card image of this trade."
+      }
+    ]
+  },
+  {
+    "name": "no focus edits and teammate swap",
+    "title": "No focused trade, then same-team swap",
+    "description": "Edits and explanations without a focused proposal and swapping teammates show their specific responses.",
+    "tags": ["Missing context", "Scope limits", "Same team"],
+    "turns": [
+      {
+        "message": "Undo the last change."
+      },
+      {
+        "message": "Why is that trade invalid?"
+      },
+      {
+        "message": "Swap Derrick White for Jayson Tatum."
+      }
+    ]
+  },
+  {
+    "name": "research and automatic asset limits",
+    "title": "Research assets without guessing a trade",
+    "description": "Research rights and exceptions; unsupported automatic pick/right searches cannot silently substitute players.",
+    "tags": ["Research", "Picks", "Draft rights", "Scope limits"],
+    "turns": [
+      {
+        "message": "What draft rights does Boston own?"
+      },
+      {
+        "message": "What trade exceptions does Boston have?"
+      },
+      {
+        "message": "Find Boston trades including a first-round pick."
+      },
+      {
+        "message": "Automatically find trades for Boston's unsigned draft rights."
+      }
+    ]
+  },
+  {
+    "name": "trade revisions",
+    "title": "Swap, explain and revise",
+    "description": "A checked swap, exact salary explanation, invalid variation, restoration and an existing pick addition.",
+    "tags": ["Trade", "Revisions", "Picks"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Why does it work? Explain Miami's salary matching."
+      },
+      {
+        "message": "Replace Andrew Wiggins with Pelle Larsson."
+      },
+      {
+        "message": "Why did that fail?"
+      },
+      {
+        "message": "Put Andrew Wiggins back instead of Pelle Larsson."
+      },
+      {
+        "message": "Add Miami's 2027 first-round pick."
+      }
+    ]
+  },
+  {
+    "name": "ambiguous name clarification",
+    "title": "Which Williams?",
+    "description": "Resolve an ambiguous name, then replace the confirmed player using a later correction.",
+    "tags": ["Clarification", "Revisions"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Williams."
+      },
+      {
+        "message": "Grant Williams."
+      },
+      {
+        "message": "Actually, Patrick Williams instead of Grant."
+      }
+    ]
+  },
+  {
+    "name": "research and unsupported requests",
+    "title": "Research, routing and unavailable identities",
+    "description": "Research players, handle an unsigned player, then build a three-team trade by asking only for missing players. An unknown name gets its own identity question; a stale selected ID is rejected.",
+    "tags": ["Research", "Clarification", "Recovery"],
+    "turns": [
+      {
+        "message": "Compare Derrick White and Andrew Wiggins. Don't create a trade."
+      },
+      {
+        "message": "What is Derrick White's salary and contract length?"
+      },
+      {
+        "message": "Swap Terry Rozier for Derrick White."
+      },
+      {
+        "message": "Build a three-team trade between Boston, Miami and Chicago."
+      },
+      {
+        "message": "Trade Michael Imaginary to Miami."
+      },
+      {
+        "message": "Swap these selected players.",
+        "selectedPlayerIds": [999999999]
+      }
+    ]
+  },
+  {
+    "name": "cancellation reset and preservation",
+    "title": "Cancel an edit, then explore another trade",
+    "description": "Cancel a pending edit without losing the checked trade, then start a different trade directly. Earlier cards remain available and follow-up questions refer to the new trade.",
+    "tags": ["Clarification", "History", "Research"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Add Williams."
+      },
+      {
+        "message": "Never mind that edit."
+      },
+      {
+        "message": "Is this a good deal for Miami? Use only the available catalogue data."
+      },
+      {
+        "message": "Swap Derrick White for Grant Williams."
+      },
+      {
+        "message": "Why does this trade work or fail?"
+      }
+    ]
+  },
+  {
+    "name": "badge and conversational references",
+    "title": "Selected players, remove and undo",
+    "description": "Trade exact selected player identities, remove by surname, then undo.",
+    "tags": ["Selected players", "Undo"],
+    "turns": [
+      {
+        "message": "Swap these two players.",
+        "selectedPlayerIds": [16992, 17222]
+      },
+      {
+        "message": "Remove Wiggins."
+      },
+      {
+        "message": "Undo that last change."
+      }
+    ]
+  },
+  {
+    "name": "one way and unsupported hypotheticals",
+    "title": "One-way trade, contract change and signing",
+    "description": "Check a one-way package, change a hypothetical salary, then attempt a signing request.",
+    "tags": ["One-way trade", "Contracts", "Sign and trade"],
+    "turns": [
+      {
+        "message": "Send Derrick White to Miami with no player coming back."
+      },
+      {
+        "message": "Change his salary to $1 million so it works."
+      },
+      {
+        "message": "Sign Terry Rozier and then trade him for Derrick White."
+      }
+    ]
+  },
+  {
+    "name": "ambiguous edit references",
+    "title": "Remove him — who?",
+    "description": "An ambiguous edit, a named follow-up, undo and duplicate addition show the actual current responses.",
+    "tags": ["Clarification", "Undo", "No-op"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Remove him."
+      },
+      {
+        "message": "Andrew Wiggins."
+      },
+      {
+        "message": "Undo that change."
+      },
+      {
+        "message": "Also add Derrick White again."
+      }
+    ]
+  },
+  {
+    "name": "replacement with badges",
+    "title": "Replace across teams",
+    "description": "Selected-player replacements change the participants while retaining the unaffected side.",
+    "tags": ["Selected players", "Revisions"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Grant Williams."
+      },
+      {
+        "message": "Patrick Williams instead of Grant Williams.",
+        "selectedPlayerIds": [17041, 17027]
+      },
+      {
+        "message": "Andrew Wiggins instead of Patrick Williams.",
+        "selectedPlayerIds": [17222, 17041]
+      }
+    ]
+  },
+  {
+    "name": "trade discovery",
+    "title": "Find alternatives",
+    "description": "Keep the original checked swap in the conversation while browsing trade ideas and changing incoming age constraints.",
+    "tags": ["Discovery", "Filters", "Multiple cards"],
+    "turns": [
+      {
+        "message": "Swap Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Find Boston trade options with exactly one outgoing player and two incoming players. Exclude Derrick White."
+      },
+      {
+        "message": "Now require all incoming players to be under 25."
+      }
+    ]
+  },
+  {
+    "name": "initial nickname clarification",
+    "title": "An unmatched first name",
+    "description": "An unclear nickname asks for an identity without offering unrelated spellings as player options.",
+    "tags": ["Clarification", "Player search"],
+    "turns": [
+      {
+        "message": "Trade Jrue Holiday for dave",
+        "selectedPlayerIds": [17361]
+      }
+    ]
+  },
+  {
+    "name": "same-team outgoing package searches immediately",
+    "title": "Trade a package without naming a return",
+    "description": "White and Tatum immediately open trade ideas without asking the user to click “Find trade options”. Choose ideas to check.",
+    "tags": ["Discovery", "Packages"],
+    "turns": [
+      {
+        "message": "I'd like to trade Derrick White and Jayson Tatum"
+      }
+    ]
+  },
+  {
+    "name": "fresh salary-invalid trade then a legal swap",
+    "title": "Fresh salary-invalid trade then a legal swap",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Jrue Holiday for Anfernee Simons"
+      },
+      {
+        "message": "instead let's trade Derrick White for Andrew Wiggins"
+      }
+    ]
+  },
+  {
+    "name": "ordinary revisions and pronouns",
+    "title": "Revise, explain, restore and undo",
+    "description": "Change the return player, explain the verdict, restore Wiggins, remove the current referent and undo.",
+    "tags": ["Revisions", "Clarification", "Undo", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Pelle Larsson instead of Wiggins"
+      },
+      {
+        "message": "why doesn't that work?"
+      },
+      {
+        "message": "put Wiggins back"
+      },
+      {
+        "message": "remove him"
+      },
+      {
+        "message": "undo"
+      }
+    ]
+  },
+  {
+    "name": "repair and choose a suggestion",
+    "title": "Repair a trade and choose the first option",
+    "description": "Keep White, permit changes to the return and choose the first repair idea to check using a typed reply.",
+    "tags": ["Repair", "Discovery", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Pelle Larsson."
+      },
+      {
+        "message": "fix it, keep White but you can replace the other player"
+      },
+      {
+        "message": "go with the first one"
+      }
+    ]
+  },
+  {
+    "name": "owner retained when another player still trades",
+    "title": "Keep a team with another outgoing asset",
+    "description": "Replacing Curry retains Golden State because Draymond still participates.",
+    "tags": ["Multi-team", "Revisions", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry and Draymond Green to Boston."
+      },
+      {
+        "message": "change curry for Giannis Antetokounmpo"
+      }
+    ]
+  },
+  {
+    "name": "outgoing goal and natural option selection",
+    "title": "Trade White and choose an option",
+    "description": "Confirm which White, discover options immediately, choose the second one and ask about fairness.",
+    "tags": ["Discovery", "Clarification"],
+    "turns": [
+      {
+        "message": "i want to trade white"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-16992"
+      },
+      {
+        "message": "the second one"
+      },
+      {
+        "message": "is it a good deal?"
+      }
+    ]
+  },
+  {
+    "name": "typo in a specified swap",
+    "title": "An obvious typo in a trade",
+    "description": "A minor full-name spelling mistake resolves to Derrick White and the named swap is checked immediately.",
+    "tags": ["Trade", "Names", "Typos"],
+    "turns": [
+      {
+        "message": "trade derrik white for andrew wiggins"
+      }
+    ]
+  },
+  {
+    "name": "fresh package and unrelated research",
+    "title": "Fresh package and unrelated research",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "swap Giannis Antetokounmpo for Stephen Curry"
+      },
+      {
+        "message": "compare Derrick White and Andrew Wiggins, don't change the trade"
+      },
+      {
+        "message": "what's Curry's salary?"
+      }
+    ]
+  },
+  {
+    "name": "historical reference targets the original trade",
+    "title": "Historical reference targets the original trade",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Trade Jrue Holiday for Anfernee Simons."
+      },
+      {
+        "message": "Replace Wiggins with Pelle Larsson in the first trade."
+      }
+    ]
+  },
+  {
+    "name": "named outgoing filters pagination and changed source",
+    "title": "Named outgoing filters pagination and changed source",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Discovery"],
+    "turns": [
+      {
+        "message": "trade Derrick White, only with Miami and just one player back"
+      },
+      {
+        "message": "show more"
+      },
+      {
+        "message": "now find Chicago trades, one player for one center under 25"
+      }
+    ]
+  },
+  {
+    "name": "unsupported requests preserve the checked trade",
+    "title": "Unsupported requests preserve the checked trade",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "find a five-team trade"
+      },
+      {
+        "message": "find someone averaging 30 points to replace White"
+      }
+    ]
+  },
+  {
+    "name": "add fourth team reroute and undo",
+    "title": "Add fourth team reroute and undo",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Multi-team", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade."
+      },
+      {
+        "message": "add Andrew Wiggins going to Boston"
+      },
+      {
+        "message": "send Wiggins to Denver instead"
+      },
+      {
+        "message": "undo that last change"
+      }
+    ]
+  },
+  {
+    "name": "mixed picks retained through replacement and removal",
+    "title": "Mixed picks retained through replacement and removal",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Picks", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins and Miami's 2029 first-round pick to Boston."
+      },
+      {
+        "message": "Pelle instead of Wiggins"
+      },
+      {
+        "message": "remove the pick"
+      },
+      {
+        "message": "undo"
+      }
+    ]
+  },
+  {
+    "name": "correction overrides a selected identity",
+    "title": "Correct a selected player",
+    "description": "An additional correction supersedes the selected player before resolving the return player.",
+    "tags": ["Clarification", "Corrections", "Invalid trade"],
+    "turns": [
+      {
+        "message": "trade nick for andrew"
+      },
+      {
+        "choose": "Nick Smith Jr.",
+        "extra": "actually i mean dave"
+      },
+      {
+        "message": "By Dave I mean Dalen Terry; still trade him for Andrew."
+      },
+      {
+        "choose": "Andrew Wiggins"
+      }
+    ]
+  },
+  {
+    "name": "shorthand request and ambiguous replacement",
+    "title": "Shorthand request and ambiguous replacement",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Invalid trade", "Clarification"],
+    "turns": [
+      {
+        "message": "Jrue for Simons"
+      },
+      {
+        "message": "white instead of jrue"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-16992"
+      }
+    ]
+  },
+  {
+    "name": "duplicate full name and implicit two-team exchange",
+    "title": "Duplicate full name and implicit two-team exchange",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Clarification", "Invalid trade"],
+    "turns": [
+      {
+        "message": "trade ryan conwell, kam jones and andrew wiggins"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-17164"
+      }
+    ]
+  },
+  {
+    "name": "unknown name and typed recovery",
+    "title": "Unknown name and typed recovery",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Clarification"],
+    "turns": [
+      {
+        "message": "Swap Michael Imaginary for Andrew Wiggins."
+      },
+      {
+        "message": "Derrick White"
+      }
+    ]
+  },
+  {
+    "name": "explicitly retaining the original team",
+    "title": "Keep Golden State in the trade",
+    "description": "An explicit instruction to keep Golden State receiving Jokic overrides the default team-role substitution.",
+    "tags": ["Multi-team", "Revisions", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade."
+      },
+      {
+        "message": "replace Stephen Curry with Giannis Antetokounmpo, but keep Golden State receiving Jokic"
+      }
+    ]
+  },
+  {
+    "name": "cycle replacement",
+    "title": "Replace a player in a three-team trade",
+    "description": "Replacing the sole outgoing player substitutes the new owner’s role, then undo restores the original cycle.",
+    "tags": ["Multi-team", "Revisions", "Undo", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade."
+      },
+      {
+        "message": "change curry for Giannis Antetokounmpo",
+        "selectedPlayerIds": [17235]
+      },
+      {
+        "message": "undo that"
+      },
+      {
+        "message": "Buddy Hield instead of Curry"
+      }
+    ]
+  },
+  {
+    "name": "vague and impossible discovery filters",
+    "title": "Vague and impossible discovery filters",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Clarification", "Discovery"],
+    "turns": [
+      {
+        "message": "find Chicago trades for young guards"
+      },
+      {
+        "message": "under 25"
+      },
+      {
+        "message": "more, but under 10"
+      }
+    ]
+  },
+  {
+    "name": "badge-only pair",
+    "title": "Badge-only pair",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Trade"],
+    "turns": [
+      {
+        "message": "trade these",
+        "selectedPlayerIds": [16992, 17222]
+      }
+    ]
+  },
+  {
+    "name": "compound package edits",
+    "title": "Remove and replace in one request",
+    "description": "Remove Pelle and replace Wiggins with Jrue while preserving White and updating the participating teams.",
+    "tags": ["Revisions", "Packages", "Invalid trade"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins and Pelle Larsson."
+      },
+      {
+        "message": "remove Pelle and change Wiggins for Jrue Holiday"
+      }
+    ]
+  },
+  {
+    "name": "sparse three-team routing choices",
+    "title": "Sparse three-team routing choices",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Clarification", "Multi-team", "Invalid trade"],
+    "turns": [
+      {
+        "message": "trade Jayson Tatum, Stephen Curry and Nikola Jokic"
+      },
+      {
+        "message": "Send Tatum to Denver, Curry to Boston, and Jokic to Golden State."
+      }
+    ]
+  },
+  {
+    "name": "research while an identity question is pending",
+    "title": "Research during a pending question",
+    "description": "Ask a salary question: dismiss the old identity choices and keep the original question in the transcript. Explicitly return to the unfinished trade with a typed answer.",
+    "tags": ["Research", "Clarification", "Discovery"],
+    "turns": [
+      {
+        "message": "i want to trade white"
+      },
+      {
+        "message": "what is Stephen Curry's salary?"
+      },
+      {
+        "message": "Back to the trade, I meant Derrick White"
+      }
+    ]
+  },
+  {
+    "name": "contracts rights and exceptions",
+    "title": "Contracts, rights and exceptions",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": [
+      "Contracts",
+      "Assets",
+      "Invalid trade",
+      "Draft rights",
+      "Multi-team",
+      "Trade exceptions"
+    ],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "What if Derrick White's salary were $18 million instead?"
+      },
+      {
+        "message": "Give Derrick White two remaining years instead, keeping the hypothetical salary."
+      },
+      {
+        "message": "Add Juhann Begarin's draft rights to Miami."
+      },
+      {
+        "message": "Send Juhann Begarin's rights to Chicago instead."
+      },
+      {
+        "message": "Undo that last change."
+      },
+      {
+        "message": "Use Boston's Anfernee Simons trade exception."
+      },
+      {
+        "message": "Explain Boston's salary matching and the hypothetical contracts."
+      },
+      {
+        "message": "Remove Boston's selected trade exception."
+      },
+      {
+        "message": "Reset Derrick White's contract to its original values."
+      }
+    ]
+  },
+  {
+    "name": "signing then sign and trade",
+    "title": "Sign, trade and undo",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Contracts", "Assets", "Signings", "Invalid trade"],
+    "turns": [
+      {
+        "message": "What contract options does Boston have for Tre Scott?"
+      },
+      {
+        "message": "Sign Tre Scott to Boston on a one-year minimum contract."
+      },
+      {
+        "message": "Now sign-and-trade Tre Scott to Miami."
+      },
+      {
+        "message": "Undo that last trade change."
+      }
+    ]
+  },
+  {
+    "name": "stretch and waive scenario",
+    "title": "Stretch and waive a contract",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Contracts", "Assets"],
+    "turns": [
+      {
+        "message": "Stretch and waive Derrick White's contract in Boston as a hypothetical."
+      },
+      {
+        "message": "Explain Boston's payroll after the stretch."
+      }
+    ]
+  },
+  {
+    "name": "standalone draft rights exchange",
+    "title": "Trade draft rights",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Contracts", "Assets", "Draft rights"],
+    "turns": [
+      {
+        "message": "Trade Juhann Begarin's draft rights from Boston to Miami."
+      }
+    ]
+  },
+  {
+    "name": "missing signing terms clarification",
+    "title": "Supply missing signing terms",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Contracts", "Assets", "Clarification", "Signings"],
+    "turns": [
+      {
+        "message": "Sign Tre Scott to Boston."
+      },
+      {
+        "message": "One year at the minimum."
+      }
+    ]
+  },
+  {
+    "name": "combined contract rights and exception",
+    "title": "Combine contract, rights and exception edits",
+    "description": "Follow the complete conversation, including its checked proposals, clarifications and current responses.",
+    "tags": ["Contracts", "Assets", "Draft rights", "Trade exceptions"],
+    "turns": [
+      {
+        "message": "Trade Derrick White to Miami for Andrew Wiggins to Boston. Set White's hypothetical annual salary to $18 million, add Juhann Begarin's draft rights to Miami, and use Boston's Anfernee Simons trade exception."
+      }
+    ]
+  },
+  {
+    "name": "pick only explicit origins",
+    "title": "A pick-only exchange with explicit origins",
+    "description": "Exchange each team’s own pick, explaining the zero-salary package and undoing a removal.",
+    "tags": ["Picks", "Zero salary", "Ownership", "Undo"],
+    "turns": [
+      {
+        "message": "Trade Boston's own 2031 first-round pick to Chicago for Chicago's own 2031 first-round pick to Boston."
+      },
+      {
+        "message": "Explain the pick rules and salary impact."
+      },
+      {
+        "message": "Remove Chicago's own 2031 first-round pick."
+      },
+      {
+        "message": "Undo that removal."
+      }
+    ]
+  },
+  {
+    "name": "full name transposition",
+    "title": "Swapped letters in a full name",
+    "description": "A full-name transposition resolves the intended player without a question.",
+    "tags": ["Trade", "Names", "Typos"],
+    "turns": [
+      {
+        "message": "trade derrick whtie for andrew wiggins"
+      }
+    ]
+  },
+  {
+    "name": "typo preserves a different first name",
+    "title": "Keep the supplied first name",
+    "description": "Coby Whte resolves to Coby White rather than another White.",
+    "tags": ["Trade", "Names", "Typos"],
+    "turns": [
+      {
+        "message": "trade coby whte for andrew wiggins"
+      }
+    ]
+  },
+  {
+    "name": "equally close full name typos remain ambiguous",
+    "title": "Two equally close names",
+    "description": "Jalin Williams needs a choice between Jalen and Jaylin Williams.",
+    "tags": ["Clarification", "Names", "Typos"],
+    "turns": [
+      {
+        "message": "trade jalin williams for andrew wiggins"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-17306"
+      }
+    ]
+  },
+  {
+    "name": "surname alone remains ambiguous in a swap",
+    "title": "A surname still needs a choice",
+    "description": "White offers both catalogue identities and uses the selected Coby White.",
+    "tags": ["Clarification", "Names"],
+    "turns": [
+      {
+        "message": "trade white for andrew wiggins"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-17037"
+      }
+    ]
+  },
+  {
+    "name": "replacement with an obvious full name typo",
+    "title": "A misspelled replacement name",
+    "description": "Jrue Holidy replaces White with the existing receiving role, without a spelling or destination question.",
+    "tags": ["Trade", "Revisions", "Typos"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "replace White with Jrue Holidy"
+      }
+    ]
+  },
+  {
+    "name": "research dismisses pending edit choices",
+    "title": "Research interrupts an unfinished edit",
+    "description": "A salary question hides the previous replacement picker, preserves the checked trade, and allows an explicit return to the edit.",
+    "tags": ["Research", "Clarification", "Edits"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "replace Derrick White with Williams"
+      },
+      {
+        "message": "what is Stephen Curry's salary?"
+      },
+      {
+        "message": "Back to that replacement, I meant Jaylin Williams"
+      }
+    ]
+  },
+  {
+    "name": "a different research question replaces the picker",
+    "title": "A new question gets its own choices",
+    "description": "Move from an unfinished White trade to a Williams salary question. Only Williams choices remain; answering them returns salary information.",
+    "tags": ["Research", "Clarification"],
+    "turns": [
+      {
+        "message": "i want to trade white"
+      },
+      {
+        "message": "what is Williams' salary?"
+      },
+      {
+        "message": "",
+        "chooseOptionId": "player-17000"
+      }
+    ]
+  },
+  {
+    "name": "named teams ask for players before destinations",
+    "title": "Choose players before routing them",
+    "description": "Known teams lead to a single open player question with no placeholder option. Named players get real destination choices; an explicit route completes the trade.",
+    "tags": ["Multi-team", "Clarification", "Routing"],
+    "turns": [
+      {
+        "message": "Build a three-team trade between Boston, Miami and Chicago."
+      },
+      {
+        "message": "Derrick White, Andrew Wiggins and Tre Jones"
+      },
+      {
+        "message": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston"
+      }
+    ]
+  },
+  {
+    "name": "player question accepts a complete routed answer",
+    "title": "Answer with the whole trade",
+    "description": "The open player question accepts players and destinations together without redundant follow-up questions.",
+    "tags": ["Multi-team", "Clarification"],
+    "turns": [
+      {
+        "message": "Build a three-team trade between Boston, Miami and Chicago."
+      },
+      {
+        "message": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston"
+      }
+    ]
+  },
+  {
+    "name": "case punctuation and accents",
+    "title": "Names with accents and punctuation",
+    "description": "Resolve catalogue names despite accents, case and punctuation without assuming another player.",
+    "tags": ["Names", "Trade", "Research"],
+    "turns": [
+      {
+        "message": "swap LUKA DONČIĆ for Shai Gilgeous-Alexander"
+      },
+      {
+        "message": "what is shai gilgeous alexander’s salary?"
+      }
+    ]
+  },
+  {
+    "name": "same asset on both sides",
+    "title": "A player cannot be traded for himself",
+    "description": "An impossible request gets a useful explanation without making a misleading card.",
+    "tags": ["Trade", "Invalid input", "Recovery"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Derrick White."
+      },
+      {
+        "message": "I mean Andrew Wiggins in return."
+      }
+    ]
+  },
+  {
+    "name": "pending question abandoned for a fresh swap",
+    "title": "Start a different trade while a name is pending",
+    "description": "A complete fresh swap replaces the pending surname question; it does not inherit either unresolved identity.",
+    "tags": ["Clarification", "Reset", "Trade"],
+    "turns": [
+      {
+        "message": "Trade Nick for Andrew."
+      },
+      {
+        "message": "Actually start a different trade: Stephen Curry for Nikola Jokic."
+      }
+    ]
+  },
+  {
+    "name": "unknown historical option",
+    "title": "An option that was never shown",
+    "description": "A nonexistent numbered option asks for an existing reference without creating a trade.",
+    "tags": ["History", "Clarification", "Invalid input"],
+    "turns": [
+      {
+        "message": "Use the third trade option."
+      }
+    ]
+  },
+  {
+    "name": "basketball opinion without performance evidence",
+    "title": "Research cannot invent performance",
+    "description": "A request for actual recent performance and a value judgment should explain missing evidence, not fabricate statistics.",
+    "tags": ["Research", "Scope limits", "Value"],
+    "turns": [
+      {
+        "message": "How many points per game did Derrick White average last season?"
+      },
+      {
+        "message": "Would Boston be better off swapping him for Andrew Wiggins?"
+      }
+    ]
+  },
+  {
+    "name": "empty identity correction recovery",
+    "title": "Correct a missing name",
+    "description": "An unknown full name can be replaced by a real package and checked without keeping the unknown identity.",
+    "tags": ["Clarification", "Corrections", "Recovery"],
+    "turns": [
+      {
+        "message": "Trade Michael Imaginary for Andrew Wiggins."
+      },
+      {
+        "message": "Sorry, Derrick White for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "search filter relaxation",
+    "title": "Relax one filter and retain the others",
+    "description": "A follow-up removes the age limit while retaining the position, source, package size and partner.",
+    "tags": ["Discovery", "Filters", "Pagination"],
+    "turns": [
+      {
+        "message": "Find Boston trades with Miami: one player for one incoming guard under 25."
+      },
+      {
+        "message": "Remove the age limit but keep everything else."
+      }
+    ]
+  },
+  {
+    "name": "clear during identity question then fresh request",
+    "title": "Clear pending work and start again",
+    "description": "Clearing an unfinished request removes its question; a later swap has no leftover names.",
+    "tags": ["Clarification", "Reset", "Recovery"],
+    "turns": [
+      {
+        "message": "Trade White for Williams."
+      },
+      {
+        "message": "Clear this trade."
+      },
+      {
+        "message": "Trade Stephen Curry for Nikola Jokic."
+      }
+    ]
+  },
+  {
+    "name": "shortened given name discovery",
+    "title": "A shortened first name",
+    "description": "A shortened first name and complete surname resolve to one catalogue player; trade discovery runs without an identity question.",
+    "tags": ["Identity", "Discovery", "Shortened names"],
+    "turns": [
+      {
+        "message": "find a trade for steph curry"
+      }
+    ]
+  },
+  {
+    "name": "shortened names in a specified swap",
+    "title": "Two shortened first names",
+    "description": "Both players in a specified swap resolve from their shortened first names and complete surnames.",
+    "tags": ["Identity", "Validation", "Shortened names"],
+    "turns": [
+      {
+        "message": "Trade Steph Curry for Ant Edwards."
+      }
+    ]
+  },
+  {
+    "name": "surname without a given name remains ambiguous",
+    "title": "A surname needs a choice",
+    "description": "Curry alone still offers Stephen and Seth; a shortened-name fix must not guess between them.",
+    "tags": ["Identity", "Clarification"],
+    "turns": [
+      {
+        "message": "Find a trade for Curry."
+      }
+    ]
+  },
+  {
+    "name": "distinct shortened and full names in the same package",
+    "title": "Two different Currys",
+    "description": "Steph and Seth are distinct references. The unsigned-player restriction is explained without an identity question.",
+    "tags": ["Identity", "Signing restrictions", "Shortened names"],
+    "turns": [
+      {
+        "message": "Trade Steph Curry for Seth Curry."
+      }
+    ]
+  },
+  {
+    "name": "replace a scoped abbreviation and correct the first displayed trade",
+    "title": "Replace Derrick, then correct the original trade",
+    "description": "An abbreviated existing asset is resolved from its trade; replacing White keeps Wiggins. A typo and a reference to the first card retain the original version.",
+    "tags": ["Replacement", "Context", "Typo", "Historical reference"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "swap derrick for steph curry"
+      },
+      {
+        "message": "no i mean swap driick for steph in that first trade"
+      }
+    ]
+  },
+  {
+    "name": "equivalent age limit: must not be over 25",
+    "title": "Incoming players must not be over 25",
+    "description": "Equivalent inclusive age limits are enforced for every incoming player.",
+    "tags": ["Discovery", "Age", "Natural language"],
+    "turns": [
+      {
+        "message": "Find Chicago trades, one player for one player. Incoming players must not be over 25."
+      }
+    ]
+  },
+  {
+    "name": "equivalent age limit: must be no older than 25",
+    "title": "Incoming players must be no older than 25",
+    "description": "Equivalent inclusive age limits are enforced for every incoming player.",
+    "tags": ["Discovery", "Age", "Natural language"],
+    "turns": [
+      {
+        "message": "Find Chicago trades, one player for one player. Incoming players must be no older than 25."
+      }
+    ]
+  },
+  {
+    "name": "equivalent age limit: must be 25 or younger",
+    "title": "Incoming players must be 25 or younger",
+    "description": "Equivalent inclusive age limits are enforced for every incoming player.",
+    "tags": ["Discovery", "Age", "Natural language"],
+    "turns": [
+      {
+        "message": "Find Chicago trades, one player for one player. Incoming players must be 25 or younger."
+      }
+    ]
+  },
+  {
+    "name": "equivalent age limit: must be twenty five or younger",
+    "title": "Incoming players must be twenty five or younger",
+    "description": "Equivalent inclusive age limits are enforced for every incoming player.",
+    "tags": ["Discovery", "Age", "Natural language"],
+    "turns": [
+      {
+        "message": "Find Chicago trades, one player for one player. Incoming players must be twenty five or younger."
+      }
+    ]
+  },
+  {
+    "name": "cancellation preserves focus and clear removes focus",
+    "title": "Cancel an edit, then start over",
+    "description": "Cancelling an identity question keeps the checked trade. Clearing the trade removes focus, and the next specified exchange starts fresh.",
+    "tags": ["Conversation", "Cancellation", "Fresh requests"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "replace Wiggins with Williams"
+      },
+      {
+        "message": "never mind that edit"
+      },
+      {
+        "message": "start over and clear the trade"
+      },
+      {
+        "message": "Trade Jrue Holiday for Anfernee Simons."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: KD",
+    "title": "KD — Kevin Durant",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade KD for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: the Greek Freak",
+    "title": "the Greek Freak — Giannis Antetokounmpo",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade the Greek Freak for Derrick White."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: SGA",
+    "title": "SGA — Shai Gilgeous-Alexander",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade SGA for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: the Joker",
+    "title": "the Joker — Nikola Jokic",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade the Joker for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: King James",
+    "title": "King James — LeBron James",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade King James for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: AD",
+    "title": "AD — Anthony Davis",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Nicknames", "Trade"],
+    "turns": [
+      {
+        "message": "Trade AD for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: Derrik Wite",
+    "title": "Derrik Wite — Derrick White",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Spelling", "Trade"],
+    "turns": [
+      {
+        "message": "Trade Derrik Wite for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: Nikola Jokić",
+    "title": "Nikola Jokić — Nikola Jokic",
+    "description": "Interpret the name in the model call, verify the catalogue identity, and check the specified exchange without a redundant identity question.",
+    "tags": ["Identity", "Spelling", "Trade"],
+    "turns": [
+      {
+        "message": "Trade Nikola Jokić for Andrew Wiggins."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: unavailable Pat Riley",
+    "title": "Pat Riley — clarify and correct",
+    "description": "An unavailable person cannot replace an asset or receive unrelated player suggestions. A nickname answer resumes the same edit and preserves the other player.",
+    "tags": ["Identity", "Unknown names", "Clarification", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace Derrick with Pat Riley."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: unavailable Michael Jordan",
+    "title": "Michael Jordan — clarify and correct",
+    "description": "An unavailable person cannot replace an asset or receive unrelated player suggestions. A nickname answer resumes the same edit and preserves the other player.",
+    "tags": ["Identity", "Unknown names", "Clarification", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace Derrick with Michael Jordan."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: unavailable Michael Imaginary",
+    "title": "Michael Imaginary — clarify and correct",
+    "description": "An unavailable person cannot replace an asset or receive unrelated player suggestions. A nickname answer resumes the same edit and preserves the other player.",
+    "tags": ["Identity", "Unknown names", "Clarification", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace Derrick with Michael Imaginary."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: unavailable Taylor Swift",
+    "title": "Taylor Swift — clarify and correct",
+    "description": "An unavailable person cannot replace an asset or receive unrelated player suggestions. A nickname answer resumes the same edit and preserves the other player.",
+    "tags": ["Identity", "Unknown names", "Clarification", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace Derrick with Taylor Swift."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: unavailable Stephen Imaginary",
+    "title": "Stephen Imaginary — clarify and correct",
+    "description": "An unavailable person cannot replace an asset or receive unrelated player suggestions. A nickname answer resumes the same edit and preserves the other player.",
+    "tags": ["Identity", "Unknown names", "Clarification", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace Derrick with Stephen Imaginary."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: ambiguous nickname",
+    "title": "Resolve Ant’s identity",
+    "description": "Resolve the nickname against real players and accept an explicit identity correction.",
+    "tags": ["Identity", "Nicknames", "Clarification"],
+    "turns": [
+      {
+        "message": "Trade Ant for Andrew Wiggins."
+      },
+      {
+        "message": "By Ant I mean Anthony Edwards."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: ambiguous name and nickname answer",
+    "title": "Curry — answered with Steph",
+    "description": "A nickname answer resolves a shared surname without repeating the question.",
+    "tags": ["Identity", "Nicknames", "Clarification"],
+    "turns": [
+      {
+        "message": "Trade Curry for Andrew Wiggins."
+      },
+      {
+        "message": "Steph."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: scoped nickname and historical typo",
+    "title": "Nickname edits and the first trade",
+    "description": "Replace the existing nickname referent, then resolve a typo against the exact first displayed trade; preserve Derrick White.",
+    "tags": ["Identity", "Nicknames", "History", "Replacement"],
+    "turns": [
+      {
+        "message": "Trade the Greek Freak for Derrick White."
+      },
+      {
+        "message": "Replace the Greek Freak with KD."
+      },
+      {
+        "message": "No, replace gianis with Steph in the first trade."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: pronoun after nickname research",
+    "title": "Research, then replace him",
+    "description": "A research question establishes the referent without changing the trade; the following edit uses that person.",
+    "tags": ["Identity", "Context", "Research", "Replacement"],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "What is Derrick's salary?"
+      },
+      {
+        "message": "Replace him with KD."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: research nickname and collection",
+    "title": "KD, every White, and a non-player",
+    "description": "Read facts using a recognised nickname, browse all matching names without an identity choice, and explain that a non-player cannot be traded.",
+    "tags": ["Identity", "Research", "Collections", "Non-players"],
+    "turns": [
+      {
+        "message": "What's KD's salary and team?"
+      },
+      {
+        "message": "Show me all the players called White."
+      },
+      {
+        "message": "Can Pat Riley be traded as a player?"
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: nickname discovery and more",
+    "title": "Find trades for KD, then more",
+    "description": "A nickname identifies the fixed outgoing player. Pagination retains that player and the saved search.",
+    "tags": ["Identity", "Nicknames", "Discovery", "Pagination"],
+    "turns": [
+      {
+        "message": "Find a trade for KD, one player for one player."
+      },
+      {
+        "message": "Show more with the same player."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: nickname contract",
+    "title": "Change KD’s hypothetical contract",
+    "description": "A nickname identifies the player for a salary and duration change; terms and eligibility remain checked by the contract tools.",
+    "tags": ["Identity", "Nicknames", "Contracts"],
+    "turns": [
+      {
+        "message": "What if KD made $20 million per year for two years?"
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: relationship signing",
+    "title": "Sign Steph’s brother",
+    "description": "Interpret the family reference against the catalogue, then check the identified free agent’s signing terms.",
+    "tags": ["Identity", "Context", "Signing"],
+    "turns": [
+      {
+        "message": "Sign Steph's brother to Boston for the minimum for one year."
+      }
+    ]
+  },
+  {
+    "name": "semantic identity: nickname repair pin",
+    "title": "Fix the trade while keeping KD",
+    "description": "A nickname pins the correct player in repair ideas while preserving the original trade in the conversation.",
+    "tags": ["Identity", "Nicknames", "Repair", "Preservation"],
+    "turns": [
+      {
+        "message": "Trade KD for Derrick White."
+      },
+      {
+        "message": "Find a way to fix it. Keep KD but you can replace White."
+      }
+    ]
+  },
+  {
+    "name": "discovery eligibility: sibling replacement and signing",
+    "title": "Steph’s brother — signing instead of trading",
+    "description": "Interpret the sibling reference as Seth Curry, explain why an unsigned player cannot be traded, then use the same person when the user asks to sign him.",
+    "tags": ["Identity", "Discovery", "Free agents", "Signing"],
+    "turns": [
+      {
+        "message": "find trades for steph curry"
+      },
+      {
+        "message": "do his brother instead"
+      },
+      {
+        "message": "Sign him to Boston on a one-year minimum contract instead."
+      }
+    ]
+  },
+  {
+    "name": "discovery eligibility: Seth Curry",
+    "title": "Trade options for an unsigned player",
+    "description": "Explain the free-agent restriction before searching and offer signing as the alternative.",
+    "tags": ["Discovery", "Free agents"],
+    "turns": [
+      {
+        "message": "Find trades for Seth Curry."
+      }
+    ]
+  },
+  {
+    "name": "discovery eligibility: Amari Williams",
+    "title": "Trade options for a two-way player",
+    "description": "Explain the supported contract types instead of displaying a generic search error.",
+    "tags": ["Discovery", "Contract status"],
+    "turns": [
+      {
+        "message": "Find trades for Amari Williams."
+      }
+    ]
+  },
+  {
+    "name": "discovery eligibility: package cannot silently omit unsigned player",
+    "title": "An outgoing package includes an unsigned player",
+    "description": "Retain every requested player and explain why the whole package cannot be searched.",
+    "tags": ["Discovery", "Packages", "Free agents"],
+    "turns": [
+      {
+        "message": "Find trades for Stephen Curry and Seth Curry."
+      }
+    ]
+  },
+  {
+    "name": "discovery eligibility: change active player and source",
+    "title": "Change the search from Steph to KD",
+    "description": "Search for the replacement player using his current team, without retaining the previous outgoing player.",
+    "tags": ["Discovery", "Corrections", "Nicknames"],
+    "turns": [
+      {
+        "message": "find trades for steph curry"
+      },
+      {
+        "message": "do KD instead"
+      }
+    ]
+  },
+  {
+    "name": "clarification choices: signing team catalogue",
+    "title": "Sign Steph’s brother — choose a team",
+    "description": "An unsigned sibling reference carries into a signing request. Every team is offered with a reusable filter, and the team answer plus contract terms completes the signing.",
+    "tags": ["Clarification", "Team choices", "Search", "Signing"],
+    "turns": [
+      {
+        "message": "find trades for steph curry"
+      },
+      {
+        "message": "do his brother instead"
+      },
+      {
+        "message": "ok, sign him"
+      },
+      {
+        "chooseId": "team-2",
+        "extra": "on a one-year minimum contract"
+      }
+    ]
+  },
+  {
+    "name": "clarification choices: free-text identity answer",
+    "title": "A question answered in ordinary chat",
+    "description": "An unknown player has no offered choices. The question appears immediately as an assistant message and a nickname answer resumes the same trade.",
+    "tags": ["Clarification", "Free text", "Identity"],
+    "turns": [
+      {
+        "message": "Trade Michael Imaginary for Derrick White."
+      },
+      {
+        "message": "I meant KD."
+      }
+    ]
+  },
+  {
+    "name": "player alternatives: historical middle proposal",
+    "title": "Replace one player in an older option",
+    "description": "Select and check three Curry trade ideas, edit the last checked trade, then browse replacements within the original middle trade. Keep every other asset in place and explain the search.",
+    "tags": [
+      "Player alternatives",
+      "Historical references",
+      "Selection",
+      "Conversation recall"
+    ],
+    "turns": [
+      {
+        "message": "find trades for steph curry"
+      },
+      {
+        "chooseIdeaIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "message": "In the last of those three checked trades, swap the second player Golden State receives for White."
+      },
+      {
+        "choose": "Coby White"
+      },
+      {
+        "message": "What player could replace the first player Golden State receives in the original middle trade? Keep Curry and the other player in place."
+      },
+      {
+        "message": "Can you tell me how you interpreted my last message?"
+      },
+      {
+        "message": "Why is that Coby White trade invalid?"
+      }
+    ]
+  },
+  {
+    "name": "player alternatives: invalid package and selection",
+    "title": "Find a replacement idea, then check it",
+    "description": "Browse replacements for Wiggins in a Curry/Wiggins/Bam package, preserve the other assets, check a chosen idea, then start a broader Curry search.",
+    "tags": [
+      "Player alternatives",
+      "Validation",
+      "Selection",
+      "Discovery"
+    ],
+    "turns": [
+      {
+        "message": "Trade Stephen Curry for Andrew Wiggins and Bam Adebayo."
+      },
+      {
+        "message": "who else could take Wiggins' place here?"
+      },
+      {
+        "message": "go with the first one"
+      },
+      {
+        "message": "instead of that last search, show me more general Curry trade options"
+      }
+    ]
+  },
+  {
+    "name": "player alternatives: filters and missing target",
+    "title": "Filter replacements and correct the target",
+    "description": "Age and position filters apply to the replacement while Bam remains fixed. A player outside the referenced trade prompts a choice of existing assets.",
+    "tags": ["Player alternatives", "Filters", "Clarification", "Recovery"],
+    "turns": [
+      {
+        "message": "Trade Stephen Curry for Andrew Wiggins and Bam Adebayo."
+      },
+      {
+        "message": "find a replacement for Wiggins, but only centers under 25"
+      },
+      {
+        "message": "find alternatives to Mitchell in this trade"
+      },
+      {
+        "message": "I meant Andrew Wiggins in this trade."
+      }
+    ]
+  },
+  {
+    "name": "historical batches and replacement search",
+    "title": "Return to an earlier option",
+    "description": "Select and check three search results, revise the last trade, find replacements within the middle trade, interrupt with research, resume, compare and undo a branch.",
+    "tags": [
+      "Historical references",
+      "Replacement search",
+      "Search continuation",
+      "Comparison",
+      "Undo"
+    ],
+    "turns": [
+      {
+        "message": "Find trades for Steph Curry."
+      },
+      {
+        "chooseIdeaIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "message": "In the last of those three checked trades, replace the second player Golden State receives with Coby White."
+      },
+      {
+        "message": "Find alternatives to the first player Golden State receives in the original middle trade. Keep Stephen Curry and the other player in place."
+      },
+      {
+        "message": "What is Boston's current payroll?"
+      },
+      {
+        "message": "Show me more of those player replacements."
+      },
+      {
+        "message": "Compare the original middle trade with the Coby White version."
+      },
+      {
+        "message": "Undo that Coby White swap."
+      },
+      {
+        "message": "In the original first checked option, assume Stephen Curry earns $20 million per year."
+      }
+    ]
+  },
+  {
+    "name": "multi-team and hypothetical branches",
+    "title": "Four teams, separate assumptions",
+    "description": "Edit a three-team deal, add a fourth team, create a separate proposal, then return to the earlier hypothetical.",
+    "tags": [
+      "Three teams",
+      "Four teams",
+      "Routing",
+      "Hypothetical contracts",
+      "Independent proposals"
+    ],
+    "turns": [
+      {
+        "message": "Build a three-team trade: Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston."
+      },
+      {
+        "message": "Replace Curry with Giannis in that deal."
+      },
+      {
+        "message": "New four-team trade: Tatum to Denver, Jokic to Golden State, Curry to Miami, and Bam Adebayo to Boston."
+      },
+      {
+        "message": "On that four-team trade, assume Tatum makes $10 million a year."
+      },
+      {
+        "message": "Now a separate deal: Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Return to the four-team hypothetical and remove the salary assumption."
+      }
+    ]
+  },
+  {
+    "name": "signing identity and ownership",
+    "title": "From Curry to his brother",
+    "description": "Resolve a relationship, recognize a free agent, choose a signing team and keep hypothetical ownership scoped to one proposal.",
+    "tags": [
+      "Relationships",
+      "Free agents",
+      "Signings",
+      "Searchable teams",
+      "Hypothetical ownership"
+    ],
+    "turns": [
+      {
+        "message": "Find trades for Steph Curry."
+      },
+      {
+        "message": "Do his brother instead."
+      },
+      {
+        "message": "Okay, sign him."
+      },
+      {
+        "message": "Boston, one year at the minimum."
+      },
+      {
+        "message": "Trade him to Miami for Andrew Wiggins in that signing scenario."
+      },
+      {
+        "message": "What is Seth's actual team, outside this hypothetical?"
+      }
+    ]
+  },
+  {
+    "name": "clarification interruptions and corrections",
+    "title": "Research between questions",
+    "description": "Ask about payroll during an identity question, return with a compound answer, then correct, substitute and cancel requests.",
+    "tags": [
+      "Clarification",
+      "Research",
+      "Compound answers",
+      "Corrections",
+      "Cancellation"
+    ],
+    "turns": [
+      {
+        "message": "Trade White for Andrew Wiggins."
+      },
+      {
+        "message": "Before choosing, what is Boston's payroll?"
+      },
+      {
+        "message": "I meant Derrick White. Add Payton Pritchard too."
+      },
+      {
+        "message": "Actually swap Derrick for Steph in the original White-Wiggins trade."
+      },
+      {
+        "message": "New trade: Frodo Baggins for Andrew Wiggins."
+      },
+      {
+        "message": "Cancel that request. What is Wiggins' salary?"
+      }
+    ]
+  },
+  {
+    "name": "filters and search refinement",
+    "title": "Refine and resume a search",
+    "description": "Retain position and salary filters when removing an age limit; continue without repeating options and explain unavailable performance filters.",
+    "tags": [
+      "Search filters",
+      "Refinement",
+      "Continuation",
+      "Unsupported filters"
+    ],
+    "turns": [
+      {
+        "message": "Find one-for-one Bulls trades for incoming centers under 25 without increasing payroll."
+      },
+      {
+        "message": "Drop the age limit but keep the other filters."
+      },
+      {
+        "message": "Show more."
+      },
+      {
+        "message": "Only players scoring 20 points a game."
+      }
+    ]
+  },
+  {
+    "name": "exception identity and atomic assumptions",
+    "title": "An exception, a contract and draft rights",
+    "description": "Choose a named trade exception, apply a hypothetical salary and add draft rights in one edit, then remove only the exception.",
+    "tags": [
+      "Trade exceptions",
+      "Draft rights",
+      "Hypothetical contracts",
+      "Compound edits"
+    ],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Use Boston's trade exception."
+      },
+      {
+        "message": "The Anfernee Simons one. Also set White's hypothetical annual salary to $18 million and add Juhann Begarin's draft rights to Miami."
+      },
+      {
+        "message": "Remove just the exception."
+      }
+    ]
+  },
+  {
+    "name": "compound explicit destinations",
+    "title": "Replace a player and add another route",
+    "description": "Replace White with Stephen Curry and add Jrue Holiday, preserving each explicitly requested recipient across four teams.",
+    "tags": [
+      "Four teams",
+      "Replacement",
+      "Explicit destinations",
+      "Compound edits"
+    ],
+    "turns": [
+      {
+        "message": "Trade Derrick White for Andrew Wiggins."
+      },
+      {
+        "message": "Replace White with Stephen Curry, and add Jrue Holiday going to Boston. Wiggins should go back to Stephen's team."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: trade plus a New York signing",
+    "title": "Add a signing to a trade",
+    "description": "Retain the three-team trade, add a direct signing, explain the difference from a sign-and-trade, then undo the signing.",
+    "tags": ["Signing", "Trade", "Eligibility"],
+    "turns": [
+      {
+        "message": "Build a three-team trade: Larry Nance Jr. to New York, Oscar Tshiebwe and Julian Phillips to Indiana, and Landry Shamet to Houston."
+      },
+      {
+        "message": "Include Aaron Holiday signing for New York at the minimum for one year in that deal."
+      },
+      {
+        "message": "Is that a sign-and-trade?"
+      },
+      {
+        "message": "Undo the signing."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: short contract cannot be traded immediately",
+    "title": "A signing cannot be traded immediately",
+    "description": "A one-year direct signing remains intact when an immediate trade would require a different team and longer contract.",
+    "tags": ["Signing", "Trade", "Eligibility"],
+    "turns": [
+      {
+        "message": "Sign Aaron Holiday to New York for one year at the minimum."
+      },
+      {
+        "message": "Now sign-and-trade him to Brooklyn."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: eligible structure still needs evidence",
+    "title": "Check a sign-and-trade",
+    "description": "Use the previous team’s Bird rights and a guaranteed three-year contract, while showing the remaining eligibility checks.",
+    "tags": ["Signing", "Trade", "Eligibility"],
+    "turns": [
+      {
+        "message": "Have Houston sign and trade its free agent Aaron Holiday to Memphis on a three-year deal, $3,290,014 in the first year, with the first year fully guaranteed. Use his Bird rights, not the minimum exception."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: replacements retain direct signing",
+    "title": "Find replacements while retaining the signing",
+    "description": "Change one trade slot without dropping the direct signing or confusing mechanical checks with signing eligibility.",
+    "tags": ["Signing", "Replacement", "Preserved package"],
+    "turns": [
+      {
+        "message": "Build a three-team trade: Larry Nance Jr. to New York, Oscar Tshiebwe and Julian Phillips to Indiana, and Landry Shamet to Houston."
+      },
+      {
+        "message": "Include Aaron Holiday signing for New York at the minimum for one year in that deal."
+      },
+      {
+        "message": "What player could replace Larry Nance Jr. in that trade? Keep Aaron Holiday signing for New York and every other trade slot unchanged."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: sign-and-trade with a return",
+    "title": "Sign-and-trade with a returning player",
+    "description": "Move the newly signed player and the returning player to their requested teams, checking final payroll and the receiving team’s first-apron limit.",
+    "tags": ["Sign-and-trade", "Return player", "Needs review"],
+    "turns": [
+      {
+        "message": "Have Houston sign and trade Aaron Holiday to Memphis on a three-year deal at $3,290,014 in the first year, fully guaranteed in the first year using his Bird rights. Memphis sends Mamadi Diakite to Houston in return."
+      }
+    ]
+  },
+  {
+    "name": "signing transactions: edit and separate signing together",
+    "title": "Edit a trade and propose a separate signing",
+    "description": "Change one trade slot and add a related signing in one message, without folding the contract into the trade or claiming combined approval.",
+    "tags": ["Signing", "Trade", "Compound request", "References"],
+    "turns": [
+      {
+        "message": "Build a three-team trade: Larry Nance Jr. to New York, Oscar Tshiebwe and Julian Phillips to Indiana, and Landry Shamet to Houston."
+      },
+      {
+        "message": "Replace Larry Nance Jr. with Ben Sheppard, keeping every other trade slot the same. Also sign Aaron Holiday for New York for one year at the minimum alongside that edited deal."
+      }
+    ]
+  },
+  {
+    "name": "multi choice: three teams and compound reply",
+    "title": "Choose three teams and add trade routes",
+    "description": "Select all three teams together, include explicit player destinations, then add a fourth participating team.",
+    "tags": [
+      "Clarification",
+      "Multi-select",
+      "Three-team",
+      "Four-team",
+      "Compound reply"
+    ],
+    "turns": [
+      {
+        "message": "Help me build a three-team trade. Let’s choose the three teams first."
+      },
+      {
+        "chooseTeamIds": [2, 8, 10],
+        "extra": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston."
+      },
+      {
+        "message": "Add a fourth team: send Derrick White to Miami in that proposal."
+      }
+    ]
+  },
+  {
+    "name": "multi choice: single identity remains single",
+    "title": "Keep player identity choices single-select",
+    "description": "An ambiguous surname offers one player choice, then resumes the specified trade.",
+    "tags": ["Clarification", "Player identity", "Single-select"],
+    "turns": [
+      {
+        "message": "Start a separate deal: trade White for Andrew Wiggins."
+      },
+      {
+        "choose": "Derrick White"
+      }
+    ]
+  },
+  {
+    "name": "durable result paging and historical references",
+    "title": "Browse more ideas, check three, then explain one",
+    "description": "Browse a later page, select three ideas to check, ask about salary rules for the middle checked trade, then stop browsing.",
+    "tags": [
+      "Discovery",
+      "Pagination",
+      "Selection",
+      "Historical references",
+      "Salary rules",
+      "Cancellation"
+    ],
+    "turns": [
+      {
+        "message": "Find Boston one-for-one trade options with Miami."
+      },
+      {
+        "message": "Show me more options from that same search."
+      },
+      {
+        "chooseIdeaIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "message": "Explain the salary rules for the middle of those three checked trades."
+      },
+      {
+        "message": "Stop that search."
+      }
+    ]
+  },
+  {
+    "name": "background search while another question is pending",
+    "title": "Interrupt and resume a saved search",
+    "description": "Pause browsing for research and an identity question, return to the saved Boston–Miami search, change its package size, cancel its choices and reopen it.",
+    "tags": [
+      "Discovery",
+      "Research",
+      "Clarification",
+      "Cancellation",
+      "Search continuation"
+    ],
+    "turns": [
+      {
+        "message": "Find Boston one-for-one trade options with Miami."
+      },
+      {
+        "message": "What is Derrick White’s salary?"
+      },
+      {
+        "message": "I want to trade a player named Johnson for Derrick White."
+      },
+      {
+        "message": "Forget Johnson for now. Show me more options from the Boston–Miami search."
+      },
+      {
+        "message": "Make that same Boston–Miami search two Boston players for two Miami players instead."
+      },
+      {
+        "message": "Stop that two-for-two search."
+      },
+      {
+        "message": "Resume that two-for-two search."
+      },
+      {
+        "message": "Stop it again."
+      }
+    ]
+  },
+  {
+    "name": "Trade idea selection with financial filters",
+    "title": "Trade idea selection with financial filters",
+    "description": "Live model discovery, user selection and backend validation. Ideas are browsed before checking only chosen trades.",
+    "tags": ["search", "selection", "financial"],
+    "turns": [
+      {
+        "message": "Find Bulls options: one player for one player, incoming salary at most $12 million, saving at least $5 million, payroll after the trade at most $142 million."
+      },
+      {
+        "chooseIdeaIndices": [35]
+      },
+      {
+        "message": "Why did that trade fail?"
+      },
+      {
+        "message": "Show the Bulls options again."
+      }
+    ]
+  },
+  {
+    "name": "Incoming guard selection and five checks",
+    "title": "Incoming guard selection and five checks",
+    "description": "Live model discovery, user selection and backend validation. Ideas are browsed before checking only chosen trades.",
+    "tags": ["search", "selection", "five-checks"],
+    "turns": [
+      {
+        "message": "Find Boston trade options for an incoming guard, one player for one player."
+      },
+      {
+        "chooseIdeaIndices": [0, 1, 2, 3, 4]
+      }
+    ]
+  },
+  {
+    "name": "Package browsing with player inspection",
+    "title": "Package browsing with player inspection",
+    "description": "Live model discovery, user selection and backend validation. Ideas are browsed before checking only chosen trades.",
+    "tags": ["search", "selection", "packages"],
+    "turns": [
+      {
+        "message": "Find trades for Steph Curry."
+      },
+      {
+        "chooseIdeaIndices": [0, 1]
+      }
+    ]
+  },
+  {
+    "name": "Cancel player choices",
+    "title": "Cancel player choices",
+    "description": "Live question followed by explicit cancellation. The original question and cancellation remain in the thread.",
+    "tags": ["selection", "cancel"],
+    "turns": [
+      {
+        "message": "Trade White for Andrew Wiggins."
+      },
+      {
+        "message": "Cancel"
+      }
+    ]
+  },
+  {
+    "name": "Cancel team choices",
+    "title": "Cancel team choices",
+    "description": "Live question followed by explicit cancellation. The original question and cancellation remain in the thread.",
+    "tags": ["selection", "cancel"],
+    "turns": [
+      {
+        "message": "Help me build a three-team trade. Which teams should we start with?"
+      },
+      {
+        "message": "Cancel"
+      }
+    ]
+  },
+  {
+    "name": "Cancel trade ideas",
+    "title": "Cancel trade ideas",
+    "description": "Live question followed by explicit cancellation. The original question and cancellation remain in the thread.",
+    "tags": ["selection", "cancel"],
+    "turns": [
+      {
+        "message": "Find Boston trade options for an incoming guard, one player for one player."
+      },
+      {
+        "message": "Cancel"
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "prompt": "Sign Terry Rozier to Miami on a one-year minimum contract, then trade him to Boston for Derrick White.",
+  "status": "complete",
+  "workDurationMs": 13312,
+  "proposal": {
+    "proposalId": "f92f0005-eaf6-4e90-8e69-93a81ab1a4b3",
+    "revision": 1,
+    "teamIds": [
+      16,
+      2
+    ],
+    "transfers": [
+      {
+        "assetType": "player",
+        "assetId": 17234,
+        "fromTeamId": 16,
+        "toTeamId": 2
+      },
+      {
+        "assetType": "player",
+        "assetId": 16992,
+        "fromTeamId": 2,
+        "toTeamId": 16
+      }
+    ],
+    "createdAt": "2026-10-08T04:14:34.245Z",
+    "signings": [
+      {
+        "playerId": 17234,
+        "signingTeamId": 16,
+        "salary": 3290014,
+        "contractYears": 1,
+        "contractType": "minimum"
+      }
+    ]
+  },
+  "verdict": {
+    "proposalId": "f92f0005-eaf6-4e90-8e69-93a81ab1a4b3",
+    "revision": 1,
+    "evaluatedAt": "2026-10-08T04:14:34.246Z",
+    "dataFetchedAt": "2026-10-08T04:13:55.190Z",
+    "season": "2026-27",
+    "source": "bball-gm",
+    "status": "invalid_trade",
+    "summary": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.",
+    "teams": [
+      {
+        "teamId": 16,
+        "teamName": "Miami Heat",
+        "salaryOut": 3290014,
+        "salaryIn": 30348000,
+        "netSalaryChange": 27057986,
+        "newTotalSalary": 237283956,
+        "newCapStatus": "Over Second Apron",
+        "isValid": false,
+        "violations": [
+          "Hard cap violation: This trade would push Miami Heat over the second apron hard cap ($221.7M)",
+          "Sign-and-trade restriction (§8(e)(1)): Miami Heat are over the first apron and cannot receive any salary as the S&T sending team — only picks, cash, or a future TPE are permitted"
+        ],
+        "allowances": []
+      },
+      {
+        "teamId": 2,
+        "teamName": "Boston Celtics",
+        "salaryOut": 30348000,
+        "salaryIn": 3290014,
+        "netSalaryChange": -27057986,
+        "newTotalSalary": 179623846,
+        "newCapStatus": "Over Cap",
+        "isValid": true,
+        "violations": [],
+        "allowances": [
+          "Sign-and-trade (§8(e)(1)): Boston Celtics are over the cap, but this trade drops their salary to $179.6M, below the first apron ($209.0M) — S&T acquisition permitted",
+          "Expanded TPE: Sending $30.3M, can receive up to $32.7M (first apron hard cap applies: $209.0M), matching $3.3M",
+          "Note: Boston Celtics are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+        ]
+      }
+    ],
+    "appliedRules": [
+      "NBA CBA 2023 (2026-27 season) — Art. VII §6(j) Traded Player Exception",
+      "§8(a): Cash in trades limited to 5.15% of the salary cap ($8.5M) per team per season",
+      "§8(e)(1): Over-cap S&T receiver — permitted only when the trade itself brings the team below the first apron",
+      "§6(j)(1)(iv) + Table row E + §2(e)(2)(i)(A): Expanded TPE — max(min(200%+$250K, 100%+$9.4M), 125%+$250K), hard-capped at first apron level",
+      "Luxury Tax (§6(f)): Tax teams pay a progressive surcharge and are limited to the Taxpayer MLE for future signings"
+    ],
+    "issues": []
+  },
+  "allToolsComplete": true
+}

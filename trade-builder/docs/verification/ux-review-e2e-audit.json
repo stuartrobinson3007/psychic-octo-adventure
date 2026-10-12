@@ -1,0 +1,1565 @@
+{
+  "checkedAt": "2026-10-08T08:53:56.998Z",
+  "coverage": {
+    "scenarios": 140,
+    "recordedConversations": 105,
+    "recordedTurns": 313,
+    "authoredFixtures": 35,
+    "workspaceFixtures": 22,
+    "viewportViews": 1400,
+    "capabilities": [
+      {
+        "id": "player-identities",
+        "title": "Player identities and corrections",
+        "scenarios": [
+          "ambiguous name clarification",
+          "duplicate full name in mixed-team package",
+          "typo in a specified swap",
+          "full name transposition",
+          "equally close full name typos remain ambiguous",
+          "case punctuation and accents",
+          "unknown name and typed recovery",
+          "selected answer with correction"
+        ],
+        "checks": [
+          "Unique names and typos resolve",
+          "Ambiguous names ask before choosing",
+          "Every requested player is retained",
+          "Typed corrections override provisional badges"
+        ],
+        "scenarioIds": [
+          "ambiguous-name-clarification",
+          "duplicate-full-name-in-mixed-team-package",
+          "typo-in-a-specified-swap",
+          "full-name-transposition",
+          "equally-close-full-name-typos-remain-ambiguous",
+          "case-punctuation-and-accents",
+          "unknown-name-and-typed-recovery",
+          "selected-answer-with-correction"
+        ],
+        "missingScenarios": [],
+        "frameCount": 68
+      },
+      {
+        "id": "conversation-context",
+        "title": "Conversation context and focus",
+        "scenarios": [
+          "conversation history and focus",
+          "independent proposals",
+          "historical reference targets the original trade",
+          "research while an identity question is pending",
+          "research dismisses pending edit choices",
+          "pending question abandoned for a fresh swap",
+          "unknown historical option"
+        ],
+        "checks": [
+          "Research preserves focus and dismisses obsolete controls",
+          "Answered questions remain in the transcript",
+          "Fresh requests do not inherit pending assets",
+          "Historical references target the intended version"
+        ],
+        "scenarioIds": [
+          "conversation-history-and-focus",
+          "independent-proposals",
+          "historical-reference-targets-the-original-trade",
+          "research-while-an-identity-question-is-pending",
+          "research-dismisses-pending-edit-choices",
+          "pending-question-abandoned-for-a-fresh-swap",
+          "unknown-historical-option"
+        ],
+        "missingScenarios": [],
+        "frameCount": 100
+      },
+      {
+        "id": "trade-edits",
+        "title": "Create, replace, remove, reroute and undo",
+        "scenarios": [
+          "trade revisions",
+          "ordinary revisions and pronouns",
+          "compound package edits",
+          "add fourth team reroute and undo",
+          "cycle replacement",
+          "explicitly retaining the original team",
+          "same asset on both sides"
+        ],
+        "checks": [
+          "Replacements preserve destinations and unrelated assets",
+          "Unused teams disappear",
+          "Explicitly retained teams remain",
+          "Undo restores the prior checked version",
+          "No-op edits do not lose assets"
+        ],
+        "scenarioIds": [
+          "trade-revisions",
+          "ordinary-revisions-and-pronouns",
+          "compound-package-edits",
+          "add-fourth-team-reroute-and-undo",
+          "cycle-replacement",
+          "explicitly-retaining-the-original-team",
+          "same-asset-on-both-sides"
+        ],
+        "missingScenarios": [],
+        "frameCount": 108
+      },
+      {
+        "id": "routing",
+        "title": "Two-, three- and four-team routing",
+        "scenarios": [
+          "duplicate full name and implicit two-team exchange",
+          "multi team setup and routing",
+          "sparse three-team routing choices",
+          "named teams ask for players before destinations",
+          "player question accepts a complete routed answer",
+          "multi team and export limits"
+        ],
+        "checks": [
+          "Two-team exchanges infer the other destination",
+          "Multi-team requests ask only missing destinations",
+          "Explicit routes are not asked again",
+          "More than four teams are rejected without changing focus"
+        ],
+        "scenarioIds": [
+          "duplicate-full-name-and-implicit-two-team-exchange",
+          "multi-team-setup-and-routing",
+          "sparse-three-team-routing-choices",
+          "named-teams-ask-for-players-before-destinations",
+          "player-question-accepts-a-complete-routed-answer",
+          "multi-team-and-export-limits"
+        ],
+        "missingScenarios": [],
+        "frameCount": 76
+      },
+      {
+        "id": "discovery",
+        "title": "Trade discovery and pagination",
+        "scenarios": [
+          "incomplete request clarification",
+          "same-team outgoing package searches immediately",
+          "outgoing-only identity clarification",
+          "filtered discovery",
+          "financial filters with matches",
+          "package sizes",
+          "fixed outgoing and exclusions",
+          "fresh search resets filters",
+          "search filter relaxation",
+          "financial discovery",
+          "vague filters"
+        ],
+        "checks": [
+          "Outgoing goals search immediately",
+          "Team-wide searches delegate player selection",
+          "Age, position and combined financial limits are enforced",
+          "Fresh searches reset filters",
+          "Continued searches retain filters and avoid repeats",
+          "Impossible filters produce honest empty results"
+        ],
+        "scenarioIds": [
+          "incomplete-request-clarification",
+          "same-team-outgoing-package-searches-immediately",
+          "outgoing-only-identity-clarification",
+          "filtered-discovery",
+          "financial-filters-with-matches",
+          "package-sizes",
+          "fixed-outgoing-and-exclusions",
+          "fresh-search-resets-filters",
+          "search-filter-relaxation",
+          "financial-discovery",
+          "vague-filters"
+        ],
+        "missingScenarios": [],
+        "frameCount": 76
+      },
+      {
+        "id": "repair",
+        "title": "Checked repairs and choosing alternatives",
+        "scenarios": [
+          "repair additions",
+          "pinned replacements",
+          "repair team perspective",
+          "repair and choose a suggestion",
+          "duplicate pick and retained repairs"
+        ],
+        "checks": [
+          "Required players and picks are retained",
+          "Only permitted replacements occur",
+          "Team perspective is clear",
+          "Candidates stay separate from focus until chosen"
+        ],
+        "scenarioIds": [
+          "repair-additions",
+          "pinned-replacements",
+          "repair-team-perspective",
+          "repair-and-choose-a-suggestion",
+          "duplicate-pick-and-retained-repairs"
+        ],
+        "missingScenarios": [],
+        "frameCount": 60
+      },
+      {
+        "id": "picks",
+        "title": "Pick packages, ownership and protections",
+        "scenarios": [
+          "pick only explicit origins",
+          "ambiguous pick year",
+          "blocked picks and swap rights",
+          "protected pick current ownership",
+          "mixed picks retained through replacement and removal",
+          "duplicate pick and retained repairs"
+        ],
+        "checks": [
+          "Original team is distinguished from current owner",
+          "Existing protections survive edits",
+          "Ambiguous year/round asks for missing information",
+          "Unavailable picks and swap rights are rejected",
+          "Picks never supply matching salary"
+        ],
+        "scenarioIds": [
+          "pick-only-explicit-origins",
+          "ambiguous-pick-year",
+          "blocked-picks-and-swap-rights",
+          "protected-pick-current-ownership",
+          "mixed-picks-retained-through-replacement-and-removal",
+          "duplicate-pick-and-retained-repairs"
+        ],
+        "missingScenarios": [],
+        "frameCount": 84
+      },
+      {
+        "id": "rights",
+        "title": "Draft rights",
+        "scenarios": [
+          "draft rights clarification and removal",
+          "draft rights ownership errors",
+          "standalone draft rights exchange",
+          "contracts rights and exceptions"
+        ],
+        "checks": [
+          "Rights use their own identities and current owners",
+          "Zero-salary packages render",
+          "Unknown rights and unsupported automatic selection recover",
+          "Remove and undo preserve unrelated assets"
+        ],
+        "scenarioIds": [
+          "draft-rights-clarification-and-removal",
+          "draft-rights-ownership-errors",
+          "standalone-draft-rights-exchange",
+          "contracts-rights-and-exceptions"
+        ],
+        "missingScenarios": [],
+        "frameCount": 72
+      },
+      {
+        "id": "contracts",
+        "title": "Contract and payroll scenarios",
+        "scenarios": [
+          "standalone contract payroll reset",
+          "contract annual versus total",
+          "stretch trading restriction and reset",
+          "stretch and waive scenario",
+          "combined contract rights and exception"
+        ],
+        "checks": [
+          "Annual salary differs from total contract value",
+          "Hypothetical contracts are identified",
+          "Stretch-and-waive restrictions are enforced",
+          "Reset and undo restore catalogue terms"
+        ],
+        "scenarioIds": [
+          "standalone-contract-payroll-reset",
+          "contract-annual-versus-total",
+          "stretch-trading-restriction-and-reset",
+          "stretch-and-waive-scenario",
+          "combined-contract-rights-and-exception"
+        ],
+        "missingScenarios": [],
+        "frameCount": 52
+      },
+      {
+        "id": "signings",
+        "title": "Free agents and sign-and-trades",
+        "scenarios": [
+          "unsigned free agent then signing",
+          "signing offer rejected preserves trade",
+          "signing unspecified tier and undo",
+          "missing signing terms clarification",
+          "signing then sign and trade"
+        ],
+        "checks": [
+          "Unsigned players cannot be traded as ordinary assets",
+          "Missing salary/tier and duration are requested",
+          "Rejected offers preserve focus",
+          "Sign-and-trades use the hypothetical signing owner"
+        ],
+        "scenarioIds": [
+          "unsigned-free-agent-then-signing",
+          "signing-offer-rejected-preserves-trade",
+          "signing-unspecified-tier-and-undo",
+          "missing-signing-terms-clarification",
+          "signing-then-sign-and-trade"
+        ],
+        "missingScenarios": [],
+        "frameCount": 60
+      },
+      {
+        "id": "exceptions",
+        "title": "Trade exceptions",
+        "scenarios": [
+          "trade exception clarification",
+          "exception ownership and combination limits",
+          "contracts rights and exceptions"
+        ],
+        "checks": [
+          "Multiple exceptions need a concrete source or amount",
+          "Unavailable exceptions produce a useful response",
+          "Exceptions cannot be merged",
+          "Removal restores ordinary matching"
+        ],
+        "scenarioIds": [
+          "trade-exception-clarification",
+          "exception-ownership-and-combination-limits",
+          "contracts-rights-and-exceptions"
+        ],
+        "missingScenarios": [],
+        "frameCount": 68
+      },
+      {
+        "id": "research-and-limits",
+        "title": "Research, basketball value and unsupported requests",
+        "scenarios": [
+          "catalogue research",
+          "research and unsupported requests",
+          "unsupported search criteria",
+          "research and automatic asset limits",
+          "unsupported requests preserve the checked trade",
+          "basketball opinion without performance evidence"
+        ],
+        "checks": [
+          "Research does not construct a trade",
+          "Absent performance data is not invented",
+          "Value judgments do not equate legality with fairness",
+          "Unsupported features explain the limitation and available alternative"
+        ],
+        "scenarioIds": [
+          "catalogue-research",
+          "research-and-unsupported-requests",
+          "unsupported-search-criteria",
+          "research-and-automatic-asset-limits",
+          "unsupported-requests-preserve-the-checked-trade",
+          "basketball-opinion-without-performance-evidence"
+        ],
+        "missingScenarios": [],
+        "frameCount": 92
+      },
+      {
+        "id": "recovery",
+        "title": "Recheck, cancel, reset and transport recovery",
+        "scenarios": [
+          "recheck and no op",
+          "cancellation reset and preservation",
+          "stale conversation version",
+          "clear during identity question then fresh request",
+          "empty identity correction recovery"
+        ],
+        "fixtures": [
+          "workspace-loading",
+          "workspace-data-error",
+          "workspace-connection-error",
+          "network-failure",
+          "provider-unavailable",
+          "history-failure",
+          "first-loading",
+          "edit-loading"
+        ],
+        "checks": [
+          "Rechecks retain the proposal",
+          "Cancel preserves the last checked trade",
+          "Clear removes pending work",
+          "Stale clients and invalid identities preserve focus",
+          "Network, assistant and storage failures remain recoverable"
+        ],
+        "scenarioIds": [
+          "recheck-and-no-op",
+          "cancellation-reset-and-preservation",
+          "stale-conversation-version",
+          "clear-during-identity-question-then-fresh-request",
+          "empty-identity-correction-recovery",
+          "workspace-loading",
+          "workspace-data-error",
+          "workspace-connection-error",
+          "network-failure",
+          "provider-unavailable",
+          "history-failure",
+          "first-loading",
+          "edit-loading"
+        ],
+        "missingScenarios": [],
+        "frameCount": 96
+      },
+      {
+        "id": "tool-history",
+        "title": "Progress, tool history and timestamps",
+        "scenarios": [
+          "tool activity history"
+        ],
+        "fixtures": [
+          "tool-history",
+          "first-loading",
+          "edit-loading"
+        ],
+        "checks": [
+          "One active operation at a time",
+          "Friendly operation names",
+          "Routine bookkeeping is hidden",
+          "Worked for appears before the reply, question or card",
+          "Message time is available on hover"
+        ],
+        "scenarioIds": [
+          "tool-activity-history",
+          "tool-history",
+          "first-loading",
+          "edit-loading"
+        ],
+        "missingScenarios": [],
+        "frameCount": 16
+      },
+      {
+        "id": "player-browser",
+        "title": "Player browsing and comparison",
+        "fixtures": [
+          "workspace-players",
+          "workspace-player-filters",
+          "workspace-player-empty",
+          "workspace-player-details",
+          "workspace-free-agent",
+          "workspace-comparison",
+          "workspace-comparison-full"
+        ],
+        "checks": [
+          "Search, clear, combined filters, sort and pagination",
+          "Details, contracts, estimates and missing evidence",
+          "Comparison add/remove and four-player limit",
+          "Add to message and close/return focus",
+          "Desktop resizing and full-width mobile research"
+        ],
+        "scenarioIds": [
+          "workspace-players",
+          "workspace-player-filters",
+          "workspace-player-empty",
+          "workspace-player-details",
+          "workspace-free-agent",
+          "workspace-comparison",
+          "workspace-comparison-full"
+        ],
+        "missingScenarios": [],
+        "frameCount": 28
+      },
+      {
+        "id": "pick-browser",
+        "title": "Draft-pick browsing and selection",
+        "fixtures": [
+          "workspace-picks",
+          "workspace-pick-filters",
+          "workspace-pick-empty",
+          "workspace-pick-protected",
+          "workspace-pick-protection-unknown",
+          "workspace-pick-unavailable",
+          "workspace-pick-selected",
+          "workspace-pick-refreshing",
+          "workspace-pick-refresh-error"
+        ],
+        "checks": [
+          "Search, owner, origin, year, round and availability filters",
+          "Sort, pagination and clearing filters",
+          "Protected and unavailable pick details",
+          "Duplicate insertion disabled",
+          "Refresh preserves the draft and filters",
+          "Exact badges reopen their asset"
+        ],
+        "scenarioIds": [
+          "workspace-picks",
+          "workspace-pick-filters",
+          "workspace-pick-empty",
+          "workspace-pick-protected",
+          "workspace-pick-protection-unknown",
+          "workspace-pick-unavailable",
+          "workspace-pick-selected",
+          "workspace-pick-refreshing",
+          "workspace-pick-refresh-error"
+        ],
+        "missingScenarios": [],
+        "frameCount": 36
+      },
+      {
+        "id": "saved",
+        "title": "Saved trade versions",
+        "fixtures": [
+          "workspace-saved-empty",
+          "workspace-saved"
+        ],
+        "checks": [
+          "Save and unsave independently of history",
+          "View the exact version",
+          "Players, picks, rights, scenarios and validation status",
+          "Empty panel and closing it"
+        ],
+        "scenarioIds": [
+          "workspace-saved-empty",
+          "workspace-saved"
+        ],
+        "missingScenarios": [],
+        "frameCount": 16
+      },
+      {
+        "id": "composer",
+        "title": "Composing and clarification replies",
+        "fixtures": [
+          "welcome",
+          "long-draft",
+          "workspace-composer-players",
+          "workspace-pick-selected",
+          "selected-player",
+          "selected-team",
+          "selected-package",
+          "selected-answer",
+          "selected-long-answer"
+        ],
+        "checks": [
+          "Text, player and pick badges",
+          "# picker search, tabs, keyboard and escape",
+          "Badge removal and undo/redo",
+          "Option selection with supplementary text",
+          "Empty send disabled and Enter submission",
+          "Long content at all viewport sizes"
+        ],
+        "scenarioIds": [
+          "welcome",
+          "long-draft",
+          "workspace-composer-players",
+          "workspace-pick-selected",
+          "selected-player",
+          "selected-team",
+          "selected-package",
+          "selected-answer",
+          "selected-long-answer"
+        ],
+        "missingScenarios": [],
+        "frameCount": 36
+      }
+    ]
+  },
+  "freshIntentions": {
+    "checkedAt": "2026-10-08T08:53:56.998Z",
+    "passed": 100,
+    "total": 101,
+    "results": [
+      {
+        "scenario": "player question accepts a complete routed answer",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which players would you like to include?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Here is a comparison of Derrick White and Andrew Wiggins:\n\n- Derrick White (Boston Celtics): Age 32, Position: Shooting Guard (SG), Salary for 2026-27: $30,348,000, 8 years of experience, 3 years remaining on his contract.\n\n- Andrew Wiggins (Miami Heat): Age 32, Position: Small Forward (SF), Salary for 2026-27: $30,169,644, 11 years of experience, 3 years remaining on his contract.\n\nBoth players are of the same age and have similar salaries and contract lengths for the upcoming season. Derrick White is a shooting guard with 8 years of experience, while Andrew Wiggins is a small forward with 11 years of experience."
+      },
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which players would you like to include?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "What is Derrick White's salary and contract length?",
+        "passed": true,
+        "status": "complete",
+        "message": "Derrick White's salary for the 2026-27 season is $30,348,000. He has a contract length of 3 years remaining, covering the 2026-27, 2027-28, and 2028-29 seasons."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Swap Terry Rozier for Derrick White.",
+        "passed": true,
+        "status": "complete",
+        "message": "Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms."
+      },
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Derrick White, Andrew Wiggins and Tre Jones",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which team should receive Derrick White?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which players would you like to include?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Trade Michael Imaginary to Miami.",
+        "passed": false,
+        "error": "The expression evaluated to a falsy value:\n\n  assert.ok(/Michael Imaginary/i.test(r.clarification.question))\n",
+        "status": "needs_clarification",
+        "message": "Which players would you like to include in the trade between Boston, Miami and Chicago?"
+      },
+      {
+        "scenario": "player question accepts a complete routed answer",
+        "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "cycle replacement",
+        "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "Pelle Larsson instead of Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "cycle replacement",
+        "input": "change curry for Giannis Antetokounmpo",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "why doesn't that work?",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements.\n\nMiami Heat sends Pelle Larsson ($2,296,271) and receives Derrick White ($30,348,000). Payroll becomes $234,987,685 (Over Second Apron).\nFirst apron hard cap (Table row E): Miami Heat cannot match $30.3M via Expanded TPE — would push team salary to $235.0M, above the first apron ($209.0M). Max matchable: $4.4M.\nNote: Miami Heat are a luxury tax team — limited to Taxpayer MLE ($6.1M) for future signings"
+      },
+      {
+        "scenario": "owner retained when another player still trades",
+        "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry and Draymond Green to Boston.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "put Wiggins back",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "cycle replacement",
+        "input": "undo that",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "remove him",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which player do you want to remove?"
+      },
+      {
+        "scenario": "owner retained when another player still trades",
+        "input": "change curry for Giannis Antetokounmpo",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics, Golden State Warriors do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "Andrew Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "cycle replacement",
+        "input": "Buddy Hield instead of Curry",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Atlanta Hawks do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "ordinary revisions and pronouns",
+        "input": "undo",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "correction overrides a selected identity",
+        "input": "trade nick for andrew",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “nick” do you mean?"
+      },
+      {
+        "scenario": "duplicate full name and implicit two-team exchange",
+        "input": "trade ryan conwell, kam jones and andrew wiggins",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Kam Jones” do you mean?"
+      },
+      {
+        "scenario": "outgoing goal and natural option selection",
+        "input": "i want to trade white",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?"
+      },
+      {
+        "scenario": "correction overrides a selected identity",
+        "input": "Nick Smith Jr.\n\nactually i mean dave",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Who did you mean by “dave”?"
+      },
+      {
+        "scenario": "correction overrides a selected identity",
+        "input": "Dalen Terry",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Andrew” do you mean?"
+      },
+      {
+        "scenario": "outgoing goal and natural option selection",
+        "input": "Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+      },
+      {
+        "scenario": "outgoing goal and natural option selection",
+        "input": "the second one",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "correction overrides a selected identity",
+        "input": "Andrew Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "duplicate full name and implicit two-team exchange",
+        "input": "Kam Jones",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "outgoing goal and natural option selection",
+        "input": "is it a good deal?",
+        "passed": true,
+        "status": "complete",
+        "message": "I can compare contracts, age and position, but I don’t have the performance and team-fit information needed to judge whether this is a good deal for either team. Passing salary and roster checks alone does not establish basketball value."
+      },
+      {
+        "scenario": "replacement with an obvious full name typo",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "full name transposition",
+        "input": "trade derrick whtie for andrew wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "typo in a specified swap",
+        "input": "trade derrik white for andrew wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "replacement with an obvious full name typo",
+        "input": "replace White with Jrue Holidy",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "equally close full name typos remain ambiguous",
+        "input": "trade jalin williams for andrew wiggins",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “jalin williams” do you mean?"
+      },
+      {
+        "scenario": "surname alone remains ambiguous in a swap",
+        "input": "trade white for andrew wiggins",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?"
+      },
+      {
+        "scenario": "typo preserves a different first name",
+        "input": "trade coby whte for andrew wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "surname alone remains ambiguous in a swap",
+        "input": "Coby White",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "equally close full name typos remain ambiguous",
+        "input": "Jaylin Williams",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Swap Michael Imaginary for Andrew Wiggins.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Who did you mean by “Michael Imaginary”?"
+      },
+      {
+        "scenario": "historical reference targets the original trade",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "fresh package and unrelated research",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "fresh package and unrelated research",
+        "input": "swap Giannis Antetokounmpo for Stephen Curry",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "historical reference targets the original trade",
+        "input": "Trade Jrue Holiday for Anfernee Simons.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "fresh package and unrelated research",
+        "input": "compare Derrick White and Andrew Wiggins, don't change the trade",
+        "passed": true,
+        "status": "complete",
+        "message": "Comparison of Derrick White and Andrew Wiggins:\n\n- Derrick White (Boston Celtics): Shooting Guard, age 32, salary $30,348,000 for 2026-27 season, with 3 years remaining on his contract.\n- Andrew Wiggins (Miami Heat): Small Forward, age 32, salary $30,169,644 for 2026-27 season, with 3 years remaining on his contract.\n\nBoth players have similar salaries and contract lengths. White is a shooting guard, while Wiggins is a small forward. Both are experienced players at age 32 with multiple years left on their contracts.\n\nThe current trade involving these two players is valid and does not need to be changed."
+      },
+      {
+        "scenario": "historical reference targets the original trade",
+        "input": "Replace Wiggins with Pelle Larsson in the first trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "fresh package and unrelated research",
+        "input": "what's Curry's salary?",
+        "passed": true,
+        "status": "complete",
+        "message": "Stephen Curry's salary for the 2026-27 season is $62,587,158."
+      },
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "find Chicago trades for young guards",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "What age range do you want for incoming players?"
+      },
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "under 25",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 24 or younger; incoming positions PG or SG."
+      },
+      {
+        "scenario": "named outgoing filters pagination and changed source",
+        "input": "trade Derrick White, only with Miami and just one player back",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 1 checked option. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+      },
+      {
+        "scenario": "cancellation preserves focus and clear removes focus",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "more, but under 10",
+        "passed": true,
+        "status": "complete",
+        "message": "No new candidate package met the requested filters and exclusions in the combinations considered. This does not prove that no possible trade exists. Required: incoming players aged 9 or younger; incoming positions PG or SG."
+      },
+      {
+        "scenario": "named outgoing filters pagination and changed source",
+        "input": "show more",
+        "passed": true,
+        "status": "complete",
+        "message": "No passing option was found in the checked shortlist. This does not prove that no possible trade exists."
+      },
+      {
+        "scenario": "cancellation preserves focus and clear removes focus",
+        "input": "replace Wiggins with Williams",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Williams” do you mean?"
+      },
+      {
+        "scenario": "named outgoing filters pagination and changed source",
+        "input": "now find Chicago trades, one player for one center under 25",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 24 or younger; incoming positions C."
+      },
+      {
+        "scenario": "cancellation preserves focus and clear removes focus",
+        "input": "never mind that edit",
+        "passed": true,
+        "status": "complete",
+        "message": "The pending edit has been cancelled."
+      },
+      {
+        "scenario": "cancellation preserves focus and clear removes focus",
+        "input": "start over and clear the trade",
+        "passed": true,
+        "status": "complete",
+        "message": "Ready for a new trade. Your previous trades are still in the conversation."
+      },
+      {
+        "scenario": "cancellation preserves focus and clear removes focus",
+        "input": "Trade Jrue Holiday for Anfernee Simons.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "badge-only pair",
+        "input": "trade these",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "unsupported requests preserve the checked trade",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "unsupported requests preserve the checked trade",
+        "input": "find a five-team trade",
+        "passed": true,
+        "status": "complete",
+        "message": "Trades involving more than four teams aren’t supported yet."
+      },
+      {
+        "scenario": "unsupported requests preserve the checked trade",
+        "input": "find someone averaging 30 points to replace White",
+        "passed": true,
+        "status": "complete",
+        "message": "Performance filters aren't supported yet. You can filter by age, position, incoming salary, salary savings, or team payroll."
+      },
+      {
+        "scenario": "repair and choose a suggestion",
+        "input": "Trade Derrick White for Pelle Larsson.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "repair and choose a suggestion",
+        "input": "fix it, keep White but you can replace the other player",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 2 checked repairs. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+      },
+      {
+        "scenario": "repair and choose a suggestion",
+        "input": "go with the first one",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "add fourth team reroute and undo",
+        "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "compound package edits",
+        "input": "Trade Derrick White for Andrew Wiggins and Pelle Larsson.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "shorthand request and ambiguous replacement",
+        "input": "Jrue for Simons",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "shorthand request and ambiguous replacement",
+        "input": "white instead of jrue",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “White” do you mean?"
+      },
+      {
+        "scenario": "compound package edits",
+        "input": "remove Pelle and change Wiggins for Jrue Holiday",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "add fourth team reroute and undo",
+        "input": "add Andrew Wiggins going to Boston",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "shorthand request and ambiguous replacement",
+        "input": "Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "add fourth team reroute and undo",
+        "input": "send Wiggins to Denver instead",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics, Denver Nuggets do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "add fourth team reroute and undo",
+        "input": "undo that last change",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "research while an identity question is pending",
+        "input": "i want to trade white",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?"
+      },
+      {
+        "scenario": "sparse three-team routing choices",
+        "input": "trade Jayson Tatum, Stephen Curry and Nikola Jokic",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which team should receive Jayson Tatum?"
+      },
+      {
+        "scenario": "research while an identity question is pending",
+        "input": "what is Stephen Curry's salary?",
+        "passed": true,
+        "status": "complete",
+        "message": "Stephen Curry's salary for the 2026-27 season is $62,587,158."
+      },
+      {
+        "scenario": "sparse three-team routing choices",
+        "input": "Send Jayson Tatum to Denver Nuggets.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which team should receive Stephen Curry?"
+      },
+      {
+        "scenario": "research dismisses pending edit choices",
+        "input": "Trade Derrick White for Andrew Wiggins.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "sparse three-team routing choices",
+        "input": "Send Stephen Curry to Boston Celtics.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which team should receive Nikola Jokic?"
+      },
+      {
+        "scenario": "research dismisses pending edit choices",
+        "input": "replace Derrick White with Williams",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Williams” do you mean?"
+      },
+      {
+        "scenario": "research dismisses pending edit choices",
+        "input": "what is Stephen Curry's salary?",
+        "passed": true,
+        "status": "complete",
+        "message": "Stephen Curry's salary for the 2026-27 season is $62,587,158."
+      },
+      {
+        "scenario": "research while an identity question is pending",
+        "input": "Back to the trade, I meant Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+      },
+      {
+        "scenario": "sparse three-team routing choices",
+        "input": "Send Nikola Jokic to Golden State Warriors.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "research dismisses pending edit choices",
+        "input": "Back to that replacement, I meant Jaylin Williams",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Oklahoma City Thunder do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "i want to trade white",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?"
+      },
+      {
+        "scenario": "same-team outgoing package searches immediately",
+        "input": "I'd like to trade Derrick White and Jayson Tatum",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment."
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "what is Williams' salary?",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Williams” do you mean?"
+      },
+      {
+        "scenario": "explicitly retaining the original team",
+        "input": "Send Jayson Tatum to Denver, Nikola Jokic to Golden State, and Stephen Curry to Boston in a three-team trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Boston Celtics do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "explicitly retaining the original team",
+        "input": "replace Stephen Curry with Giannis Antetokounmpo, but keep Golden State receiving Jokic",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Golden State Warriors do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "Amari Williams",
+        "passed": true,
+        "status": "complete",
+        "message": "Amari Williams is on a two-way contract with the Boston Celtics for the 2026-27 season, with a salary of $0 (likely a two-way contract salary)."
+      },
+      {
+        "scenario": "fresh salary-invalid trade then a legal swap",
+        "input": "Trade Jrue Holiday for Anfernee Simons",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Philadelphia 76ers do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "Trade Derrick White for Andrew Wiggins and Miami's 2029 first-round pick to Boston.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks. Pick ownership and availability were checked; existing protections are retained."
+      },
+      {
+        "scenario": "fresh salary-invalid trade then a legal swap",
+        "input": "instead let's trade Derrick White for Andrew Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "Pelle instead of Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "remove the pick",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "undo",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      }
+    ]
+  },
+  "affectedIntentions": {
+    "checkedAt": "2026-10-08T08:56:46.843Z",
+    "passed": 15,
+    "total": 16,
+    "results": [
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "find Chicago trades for young guards",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "What age range do you want for incoming players?"
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Swap Michael Imaginary for Andrew Wiggins.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Who did you mean by “Michael Imaginary”?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Here is a comparison of Derrick White and Andrew Wiggins:\n\n- Derrick White (Boston Celtics): Age 32, Position SG, Salary $30,348,000 for 2026-27 season, 8 years of experience, 3 years remaining on contract.\n\n- Andrew Wiggins (Miami Heat): Age 32, Position SF, Salary $30,169,644 for 2026-27 season, 11 years of experience, 3 years remaining on contract.\n\nBoth players are similar in age and salary for the upcoming season, with Wiggins having more years of experience. White is a shooting guard, while Wiggins is a small forward. Both have standard contracts with full bird rights and no trade clauses."
+      },
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "under 25",
+        "passed": true,
+        "status": "complete",
+        "message": "Found 3 checked options. These options pass salary and roster checks; team fit and willingness to trade need a separate assessment. Required: incoming players aged 24 or younger; incoming positions PG or SG."
+      },
+      {
+        "scenario": "vague and impossible discovery filters",
+        "input": "more, but under 10",
+        "passed": true,
+        "status": "complete",
+        "message": "No new candidate package met the requested filters and exclusions in the combinations considered. This does not prove that no possible trade exists. Required: incoming players aged 9 or younger; incoming positions PG or SG."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "What is Derrick White's salary and contract length?",
+        "passed": true,
+        "status": "complete",
+        "message": "Derrick White's salary for the 2026-27 season is $30,348,000. He has a contract length of 3 years remaining, covering the 2026-27, 2027-28, and 2028-29 seasons."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Swap Terry Rozier for Derrick White.",
+        "passed": true,
+        "status": "complete",
+        "message": "Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": false,
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'Who did you mean by “between Boston”?'\n- 'Which players would you like to include?'\n",
+        "status": "needs_clarification",
+        "message": "Who did you mean by “between Boston”?"
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "i want to trade white",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “white” do you mean?"
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "what is Williams' salary?",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which “Williams” do you mean?"
+      },
+      {
+        "scenario": "a different research question replaces the picker",
+        "input": "Amari Williams",
+        "passed": true,
+        "status": "complete",
+        "message": "Amari Williams is on the Boston Celtics with a two-way contract for the 2026-27 season. His salary is $0 for that season."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "Trade Derrick White for Andrew Wiggins and Miami's 2029 first-round pick to Boston.",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks. Pick ownership and availability were checked; existing protections are retained."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "Pelle instead of Wiggins",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "remove the pick",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "mixed picks retained through replacement and removal",
+        "input": "undo",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Miami Heat do not satisfy salary matching requirements."
+      }
+    ]
+  },
+  "transport": {
+    "checkedAt": "2026-10-08T08:43:57.481Z",
+    "passed": 6,
+    "total": 6,
+    "results": [
+      {
+        "name": "repeated request returns exactly its original reply",
+        "passed": true
+      },
+      {
+        "name": "a stale client preserves the checked trade",
+        "passed": true
+      },
+      {
+        "name": "unknown selected player preserves focus",
+        "passed": true
+      },
+      {
+        "name": "expired or forged clarification option preserves focus",
+        "passed": true
+      },
+      {
+        "name": "two simultaneous clients cannot both commit the same version",
+        "passed": true
+      },
+      {
+        "name": "malformed requests receive HTTP 400",
+        "passed": true
+      }
+    ]
+  },
+  "blockedModelRecheck": {
+    "checkedAt": "2026-10-08T08:58:36.574Z",
+    "passed": 0,
+    "total": 2,
+    "results": [
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Swap Michael Imaginary for Andrew Wiggins.",
+        "passed": false,
+        "error": "Conversational requests are unavailable because the AI service has no remaining credits. Its billing balance needs to be restored before chat can continue.\n+ actual - expected\n\n+ 'agent_unavailable'\n- 'needs_clarification'\n",
+        "status": "agent_unavailable",
+        "message": "Conversational requests are unavailable because the AI service has no remaining credits. Its billing balance needs to be restored before chat can continue."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+        "passed": false,
+        "error": "Conversational requests are unavailable because the AI service has no remaining credits. Its billing balance needs to be restored before chat can continue.\n+ actual - expected\n\n+ 'agent_unavailable'\n- 'complete'\n",
+        "status": "agent_unavailable",
+        "message": "Conversational requests are unavailable because the AI service has no remaining credits. Its billing balance needs to be restored before chat can continue."
+      }
+    ]
+  },
+  "resolvedModelRecheck": {
+    "checkedAt": "2026-10-08T09:07:19.063Z",
+    "passed": 11,
+    "total": 11,
+    "results": [
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which players would you like to include?"
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Swap Michael Imaginary for Andrew Wiggins.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Who did you mean by “Michael Imaginary”?"
+      },
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Derrick White, Andrew Wiggins and Tre Jones",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which team should receive Derrick White?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Compare Derrick White and Andrew Wiggins. Don't create a trade.",
+        "passed": true,
+        "status": "complete",
+        "message": "Here is a comparison of Derrick White and Andrew Wiggins:\n\n- Derrick White (Boston Celtics):\n  - Position: Shooting Guard (SG)\n  - Age: 32\n  - Experience: 8 years\n  - Contract: 3 years remaining\n  - Salary for 2026-27: $30,348,000\n  - Contract type: Standard\n  - Bird rights: Full\n  - No trade clause: No\n\n- Andrew Wiggins (Miami Heat):\n  - Position: Small Forward (SF)\n  - Age: 32\n  - Experience: 11 years\n  - Contract: 3 years remaining\n  - Salary for 2026-27: $30,169,644\n  - Contract type: Standard\n  - Bird rights: Full\n  - No trade clause: No\n\nBoth players are similar in age and salary, with Wiggins having slightly more NBA experience. White is a shooting guard, while Wiggins is a small forward. Both have standard contracts with three years remaining and full bird rights, and neither has a no-trade clause."
+      },
+      {
+        "scenario": "named teams ask for players before destinations",
+        "input": "Send Derrick White to Miami, Andrew Wiggins to Chicago and Tre Jones to Boston",
+        "passed": true,
+        "status": "complete",
+        "message": "Trade is invalid. Chicago Bulls do not satisfy salary matching requirements."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "What is Derrick White's salary and contract length?",
+        "passed": true,
+        "status": "complete",
+        "message": "Derrick White's salary for the 2026-27 season is $30,348,000. He has a contract length of 3 years remaining, covering the 2026-27, 2027-28, and 2028-29 seasons."
+      },
+      {
+        "scenario": "unknown name and typed recovery",
+        "input": "Derrick White",
+        "passed": true,
+        "status": "complete",
+        "message": "This trade passes the 2026-27 salary and roster checks."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Swap Terry Rozier for Derrick White.",
+        "passed": true,
+        "status": "complete",
+        "message": "Terry Rozier is unsigned and cannot be traded. A sign-and-trade needs a signing team and contract terms."
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Build a three-team trade between Boston, Miami and Chicago.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Which players would you like to include?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Trade Michael Imaginary to Miami.",
+        "passed": true,
+        "status": "needs_clarification",
+        "message": "Who did you mean by “Michael Imaginary”?"
+      },
+      {
+        "scenario": "research and unsupported requests",
+        "input": "Swap these selected players.",
+        "passed": true,
+        "status": "error",
+        "message": "A selected player is no longer available."
+      }
+    ]
+  },
+  "currentSemanticChecks": {
+    "passed": 106,
+    "total": 106,
+    "conversations": 39,
+    "method": "Complete affected conversation groups replace prior observations; all use the real HTTP/SSE service."
+  },
+  "browserChecks": {
+    "desktopScenarioPreviews": 140,
+    "workspaceCheckpointsAtEachAdditionalWidth": 22,
+    "widths": [
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "totalFinalObservations": 206,
+    "unexpectedRenderErrors": 0,
+    "documentOverflow": 0,
+    "evidence": "ux-review-browser-audit.json"
+  },
+  "validation": {
+    "typecheck": "passed",
+    "scopedLint": "passed",
+    "build": "passed",
+    "manifestVerification": "1416 current previews across 144 scenarios; 0 current frozen screenshots",
+    "unitTests": "not added or run",
+    "liveBrowserEvidence": "ux-review-live-browser.json",
+    "liveBrowserScreenshot": "../evidence/ux-review-live-question-answer.jpg",
+    "finalPolish": "Selected-pick prefill verified after the composer microtask change; final typecheck, scoped lint, build and manifest checks passed.",
+    "remainingVerificationLimit": "The browser connection became unavailable during the additional player-prefill recheck after the final composer warning fix. Earlier player-prefill checks passed. The 206 completed observations are retained; no additional successful observation is claimed."
+  },
+  "shortenedNameFollowup": {
+    "checkedAt": "2026-10-08T09:31:21.546Z",
+    "passed": 12,
+    "total": 12,
+    "conversations": 9,
+    "evidence": "shortened-name-e2e.json",
+    "liveBrowserScreenshot": "../evidence/steph-curry-discovery.jpg",
+    "browserPreviewEvidence": "shortened-name-browser.json",
+    "desktopPreviewsPassed": 4,
+    "developmentPreviewFix": "Independent dev-server dependency caches prevent concurrent servers from mixing optimized React chunks. Verified all four new previews after the fix."
+  }
+}
